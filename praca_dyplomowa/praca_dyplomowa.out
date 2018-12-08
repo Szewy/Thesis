@@ -1,1 +1,36 @@
 \BOOKMARK [0][-]{chapter.1}{Wstep}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Wprowadzenie}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Cel pracy}{chapter.1}% 3
+\BOOKMARK [0][-]{chapter.2}{Teoria}{}% 4
+\BOOKMARK [1][-]{section.2.1}{Przetwarzanie obraz\363w}{chapter.2}% 5
+\BOOKMARK [2][-]{subsection.2.1.1}{Cyfrowe przetwarzanie obraz\363w binarnych}{section.2.1}% 6
+\BOOKMARK [2][-]{subsection.2.1.2}{OpenCV}{section.2.1}% 7
+\BOOKMARK [2][-]{subsection.2.1.3}{Operacje morfologiczne}{section.2.1}% 8
+\BOOKMARK [2][-]{subsection.2.1.4}{Filtry ruchu}{section.2.1}% 9
+\BOOKMARK [2][-]{subsection.2.1.5}{Detekcja kolor\363w}{section.2.1}% 10
+\BOOKMARK [1][-]{section.2.2}{Sztuczna inteligencja}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.1}{Neuron}{section.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.2}{Sieci neuronowe}{section.2.2}% 13
+\BOOKMARK [1][-]{section.2.3}{Uczenie maszynowe}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.3.1}{Klasyfikatory}{section.2.3}% 15
+\BOOKMARK [2][-]{subsection.2.3.2}{Klasyfikator KNN}{section.2.3}% 16
+\BOOKMARK [2][-]{subsection.2.3.3}{Dob\363r cech}{section.2.3}% 17
+\BOOKMARK [2][-]{subsection.2.3.4}{Ocena cech}{section.2.3}% 18
+\BOOKMARK [2][-]{subsection.2.3.5}{Deep learning}{section.2.3}% 19
+\BOOKMARK [2][-]{subsection.2.3.6}{Python}{section.2.3}% 20
+\BOOKMARK [2][-]{subsection.2.3.7}{TensorFlow}{section.2.3}% 21
+\BOOKMARK [2][-]{subsection.2.3.8}{Keras}{section.2.3}% 22
+\BOOKMARK [1][-]{section.2.4}{Gra papier, kamien, nozyce}{chapter.2}% 23
+\BOOKMARK [0][-]{chapter.3}{Wykonana praca}{}% 24
+\BOOKMARK [1][-]{section.3.1}{Aktywizacja danych}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.2}{Detekcja ruchu}{chapter.3}% 26
+\BOOKMARK [1][-]{section.3.3}{Detekcja kolor\363w}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.4}{Szumy w zbiorze danych}{chapter.3}% 28
+\BOOKMARK [1][-]{section.3.5}{Znajdowanie obiekt\363w}{chapter.3}% 29
+\BOOKMARK [1][-]{section.3.6}{Dob\363r cech}{chapter.3}% 30
+\BOOKMARK [1][-]{section.3.7}{Ocena cech}{chapter.3}% 31
+\BOOKMARK [1][-]{section.3.8}{Rozpoznawanie gest\363w przy pomocy klasyfikatora KNN}{chapter.3}% 32
+\BOOKMARK [1][-]{section.3.9}{Rozpoznawanie gest\363w przy pomocy sieci neuronowej}{chapter.3}% 33
+\BOOKMARK [2][-]{subsection.3.9.1}{Siec neuronowa dla cech}{section.3.9}% 34
+\BOOKMARK [2][-]{subsection.3.9.2}{Siec neuronowa obraz\363w binarnych}{section.3.9}% 35
+\BOOKMARK [0][-]{chapter.4}{Podsumowanie}{}% 36
