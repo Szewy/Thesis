@@ -14,6 +14,9 @@
 \usepackage{verbatim}
 \usepackage{indentfirst}
 \usepackage[pdftex]{hyperref}
+\usepackage{amsmath}
+
+\usepackage{subfigure}
 
 \usepackage{enumitem}% http://ctan.org/pkg/enumitem
 \setlist[itemize]{noitemsep, topsep=0pt}
@@ -71,7 +74,7 @@ Cyfrowe przetwarzanie obrazów binarnych jest to dziedzina przetwarzania obrazó
 
 Obrazy binarne składają się z pikseli, które mogą przyjmować jedynie dwie wartości. Piksele takie możmy oznaczać różnymi symboli, np. 0/1, false/true czy też (0,0,0)/(255,255,255). Podczas interpretacji obrazu jedne z pikseli można traktować jako tło, inne zaś jako część obiektu. Dzięki czemu jesteśmy wstanie rozróżnić interesującą nas część obrazu od pozostałej części. 
 
-\subsection{OpenCV}
+\section{OpenCV}
 OpenCV (Open Source Computer Vision Library) jest to otwartoźródłowa biblioteka wykorzystywana przy rozpoznawaniu obrazów oraz przy uczeniu maszynowym. Została napisana w języku C przez programistów z firmy Intel w 1999 roku.
 
 W późniejszym czasie kolejne części biblioteki były także pisane w języku C++. OpenCV umożliwia pisanie kodów nie tylko w językach C i C++ ale również mamy możliwość wykorzystywania tej biblioteki w językach Python, Java czy też Matlab. Co więcej zostały udostępnione nakładki do języków takich jak C\#, Perl, Ruby czy Haskell aby móc również wykorzystywać zalety  biblioteki. 
@@ -101,7 +104,7 @@ OpenCV znalazło zastosowanie w wielu dziedzinach naszego codziennego życia:
 \end{itemize}
 
 
-\subsection{Operacje morfologiczne}
+\section{Operacje morfologiczne}
 Operacje morfologiczne to podstawowe operacje przetwarzania obrazów. Pozwalają na złożone czynności związane z analizą kształtu poszczególnych elementów obrazu oraz położeniem względem siebie. W wyniku operacji struktura obiektu na obrazie zostaje zmieniona, w celu osiągnięcia określonych rezultatów. 
 Operacje morfologiczne najczęściej stosuje się dla obrazów binarnych, dla których są to operacji podstawowe oraz jedne z najważniejszych. Dzięki nim jesteśmy wstanie wyszczególnić interesujące nas części czy też przefiltrować nasz obraz. Najczęściej wykorzystywane operacje morfologiczne to: erozja, dylatacja, otwarcie oraz zamknięcie. Wymienione operacje można ze sobą łączyć, tworząc zaawansowane systemy analizy.
 
@@ -126,8 +129,16 @@ Jest to operacja zwężania i zmniejszania poprzez usunięcie pikseli granicznyc
 	\item  Jeżeli przynajmniej jeden piksel z otoczenia objętego przez szablon strukturalny ma wartość równą 0, to punkt centralny przyjmuje wartość 0. Jeżeli zaś taki przypadek nie wystąpił piksel centralny zachowuje swoją poprzednią wartość
 \end{enumerate}
 
-
-Poniższy rysunek przedstawia przykładowy wynik operacji erozji na obrazie binarnym:
+\begin{figure}[h]
+	\centering
+	\subfigure[Obraz początkowy]
+		{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/szablon.png}}
+	\subfigure[Element struturalny, punkt czerwony jest punktem centralnym]
+		{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/e.png}}
+	\subfigure[Obraz wyjściowy]
+		{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/erozja.png}}
+	\caption{Operacja erozji na obrazie binarnym}
+\end{figure}
 
 \paragraph{Dylatacja:}\mbox{} \\
 Jest to operacja rozszerzania i zwiększania. Pozwala na wypełnienie dziur binarnych w obiektach. Jeżeli dwa obiekty są położone blisko siebie, może nastąpić złączenie w jeden obiekt.
@@ -139,7 +150,16 @@ Jest to operacja rozszerzania i zwiększania. Pozwala na wypełnienie dziur bina
 	\item Jeżeli przynajmniej jeden piksel z otoczenia objętego przez szablon strukturalny ma wartość równą 1, to punkt centralny przyjmuje również wartość 1. Jeżeli zaś wszystkie piksele z otoczenia piksela centralnego określonego przez element strukturalny mają wartość 0 to wówczas piksel centralny przyjmuje wartość 0.
 \end{enumerate}
 
-Poniższy rysunek przedstawia przykładowy wynik operacji erozji na obrazie binarnym:
+\begin{figure}[h]
+	\centering
+	\subfigure[Obraz początkowy]
+	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/szablon.png}}
+	\subfigure[Element struturalny, punkt czerwony jest punktem centralnym]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/e.png}}
+	\subfigure[Obraz wyjściowy]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/dylatacja.png}}
+	\caption{Operacja dylatacji na obrazie binarnym}
+\end{figure}
 
 \paragraph{Otwarcie:}\mbox{} \\
 Operacja otwarcia morfologicznego jest definiowana przez połączenie metod erozji oraz dylatacji. Metoda ta wygładza obiekt, usuwa niechciane szumy, a w dodatku nie modyfikuje znacząco wielkości obiektów tak jak to jest w przypadku zastosowania operacji erozji czy dylatacji.
@@ -150,34 +170,72 @@ Operacja otwarcia morfologicznego jest definiowana przez połączenie metod eroz
 	\item Wykonywana jest operacja dylatacji na obraz, który jest wynikiem erozji z punktu 1.
 \end{enumerate}
 
-Poniższy rysunek przedstawia przykładowy wynik operacji otwarcia na obrazie binarnym:
+\begin{figure}[h]
+	\centering
+	\subfigure[Obraz początkowy]
+	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/szablon.png}}
+	\subfigure[Element struturalny, punkt czerwony jest punktem centralnym]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/e.png}}
+	\subfigure[Obraz wyjściowy]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/otwarcie.png}}
+	\caption{Operacja otwarcia na obrazie binarnym}
+\end{figure}
 
 \paragraph{Zamknięcie:}\mbox{} \\
 Operacja zamknięcia łączy w sobie połączenie dwóch metod dylatacji oraz erozji, analogicznie jak było w przypadku operacji zamknięcia, jednakże w odwrotnej kolejności. W rezultacie uzyskujemy połączenie obiektów o zbliżonych odległościach, wypełnienie dziur w obiektach, jednakże końcowy kształt obiektu zostaje w dużym stopniu zmieniony w stosunku do kształtu przed zastosowaniem operacji zamknięcia.
 
+\paragraph{Etapy operacji otwarcia:}
+\begin{enumerate}
+	\item Wykonywana jest operacja dylatacji na zadanym obrazie
+	\item Wykonywana jest operacja erozji na obraz, który jest wynikiem erozji z punktu 1.
+\end{enumerate}
 
+\begin{figure}[h]
+	\centering
+	\subfigure[Obraz początkowy]
+	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/szablon.png}}
+	\subfigure[Element struturalny, punkt czerwony jest punktem centralnym]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/e.png}}
+	\subfigure[Obraz wyjściowy]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/zamkniecie.png}}
+	\caption{Operacja zamknięcia na obrazie binarnym}
+\end{figure}
 
-Poniższy rysunek przedstawia przykładowy wynik operacji zamknięcia na obrazie binarnym:
+\section{Filtry ruchu}
+Filtry ruchu są wykorzystywane do generowania maski binarnej zawierającej poruszające się obiekty. Tak zwany z ang. background subtraction wykorzystuje różnicę z dwóch różnych klatek z pliku wideo. Odejmowanie dwóch klatek pozwala nam prześledzić, które z części obrazów zmieniły się. Różnica dwóch pikseli da nam wartość niezerową, tylko wtedy jeżeli z analizowanych klatkach wartość odpowiadających pikseli różni się, co interpretujemy, że ta część obrazu poruszyła się. 
 
-\subsection{Filtry ruchu}
-Jest to powszechna technika generowania maski binarnej zawierającej poruszające się obiekty. Eng. background subtraction wykorzystuje różnicę z kolejnych klatek z kamery. Odejmowanie dwóch następujących po sobie klatek pozwala nam prześledzić, które z części obrazów zmieniły się. Różnica dwóch pikseli da nam wartość niezerową tylko wtedy jeżeli z analizowanych klatkach wartość odpowiadających pikseli różnic się. 
+\begin{figure}[h]
+	\centering
+	\subfigure[Tło]
+	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/tlo.jpg}}
+	\subfigure[Zdjęcie]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/img.jpg}}
+	\subfigure[Różnica zdjęcia i tła ]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/bin.jpg}}
+	\caption{Przykładowe metody background subtractor z biblioteki OpenCV}
+\end{figure}
 
-Rysunek działania:
-
-OpenCV w swojej bibliotece posiada wiele gotowych rozwiązać to wykrywania obiektów w ruchu. Jako najczęściej wykorzystywanych możemy wyróżnić następujące:
+OpenCV w swojej bibliotece posiada wiele gotowych rozwiązać do wykrywania obiektów w ruchu. Jako jedne z najczęściej wykorzystywanych metod możemy wyróżnić następujące:
 \begin{itemize} 
 	\item BackgroundSubtractorMOG
 	\item BackgroundSubtractorMOG2
 	\item BackgroundSubtractorGMG
 \end{itemize} 
 	
-Przykładowy kod OpenCV:
+\begin{figure}[h]
+	\centering
+	\subfigure[BackgroundSubtractorMOG]
+	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/mog.png}}
+	\subfigure[BackgroundSubtractorMOG2]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/mog2.png}}
+	\subfigure[BackgroundSubtractorGMG]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/gmg.png}}
+	\caption{Przykładowe metody background subtractor z biblioteki OpenCV}
+\end{figure}
 
-Obrazki prezentujące BS:
+W celu polepszenia efektów, należy pozbyć się niedokładnej segmentacji oraz możliwych szumów,  które mogą wystąpić podczas analizy. Są one spowodowane różnymi odbiciami, cieniami czy innymi niezauważalnymi ruchami. Wówczas należy wykorzystać przedstawione wcześniej operacje morfologiczne, które poprawią nam wykonaną detekcję.
 
-Aby efekt był jeszcze lepszy, należy pozbyć się szumów, które mogą wystąpić podczas analizy klatek. Są one spowodowane różnymi odbiciami, cieniami czy innymi niezauważalnymi ruchami. Wówczas należy wykorzystać operacje morfologiczne, które poprawią nam wykonaną detekcję.
-
-\subsection{Detekcja kolorów}
+\section{Detekcja kolorów}
 Celem detekcji kolorów jest wygenerowanie obrazu binarnego, w którym piksele binarne  o wartości rgb(255,255,255) oznaczają piksele, które na zadanym obrazie są w określonym przedziale kolorów. Jeżeli dany piksel nie należy do zadanego przedziału, wówczas obraz binarny w tym punkcie otrzymuje wartość rgb(0,0,0). Detekcja taka pozwala na wyłuskania tylko obiektów o określonym koloru.
 
 Detekcja jest bardzo wrażliwa na różnego rodzaju szumy. Najczęstszym powodem występowanie jest zmienne oświetlenie. Obiekt przy różnym świetle możemy odbierać kolorystycznie całkowicie inaczej. W przypaku kiedy analizujemy dynamiczny ruch, wówczas dynamika również może wpływać na kolorystykę danego obiektu. Te wszystkie czynniki, sprawiają, że detekcja określonego koloru nie jest zadaniem takim prostym. 
@@ -280,11 +338,74 @@ Zachowując takie zasady, każdy z gestów ma takie samo prawdopodobieństwo, ab
 
 \chapter{Wykonana praca}
 \section{Aktywizacja danych}
+Pierwszym moim etapem pracy była aktywizacja danych potrzebnych do uczenia maszynowego. Zbieranie danych polegało na nagrywaniu plików wideo na których dana osoba wykonywała określony gest. W swojej pracy dyplomowej zakładam, że każdy wykonywany gest, jest wykonany w niebieskiej rękawiczce. Takie założenie będę zakładał w całej swojej pracy inżynierskiej.
+
+Do nagrywania plików używałem dwóch kamer dedykowanych w laptopach:
+\begin{itemize}
+	\item USB2.0 UVC HD Webcam
+	\item HD Webcam
+\end{itemize}
+
+Obie kamery pozwoliły na zadowalające efekty zbierania danych. Jakość zdjęć przy dostatecznie dobrym oświetleniu była bardzo zadowalające, pozwalające bez problem rozpoznawać wykonywany gest. Również ilość klatek na sekundę, pozwoliła, aby dynamiczny ruch był płynny i aby go móc pomyślnie wysegmentować.
+
+Aby, zebrać jak najbardziej szeroki zakres danych, zbieranie gestów nie ograniczyło się do jednej osoby, jednakże do pięciu różnych osobach:
+\begin{itemize}
+	\item trzech kobietach 
+	\item dwóch mężczyznach
+\end{itemize}
+
+Zbieranie danych na różnych osobach pozwala na zmniejszanie m. in. wpływu:
+\begin{itemize}
+	\item długości dłoni
+	\item szerokości dłoni
+	\item charakterystycznych cech gestu dla danej osoby
+\end{itemize}
+
+Po zgromadzeniu całego materiału wideo przeszedłem to etapu to wyznaczania numerów klatek filmu na której był moment wykonanego gestu. Klatki te będę wykorzystywał w późniejszym  etapie segmentacji dłoni z wykonanym gestem.
+
+Tak zebrane danych daje ogólny pogląd na różnorodność cech danego gestu. Sprawia, że uczenie maszynowe jest skutecznie i daje oczekiwane rezultaty. Aby zapewnić prawidło rozpoznawanie należy zgromadzić sporą ilość gestów. W mojej pracy inżynierskiej wykorzystywałem zbiór danych składający się:
+\begin{itemize}
+	\item 300 próbek gestu papieru
+	\item 300 próbek gestu kamienia
+	\item 300 próbek gestu nożyc
+\end{itemize}
+
+
+
 \section{Detekcja ruchu}
+Po zebraniu danych zająłem się ich przetwarzaniem. Pierwszym krokiem było wysegmentowanie obiektów, które znajdowały się w ruchu. Aby to osiągnąć należało wygenerować maskę binarną, którą rozdzielała tło od obiektów pierwszoplanowych. Do tego wykorzystałem tzw. z ang. Background Subtraction czyli tłumacząc "odejmowanie tła".
+
+Metodę dokładną z jakiej skorzystałem była to funkcja z biblioteki OpenCV BackgroundSubtractorKNN. Moim zdaniem uważam że w przypadkach na jakich testowałem segmentację ruchu, metoda ta dawała najlepsze rezultaty w porównaniu z innymi dostępnymi w bibliotece OpenCV. 
+
+Metoda ta pozwoliła uzyskać następujące efekty:
+\begin{figure}[h]
+	\centering
+	\subfigure[Gest papieru]
+	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/szablon.png}}
+	\subfigure[Gest kamienia]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/e.png}}
+	\subfigure[Gest nożyc]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/otwarcie.png}}
+	\caption{BackgroundSubtractorKNN na gestach z gry papier, kamier, nożyce}
+\end{figure}
+
 \section{Detekcja kolorów}
+Równolegle do segmentacji obiektów w ruchu, zająłem się segmentacją obiektów o określonym kolorze. W swojej pracy dyplomowej założyłem, że każdy wykonywany gest jest wykonany w niebieskiej rękawiczce, w celu łatwiejszej segmentacji dłoni. Nie użyłem tradycyjnego koloru skóry dla osób wschodnio-europejskich ze względu na fakt, że oprócz segmentacji dłoni można było wysegmentować również pozostałe części ręki, jak również inne części ciała jak głowy czy klatka piersiowa. 
+
+Wybrałem kolor niebieski ze względu na kolor dobrze rozróżniający się od innych, na który nie wpływa aż tak znacząco moc oświetlenia, który może wpłynąć negatywnie na rozpoznawany kolor.
+
 \section{Szumy w zbiorze danych}
+Połączenie segmentacji obiektów w ruchu oraz obiektów o określonym kolorze niesie za sobą możliwy szum, który dla lepszych efektów rozpoznawania obiektów należy zminimalizować. 
+
+Segmentacja elementów obrazu w ruchu, może nieść ze sobą czum spowodowany tym, że inne obiekty, różne od naszej dłoni też mogą się przesuwać. 
 \section{Znajdowanie obiektów}
+
 \section{Dobór i ocena cech}
+Po wysegmentowaniu gestów dla uczenia maszynowego nadszedł czas, aby zgromadzony materiał opisać dobranymi cechami. Zbiór danych to wysegmentowana dłoń. Zdecydawałem się, że gesty będę opisywał w następujący sposób.
+
+Przy ocenie jakości dobranych cech w pierwszej kolejności wykorzystałem odchylenie standardowe. Dzięki czemu miałem porównanie jak dana cecha wpływa na określony gest. 
+
+Kolejnym etapie było skuteczności wybranej cechy przy rozpoznawaniu konkretnych dwóch gestów. Do tego wykorzystałem wyt	`odę...
 \section{Rozpoznawanie gestów przy pomocy klasyfikatora KNN}
 \section{Rozpoznawanie gestów przy pomocy sieci neuronowej}
 \subsection{Sieć neuronowa dla cech}

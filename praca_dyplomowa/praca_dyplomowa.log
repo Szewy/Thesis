@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.28)  12 DEC 2018 20:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.28)  20 DEC 2018 19:44
 entering extended mode
 **./praca_dyplomowa.tex
 (praca_dyplomowa.tex
@@ -647,58 +647,237 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip51
 )
+("C:\Users\Szewy\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.st
+y"
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip52
+
+For additional information on amsmath, use the `?' option.
+
+("C:\Users\Szewy\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.st
+y"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Users\Szewy\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks22
+\ex@=\dimen123
+))
+("C:\Users\Szewy\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
+"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen124
+)
+("C:\Users\Szewy\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count105
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count106
+\leftroot@=\count107
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count108
+\DOTSCASE@=\count109
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen125
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count110
+\c@MaxMatrixCols=\count111
+\dotsspace@=\muskip11
+\c@parentequation=\count112
+\dspbrk@lvl=\count113
+\tag@help=\toks23
+\row@=\count114
+\column@=\count115
+\maxfields@=\count116
+\andhelp@=\toks24
+\eqnshift@=\dimen126
+\alignsep@=\dimen127
+\tagshift@=\dimen128
+\tagwidth@=\dimen129
+\totwidth@=\dimen130
+\lineht@=\dimen131
+\@envbody=\toks25
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks26
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
 ("C:\Users\Szewy\AppData\Local\Programs\MiKTeX 2.9\tex\latex\enumitem\enumitem.
 sty"
 Package: enumitem 2018/11/30 v3.6 Customized lists
-\labelindent=\skip52
-\enit@outerparindent=\dimen123
-\enit@toks=\toks22
-\enit@inbox=\box26
-\enitdp@description=\count105
+\labelindent=\skip55
+\enit@outerparindent=\dimen132
+\enit@toks=\toks27
+\enit@inbox=\box28
+\enitdp@description=\count117
 )
 ("C:\Users\Szewy\AppData\Local\Programs\MiKTeX 2.9\tex\latex\multirow\multirow.
 sty"
 Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
-\multirow@colwidth=\skip53
-\multirow@cntb=\count106
-\multirow@dima=\skip54
-\bigstrutjot=\dimen124
+\multirow@colwidth=\skip56
+\multirow@cntb=\count118
+\multirow@dima=\skip57
+\bigstrutjot=\dimen133
 ) (prmag2017.sty
 Package `prmag2017' (ZETiIS PW Thesis) ver. 0.2 (Jan 2017)
-) (praca_dyplomowa.aux)
+) (praca_dyplomowa.aux
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:a' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:a' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:a' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:a' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:a' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:a' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:a' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:a' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:a' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:a' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:a' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:a' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+)
 \openout1 = `praca_dyplomowa.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
 
 ("C:\Users\Szewy\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mk
 ii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count107
-\scratchdimen=\dimen125
-\scratchbox=\box27
-\nofMPsegments=\count108
-\nofMParguments=\count109
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count110
-\MPscratchDim=\dimen126
-\MPnumerator=\count111
-\makeMPintoPDFobject=\count112
-\everyMPtoPDFconversion=\toks24
+\scratchcounter=\count119
+\scratchdimen=\dimen134
+\scratchbox=\box29
+\nofMPsegments=\count120
+\nofMParguments=\count121
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count122
+\MPscratchDim=\dimen135
+\MPnumerator=\count123
+\makeMPintoPDFobject=\count124
+\everyMPtoPDFconversion=\toks29
 )
 ("C:\Users\Szewy\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-
 base.sty"
@@ -715,8 +894,8 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-\AtBeginShipoutBox=\box28
-Package hyperref Info: Link coloring OFF on input line 55.
+\AtBeginShipoutBox=\box30
+Package hyperref Info: Link coloring OFF on input line 58.
 
 ("C:\Users\Szewy\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.s
 ty"
@@ -726,17 +905,17 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 estring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count113
+\c@section@level=\count125
 )
-LaTeX Info: Redefining \ref on input line 55.
-LaTeX Info: Redefining \pageref on input line 55.
-LaTeX Info: Redefining \nameref on input line 55.
+LaTeX Info: Redefining \ref on input line 58.
+LaTeX Info: Redefining \pageref on input line 58.
+LaTeX Info: Redefining \nameref on input line 58.
  (praca_dyplomowa.out) (praca_dyplomowa.out)
 \@outlinefile=\write3
 \openout3 = `praca_dyplomowa.out'.
 
-Package hyperref Info: Option `pageanchor' set `false' on input line 56.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 56.
+Package hyperref Info: Option `pageanchor' set `false' on input line 59.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 59.
 
 ("C:\Users\Szewy\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
@@ -744,63 +923,63 @@ File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 <PWHead.png, id=135, 2015.53pt x 320.19624pt>
 File: PWHead.png Graphic file (type png)
 <use PWHead.png>
-Package pdftex.def Info: PWHead.png  used on input line 56.
+Package pdftex.def Info: PWHead.png  used on input line 59.
 (pdftex.def)             Requested size: 455.24408pt x 72.31953pt.
 
-Overfull \hbox (31.10086pt too wide) in paragraph at lines 56--56
+Overfull \hbox (31.10086pt too wide) in paragraph at lines 59--59
 [] 
  []
 
 <inzhead.png, id=136, 1392.20125pt x 303.1325pt>
 File: inzhead.png Graphic file (type png)
 <use inzhead.png>
-Package pdftex.def Info: inzhead.png  used on input line 56.
+Package pdftex.def Info: inzhead.png  used on input line 59.
 (pdftex.def)             Requested size: 455.24408pt x 99.12282pt.
 
-Overfull \hbox (31.10086pt too wide) in paragraph at lines 56--56
+Overfull \hbox (31.10086pt too wide) in paragraph at lines 59--59
  [] 
  []
 
-LaTeX Font Info:    Try loading font information for OML+plm on input line 56.
+LaTeX Font Info:    Try loading font information for OML+plm on input line 59.
 ("C:\Users\Szewy\AppData\Local\Programs\MiKTeX 2.9\tex\latex\polski\omlplm.fd"
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMS+plsy on input line 56.
+LaTeX Font Info:    Try loading font information for OMS+plsy on input line 59.
 
 ("C:\Users\Szewy\AppData\Local\Programs\MiKTeX 2.9\tex\latex\polski\omsplsy.fd"
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMX+plex on input line 56.
+LaTeX Font Info:    Try loading font information for OMX+plex on input line 59.
 
  ("C:\Users\Szewy\AppData\Local\Programs\MiKTeX 2.9\tex\latex\polski\omxplex.fd
 "
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <12> on input line 56.
+(Font)              <12> on input line 59.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <8> on input line 56.
+(Font)              <8> on input line 59.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <6> on input line 56.
-LaTeX Font Info:    Try loading font information for U+msa on input line 56.
+(Font)              <6> on input line 59.
+LaTeX Font Info:    Try loading font information for U+msa on input line 59.
 
 ("C:\Users\Szewy\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 56.
+LaTeX Font Info:    Try loading font information for U+msb on input line 59.
 ("C:\Users\Szewy\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (streszczenia.tex [1
 
 {C:/Users/Szewy/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./PWHead.pn
 g (PNG copy)> <./inzhead.png (PNG copy)>]) [2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 56.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 59.
 
 ("C:\Users\Szewy\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 56.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 59.
 
 [3
 
@@ -815,7 +994,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 \openout4 = `praca_dyplomowa.toc'.
 
  [2]
-Package hyperref Info: Option `pageanchor' set `true' on input line 56.
+Package hyperref Info: Option `pageanchor' set `true' on input line 59.
 
 Rozdzia\l  1.
 [1
@@ -826,63 +1005,254 @@ Rozdzia\l  2.
 [2
 
 ]
-Overfull \hbox (2.05502pt too wide) in paragraph at lines 105--107
+Overfull \hbox (2.05502pt too wide) in paragraph at lines 108--110
 \T1/cmr/m/n/12 ele-men-tów ob-razu oraz po-ªo-»e-niem wzgl¦-dem sie-bie. W wy-n
 iku ope-ra-cji struk-
  []
 
-[3] [4] [5] [6] [7]
+[3]
+<./rys/operacje_morfologiczne/szablon.png, id=213, 250.536pt x 186.09525pt>
+File: ./rys/operacje_morfologiczne/szablon.png Graphic file (type png)
+<use ./rys/operacje_morfologiczne/szablon.png>
+Package pdftex.def Info: ./rys/operacje_morfologiczne/szablon.png  used on inpu
+t line 135.
+(pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
+<./rys/operacje_morfologiczne/e.png, id=215, 250.536pt x 186.09525pt>
+File: ./rys/operacje_morfologiczne/e.png Graphic file (type png)
+<use ./rys/operacje_morfologiczne/e.png>
+Package pdftex.def Info: ./rys/operacje_morfologiczne/e.png  used on input line
+ 137.
+(pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
+
+Underfull \hbox (badness 5667) in paragraph at lines 137--137
+[]\T1/cmr/m/n/10 (b) Ele-ment stru-tu-ralny,
+ []
+
+<./rys/operacje_morfologiczne/erozja.png, id=216, 250.536pt x 186.09525pt>
+File: ./rys/operacje_morfologiczne/erozja.png Graphic file (type png)
+<use ./rys/operacje_morfologiczne/erozja.png>
+Package pdftex.def Info: ./rys/operacje_morfologiczne/erozja.png  used on input
+ line 139.
+(pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
+[4 <./rys/operacje_morfologiczne/szablon.png> <./rys/operacje_morfologiczne/e.p
+ng> <./rys/operacje_morfologiczne/erozja.png>]
+File: ./rys/operacje_morfologiczne/szablon.png Graphic file (type png)
+<use ./rys/operacje_morfologiczne/szablon.png>
+Package pdftex.def Info: ./rys/operacje_morfologiczne/szablon.png  used on inpu
+t line 156.
+(pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
+File: ./rys/operacje_morfologiczne/e.png Graphic file (type png)
+<use ./rys/operacje_morfologiczne/e.png>
+Package pdftex.def Info: ./rys/operacje_morfologiczne/e.png  used on input line
+ 158.
+(pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
+
+Underfull \hbox (badness 5667) in paragraph at lines 158--158
+[]\T1/cmr/m/n/10 (b) Ele-ment stru-tu-ralny,
+ []
+
+<./rys/operacje_morfologiczne/dylatacja.png, id=238, 250.536pt x 186.09525pt>
+File: ./rys/operacje_morfologiczne/dylatacja.png Graphic file (type png)
+<use ./rys/operacje_morfologiczne/dylatacja.png>
+Package pdftex.def Info: ./rys/operacje_morfologiczne/dylatacja.png  used on in
+put line 160.
+(pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
+File: ./rys/operacje_morfologiczne/szablon.png Graphic file (type png)
+<use ./rys/operacje_morfologiczne/szablon.png>
+Package pdftex.def Info: ./rys/operacje_morfologiczne/szablon.png  used on inpu
+t line 176.
+(pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
+File: ./rys/operacje_morfologiczne/e.png Graphic file (type png)
+<use ./rys/operacje_morfologiczne/e.png>
+Package pdftex.def Info: ./rys/operacje_morfologiczne/e.png  used on input line
+ 178.
+(pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
+
+Underfull \hbox (badness 5667) in paragraph at lines 178--178
+[]\T1/cmr/m/n/10 (b) Ele-ment stru-tu-ralny,
+ []
+
+<./rys/operacje_morfologiczne/otwarcie.png, id=239, 250.536pt x 186.09525pt>
+File: ./rys/operacje_morfologiczne/otwarcie.png Graphic file (type png)
+<use ./rys/operacje_morfologiczne/otwarcie.png>
+Package pdftex.def Info: ./rys/operacje_morfologiczne/otwarcie.png  used on inp
+ut line 180.
+(pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5 <./rys/operacje_morfologiczne/dylatacja.png>]
+File: ./rys/operacje_morfologiczne/szablon.png Graphic file (type png)
+<use ./rys/operacje_morfologiczne/szablon.png>
+Package pdftex.def Info: ./rys/operacje_morfologiczne/szablon.png  used on inpu
+t line 196.
+(pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
+File: ./rys/operacje_morfologiczne/e.png Graphic file (type png)
+<use ./rys/operacje_morfologiczne/e.png>
+Package pdftex.def Info: ./rys/operacje_morfologiczne/e.png  used on input line
+ 198.
+(pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
+
+Underfull \hbox (badness 5667) in paragraph at lines 198--198
+[]\T1/cmr/m/n/10 (b) Ele-ment stru-tu-ralny,
+ []
+
+<./rys/operacje_morfologiczne/zamkniecie.png, id=257, 250.536pt x 186.09525pt>
+File: ./rys/operacje_morfologiczne/zamkniecie.png Graphic file (type png)
+<use ./rys/operacje_morfologiczne/zamkniecie.png>
+Package pdftex.def Info: ./rys/operacje_morfologiczne/zamkniecie.png  used on i
+nput line 200.
+(pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
+[6 <./rys/operacje_morfologiczne/otwarcie.png> <./rys/operacje_morfologiczne/za
+mkniecie.png>]
+<./rys/bs/tlo.jpg, id=276, 963.6pt x 542.025pt>
+File: ./rys/bs/tlo.jpg Graphic file (type jpg)
+<use ./rys/bs/tlo.jpg>
+Package pdftex.def Info: ./rys/bs/tlo.jpg  used on input line 210.
+(pdftex.def)             Requested size: 117.00119pt x 65.80936pt.
+<./rys/bs/img.jpg, id=277, 963.6pt x 542.025pt>
+File: ./rys/bs/img.jpg Graphic file (type jpg)
+<use ./rys/bs/img.jpg>
+Package pdftex.def Info: ./rys/bs/img.jpg  used on input line 212.
+(pdftex.def)             Requested size: 117.00119pt x 65.80936pt.
+<./rys/bs/bin.jpg, id=278, 963.6pt x 542.025pt>
+File: ./rys/bs/bin.jpg Graphic file (type jpg)
+<use ./rys/bs/bin.jpg>
+Package pdftex.def Info: ./rys/bs/bin.jpg  used on input line 214.
+(pdftex.def)             Requested size: 117.00119pt x 65.80936pt.
+
+Underfull \hbox (badness 1142) in paragraph at lines 215--215
+[]\T1/cmr/m/n/12 Rysunek 2.5: []Przykªadowe me-tody back-gro-und sub-trac-tor z
+ bi-blio-teki
+ []
+
+<./rys/bs/mog.png, id=279, 1284.8pt x 722.7pt>
+File: ./rys/bs/mog.png Graphic file (type png)
+<use ./rys/bs/mog.png>
+Package pdftex.def Info: ./rys/bs/mog.png  used on input line 228.
+(pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 228--228
+[]\T1/cmr/m/n/10 (a) Back-gro-und-Sub-trac-
+ []
+
+<./rys/bs/mog2.png, id=280, 1284.8pt x 722.7pt>
+File: ./rys/bs/mog2.png Graphic file (type png)
+<use ./rys/bs/mog2.png>
+Package pdftex.def Info: ./rys/bs/mog2.png  used on input line 230.
+(pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 230--230
+[]\T1/cmr/m/n/10 (b) Back-gro-und-Sub-trac-
+ []
+
+<./rys/bs/gmg.png, id=281, 1284.8pt x 722.7pt>
+File: ./rys/bs/gmg.png Graphic file (type png)
+<use ./rys/bs/gmg.png>
+Package pdftex.def Info: ./rys/bs/gmg.png  used on input line 232.
+(pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--232
+[]\T1/cmr/m/n/10 (c) Back-gro-und-Sub-trac-
+ []
+
+
+Underfull \hbox (badness 1142) in paragraph at lines 233--233
+[]\T1/cmr/m/n/12 Rysunek 2.6: []Przykªadowe me-tody back-gro-und sub-trac-tor z
+ bi-blio-teki
+ []
+
+[7 <./rys/bs/tlo.jpg> <./rys/bs/img.jpg> <./rys/bs/bin.jpg> <./rys/bs/mog.png (
+PNG copy)> <./rys/bs/mog2.png (PNG copy)> <./rys/bs/gmg.png (PNG copy)>]
+[8]
 Rozdzia\l  3.
-[8
+[9
 
-] [9] [10] [11]
+] [10] [11] [12]
 Rozdzia\l  4.
-[12
-
-]
-Rozdzia\l  5.
 [13
 
 ]
-Rozdzia\l  6.
+Rozdzia\l  5.
 [14
 
 ]
+Overfull \hbox (7.01614pt too wide) in paragraph at lines 378--379
+[]\T1/cmr/m/n/12 Metod¦ do-kªadn¡ z ja-kiej sko-rzy-sta-ªem byªa to funk-cja z 
+bi-blio-teki OpenCV
+ []
 
-LaTeX Warning: Empty `thebibliography' environment on input line 305.
+File: ./rys/operacje_morfologiczne/szablon.png Graphic file (type png)
+<use ./rys/operacje_morfologiczne/szablon.png>
+Package pdftex.def Info: ./rys/operacje_morfologiczne/szablon.png  used on inpu
+t line 384.
+(pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
+File: ./rys/operacje_morfologiczne/e.png Graphic file (type png)
+<use ./rys/operacje_morfologiczne/e.png>
+Package pdftex.def Info: ./rys/operacje_morfologiczne/e.png  used on input line
+ 386.
+(pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
+File: ./rys/operacje_morfologiczne/otwarcie.png Graphic file (type png)
+<use ./rys/operacje_morfologiczne/otwarcie.png>
+Package pdftex.def Info: ./rys/operacje_morfologiczne/otwarcie.png  used on inp
+ut line 388.
+(pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 308.
-[15
+Overfull \hbox (4.08353pt too wide) in paragraph at lines 393--394
+\T1/cmr/m/n/12 wschodnio-europejskich ze wzgl¦du na fakt, »e oprócz seg-men-ta-
+cji dªoni mo»na
+ []
+
+[15]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16]
+[17]
+Rozdzia\l  6.
+[18
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 308.
+
+LaTeX Warning: Empty `thebibliography' environment on input line 426.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 429.
+[19
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 429.
  (praca_dyplomowa.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 308.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 308.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 429.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 429.
 Package rerunfilecheck Info: File `praca_dyplomowa.out' has not changed.
-(rerunfilecheck)             Checksum: 7167CAFA32208F42959ACFADE099AC1D;2286.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 308.
+(rerunfilecheck)             Checksum: EFA38B65EA7FBAA1B0107303D8933629;2258.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 429.
  ) 
 Here is how much of TeX's memory you used:
- 7312 strings out of 493305
- 107035 string characters out of 3129801
- 196378 words of memory out of 3000000
- 10640 multiletter control sequences out of 15000+200000
- 23963 words of font info for 46 fonts, out of 3000000 for 9000
+ 7997 strings out of 493305
+ 116001 string characters out of 3129801
+ 207109 words of memory out of 3000000
+ 11258 multiletter control sequences out of 15000+200000
+ 24726 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,7n,28p,705b,460s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 28i,7n,28p,705b,465s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Szewy\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
-ecbx2488.pk> <C:\Users\Szewy\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
-ec\dpi600\ecbx1200.pk> <C:\Users\Szewy\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
-\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Szewy\AppData\Local\MiKTeX\2.9\fonts
-\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Szewy\AppData\Local\MiKTeX
-\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk>{C:/Users/Szewy/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/Szewy/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Szewy
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on praca_dyplomowa.pdf (21 pages, 431066 bytes).
+ecrm1000.pk> <C:\Users\Szewy\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecbx2488.pk> <C:\Users\Szewy\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
+\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Szewy\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Szewy\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Szewy\AppData\Lo
+cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk>{C:/Users/Szewy/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/Szewy/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/U
+sers/Szewy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pf
+b>
+Output written on praca_dyplomowa.pdf (25 pages, 882473 bytes).
 PDF statistics:
- 613 PDF objects out of 1000 (max. 8388607)
- 79 named destinations out of 1000 (max. 500000)
- 275 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 728 PDF objects out of 1000 (max. 8388607)
+ 114 named destinations out of 1000 (max. 500000)
+ 335 words of extra memory for PDF output out of 10000 (max. 10000000)
 

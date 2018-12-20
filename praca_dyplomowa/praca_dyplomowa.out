@@ -3,10 +3,10 @@
 \BOOKMARK [1][-]{section.1.2}{Cel pracy}{chapter.1}% 3
 \BOOKMARK [0][-]{chapter.2}{Przetwarzanie obraz\363w}{}% 4
 \BOOKMARK [1][-]{section.2.1}{Cyfrowe przetwarzanie obraz\363w binarnych}{chapter.2}% 5
-\BOOKMARK [2][-]{subsection.2.1.1}{OpenCV}{section.2.1}% 6
-\BOOKMARK [2][-]{subsection.2.1.2}{Operacje morfologiczne}{section.2.1}% 7
-\BOOKMARK [2][-]{subsection.2.1.3}{Filtry ruchu}{section.2.1}% 8
-\BOOKMARK [2][-]{subsection.2.1.4}{Detekcja kolor\363w}{section.2.1}% 9
+\BOOKMARK [1][-]{section.2.2}{OpenCV}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.3}{Operacje morfologiczne}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.4}{Filtry ruchu}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.5}{Detekcja kolor\363w}{chapter.2}% 9
 \BOOKMARK [0][-]{chapter.3}{Sztuczna inteligencja}{}% 10
 \BOOKMARK [1][-]{section.3.1}{Sztuczna inteligencja, uczenie maszynowe, g\233ebokie uczenie}{chapter.3}% 11
 \BOOKMARK [1][-]{section.3.2}{Sieci neuronowe}{chapter.3}% 12
