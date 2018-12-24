@@ -11,23 +11,22 @@
 \BOOKMARK [1][-]{section.3.1}{Sztuczna inteligencja, uczenie maszynowe, g\233ebokie uczenie}{chapter.3}% 11
 \BOOKMARK [1][-]{section.3.2}{Sieci neuronowe}{chapter.3}% 12
 \BOOKMARK [2][-]{subsection.3.2.1}{Uczenie sieci neuronowych}{section.3.2}% 13
-\BOOKMARK [2][-]{subsection.3.2.2}{Wykorzystanie sieci neuronowych}{section.3.2}% 14
-\BOOKMARK [1][-]{section.3.3}{Klasyfikatory}{chapter.3}% 15
-\BOOKMARK [2][-]{subsection.3.3.1}{Klasyfikator KNN}{section.3.3}% 16
-\BOOKMARK [2][-]{subsection.3.3.2}{Dob\363r i ocena cech}{section.3.3}% 17
-\BOOKMARK [1][-]{section.3.4}{Python}{chapter.3}% 18
-\BOOKMARK [1][-]{section.3.5}{TensorFlow}{chapter.3}% 19
-\BOOKMARK [1][-]{section.3.6}{Keras}{chapter.3}% 20
-\BOOKMARK [0][-]{chapter.4}{Gra papier, kamien, nozyce}{}% 21
-\BOOKMARK [0][-]{chapter.5}{Wykonana praca}{}% 22
-\BOOKMARK [1][-]{section.5.1}{Aktywizacja danych}{chapter.5}% 23
-\BOOKMARK [1][-]{section.5.2}{Detekcja ruchu}{chapter.5}% 24
-\BOOKMARK [1][-]{section.5.3}{Detekcja kolor\363w}{chapter.5}% 25
-\BOOKMARK [1][-]{section.5.4}{Szumy w zbiorze danych}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.5}{Znajdowanie obiekt\363w}{chapter.5}% 27
-\BOOKMARK [1][-]{section.5.6}{Dob\363r i ocena cech}{chapter.5}% 28
-\BOOKMARK [1][-]{section.5.7}{Rozpoznawanie gest\363w przy pomocy klasyfikatora KNN}{chapter.5}% 29
-\BOOKMARK [1][-]{section.5.8}{Rozpoznawanie gest\363w przy pomocy sieci neuronowej}{chapter.5}% 30
-\BOOKMARK [2][-]{subsection.5.8.1}{Siec neuronowa dla cech}{section.5.8}% 31
-\BOOKMARK [2][-]{subsection.5.8.2}{Siec neuronowa obraz\363w binarnych}{section.5.8}% 32
-\BOOKMARK [0][-]{chapter.6}{Podsumowanie}{}% 33
+\BOOKMARK [1][-]{section.3.3}{Klasyfikatory}{chapter.3}% 14
+\BOOKMARK [2][-]{subsection.3.3.1}{Klasyfikator KNN}{section.3.3}% 15
+\BOOKMARK [2][-]{subsection.3.3.2}{Dob\363r i ocena cech}{section.3.3}% 16
+\BOOKMARK [1][-]{section.3.4}{Python}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.5}{TensorFlow}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.6}{Keras}{chapter.3}% 19
+\BOOKMARK [0][-]{chapter.4}{Gra papier, kamien, nozyce}{}% 20
+\BOOKMARK [0][-]{chapter.5}{Rozpoznawanie gest\363w w grze papier, kamien, nozyce}{}% 21
+\BOOKMARK [1][-]{section.5.1}{Aktywizacja danych}{chapter.5}% 22
+\BOOKMARK [1][-]{section.5.2}{Detekcja ruchu}{chapter.5}% 23
+\BOOKMARK [1][-]{section.5.3}{Detekcja kolor\363w}{chapter.5}% 24
+\BOOKMARK [1][-]{section.5.4}{Szumy w zbiorze danych}{chapter.5}% 25
+\BOOKMARK [1][-]{section.5.5}{Znajdowanie obiekt\363w}{chapter.5}% 26
+\BOOKMARK [1][-]{section.5.6}{Dob\363r i ocena cech}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.7}{Rozpoznawanie gest\363w przy pomocy klasyfikatora KNN}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.8}{Rozpoznawanie gest\363w przy pomocy sieci neuronowej}{chapter.5}% 29
+\BOOKMARK [2][-]{subsection.5.8.1}{Siec neuronowa dla cech}{section.5.8}% 30
+\BOOKMARK [2][-]{subsection.5.8.2}{Siec neuronowa obraz\363w binarnych}{section.5.8}% 31
+\BOOKMARK [0][-]{chapter.6}{Podsumowanie}{}% 32

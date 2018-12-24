@@ -15,7 +15,7 @@
 \usepackage{indentfirst}
 \usepackage[pdftex]{hyperref}
 \usepackage{amsmath}
-
+\usepackage{float}
 \usepackage{subfigure}
 
 \usepackage{enumitem}% http://ctan.org/pkg/enumitem
@@ -63,7 +63,7 @@
 \section{Wprowadzenie}
 Gesty są jednym z najważniejszych elementów komunikacja pomiędzy ludźmi. Niewerbowana mowa może przekazać zdecydowanie więcej informacji niż tylko słowa wypowiedziane przez nadawcę. Gesty mogę, również zastąpić słowa i być wykorzystywane jako zamiennik na słyszalne słowa. Przykładem tego jest język migowy, który pozwala na wzajemną komunikację ludzi głuchych . Oprócz samej mowy gesty, mają też inne zastosowania. Przykładem takim może być gra papier, kamień, nożyce. W której każdy z graczy pokazuje jeden z trzech dostępnym gestów. I w zależności od kombinacji gestów pokazanych przez graczy określany jest zwycięzca.
 
-Klasyfikacja gestów jest powszechnym problem przetwarzania obrazów. Jest to temat obszerny i coraz lepiej zbadany problem nauki. Klasyfikacja gestów ma szerokie zastosowanie. Jedną zalet rozpoznawania gestów jest możliwość sterowania naszym smartfonem za pomocą ruchu rąk. Po wykonaniu gestu a następnie po rozpoznaniu go przez  oprogramowanie telefonu wykonywana jest określona akcja. Innym wykorzystaniem klasyfikacji gestów jest sterowanie gier, a najlepszym jego przykładem jest konsola Nintendo Wii.
+Klasyfikacja gestów jest powszechnym problem przetwarzania obrazów. Jest to temat obszerny i coraz lepiej zbadanym problem nauki. Klasyfikacja gestów ma szerokie zastosowanie. Jedną zalet rozpoznawania gestów jest możliwość sterowania naszym smartfonem za pomocą ruchu rąk. Po wykonaniu gestu a następnie po rozpoznaniu go przez  oprogramowanie telefonu wykonywana jest określona akcja. Innym wykorzystaniem klasyfikacji gestów jest sterowanie gier, podając jako przykład konsolę Nintendo Wii.
 
 \section{Cel pracy}
 W swojej pracy dyplomowej będę chciał przedstawić sposób podejścia do problemu klasyfikacji gestów, a następnie zaimplementować działające rozwiązanie i wykorzystać go w praktyce, na przykładzie gry papier, kamień, nożyce. Stworzona gra pozwoli na automatyczne rozpoznawanie gestów, liczenie punktów i byciem arbitrem w grze. Wszystkim tym zajmie się specjalnie napisany system, który będę chciał zaprezentować w tej pracy dyplomowej.
@@ -71,6 +71,13 @@ W swojej pracy dyplomowej będę chciał przedstawić sposób podejścia do prob
 \chapter{Przetwarzanie obrazów}
 \section{Cyfrowe przetwarzanie obrazów binarnych}
 Cyfrowe przetwarzanie obrazów binarnych jest to dziedzina przetwarzania obrazów cyfrowych zajmująca się algorytmami obróbki obrazów binarnych. 
+
+\begin{figure}[H]	
+	\centering
+	\includegraphics[width=0.7\textwidth]{\ImgPath/rys/bin.png}
+	
+	\caption{  \textbf{Przykładowy obraz binarny}}
+\end{figure}
 
 Obrazy binarne składają się z pikseli, które mogą przyjmować jedynie dwie wartości. Piksele takie możmy oznaczać różnymi symboli, np. 0/1, false/true czy też (0,0,0)/(255,255,255). Podczas interpretacji obrazu jedne z pikseli można traktować jako tło, inne zaś jako część obiektu. Dzięki czemu jesteśmy wstanie rozróżnić interesującą nas część obrazu od pozostałej części. 
 
@@ -112,6 +119,17 @@ Operacje morfologiczne modyfikują wartość pikseli biorąc pod uwagę wartośc
 
 Najczęściej stosowanymi elementami strukturalnymi są kwadrat o boku o nieparzystej liczbie pikseli, które wszystkie przyjmują wartość równą 1 oraz element strukturalny, który aproksymuje swoim kształtem koło.
 
+\begin{figure}[H]
+	\centering
+	\subfigure[]
+	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/elementy_strukturalne/1.png}}
+	\subfigure[]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/elementy_strukturalne/2.png}}
+	\subfigure[]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/elementy_strukturalne/3.png}}
+	\caption{Przykładowe elementy strukturalne, gdzie punkt kolorze czerwonym jest punktem centralnym}
+\end{figure}
+
 \paragraph{Etapy przekształceń morfologicznych:}
 \begin{enumerate}
 	\item Szablon strukturalny jest przesuwany po całym obiekcie, tak aby punkt centralny szablonu był analizowanym pikselem
@@ -129,7 +147,7 @@ Jest to operacja zwężania i zmniejszania poprzez usunięcie pikseli granicznyc
 	\item  Jeżeli przynajmniej jeden piksel z otoczenia objętego przez szablon strukturalny ma wartość równą 0, to punkt centralny przyjmuje wartość 0. Jeżeli zaś taki przypadek nie wystąpił piksel centralny zachowuje swoją poprzednią wartość
 \end{enumerate}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\subfigure[Obraz początkowy]
 		{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/szablon.png}}
@@ -150,7 +168,7 @@ Jest to operacja rozszerzania i zwiększania. Pozwala na wypełnienie dziur bina
 	\item Jeżeli przynajmniej jeden piksel z otoczenia objętego przez szablon strukturalny ma wartość równą 1, to punkt centralny przyjmuje również wartość 1. Jeżeli zaś wszystkie piksele z otoczenia piksela centralnego określonego przez element strukturalny mają wartość 0 to wówczas piksel centralny przyjmuje wartość 0.
 \end{enumerate}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\subfigure[Obraz początkowy]
 	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/szablon.png}}
@@ -170,7 +188,7 @@ Operacja otwarcia morfologicznego jest definiowana przez połączenie metod eroz
 	\item Wykonywana jest operacja dylatacji na obraz, który jest wynikiem erozji z punktu 1.
 \end{enumerate}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\subfigure[Obraz początkowy]
 	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/szablon.png}}
@@ -190,7 +208,7 @@ Operacja zamknięcia łączy w sobie połączenie dwóch metod dylatacji oraz er
 	\item Wykonywana jest operacja erozji na obraz, który jest wynikiem erozji z punktu 1.
 \end{enumerate}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\subfigure[Obraz początkowy]
 	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/szablon.png}}
@@ -204,7 +222,7 @@ Operacja zamknięcia łączy w sobie połączenie dwóch metod dylatacji oraz er
 \section{Filtry ruchu}
 Filtry ruchu są wykorzystywane do generowania maski binarnej zawierającej poruszające się obiekty. Tak zwany z ang. background subtraction wykorzystuje różnicę z dwóch różnych klatek z pliku wideo. Odejmowanie dwóch klatek pozwala nam prześledzić, które z części obrazów zmieniły się. Różnica dwóch pikseli da nam wartość niezerową, tylko wtedy jeżeli z analizowanych klatkach wartość odpowiadających pikseli różni się, co interpretujemy, że ta część obrazu poruszyła się. 
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\subfigure[Tło]
 	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/tlo.jpg}}
@@ -222,7 +240,7 @@ OpenCV w swojej bibliotece posiada wiele gotowych rozwiązać do wykrywania obie
 	\item BackgroundSubtractorGMG
 \end{itemize} 
 	
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\subfigure[BackgroundSubtractorMOG]
 	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/mog.png}}
@@ -236,13 +254,20 @@ OpenCV w swojej bibliotece posiada wiele gotowych rozwiązać do wykrywania obie
 W celu polepszenia efektów, należy pozbyć się niedokładnej segmentacji oraz możliwych szumów,  które mogą wystąpić podczas analizy. Są one spowodowane różnymi odbiciami, cieniami czy innymi niezauważalnymi ruchami. Wówczas należy wykorzystać przedstawione wcześniej operacje morfologiczne, które poprawią nam wykonaną detekcję.
 
 \section{Detekcja kolorów}
-Celem detekcji kolorów jest wygenerowanie obrazu binarnego, w którym piksele binarne  o wartości rgb(255,255,255) oznaczają piksele, które na zadanym obrazie są w określonym przedziale kolorów. Jeżeli dany piksel nie należy do zadanego przedziału, wówczas obraz binarny w tym punkcie otrzymuje wartość rgb(0,0,0). Detekcja taka pozwala na wyłuskania tylko obiektów o określonym koloru.
+Celem detekcji kolorów jest wygenerowanie obrazu binarnego, w którym piksele binarne  o wartości prawdy oznaczają piksele, które na zadanym obrazie są w określonym przedziale kolorów. Jeżeli dany piksel nie należy do określonego  przedziału, wówczas obraz binarny w tym punkcie otrzymuje wartość fałszu. Detekcja taka pozwala na wyłuskania tylko obiektów o określonym koloru.
 
-Detekcja jest bardzo wrażliwa na różnego rodzaju szumy. Najczęstszym powodem występowanie jest zmienne oświetlenie. Obiekt przy różnym świetle możemy odbierać kolorystycznie całkowicie inaczej. W przypaku kiedy analizujemy dynamiczny ruch, wówczas dynamika również może wpływać na kolorystykę danego obiektu. Te wszystkie czynniki, sprawiają, że detekcja określonego koloru nie jest zadaniem takim prostym. 
+Detekcja jest bardzo wrażliwa na różnego rodzaju szumy. Częstymi powodem występowanie ich jest zmienne oświetlenie. Obiekt przy różnym świetle możemy odbierać kolorystycznie całkowicie inaczej. W przypadku, kiedy analizujemy dynamiczny ruch, wówczas dynamika również może wpływać na kolorystykę danego obiektu. Te wszystkie czynniki, sprawiają, że detekcja określonego koloru nie jest zadaniem takim prostym. 
 
-Aby polepszyć detekcję obiektów o określonym kolorze, należy analogicznie, tak jak w przypadku detekcji ruchu, wykorzystać odpowiednie operacje morfologiczne. 
+Aby polepszyć efekt końcowy detekcji obiektów o określonym kolorze, należy analogicznie jak w przypadku detekcji ruchu, wykorzystać odpowiednie operacje morfologiczne. 
 
 Przy detekcji kolorów tradycyjny model rgb (red, green, blue), najczęściej nie jest wystarczająco dobrym modelem. W zadaniach takich zdecydowanie lepiej sprawuje się model HSV.
+
+\begin{figure}[H]	
+	\centering
+	\includegraphics[width=0.4\textwidth]{\ImgPath/rys/hsv.png}
+	
+	\caption{  \textbf{Model HSV}}
+\end{figure}
 
 HSV (ang. Hue Saturation Value) jest to model opisu przestrzeni barw, wprowadzony przez Alveya Raya Smitha w 1978 roku.
 
@@ -252,7 +277,6 @@ Model składa się z następujących części: barwa, nasycenie, wartość. Geom
 \section{Sztuczna inteligencja, uczenie maszynowe, głębokie uczenie}
 \section{Sieci neuronowe}
 \subsection{Uczenie sieci neuronowych}
-\subsection{Wykorzystanie sieci neuronowych}
 
 \section{Klasyfikatory}
 Klasyfikacja to wyznaczanie klasy decyzyjnej do której należy nowy, nieznany dotąd obiekt. Metody klasyfikacji możemy podzielić na dwie kategorie. Pierwsza z nich jest  klasyfikacją nadzorowaną, druga zaś to klasyfikacja nienadzorowana. 
@@ -315,7 +339,7 @@ Otwartoźródłowa biblioteka programistyczna napisana w języku Python wydana w
 Jej głównym przeznaczeniem jest to, aby w jak najprostszy i  jak najszybszy sposób umożliwić pracę w głębokich sieciach neuronowych. Co więcej, biblioteka została zaprojektowana w sposób przyjemny do użytkowania, skupiona na modularności oraz rozszerzalności. Zaś od 2017 roku TensorFlow wspiera w swojej bibliotece Kerasa. Dzięki czemu Keras jest wysokopoziomową warstwą tworzenia modelów sieci neuronowych i jej uczenia.
 
 \chapter{Gra papier, kamień, nożyce}
-Jest to klasyczna gra towarzyska, w tradycyjnym wariancie przeznaczona dla dwóch graczy. W każdej rundzie każdy z graczy pokazuje gest przez siebie wybrany z trzech dostępnych. Każda z rund odbywa się na ustalony wcześniej sygnał, a pokazywane gesty powinny być jak najbardziej synchronizowane. Gra kończy się wtedy, jeżeli jeden z graczy osiągnie określoną wcześniej ilość zwycięstw.
+Jest to klasyczna gra towarzyska, w tradycyjnym wariancie przeznaczona dla dwóch graczy. W każdej rundzie każdy z graczy pokazuje gest przez siebie wybrany z trzech dostępnych. Wszystkie rundy odbywają się na ustalony wcześniej sygnał, a pokazywane gesty powinny być jak najbardziej zsynchronizowane. Gra kończy się wtedy, jeżeli jeden z graczy osiągnie określoną wcześniej ilość zwycięstw.
 
 
 \paragraph{Trzy gesty dozwolone w grze:}
@@ -324,7 +348,18 @@ Jest to klasyczna gra towarzyska, w tradycyjnym wariancie przeznaczona dla dwóc
 	\item Kamień
 	\item Nożyce
 \end{itemize} 
-\mbox{} \\
+
+\begin{figure}[H]
+	\centering
+	\subfigure[Gest papieru]
+	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/gesty_gry/papier.png}}
+	\subfigure[Gest kamienia]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/gesty_gry/kamien.png}}
+	\subfigure[Gest nożyc]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/gesty_gry/nozyce.png}}
+	\caption{BackgroundSubtractorKNN na gestach z gry papier, kamier, nożyce}
+\end{figure}
+
 Zwycięzca określany jest w zależności od kombinacji gestów pokazanych przez graczy. Jeżeli oba gracze pokazali ten sam gest, wówczas następuje remis. 
 
 \paragraph{W przypadku kombinacji:}
@@ -334,36 +369,45 @@ Zwycięzca określany jest w zależności od kombinacji gestów pokazanych przez
 \item kamień-nożyce - zwycięzcą zostaje gracz, który pokazał gest kamienia
 \end{itemize} 
 \mbox{} \\	
-Zachowując takie zasady, każdy z gestów ma takie samo prawdopodobieństwo, aby wygrać. W grze liczy się w dużej mierze szczęście, ale także umiejętność przewidywania gestów przeciwnika.
+Zachowując takie zasady, każdy z gestów ma takie samo prawdopodobieństwo zwycięstwa. W grze liczy się w dużej mierze szczęście, ale także umiejętność przewidywania gestów przeciwnika.
 
-\chapter{Wykonana praca}
+\chapter{Rozpoznawanie gestów w grze papier, kamień, nożyce}
 \section{Aktywizacja danych}
-Pierwszym moim etapem pracy była aktywizacja danych potrzebnych do uczenia maszynowego. Zbieranie danych polegało na nagrywaniu plików wideo na których dana osoba wykonywała określony gest. W swojej pracy dyplomowej zakładam, że każdy wykonywany gest, jest wykonany w niebieskiej rękawiczce. Takie założenie będę zakładał w całej swojej pracy inżynierskiej.
+Pierwszym etapem mojej pracy była aktywizacja danych potrzebnych do uczenia maszynowego. Zbieranie danych polegało na nagrywaniu plików wideo na których dana osoba wykonywała określony gest. W swojej pracy dyplomowej zakładam, że każdy wykonywany gest, jest wykonany w niebieskiej rękawiczce. Takie założenie będę zakładał w całej swojej pracy inżynierskiej.
+\begin{figure}[H]	
+	\centering
+	\includegraphics[width=0.4\textwidth]{\ImgPath/rys/rekawiczki.jpg}
+	
+	\caption{  Rękawiczki wykorzystywane w pracy inżynierskiej}
+\end{figure}
 
-Do nagrywania plików używałem dwóch kamer dedykowanych w laptopach:
+\paragraph{Do nagrywania plików używałem dwóch kamer dedykowanych w laptopach:}
 \begin{itemize}
 	\item USB2.0 UVC HD Webcam
 	\item HD Webcam
 \end{itemize}
+\mbox{} \\
+\noindent
+Obie kamery pozwoliły na zadowalające efekty zbierania danych. Jakość zdjęć przy dostatecznie dobrym oświetleniu była bardzo zadowalające, pozwalające bez problem rozpoznawać wykonywany gest. Również ilość klatek na sekundę, pozwoliła, aby dynamiczny ruch był płynny i móc go pomyślnie wysegmentować.
 
-Obie kamery pozwoliły na zadowalające efekty zbierania danych. Jakość zdjęć przy dostatecznie dobrym oświetleniu była bardzo zadowalające, pozwalające bez problem rozpoznawać wykonywany gest. Również ilość klatek na sekundę, pozwoliła, aby dynamiczny ruch był płynny i aby go móc pomyślnie wysegmentować.
-
-Aby, zebrać jak najbardziej szeroki zakres danych, zbieranie gestów nie ograniczyło się do jednej osoby, jednakże do pięciu różnych osobach:
+W celu zebrania jak najszerszego zakres danych, zbieranie gestów nie ograniczyło się do jednej osoby, jednakże do pięciu różnych osób:
 \begin{itemize}
-	\item trzech kobietach 
-	\item dwóch mężczyznach
+	\item trzech kobiet
+	\item dwóch mężczyzn
 \end{itemize}
-
-Zbieranie danych na różnych osobach pozwala na zmniejszanie m. in. wpływu:
+\mbox{} \\
+Zbieranie danych na różnych osobach pozwala na zmniejszani wpływu charakterystycznych cech dla danej osoby:
 \begin{itemize}
 	\item długości dłoni
 	\item szerokości dłoni
-	\item charakterystycznych cech gestu dla danej osoby
+	\item ułożenia palców
 \end{itemize}
+\mbox{} \\
+Po zgromadzeniu całego materiału wideo przeszedłem do etapu wyznaczania numerów klatek filmu na których był moment wykonanego gestu. Klatki te będę wykorzystywał w późniejszym  etapie segmentacji dłoni z wykonanym gestem.
 
-Po zgromadzeniu całego materiału wideo przeszedłem to etapu to wyznaczania numerów klatek filmu na której był moment wykonanego gestu. Klatki te będę wykorzystywał w późniejszym  etapie segmentacji dłoni z wykonanym gestem.
+Tak zebrane danych daje ogólny pogląd na różnorodność cech danego gestu. Sprawia, że uczenie maszynowe jest skuteczne i daje oczekiwane rezultaty. Aby zapewnić prawidłowe rozpoznawanie, należy zgromadzić sporą ilość gestów. 
 
-Tak zebrane danych daje ogólny pogląd na różnorodność cech danego gestu. Sprawia, że uczenie maszynowe jest skutecznie i daje oczekiwane rezultaty. Aby zapewnić prawidło rozpoznawanie należy zgromadzić sporą ilość gestów. W mojej pracy inżynierskiej wykorzystywałem zbiór danych składający się:
+\paragraph{W mojej pracy inżynierskiej wykorzystywałem zbiór danych składający się z:}
 \begin{itemize}
 	\item 300 próbek gestu papieru
 	\item 300 próbek gestu kamienia
@@ -373,12 +417,15 @@ Tak zebrane danych daje ogólny pogląd na różnorodność cech danego gestu. S
 
 
 \section{Detekcja ruchu}
-Po zebraniu danych zająłem się ich przetwarzaniem. Pierwszym krokiem było wysegmentowanie obiektów, które znajdowały się w ruchu. Aby to osiągnąć należało wygenerować maskę binarną, którą rozdzielała tło od obiektów pierwszoplanowych. Do tego wykorzystałem tzw. z ang. Background Subtraction czyli tłumacząc "odejmowanie tła".
+Po zebraniu danych zająłem się ich przetwarzaniem. Pierwszym krokiem było wysegmentowanie obiektów, które znajdowały się w ruchu. Aby to osiągnąć należało wygenerować maskę binarną, którą rozdzielała tło od obiektów pierwszoplanowych. Do tego wykorzystałem tzw. background subtraction czyli tłumacząc z angielskiego ,,odejmowanie tła''.
 
 Metodę dokładną z jakiej skorzystałem była to funkcja z biblioteki OpenCV BackgroundSubtractorKNN. Moim zdaniem uważam że w przypadkach na jakich testowałem segmentację ruchu, metoda ta dawała najlepsze rezultaty w porównaniu z innymi dostępnymi w bibliotece OpenCV. 
 
 Metoda ta pozwoliła uzyskać następujące efekty:
-\begin{figure}[h]
+
+
+Można zauważyć, że wykonywany ruch dłonią jest bardzo widoczny, jednakże dodatkowa zawarta jest duża ilość szumy, który w późniejszym czasie należy się pozbyć.
+\begin{figure}[H]
 	\centering
 	\subfigure[Gest papieru]
 	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/szablon.png}}
@@ -390,7 +437,7 @@ Metoda ta pozwoliła uzyskać następujące efekty:
 \end{figure}
 
 \section{Detekcja kolorów}
-Równolegle do segmentacji obiektów w ruchu, zająłem się segmentacją obiektów o określonym kolorze. W swojej pracy dyplomowej założyłem, że każdy wykonywany gest jest wykonany w niebieskiej rękawiczce, w celu łatwiejszej segmentacji dłoni. Nie użyłem tradycyjnego koloru skóry dla osób wschodnio-europejskich ze względu na fakt, że oprócz segmentacji dłoni można było wysegmentować również pozostałe części ręki, jak również inne części ciała jak głowy czy klatka piersiowa. 
+Równolegle do segmentacji obiektów w ruchu, zająłem się segmentacją obiektów o określonym kolorze. W swojej pracy dyplomowej założyłem, że każdy wykonywany gest jest pokazywany w niebieskiej rękawiczce, w celu łatwiejszej segmentacji dłoni. Nie użyłem tradycyjnego koloru skóry dla osób wschodnio-europejskich ze względu na fakt, że oprócz segmentacji dłoni można było wysegmentować również pozostałe części ręki, jak również inne części ciała jak głowy czy klatka piersiowa. A wszystko to mogło spowodować mniej precyzyjne rozpoznanie gestu.
 
 Wybrałem kolor niebieski ze względu na kolor dobrze rozróżniający się od innych, na który nie wpływa aż tak znacząco moc oświetlenia, który może wpłynąć negatywnie na rozpoznawany kolor.
 
@@ -401,12 +448,17 @@ Segmentacja elementów obrazu w ruchu, może nieść ze sobą czum spowodowany t
 \section{Znajdowanie obiektów}
 
 \section{Dobór i ocena cech}
-Po wysegmentowaniu gestów dla uczenia maszynowego nadszedł czas, aby zgromadzony materiał opisać dobranymi cechami. Zbiór danych to wysegmentowana dłoń. Zdecydawałem się, że gesty będę opisywał w następujący sposób.
+Po wysegmentowaniu gestów dla uczenia maszynowego nadszedł czas, aby zgromadzony materiał opisać dobranymi cechami. Zbiór danych to wysegmentowana dłoń. Zdecydowałem się, że gesty będę opisywał w następujący sposób.
 
 Przy ocenie jakości dobranych cech w pierwszej kolejności wykorzystałem odchylenie standardowe. Dzięki czemu miałem porównanie jak dana cecha wpływa na określony gest. 
 
 Kolejnym etapie było skuteczności wybranej cechy przy rozpoznawaniu konkretnych dwóch gestów. Do tego wykorzystałem wyt	`odę...
+
+Po wyżej wymienionej ocenie ustaliłem następujące cechy dla danego gestu:
+
+
 \section{Rozpoznawanie gestów przy pomocy klasyfikatora KNN}
+
 \section{Rozpoznawanie gestów przy pomocy sieci neuronowej}
 \subsection{Sieć neuronowa dla cech}
 \subsection{Sieć neuronowa obrazów binarnych}

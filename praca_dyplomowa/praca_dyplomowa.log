@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.28)  20 DEC 2018 19:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.28)  24 DEC 2018 16:11
 entering extended mode
 **./praca_dyplomowa.tex
 (praca_dyplomowa.tex
@@ -710,26 +710,69 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \mathdisplay@stack=\toks26
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
+) ("C:\Users\Szewy\AppData\Local\Programs\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count117
+\float@exts=\toks27
+\float@box=\box28
+\@float@everytoks=\toks28
+\@floatcapt=\box29
 )
 ("C:\Users\Szewy\AppData\Local\Programs\MiKTeX 2.9\tex\latex\enumitem\enumitem.
 sty"
 Package: enumitem 2018/11/30 v3.6 Customized lists
 \labelindent=\skip55
 \enit@outerparindent=\dimen132
-\enit@toks=\toks27
-\enit@inbox=\box28
-\enitdp@description=\count117
+\enit@toks=\toks29
+\enit@inbox=\box30
+\enitdp@description=\count118
 )
 ("C:\Users\Szewy\AppData\Local\Programs\MiKTeX 2.9\tex\latex\multirow\multirow.
 sty"
 Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 \multirow@colwidth=\skip56
-\multirow@cntb=\count118
+\multirow@cntb=\count119
 \multirow@dima=\skip57
 \bigstrutjot=\dimen133
 ) (prmag2017.sty
 Package `prmag2017' (ZETiIS PW Thesis) ver. 0.2 (Jan 2017)
 ) (praca_dyplomowa.aux
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:a' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:a' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:a' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:a' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
 
 LaTeX Warning: Label `fig:b' multiply defined.
 
@@ -867,17 +910,17 @@ LaTeX Font Info:    ... okay on input line 58.
 ("C:\Users\Szewy\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mk
 ii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count119
+\scratchcounter=\count120
 \scratchdimen=\dimen134
-\scratchbox=\box29
-\nofMPsegments=\count120
-\nofMParguments=\count121
-\everyMPshowfont=\toks28
-\MPscratchCnt=\count122
+\scratchbox=\box31
+\nofMPsegments=\count121
+\nofMParguments=\count122
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count123
 \MPscratchDim=\dimen135
-\MPnumerator=\count123
-\makeMPintoPDFobject=\count124
-\everyMPtoPDFconversion=\toks29
+\MPnumerator=\count124
+\makeMPintoPDFobject=\count125
+\everyMPtoPDFconversion=\toks31
 )
 ("C:\Users\Szewy\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-
 base.sty"
@@ -894,7 +937,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-\AtBeginShipoutBox=\box30
+\AtBeginShipoutBox=\box32
 Package hyperref Info: Link coloring OFF on input line 58.
 
 ("C:\Users\Szewy\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.s
@@ -905,7 +948,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 estring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count125
+\c@section@level=\count126
 )
 LaTeX Info: Redefining \ref on input line 58.
 LaTeX Info: Redefining \pageref on input line 58.
@@ -920,7 +963,7 @@ LaTeX Font Info:    Try loading font information for T1+phv on input line 59.
 ("C:\Users\Szewy\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
-<PWHead.png, id=135, 2015.53pt x 320.19624pt>
+<PWHead.png, id=131, 2015.53pt x 320.19624pt>
 File: PWHead.png Graphic file (type png)
 <use PWHead.png>
 Package pdftex.def Info: PWHead.png  used on input line 59.
@@ -930,7 +973,7 @@ Overfull \hbox (31.10086pt too wide) in paragraph at lines 59--59
 [] 
  []
 
-<inzhead.png, id=136, 1392.20125pt x 303.1325pt>
+<inzhead.png, id=132, 1392.20125pt x 303.1325pt>
 File: inzhead.png Graphic file (type png)
 <use inzhead.png>
 Package pdftex.def Info: inzhead.png  used on input line 59.
@@ -1002,182 +1045,305 @@ Rozdzia\l  1.
 
 ]
 Rozdzia\l  2.
-[2
+<./rys/bin.png, id=199, 770.88pt x 433.62pt>
+File: ./rys/bin.png Graphic file (type png)
+<use ./rys/bin.png>
+Package pdftex.def Info: ./rys/bin.png  used on input line 77.
+(pdftex.def)             Requested size: 272.99881pt x 153.56235pt.
 
-]
-Overfull \hbox (2.05502pt too wide) in paragraph at lines 108--110
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.86 
+      <./rys/bin.png>]
+Overfull \hbox (2.05502pt too wide) in paragraph at lines 115--117
 \T1/cmr/m/n/12 ele-men-tów ob-razu oraz po-ªo-»e-niem wzgl¦-dem sie-bie. W wy-n
 iku ope-ra-cji struk-
  []
 
 [3]
-<./rys/operacje_morfologiczne/szablon.png, id=213, 250.536pt x 186.09525pt>
+<./rys/elementy_strukturalne/1.png, id=211, 37.94176pt x 37.94176pt>
+File: ./rys/elementy_strukturalne/1.png Graphic file (type png)
+<use ./rys/elementy_strukturalne/1.png>
+Package pdftex.def Info: ./rys/elementy_strukturalne/1.png  used on input line 
+125.
+(pdftex.def)             Requested size: 117.00119pt x 117.01376pt.
+<./rys/elementy_strukturalne/2.png, id=212, 37.94176pt x 37.94176pt>
+File: ./rys/elementy_strukturalne/2.png Graphic file (type png)
+<use ./rys/elementy_strukturalne/2.png>
+Package pdftex.def Info: ./rys/elementy_strukturalne/2.png  used on input line 
+127.
+(pdftex.def)             Requested size: 117.00119pt x 117.01376pt.
+<./rys/elementy_strukturalne/3.png, id=213, 37.94176pt x 37.94176pt>
+File: ./rys/elementy_strukturalne/3.png Graphic file (type png)
+<use ./rys/elementy_strukturalne/3.png>
+Package pdftex.def Info: ./rys/elementy_strukturalne/3.png  used on input line 
+129.
+(pdftex.def)             Requested size: 117.00119pt x 117.01376pt.
+ [4pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.142 
+       <./rys/elementy_strukturalne/1.png> <./rys/elementy_strukturalne/2.png> 
+<./rys/elementy_strukturalne/3.png>]
+<./rys/operacje_morfologiczne/szablon.png, id=230, 250.536pt x 186.09525pt>
 File: ./rys/operacje_morfologiczne/szablon.png Graphic file (type png)
 <use ./rys/operacje_morfologiczne/szablon.png>
 Package pdftex.def Info: ./rys/operacje_morfologiczne/szablon.png  used on inpu
-t line 135.
+t line 153.
 (pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
-<./rys/operacje_morfologiczne/e.png, id=215, 250.536pt x 186.09525pt>
+<./rys/operacje_morfologiczne/e.png, id=231, 250.536pt x 186.09525pt>
 File: ./rys/operacje_morfologiczne/e.png Graphic file (type png)
 <use ./rys/operacje_morfologiczne/e.png>
 Package pdftex.def Info: ./rys/operacje_morfologiczne/e.png  used on input line
- 137.
+ 155.
 (pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
 
-Underfull \hbox (badness 5667) in paragraph at lines 137--137
+Underfull \hbox (badness 5667) in paragraph at lines 155--155
 []\T1/cmr/m/n/10 (b) Ele-ment stru-tu-ralny,
  []
 
-<./rys/operacje_morfologiczne/erozja.png, id=216, 250.536pt x 186.09525pt>
+<./rys/operacje_morfologiczne/erozja.png, id=232, 250.536pt x 186.09525pt>
 File: ./rys/operacje_morfologiczne/erozja.png Graphic file (type png)
 <use ./rys/operacje_morfologiczne/erozja.png>
 Package pdftex.def Info: ./rys/operacje_morfologiczne/erozja.png  used on input
- line 139.
+ line 157.
 (pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
-[4 <./rys/operacje_morfologiczne/szablon.png> <./rys/operacje_morfologiczne/e.p
-ng> <./rys/operacje_morfologiczne/erozja.png>]
+[5pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.169 \end{enumerate}
+                      <./rys/operacje_morfologiczne/szablon.png> <./rys/operacj
+e_morfologiczne/e.png> <./rys/operacje_morfologiczne/erozja.png>]
 File: ./rys/operacje_morfologiczne/szablon.png Graphic file (type png)
 <use ./rys/operacje_morfologiczne/szablon.png>
 Package pdftex.def Info: ./rys/operacje_morfologiczne/szablon.png  used on inpu
-t line 156.
+t line 174.
 (pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
 File: ./rys/operacje_morfologiczne/e.png Graphic file (type png)
 <use ./rys/operacje_morfologiczne/e.png>
 Package pdftex.def Info: ./rys/operacje_morfologiczne/e.png  used on input line
- 158.
+ 176.
 (pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
 
-Underfull \hbox (badness 5667) in paragraph at lines 158--158
+Underfull \hbox (badness 5667) in paragraph at lines 176--176
 []\T1/cmr/m/n/10 (b) Ele-ment stru-tu-ralny,
  []
 
-<./rys/operacje_morfologiczne/dylatacja.png, id=238, 250.536pt x 186.09525pt>
+<./rys/operacje_morfologiczne/dylatacja.png, id=253, 250.536pt x 186.09525pt>
 File: ./rys/operacje_morfologiczne/dylatacja.png Graphic file (type png)
 <use ./rys/operacje_morfologiczne/dylatacja.png>
 Package pdftex.def Info: ./rys/operacje_morfologiczne/dylatacja.png  used on in
-put line 160.
+put line 178.
 (pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
 File: ./rys/operacje_morfologiczne/szablon.png Graphic file (type png)
 <use ./rys/operacje_morfologiczne/szablon.png>
 Package pdftex.def Info: ./rys/operacje_morfologiczne/szablon.png  used on inpu
-t line 176.
+t line 194.
 (pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
 File: ./rys/operacje_morfologiczne/e.png Graphic file (type png)
 <use ./rys/operacje_morfologiczne/e.png>
 Package pdftex.def Info: ./rys/operacje_morfologiczne/e.png  used on input line
- 178.
+ 196.
 (pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
 
-Underfull \hbox (badness 5667) in paragraph at lines 178--178
+Underfull \hbox (badness 5667) in paragraph at lines 196--196
 []\T1/cmr/m/n/10 (b) Ele-ment stru-tu-ralny,
  []
 
-<./rys/operacje_morfologiczne/otwarcie.png, id=239, 250.536pt x 186.09525pt>
+<./rys/operacje_morfologiczne/otwarcie.png, id=254, 250.536pt x 186.09525pt>
 File: ./rys/operacje_morfologiczne/otwarcie.png Graphic file (type png)
 <use ./rys/operacje_morfologiczne/otwarcie.png>
 Package pdftex.def Info: ./rys/operacje_morfologiczne/otwarcie.png  used on inp
-ut line 180.
+ut line 198.
 (pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[5 <./rys/operacje_morfologiczne/dylatacja.png>]
+ [6pdfTeX warning (ext4): destination with the same identifier (name{figure.2.4
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.201 
+       <./rys/operacje_morfologiczne/dylatacja.png>]
 File: ./rys/operacje_morfologiczne/szablon.png Graphic file (type png)
 <use ./rys/operacje_morfologiczne/szablon.png>
 Package pdftex.def Info: ./rys/operacje_morfologiczne/szablon.png  used on inpu
-t line 196.
+t line 214.
 (pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
 File: ./rys/operacje_morfologiczne/e.png Graphic file (type png)
 <use ./rys/operacje_morfologiczne/e.png>
 Package pdftex.def Info: ./rys/operacje_morfologiczne/e.png  used on input line
- 198.
+ 216.
 (pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
 
-Underfull \hbox (badness 5667) in paragraph at lines 198--198
+Underfull \hbox (badness 5667) in paragraph at lines 216--216
 []\T1/cmr/m/n/10 (b) Ele-ment stru-tu-ralny,
  []
 
-<./rys/operacje_morfologiczne/zamkniecie.png, id=257, 250.536pt x 186.09525pt>
+<./rys/operacje_morfologiczne/zamkniecie.png, id=269, 250.536pt x 186.09525pt>
 File: ./rys/operacje_morfologiczne/zamkniecie.png Graphic file (type png)
 <use ./rys/operacje_morfologiczne/zamkniecie.png>
 Package pdftex.def Info: ./rys/operacje_morfologiczne/zamkniecie.png  used on i
-nput line 200.
+nput line 218.
 (pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
-[6 <./rys/operacje_morfologiczne/otwarcie.png> <./rys/operacje_morfologiczne/za
-mkniecie.png>]
-<./rys/bs/tlo.jpg, id=276, 963.6pt x 542.025pt>
+[7pdfTeX warning (ext4): destination with the same identifier (name{figure.2.5}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.224 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+2.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.224 
+       <./rys/operacje_morfologiczne/otwarcie.png> <./rys/operacje_morfologiczn
+e/zamkniecie.png>]
+<./rys/bs/tlo.jpg, id=289, 963.6pt x 542.025pt>
 File: ./rys/bs/tlo.jpg Graphic file (type jpg)
 <use ./rys/bs/tlo.jpg>
-Package pdftex.def Info: ./rys/bs/tlo.jpg  used on input line 210.
+Package pdftex.def Info: ./rys/bs/tlo.jpg  used on input line 228.
 (pdftex.def)             Requested size: 117.00119pt x 65.80936pt.
-<./rys/bs/img.jpg, id=277, 963.6pt x 542.025pt>
+<./rys/bs/img.jpg, id=290, 963.6pt x 542.025pt>
 File: ./rys/bs/img.jpg Graphic file (type jpg)
 <use ./rys/bs/img.jpg>
-Package pdftex.def Info: ./rys/bs/img.jpg  used on input line 212.
+Package pdftex.def Info: ./rys/bs/img.jpg  used on input line 230.
 (pdftex.def)             Requested size: 117.00119pt x 65.80936pt.
-<./rys/bs/bin.jpg, id=278, 963.6pt x 542.025pt>
+<./rys/bs/bin.jpg, id=291, 963.6pt x 542.025pt>
 File: ./rys/bs/bin.jpg Graphic file (type jpg)
 <use ./rys/bs/bin.jpg>
-Package pdftex.def Info: ./rys/bs/bin.jpg  used on input line 214.
+Package pdftex.def Info: ./rys/bs/bin.jpg  used on input line 232.
 (pdftex.def)             Requested size: 117.00119pt x 65.80936pt.
 
-Underfull \hbox (badness 1142) in paragraph at lines 215--215
-[]\T1/cmr/m/n/12 Rysunek 2.5: []Przykªadowe me-tody back-gro-und sub-trac-tor z
+Underfull \hbox (badness 1142) in paragraph at lines 233--233
+[]\T1/cmr/m/n/12 Rysunek 2.7: []Przykªadowe me-tody back-gro-und sub-trac-tor z
  bi-blio-teki
  []
 
-<./rys/bs/mog.png, id=279, 1284.8pt x 722.7pt>
+<./rys/bs/mog.png, id=292, 1284.8pt x 722.7pt>
 File: ./rys/bs/mog.png Graphic file (type png)
 <use ./rys/bs/mog.png>
-Package pdftex.def Info: ./rys/bs/mog.png  used on input line 228.
+Package pdftex.def Info: ./rys/bs/mog.png  used on input line 246.
 (pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
 []\T1/cmr/m/n/10 (a) Back-gro-und-Sub-trac-
  []
 
-<./rys/bs/mog2.png, id=280, 1284.8pt x 722.7pt>
+<./rys/bs/mog2.png, id=293, 1284.8pt x 722.7pt>
 File: ./rys/bs/mog2.png Graphic file (type png)
 <use ./rys/bs/mog2.png>
-Package pdftex.def Info: ./rys/bs/mog2.png  used on input line 230.
+Package pdftex.def Info: ./rys/bs/mog2.png  used on input line 248.
 (pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--230
+Underfull \hbox (badness 10000) in paragraph at lines 248--248
 []\T1/cmr/m/n/10 (b) Back-gro-und-Sub-trac-
  []
 
-<./rys/bs/gmg.png, id=281, 1284.8pt x 722.7pt>
+<./rys/bs/gmg.png, id=294, 1284.8pt x 722.7pt>
 File: ./rys/bs/gmg.png Graphic file (type png)
 <use ./rys/bs/gmg.png>
-Package pdftex.def Info: ./rys/bs/gmg.png  used on input line 232.
+Package pdftex.def Info: ./rys/bs/gmg.png  used on input line 250.
 (pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--232
+Underfull \hbox (badness 10000) in paragraph at lines 250--250
 []\T1/cmr/m/n/10 (c) Back-gro-und-Sub-trac-
  []
 
 
-Underfull \hbox (badness 1142) in paragraph at lines 233--233
-[]\T1/cmr/m/n/12 Rysunek 2.6: []Przykªadowe me-tody back-gro-und sub-trac-tor z
+Underfull \hbox (badness 1142) in paragraph at lines 251--251
+[]\T1/cmr/m/n/12 Rysunek 2.8: []Przykªadowe me-tody back-gro-und sub-trac-tor z
  bi-blio-teki
  []
 
-[7 <./rys/bs/tlo.jpg> <./rys/bs/img.jpg> <./rys/bs/bin.jpg> <./rys/bs/mog.png (
-PNG copy)> <./rys/bs/mog2.png (PNG copy)> <./rys/bs/gmg.png (PNG copy)>]
-[8]
+[8pdfTeX warning (ext4): destination with the same identifier (name{figure.2.7}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.256 \section
+              {Detekcja kolorÃ³w}pdfTeX warning (ext4): destination with the sa
+me identifier (name{figure.2.8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.256 \section
+              {Detekcja kolorÃ³w} <./rys/bs/tlo.jpg> <./rys/bs/img.jpg> <./rys/
+bs/bin.jpg> <./rys/bs/mog.png (PNG copy)> <./rys/bs/mog2.png (PNG copy)> <./rys
+/bs/gmg.png (PNG copy)>]
+<./rys/hsv.png, id=307, 164.41425pt x 183.68625pt>
+File: ./rys/hsv.png Graphic file (type png)
+<use ./rys/hsv.png>
+Package pdftex.def Info: ./rys/hsv.png  used on input line 267.
+(pdftex.def)             Requested size: 155.99762pt x 174.29071pt.
+ [9pdfTeX warning (ext4): destination with the same identifier (name{figure.2.9
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.274 M
+       odel skÅ‚ada siÄ™ z nastÄ™pujÄ…cych czÄ™Å›ci: barwa, nasycenie, warto...
+ <./rys/hsv.png>] [10]
 Rozdzia\l  3.
-[9
+[11
 
-] [10] [11] [12]
+] [12] [13] [14]
 Rozdzia\l  4.
-[13
+<./rys/gesty_gry/papier.png, id=340, 650.43pt x 365.56575pt>
+File: ./rys/gesty_gry/papier.png Graphic file (type png)
+<use ./rys/gesty_gry/papier.png>
+Package pdftex.def Info: ./rys/gesty_gry/papier.png  used on input line 355.
+(pdftex.def)             Requested size: 117.00119pt x 65.75436pt.
+<./rys/gesty_gry/kamien.png, id=341, 650.43pt x 365.56575pt>
+File: ./rys/gesty_gry/kamien.png Graphic file (type png)
+<use ./rys/gesty_gry/kamien.png>
+Package pdftex.def Info: ./rys/gesty_gry/kamien.png  used on input line 357.
+(pdftex.def)             Requested size: 117.00119pt x 65.75436pt.
+<./rys/gesty_gry/nozyce.png, id=342, 650.43pt x 365.56575pt>
+File: ./rys/gesty_gry/nozyce.png Graphic file (type png)
+<use ./rys/gesty_gry/nozyce.png>
+Package pdftex.def Info: ./rys/gesty_gry/nozyce.png  used on input line 359.
+(pdftex.def)             Requested size: 117.00119pt x 65.75436pt.
+[15
 
-]
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.369 \item k
+             amieÅ„-noÅ¼yce - zwyciÄ™zcÄ… zostaje gracz, ktÃ³ry pokazaÅ‚ ges...
+ <./rys/gesty_gry/papier.png> <./rys/gesty_gry/kamien.png> <./rys/gesty_gry/noz
+yce.png>] [16]
 Rozdzia\l  5.
-[14
+<./rys/rekawiczki.jpg, id=360, 340.27126pt x 390.258pt>
+File: ./rys/rekawiczki.jpg Graphic file (type jpg)
+<use ./rys/rekawiczki.jpg>
+Package pdftex.def Info: ./rys/rekawiczki.jpg  used on input line 379.
+(pdftex.def)             Requested size: 155.99762pt x 178.91345pt.
+[17
 
-]
-Overfull \hbox (7.01614pt too wide) in paragraph at lines 378--379
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.387 	\item H
+              D Webcam <./rys/rekawiczki.jpg>] [18]
+Overfull \hbox (7.01614pt too wide) in paragraph at lines 422--423
 []\T1/cmr/m/n/12 Metod¦ do-kªadn¡ z ja-kiej sko-rzy-sta-ªem byªa to funk-cja z 
 bi-blio-teki OpenCV
  []
@@ -1185,57 +1351,60 @@ bi-blio-teki OpenCV
 File: ./rys/operacje_morfologiczne/szablon.png Graphic file (type png)
 <use ./rys/operacje_morfologiczne/szablon.png>
 Package pdftex.def Info: ./rys/operacje_morfologiczne/szablon.png  used on inpu
-t line 384.
+t line 431.
 (pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
 File: ./rys/operacje_morfologiczne/e.png Graphic file (type png)
 <use ./rys/operacje_morfologiczne/e.png>
 Package pdftex.def Info: ./rys/operacje_morfologiczne/e.png  used on input line
- 386.
+ 433.
 (pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
 File: ./rys/operacje_morfologiczne/otwarcie.png Graphic file (type png)
 <use ./rys/operacje_morfologiczne/otwarcie.png>
 Package pdftex.def Info: ./rys/operacje_morfologiczne/otwarcie.png  used on inp
-ut line 388.
+ut line 435.
 (pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
 
-Overfull \hbox (4.08353pt too wide) in paragraph at lines 393--394
+Overfull \hbox (4.08353pt too wide) in paragraph at lines 440--441
 \T1/cmr/m/n/12 wschodnio-europejskich ze wzgl¦du na fakt, »e oprócz seg-men-ta-
 cji dªoni mo»na
  []
 
-[15]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[19pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2
+}) has been already used, duplicate ignored
 
- [16]
-[17]
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.447 S
+       egmentacja elementÃ³w obrazu w ruchu, moÅ¼e nieÅ›Ä‡ ze sobÄ… czum spo...
+] [20]
 Rozdzia\l  6.
-[18
+[21
 
 ]
 
-LaTeX Warning: Empty `thebibliography' environment on input line 426.
+LaTeX Warning: Empty `thebibliography' environment on input line 478.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 429.
-[19
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 481.
+[22
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 429.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 481.
  (praca_dyplomowa.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 429.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 429.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 481.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 481.
 Package rerunfilecheck Info: File `praca_dyplomowa.out' has not changed.
-(rerunfilecheck)             Checksum: EFA38B65EA7FBAA1B0107303D8933629;2258.
+(rerunfilecheck)             Checksum: 0CAC69ABA470DC2AFF0D075728789DF1;2211.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 429.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 481.
  ) 
 Here is how much of TeX's memory you used:
- 7997 strings out of 493305
- 116001 string characters out of 3129801
- 207109 words of memory out of 3000000
- 11258 multiletter control sequences out of 15000+200000
+ 8115 strings out of 493305
+ 118136 string characters out of 3129801
+ 208449 words of memory out of 3000000
+ 11346 multiletter control sequences out of 15000+200000
  24726 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,7n,28p,705b,465s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1250,9 +1419,9 @@ ppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/Szewy/Ap
 pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/U
 sers/Szewy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pf
 b>
-Output written on praca_dyplomowa.pdf (25 pages, 882473 bytes).
+Output written on praca_dyplomowa.pdf (28 pages, 2073542 bytes).
 PDF statistics:
- 728 PDF objects out of 1000 (max. 8388607)
- 114 named destinations out of 1000 (max. 500000)
- 335 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 772 PDF objects out of 1000 (max. 8388607)
+ 129 named destinations out of 1000 (max. 500000)
+ 372 words of extra memory for PDF output out of 10000 (max. 10000000)
 
