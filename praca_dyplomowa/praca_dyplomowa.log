@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.28)  24 DEC 2018 16:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.28)  30 DEC 2018 02:08
 entering extended mode
 **./praca_dyplomowa.tex
 (praca_dyplomowa.tex
@@ -887,6 +887,138 @@ LaTeX Warning: Label `fig:b' multiply defined.
 
 LaTeX Warning: Label `sub@fig:b' multiply defined.
 
+
+LaTeX Warning: Label `fig:a' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:a' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:a' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:a' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:a' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:a' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:a' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:a' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:a' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:a' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:a' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:a' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:a' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:a' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:a' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:a' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:a' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
 )
 \openout1 = `praca_dyplomowa.aux'.
 
@@ -1045,7 +1177,7 @@ Rozdzia\l  1.
 
 ]
 Rozdzia\l  2.
-<./rys/bin.png, id=199, 770.88pt x 433.62pt>
+<./rys/bin.png, id=200, 770.88pt x 433.62pt>
 File: ./rys/bin.png Graphic file (type png)
 <use ./rys/bin.png>
 Package pdftex.def Info: ./rys/bin.png  used on input line 77.
@@ -1068,19 +1200,19 @@ iku ope-ra-cji struk-
  []
 
 [3]
-<./rys/elementy_strukturalne/1.png, id=211, 37.94176pt x 37.94176pt>
+<./rys/elementy_strukturalne/1.png, id=212, 37.94176pt x 37.94176pt>
 File: ./rys/elementy_strukturalne/1.png Graphic file (type png)
 <use ./rys/elementy_strukturalne/1.png>
 Package pdftex.def Info: ./rys/elementy_strukturalne/1.png  used on input line 
 125.
 (pdftex.def)             Requested size: 117.00119pt x 117.01376pt.
-<./rys/elementy_strukturalne/2.png, id=212, 37.94176pt x 37.94176pt>
+<./rys/elementy_strukturalne/2.png, id=213, 37.94176pt x 37.94176pt>
 File: ./rys/elementy_strukturalne/2.png Graphic file (type png)
 <use ./rys/elementy_strukturalne/2.png>
 Package pdftex.def Info: ./rys/elementy_strukturalne/2.png  used on input line 
 127.
 (pdftex.def)             Requested size: 117.00119pt x 117.01376pt.
-<./rys/elementy_strukturalne/3.png, id=213, 37.94176pt x 37.94176pt>
+<./rys/elementy_strukturalne/3.png, id=214, 37.94176pt x 37.94176pt>
 File: ./rys/elementy_strukturalne/3.png Graphic file (type png)
 <use ./rys/elementy_strukturalne/3.png>
 Package pdftex.def Info: ./rys/elementy_strukturalne/3.png  used on input line 
@@ -1094,13 +1226,13 @@ Package pdftex.def Info: ./rys/elementy_strukturalne/3.png  used on input line
 l.142 
        <./rys/elementy_strukturalne/1.png> <./rys/elementy_strukturalne/2.png> 
 <./rys/elementy_strukturalne/3.png>]
-<./rys/operacje_morfologiczne/szablon.png, id=230, 250.536pt x 186.09525pt>
+<./rys/operacje_morfologiczne/szablon.png, id=231, 250.536pt x 186.09525pt>
 File: ./rys/operacje_morfologiczne/szablon.png Graphic file (type png)
 <use ./rys/operacje_morfologiczne/szablon.png>
 Package pdftex.def Info: ./rys/operacje_morfologiczne/szablon.png  used on inpu
 t line 153.
 (pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
-<./rys/operacje_morfologiczne/e.png, id=231, 250.536pt x 186.09525pt>
+<./rys/operacje_morfologiczne/e.png, id=232, 250.536pt x 186.09525pt>
 File: ./rys/operacje_morfologiczne/e.png Graphic file (type png)
 <use ./rys/operacje_morfologiczne/e.png>
 Package pdftex.def Info: ./rys/operacje_morfologiczne/e.png  used on input line
@@ -1111,7 +1243,7 @@ Underfull \hbox (badness 5667) in paragraph at lines 155--155
 []\T1/cmr/m/n/10 (b) Ele-ment stru-tu-ralny,
  []
 
-<./rys/operacje_morfologiczne/erozja.png, id=232, 250.536pt x 186.09525pt>
+<./rys/operacje_morfologiczne/erozja.png, id=233, 250.536pt x 186.09525pt>
 File: ./rys/operacje_morfologiczne/erozja.png Graphic file (type png)
 <use ./rys/operacje_morfologiczne/erozja.png>
 Package pdftex.def Info: ./rys/operacje_morfologiczne/erozja.png  used on input
@@ -1140,7 +1272,7 @@ Underfull \hbox (badness 5667) in paragraph at lines 176--176
 []\T1/cmr/m/n/10 (b) Ele-ment stru-tu-ralny,
  []
 
-<./rys/operacje_morfologiczne/dylatacja.png, id=253, 250.536pt x 186.09525pt>
+<./rys/operacje_morfologiczne/dylatacja.png, id=254, 250.536pt x 186.09525pt>
 File: ./rys/operacje_morfologiczne/dylatacja.png Graphic file (type png)
 <use ./rys/operacje_morfologiczne/dylatacja.png>
 Package pdftex.def Info: ./rys/operacje_morfologiczne/dylatacja.png  used on in
@@ -1161,7 +1293,7 @@ Underfull \hbox (badness 5667) in paragraph at lines 196--196
 []\T1/cmr/m/n/10 (b) Ele-ment stru-tu-ralny,
  []
 
-<./rys/operacje_morfologiczne/otwarcie.png, id=254, 250.536pt x 186.09525pt>
+<./rys/operacje_morfologiczne/otwarcie.png, id=255, 250.536pt x 186.09525pt>
 File: ./rys/operacje_morfologiczne/otwarcie.png Graphic file (type png)
 <use ./rys/operacje_morfologiczne/otwarcie.png>
 Package pdftex.def Info: ./rys/operacje_morfologiczne/otwarcie.png  used on inp
@@ -1192,7 +1324,7 @@ Underfull \hbox (badness 5667) in paragraph at lines 216--216
 []\T1/cmr/m/n/10 (b) Ele-ment stru-tu-ralny,
  []
 
-<./rys/operacje_morfologiczne/zamkniecie.png, id=269, 250.536pt x 186.09525pt>
+<./rys/operacje_morfologiczne/zamkniecie.png, id=270, 250.536pt x 186.09525pt>
 File: ./rys/operacje_morfologiczne/zamkniecie.png Graphic file (type png)
 <use ./rys/operacje_morfologiczne/zamkniecie.png>
 Package pdftex.def Info: ./rys/operacje_morfologiczne/zamkniecie.png  used on i
@@ -1212,17 +1344,17 @@ l.224
 l.224 
        <./rys/operacje_morfologiczne/otwarcie.png> <./rys/operacje_morfologiczn
 e/zamkniecie.png>]
-<./rys/bs/tlo.jpg, id=289, 963.6pt x 542.025pt>
+<./rys/bs/tlo.jpg, id=290, 963.6pt x 542.025pt>
 File: ./rys/bs/tlo.jpg Graphic file (type jpg)
 <use ./rys/bs/tlo.jpg>
 Package pdftex.def Info: ./rys/bs/tlo.jpg  used on input line 228.
 (pdftex.def)             Requested size: 117.00119pt x 65.80936pt.
-<./rys/bs/img.jpg, id=290, 963.6pt x 542.025pt>
+<./rys/bs/img.jpg, id=291, 963.6pt x 542.025pt>
 File: ./rys/bs/img.jpg Graphic file (type jpg)
 <use ./rys/bs/img.jpg>
 Package pdftex.def Info: ./rys/bs/img.jpg  used on input line 230.
 (pdftex.def)             Requested size: 117.00119pt x 65.80936pt.
-<./rys/bs/bin.jpg, id=291, 963.6pt x 542.025pt>
+<./rys/bs/bin.jpg, id=292, 963.6pt x 542.025pt>
 File: ./rys/bs/bin.jpg Graphic file (type jpg)
 <use ./rys/bs/bin.jpg>
 Package pdftex.def Info: ./rys/bs/bin.jpg  used on input line 232.
@@ -1233,7 +1365,7 @@ Underfull \hbox (badness 1142) in paragraph at lines 233--233
  bi-blio-teki
  []
 
-<./rys/bs/mog.png, id=292, 1284.8pt x 722.7pt>
+<./rys/bs/mog.png, id=293, 1284.8pt x 722.7pt>
 File: ./rys/bs/mog.png Graphic file (type png)
 <use ./rys/bs/mog.png>
 Package pdftex.def Info: ./rys/bs/mog.png  used on input line 246.
@@ -1243,7 +1375,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 246--246
 []\T1/cmr/m/n/10 (a) Back-gro-und-Sub-trac-
  []
 
-<./rys/bs/mog2.png, id=293, 1284.8pt x 722.7pt>
+<./rys/bs/mog2.png, id=294, 1284.8pt x 722.7pt>
 File: ./rys/bs/mog2.png Graphic file (type png)
 <use ./rys/bs/mog2.png>
 Package pdftex.def Info: ./rys/bs/mog2.png  used on input line 248.
@@ -1253,7 +1385,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 248--248
 []\T1/cmr/m/n/10 (b) Back-gro-und-Sub-trac-
  []
 
-<./rys/bs/gmg.png, id=294, 1284.8pt x 722.7pt>
+<./rys/bs/gmg.png, id=295, 1284.8pt x 722.7pt>
 File: ./rys/bs/gmg.png Graphic file (type png)
 <use ./rys/bs/gmg.png>
 Package pdftex.def Info: ./rys/bs/gmg.png  used on input line 250.
@@ -1284,7 +1416,7 @@ l.256 \section
               {Detekcja kolorÃ³w} <./rys/bs/tlo.jpg> <./rys/bs/img.jpg> <./rys/
 bs/bin.jpg> <./rys/bs/mog.png (PNG copy)> <./rys/bs/mog2.png (PNG copy)> <./rys
 /bs/gmg.png (PNG copy)>]
-<./rys/hsv.png, id=307, 164.41425pt x 183.68625pt>
+<./rys/hsv.png, id=308, 164.41425pt x 183.68625pt>
 File: ./rys/hsv.png Graphic file (type png)
 <use ./rys/hsv.png>
 Package pdftex.def Info: ./rys/hsv.png  used on input line 267.
@@ -1302,17 +1434,17 @@ Rozdzia\l  3.
 
 ] [12] [13] [14]
 Rozdzia\l  4.
-<./rys/gesty_gry/papier.png, id=340, 650.43pt x 365.56575pt>
+<./rys/gesty_gry/papier.png, id=341, 650.43pt x 365.56575pt>
 File: ./rys/gesty_gry/papier.png Graphic file (type png)
 <use ./rys/gesty_gry/papier.png>
 Package pdftex.def Info: ./rys/gesty_gry/papier.png  used on input line 355.
 (pdftex.def)             Requested size: 117.00119pt x 65.75436pt.
-<./rys/gesty_gry/kamien.png, id=341, 650.43pt x 365.56575pt>
+<./rys/gesty_gry/kamien.png, id=342, 650.43pt x 365.56575pt>
 File: ./rys/gesty_gry/kamien.png Graphic file (type png)
 <use ./rys/gesty_gry/kamien.png>
 Package pdftex.def Info: ./rys/gesty_gry/kamien.png  used on input line 357.
 (pdftex.def)             Requested size: 117.00119pt x 65.75436pt.
-<./rys/gesty_gry/nozyce.png, id=342, 650.43pt x 365.56575pt>
+<./rys/gesty_gry/nozyce.png, id=343, 650.43pt x 365.56575pt>
 File: ./rys/gesty_gry/nozyce.png Graphic file (type png)
 <use ./rys/gesty_gry/nozyce.png>
 Package pdftex.def Info: ./rys/gesty_gry/nozyce.png  used on input line 359.
@@ -1329,10 +1461,10 @@ l.369 \item k
  <./rys/gesty_gry/papier.png> <./rys/gesty_gry/kamien.png> <./rys/gesty_gry/noz
 yce.png>] [16]
 Rozdzia\l  5.
-<./rys/rekawiczki.jpg, id=360, 340.27126pt x 390.258pt>
+<./rys/rekawiczki.jpg, id=361, 340.27126pt x 390.258pt>
 File: ./rys/rekawiczki.jpg Graphic file (type jpg)
 <use ./rys/rekawiczki.jpg>
-Package pdftex.def Info: ./rys/rekawiczki.jpg  used on input line 379.
+Package pdftex.def Info: ./rys/rekawiczki.jpg  used on input line 380.
 (pdftex.def)             Requested size: 155.99762pt x 178.91345pt.
 [17
 
@@ -1341,73 +1473,330 @@ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.387 	\item H
-              D Webcam <./rys/rekawiczki.jpg>] [18]
-Overfull \hbox (7.01614pt too wide) in paragraph at lines 422--423
-[]\T1/cmr/m/n/12 Metod¦ do-kªadn¡ z ja-kiej sko-rzy-sta-ªem byªa to funk-cja z 
-bi-blio-teki OpenCV
+l.386 
+       <./rys/rekawiczki.jpg>]
+<./rys/klatka.jpg, id=367, 615.0478pt x 374.90062pt>
+File: ./rys/klatka.jpg Graphic file (type jpg)
+<use ./rys/klatka.jpg>
+Package pdftex.def Info: ./rys/klatka.jpg  used on input line 389.
+(pdftex.def)             Requested size: 234.00238pt x 142.63533pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 399--400
+
  []
 
-File: ./rys/operacje_morfologiczne/szablon.png Graphic file (type png)
-<use ./rys/operacje_morfologiczne/szablon.png>
-Package pdftex.def Info: ./rys/operacje_morfologiczne/szablon.png  used on inpu
-t line 431.
-(pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
-File: ./rys/operacje_morfologiczne/e.png Graphic file (type png)
-<use ./rys/operacje_morfologiczne/e.png>
-Package pdftex.def Info: ./rys/operacje_morfologiczne/e.png  used on input line
- 433.
-(pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
-File: ./rys/operacje_morfologiczne/otwarcie.png Graphic file (type png)
-<use ./rys/operacje_morfologiczne/otwarcie.png>
-Package pdftex.def Info: ./rys/operacje_morfologiczne/otwarcie.png  used on inp
-ut line 435.
-(pdftex.def)             Requested size: 117.00119pt x 86.9082pt.
-
-Overfull \hbox (4.08353pt too wide) in paragraph at lines 440--441
-\T1/cmr/m/n/12 wschodnio-europejskich ze wzgl¦du na fakt, »e oprócz seg-men-ta-
-cji dªoni mo»na
- []
-
-[19pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2
+[18pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.447 S
-       egmentacja elementÃ³w obrazu w ruchu, moÅ¼e nieÅ›Ä‡ ze sobÄ… czum spo...
-] [20]
+l.420 
+       <./rys/klatka.jpg>]
+<./rys/bs/knn.png, id=374, 1284.8pt x 722.7pt>
+File: ./rys/bs/knn.png Graphic file (type png)
+<use ./rys/bs/knn.png>
+Package pdftex.def Info: ./rys/bs/knn.png  used on input line 449.
+(pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 449--449
+[]\T1/cmr/m/n/10 (a) Back-gro-und-Sub-trac-
+ []
+
+<./rys/bs/gsoc.png, id=375, 1284.8pt x 722.7pt>
+File: ./rys/bs/gsoc.png Graphic file (type png)
+<use ./rys/bs/gsoc.png>
+Package pdftex.def Info: ./rys/bs/gsoc.png  used on input line 451.
+(pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 451--451
+[]\T1/cmr/m/n/10 (b) Back-gro-und-Sub-trac-
+ []
+
+<./rys/bs/lsbp.png, id=376, 1284.8pt x 722.7pt>
+File: ./rys/bs/lsbp.png Graphic file (type png)
+<use ./rys/bs/lsbp.png>
+Package pdftex.def Info: ./rys/bs/lsbp.png  used on input line 453.
+(pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 453--453
+[]\T1/cmr/m/n/10 (c) Back-gro-und-Sub-trac-
+ []
+
+
+Underfull \vbox (badness 6910) has occurred while \output is active []
+
+ [19]
+<./rys/bs/papier.png, id=383, 1284.8pt x 722.7pt>
+File: ./rys/bs/papier.png Graphic file (type png)
+<use ./rys/bs/papier.png>
+Package pdftex.def Info: ./rys/bs/papier.png  used on input line 467.
+(pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
+<./rys/bs/kamien.png, id=384, 1284.8pt x 722.7pt>
+File: ./rys/bs/kamien.png Graphic file (type png)
+<use ./rys/bs/kamien.png>
+Package pdftex.def Info: ./rys/bs/kamien.png  used on input line 469.
+(pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
+<./rys/bs/nozyce.png, id=385, 1284.8pt x 722.7pt>
+File: ./rys/bs/nozyce.png Graphic file (type png)
+<use ./rys/bs/nozyce.png>
+Package pdftex.def Info: ./rys/bs/nozyce.png  used on input line 471.
+(pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
+
+[20pdfTeX warning (ext4): destination with the same identifier (name{figure.5.3
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.480 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+5.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.480 
+       <./rys/bs/knn.png (PNG copy)> <./rys/bs/gsoc.png (PNG copy)> <./rys/bs/l
+sbp.png (PNG copy)> <./rys/bs/papier.png (PNG copy)> <./rys/bs/kamien.png (PNG 
+copy)> <./rys/bs/nozyce.png (PNG copy)>]
+File: ./rys/hsv.png Graphic file (type png)
+<use ./rys/hsv.png>
+Package pdftex.def Info: ./rys/hsv.png  used on input line 486.
+(pdftex.def)             Requested size: 85.80048pt x 95.85933pt.
+<./rys/detekcja_koloru/papier.png, id=401, 1284.8pt x 722.7pt>
+File: ./rys/detekcja_koloru/papier.png Graphic file (type png)
+<use ./rys/detekcja_koloru/papier.png>
+Package pdftex.def Info: ./rys/detekcja_koloru/papier.png  used on input line 4
+96.
+(pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
+<./rys/detekcja_koloru/kamien.png, id=402, 1284.8pt x 722.7pt>
+File: ./rys/detekcja_koloru/kamien.png Graphic file (type png)
+<use ./rys/detekcja_koloru/kamien.png>
+Package pdftex.def Info: ./rys/detekcja_koloru/kamien.png  used on input line 4
+98.
+(pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
+<./rys/detekcja_koloru/nozyce.png, id=403, 1284.8pt x 722.7pt>
+File: ./rys/detekcja_koloru/nozyce.png Graphic file (type png)
+<use ./rys/detekcja_koloru/nozyce.png>
+Package pdftex.def Info: ./rys/detekcja_koloru/nozyce.png  used on input line 5
+00.
+(pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
+ [21pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.506 	\item o
+              d HSV (98,50,20)pdfTeX warning (ext4): destination with the same 
+identifier (name{figure.5.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.506 	\item o
+              d HSV (98,50,20) <./rys/detekcja_koloru/papier.png (PNG copy)> <.
+/rys/detekcja_koloru/kamien.png (PNG copy)> <./rys/detekcja_koloru/nozyce.png (
+PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 509--510
+
+ []
+
+<./rys/bs_color/papier.png, id=413, 1284.8pt x 722.7pt>
+File: ./rys/bs_color/papier.png Graphic file (type png)
+<use ./rys/bs_color/papier.png>
+Package pdftex.def Info: ./rys/bs_color/papier.png  used on input line 516.
+(pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
+<./rys/bs_color/kamien.png, id=414, 1284.8pt x 722.7pt>
+File: ./rys/bs_color/kamien.png Graphic file (type png)
+<use ./rys/bs_color/kamien.png>
+Package pdftex.def Info: ./rys/bs_color/kamien.png  used on input line 518.
+(pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
+<./rys/bs_color/nozyce.png, id=415, 1284.8pt x 722.7pt>
+File: ./rys/bs_color/nozyce.png Graphic file (type png)
+<use ./rys/bs_color/nozyce.png>
+Package pdftex.def Info: ./rys/bs_color/nozyce.png  used on input line 520.
+(pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
+
+Overfull \hbox (6.40227pt too wide) in paragraph at lines 524--525
+[]\T1/cmr/m/n/12 Jak wi-dzimy wi¦k-szo±¢ z nie-po-»¡-da-nych szu-mów zo-staªa u
+su-ni¦ta za spraw¡
+ []
+
+
+Overfull \hbox (8.71289pt too wide) in paragraph at lines 524--525
+\T1/cmr/m/n/12 po-ª¡-cza-nia dwóch ma-sek bi-nar-nych. Mo-»emy te» za-ob-ser-wo
+-wa¢, »e nie wszystko
+ []
+
+
+Overfull \hbox (6.16989pt too wide) in paragraph at lines 531--533
+\T1/cmr/m/n/12 Pierwszym pro-ble-mem po wy-ge-ne-ro-wa-niu ma-ski bi-nar-nej mo
+»na zo-sta¢ uznane
+ []
+
+[22pdfTeX warning (ext4): destination with the same identifier (name{figure.5.7
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.533 
+       <./rys/bs_color/papier.png (PNG copy)> <./rys/bs_color/kamien.png (PNG c
+opy)> <./rys/bs_color/nozyce.png (PNG copy)>]
+<./rys/szumy/przed_erozja.png, id=427, 770.88pt x 433.62pt>
+File: ./rys/szumy/przed_erozja.png Graphic file (type png)
+<use ./rys/szumy/przed_erozja.png>
+Package pdftex.def Info: ./rys/szumy/przed_erozja.png  used on input line 537.
+(pdftex.def)             Requested size: 183.30048pt x 103.1049pt.
+<./rys/szumy/po_erozji.png, id=428, 1284.8pt x 722.7pt>
+File: ./rys/szumy/po_erozji.png Graphic file (type png)
+<use ./rys/szumy/po_erozji.png>
+Package pdftex.def Info: ./rys/szumy/po_erozji.png  used on input line 539.
+(pdftex.def)             Requested size: 183.30048pt x 103.09608pt.
+ [23pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.547 
+       <./rys/szumy/przed_erozja.png> <./rys/szumy/po_erozji.png (PNG copy)>]
+<./rys/szumy/przed_dylatacja.png, id=439, 770.88pt x 433.62pt>
+File: ./rys/szumy/przed_dylatacja.png Graphic file (type png)
+<use ./rys/szumy/przed_dylatacja.png>
+Package pdftex.def Info: ./rys/szumy/przed_dylatacja.png  used on input line 55
+1.
+(pdftex.def)             Requested size: 183.30048pt x 103.1049pt.
+<./rys/szumy/po_dylatacji.png, id=440, 1284.8pt x 722.7pt>
+File: ./rys/szumy/po_dylatacji.png Graphic file (type png)
+<use ./rys/szumy/po_dylatacji.png>
+Package pdftex.def Info: ./rys/szumy/po_dylatacji.png  used on input line 553.
+(pdftex.def)             Requested size: 183.30048pt x 103.09608pt.
+<./rys/szumy/1.png, id=441, 770.88pt x 433.62pt>
+File: ./rys/szumy/1.png Graphic file (type png)
+<use ./rys/szumy/1.png>
+Package pdftex.def Info: ./rys/szumy/1.png  used on input line 562.
+(pdftex.def)             Requested size: 175.49881pt x 98.71817pt.
+<./rys/szumy/2.png, id=442, 1284.8pt x 722.7pt>
+File: ./rys/szumy/2.png Graphic file (type png)
+<use ./rys/szumy/2.png>
+Package pdftex.def Info: ./rys/szumy/2.png  used on input line 564.
+(pdftex.def)             Requested size: 175.49881pt x 98.70714pt.
+
+[24pdfTeX warning (ext4): destination with the same identifier (name{figure.5.9
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.570 	\item
+             operacjÄ™ morfologicznÄ… erozji na masce binarnej z elementem s...
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5.10})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.570 	\item
+             operacjÄ™ morfologicznÄ… erozji na masce binarnej z elementem s...
+ <./rys/szumy/przed_dylatacja.png> <./rys/szumy/po_dylatacji.png (PNG copy)> <.
+/rys/szumy/1.png> <./rys/szumy/2.png (PNG copy)>]
+<./rys/szumy/p.png, id=455, 1284.8pt x 722.7pt>
+File: ./rys/szumy/p.png Graphic file (type png)
+<use ./rys/szumy/p.png>
+Package pdftex.def Info: ./rys/szumy/p.png  used on input line 579.
+(pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
+<./rys/szumy/k.png, id=456, 1284.8pt x 722.7pt>
+File: ./rys/szumy/k.png Graphic file (type png)
+<use ./rys/szumy/k.png>
+Package pdftex.def Info: ./rys/szumy/k.png  used on input line 581.
+(pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
+<./rys/szumy/n.png, id=457, 1284.8pt x 722.7pt>
+File: ./rys/szumy/n.png Graphic file (type png)
+<use ./rys/szumy/n.png>
+Package pdftex.def Info: ./rys/szumy/n.png  used on input line 583.
+(pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
+<./rys/obcinanie/znalezienie.jpg, id=458, 770.88pt x 433.62pt>
+File: ./rys/obcinanie/znalezienie.jpg Graphic file (type jpg)
+<use ./rys/obcinanie/znalezienie.jpg>
+Package pdftex.def Info: ./rys/obcinanie/znalezienie.jpg  used on input line 59
+6.
+(pdftex.def)             Requested size: 175.49881pt x 98.71817pt.
+ [25pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+11}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.599 
+       <./rys/szumy/p.png (PNG copy)> <./rys/szumy/k.png (PNG copy)> <./rys/szu
+my/n.png (PNG copy)>]
+<./rys/obcinanie/obcinanie.png, id=472, 382.42876pt x 243.91125pt>
+File: ./rys/obcinanie/obcinanie.png Graphic file (type png)
+<use ./rys/obcinanie/obcinanie.png>
+Package pdftex.def Info: ./rys/obcinanie/obcinanie.png  used on input line 604.
+
+(pdftex.def)             Requested size: 175.49881pt x 111.93256pt.
+ [26pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+12}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.618 \end{enumerate}
+                     pdfTeX warning (ext4): destination with the same identifie
+r (name{figure.5.13}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.618 \end{enumerate}
+                      <./rys/obcinanie/znalezienie.jpg> <./rys/obcinanie/obcina
+nie.png>]
+<./rys/obcinanie/p.png, id=486, 338.26375pt x 167.62625pt>
+File: ./rys/obcinanie/p.png Graphic file (type png)
+<use ./rys/obcinanie/p.png>
+Package pdftex.def Info: ./rys/obcinanie/p.png  used on input line 625.
+(pdftex.def)             Requested size: 117.00119pt x 57.97946pt.
+<./rys/obcinanie/k.png, id=487, 375.4025pt x 177.66376pt>
+File: ./rys/obcinanie/k.png Graphic file (type png)
+<use ./rys/obcinanie/k.png>
+Package pdftex.def Info: ./rys/obcinanie/k.png  used on input line 627.
+(pdftex.def)             Requested size: 117.00119pt x 55.37068pt.
+<./rys/obcinanie/s.png, id=488, 639.38875pt x 231.86626pt>
+File: ./rys/obcinanie/s.png Graphic file (type png)
+<use ./rys/obcinanie/s.png>
+Package pdftex.def Info: ./rys/obcinanie/s.png  used on input line 629.
+(pdftex.def)             Requested size: 117.00119pt x 42.42757pt.
+ [27pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+14}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.659 \chapter
+              {Podsumowanie} <./rys/obcinanie/p.png (PNG copy)> <./rys/obcinani
+e/k.png (PNG copy)> <./rys/obcinanie/s.png (PNG copy)>] [28]
 Rozdzia\l  6.
-[21
+[29
 
 ]
 
-LaTeX Warning: Empty `thebibliography' environment on input line 478.
+LaTeX Warning: Empty `thebibliography' environment on input line 672.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 481.
-[22
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 675.
+[30
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 481.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 675.
  (praca_dyplomowa.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 481.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 481.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 675.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 675.
 Package rerunfilecheck Info: File `praca_dyplomowa.out' has not changed.
-(rerunfilecheck)             Checksum: 0CAC69ABA470DC2AFF0D075728789DF1;2211.
+(rerunfilecheck)             Checksum: DD55BE97AD52446581AE6D145466A646;2223.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 481.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 675.
  ) 
 Here is how much of TeX's memory you used:
- 8115 strings out of 493305
- 118136 string characters out of 3129801
- 208449 words of memory out of 3000000
- 11346 multiletter control sequences out of 15000+200000
+ 8302 strings out of 493305
+ 122027 string characters out of 3129801
+ 208459 words of memory out of 3000000
+ 11454 multiletter control sequences out of 15000+200000
  24726 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,7n,28p,705b,465s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 28i,7n,28p,997b,469s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Szewy\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
 ecrm1000.pk> <C:\Users\Szewy\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
 ec\dpi600\ecbx2488.pk> <C:\Users\Szewy\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
@@ -1419,9 +1808,9 @@ ppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/Szewy/Ap
 pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/U
 sers/Szewy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pf
 b>
-Output written on praca_dyplomowa.pdf (28 pages, 2073542 bytes).
+Output written on praca_dyplomowa.pdf (36 pages, 2610381 bytes).
 PDF statistics:
- 772 PDF objects out of 1000 (max. 8388607)
- 129 named destinations out of 1000 (max. 500000)
- 372 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 912 PDF objects out of 1000 (max. 8388607)
+ 190 named destinations out of 1000 (max. 500000)
+ 507 words of extra memory for PDF output out of 10000 (max. 10000000)
 

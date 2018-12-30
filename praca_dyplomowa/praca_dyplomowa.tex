@@ -371,24 +371,34 @@ Zwycięzca określany jest w zależności od kombinacji gestów pokazanych przez
 \mbox{} \\	
 Zachowując takie zasady, każdy z gestów ma takie samo prawdopodobieństwo zwycięstwa. W grze liczy się w dużej mierze szczęście, ale także umiejętność przewidywania gestów przeciwnika.
 
-\chapter{Rozpoznawanie gestów w grze papier, kamień, nożyce}
+\chapter{Rozpoznawanie gestów na przykładzie gry papier, kamień, nożyce}
 \section{Aktywizacja danych}
-Pierwszym etapem mojej pracy była aktywizacja danych potrzebnych do uczenia maszynowego. Zbieranie danych polegało na nagrywaniu plików wideo na których dana osoba wykonywała określony gest. W swojej pracy dyplomowej zakładam, że każdy wykonywany gest, jest wykonany w niebieskiej rękawiczce. Takie założenie będę zakładał w całej swojej pracy inżynierskiej.
+Pierwszym etapem mojej pracy była aktywizacja danych potrzebnych do uczenia maszynowego. Zbieranie danych polegało na nagrywaniu plików wideo na których dana osoba wykonywała określony gest. W swojej pracy dyplomowej zakładam, że każdy wykonywany gest, jest pokazywany w niebieskiej rękawiczce. To założenie będę wykorzystywał w całej swojej pracy inżynierskiej.
+
 \begin{figure}[H]	
 	\centering
 	\includegraphics[width=0.4\textwidth]{\ImgPath/rys/rekawiczki.jpg}
 	
-	\caption{  Rękawiczki wykorzystywane w pracy inżynierskiej}
+	\caption{Rękawiczki wykorzystywane w pracy inżynierskiej}
 \end{figure}
 
-\paragraph{Do nagrywania plików używałem dwóch kamer dedykowanych w laptopach:}
+Osoba podczas nagrywania wykonuje ciąg określonych gestów, w dowolnym odstępie czasie. Jest ona ustawiona prostopadle do kamery, co pozwala, aby gest odbywał się poprzez wyciągnięcie ręki oraz jego pokazanie. Na nagraniu zostaje zarejestrowany wykonywany gest, tak aby jedyną widoczna częścią ciała była prawa dłoń oraz ewentualnie cześć przedramienia. 
+
+\begin{figure}[H]	
+	\centering
+	\includegraphics[width=0.6\textwidth]{\ImgPath/rys/klatka.jpg}
+	
+	\caption{Przykładowa klatka z nagrania}
+\end{figure}
+
+\paragraph{Do nagrywania plików wideo używałem dwóch kamer dedykowanych w laptopach:}
 \begin{itemize}
 	\item USB2.0 UVC HD Webcam
 	\item HD Webcam
 \end{itemize}
 \mbox{} \\
-\noindent
-Obie kamery pozwoliły na zadowalające efekty zbierania danych. Jakość zdjęć przy dostatecznie dobrym oświetleniu była bardzo zadowalające, pozwalające bez problem rozpoznawać wykonywany gest. Również ilość klatek na sekundę, pozwoliła, aby dynamiczny ruch był płynny i móc go pomyślnie wysegmentować.
+
+Obie kamery pozwoliły na zadowalające efekty zbierania danych. Jakość nagrań przy dostatecznie dobrym oświetleniu była bardzo zadowalające, pozwalająca bez problem rozpoznawać wykonywany gest. Również liczba klatek na sekundę pozwoliła, aby dynamiczny ruch był płynny i łatwy do prawidłowego wysegmentowania.
 
 W celu zebrania jak najszerszego zakres danych, zbieranie gestów nie ograniczyło się do jednej osoby, jednakże do pięciu różnych osób:
 \begin{itemize}
@@ -396,66 +406,250 @@ W celu zebrania jak najszerszego zakres danych, zbieranie gestów nie ograniczy�
 	\item dwóch mężczyzn
 \end{itemize}
 \mbox{} \\
-Zbieranie danych na różnych osobach pozwala na zmniejszani wpływu charakterystycznych cech dla danej osoby:
+\indent 
+Zbieranie danych na różnych osobach pozwala na zmniejszenie wpływu charakterystycznych cech dla danej osoby:
 \begin{itemize}
 	\item długości dłoni
 	\item szerokości dłoni
 	\item ułożenia palców
+	\item nachylenia dłoni
 \end{itemize}
 \mbox{} \\
-Po zgromadzeniu całego materiału wideo przeszedłem do etapu wyznaczania numerów klatek filmu na których był moment wykonanego gestu. Klatki te będę wykorzystywał w późniejszym  etapie segmentacji dłoni z wykonanym gestem.
+\indent
+Tak zebrane danych dają ogólny pogląd na różnorodność cech danego gestu. Sprawia, że uczenie maszynowe jest skuteczniejsze i daje oczekiwane rezultaty. 
 
-Tak zebrane danych daje ogólny pogląd na różnorodność cech danego gestu. Sprawia, że uczenie maszynowe jest skuteczne i daje oczekiwane rezultaty. Aby zapewnić prawidłowe rozpoznawanie, należy zgromadzić sporą ilość gestów. 
+Po zgromadzeniu całego materiału wideo, przeszedłem do etapu wyznaczania numerów klatek nagrań na których był moment wykonanego gestu. Informacje o numerach klatek gestów będę wykorzystywał w późniejszym etapie, przy segmentacji dłoni z wykonanym gestem.
 
 \paragraph{W mojej pracy inżynierskiej wykorzystywałem zbiór danych składający się z:}
 \begin{itemize}
-	\item 300 próbek gestu papieru
-	\item 300 próbek gestu kamienia
-	\item 300 próbek gestu nożyc
+	\item 350 próbek gestu papieru
+	\item 350 próbek gestu kamienia
+	\item 350 próbek gestu nożyc
 \end{itemize}
 
-
+Aby zapewnić prawidłowe rozpoznawanie, należy zgromadzić jak największą liczbę próbek gestów, którą będzie w późniejszych etapach wykorzystywana przy uczeniu oraz weryfikacji klasyfikatorów.
 
 \section{Detekcja ruchu}
-Po zebraniu danych zająłem się ich przetwarzaniem. Pierwszym krokiem było wysegmentowanie obiektów, które znajdowały się w ruchu. Aby to osiągnąć należało wygenerować maskę binarną, którą rozdzielała tło od obiektów pierwszoplanowych. Do tego wykorzystałem tzw. background subtraction czyli tłumacząc z angielskiego ,,odejmowanie tła''.
+Po zebraniu danych zająłem się ich przetwarzaniem. Pierwszym krokiem było wysegmentowanie obiektów, które znajdowały się w ruchu. Aby to osiągnąć należało wygenerować maskę binarną, którą rozdziera elementy obrazu, która są w ruchu od tych, które są elementami statycznymi. Do tego wykorzystałem tzw. background subtraction czyli tłumacząc z angielskiego ,,odejmowanie tła''.
 
-Metodę dokładną z jakiej skorzystałem była to funkcja z biblioteki OpenCV BackgroundSubtractorKNN. Moim zdaniem uważam że w przypadkach na jakich testowałem segmentację ruchu, metoda ta dawała najlepsze rezultaty w porównaniu z innymi dostępnymi w bibliotece OpenCV. 
+W swojej pracy inżynierskiej w analizie wziąłem pod uwagę następujące dostępne funkcje w bibliotece OpenCV:
 
-Metoda ta pozwoliła uzyskać następujące efekty:
+\begin{itemize} 
+	\item BackgroundSubtractorMOG
+	\item BackgroundSubtractorMOG2
+	\item BackgroundSubtractorGMG
+	\item BackgroundSubtractorKNN
+	\item BackgroundSubtractorGSOC
+	\item BackgroundSubtractorLSBP
+\end{itemize} 
 
-
-Można zauważyć, że wykonywany ruch dłonią jest bardzo widoczny, jednakże dodatkowa zawarta jest duża ilość szumy, który w późniejszym czasie należy się pozbyć.
 \begin{figure}[H]
 	\centering
-	\subfigure[Gest papieru]
-	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/szablon.png}}
-	\subfigure[Gest kamienia]
-	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/e.png}}
-	\subfigure[Gest nożyc]
-	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/otwarcie.png}}
-	\caption{BackgroundSubtractorKNN na gestach z gry papier, kamier, nożyce}
+	\subfigure[BackgroundSubtractorKNN]
+	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/knn.png}}
+	\subfigure[BackgroundSubtractorGSOC]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/gsoc.png}}
+	\subfigure[BackgroundSubtractorLSBP]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/lsbp.png}}
+	\caption{Przykładowe obrazy biorące udział w wyborze odpowiedniej funkcji usuwającej tło z biblioteki OpenCV}
 \end{figure}
 
+Po przeproawdzeniu licznych testów wywnioskowałem, że najlepszą metodą przy mojej pracy będzie funkcja z biblioteki OpenCV BackgroundSubtractorKNN. Uważam, że na przetestowanych próbkach segmentacja ruchu metodą tą dawała najlepsze rezultaty w porównaniu z innymi przetestowanymi metodami. Parametry funkcji przyjęły następującą końcową wartość:
+\begin{enumerate}
+	\item history: 200
+	\item dist2Threshold: 8
+	\item detectShadows: false
+\end{enumerate}
+
+\begin{figure}[H]
+	\centering
+	\subfigure[Znak papieru]
+	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/papier.png}}
+	\subfigure[Gest kamienia]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/kamien.png}}
+	\subfigure[Gest nożyc]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/nozyce.png}}
+	\caption{Uzyskane rezultaty metodą BackgroundSubtractorKNN z biblioteki OpenCV}
+\end{figure}
+
+
+Można zauważyć, że wykonywany ruch dłonią jest bardzo widoczny, jednakże dodatkowo zawarta jest duża ilość szumu. Pozbycie się elementów dodatkowych, nieinteresujących nas części obiektów przedstawię w kolejnych podrozdziałach o detekcji kolorów oraz w podrozdziale o filtracji szumu. 
+
 \section{Detekcja kolorów}
-Równolegle do segmentacji obiektów w ruchu, zająłem się segmentacją obiektów o określonym kolorze. W swojej pracy dyplomowej założyłem, że każdy wykonywany gest jest pokazywany w niebieskiej rękawiczce, w celu łatwiejszej segmentacji dłoni. Nie użyłem tradycyjnego koloru skóry dla osób wschodnio-europejskich ze względu na fakt, że oprócz segmentacji dłoni można było wysegmentować również pozostałe części ręki, jak również inne części ciała jak głowy czy klatka piersiowa. A wszystko to mogło spowodować mniej precyzyjne rozpoznanie gestu.
+Równolegle do segmentacji obiektów w ruchu, zająłem się detekcją obiektów o określonym kolorze. W swojej pracy inżynierskiej założyłem, że każdy wykonywany gest jest pokazywany w niebieskiej rękawiczce, w celu łatwiejszej segmentacji dłoni. Nie użyłem tradycyjnego koloru skóry ze względu na fakt, że oprócz detekcji dłoni spowodowałby także segmentację innych części ręki, jak również pozostałych części ciała, takich jak twarz czy klatka piersiowa. Wszystko to mogłoby spowodować mniej precyzyjne rozpoznawanie gestu.
 
-Wybrałem kolor niebieski ze względu na kolor dobrze rozróżniający się od innych, na który nie wpływa aż tak znacząco moc oświetlenia, który może wpłynąć negatywnie na rozpoznawany kolor.
+Wybrałem kolor niebieski ze względu na to, że jest to kolor dobrze rozróżniający się od innych, na który nie wpływa aż tak znacząco moc oświetlenia.
+Jako, że każdy gest wykonywany jest w niebieskiej rękawiczce, mogłem wykorzystać ten fakt i przy pomocy modelu HSV określić zakres kątów barwy w tym modelu. 
 
-\section{Szumy w zbiorze danych}
-Połączenie segmentacji obiektów w ruchu oraz obiektów o określonym kolorze niesie za sobą możliwy szum, który dla lepszych efektów rozpoznawania obiektów należy zminimalizować. 
+\begin{figure}[H]	
+	\centering
+	\includegraphics[width=0.22\textwidth]{\ImgPath/rys/hsv.png}
+	
+	\caption{  \textbf{Model HSV}}
+\end{figure}
 
-Segmentacja elementów obrazu w ruchu, może nieść ze sobą czum spowodowany tym, że inne obiekty, różne od naszej dłoni też mogą się przesuwać. 
+Na powyżej przedstawionym modelu HSV, można łatwo zaobserwować, że kolor niebieski znajduje się w pewnym przedziale składowej H modelu HSV. To pozwala na zdecydowanie łatwiejsze określenie zakresu niż w przypadku modelu RGB. 
+Chciałem tak dobrać przedział kolorów w modelu HSV, aby był możliwie jak najszerszy w celu dobrej detekcji dłoni. Zakres ten zawierał dodatkowo kolory zbliżone do niebieskiego oraz większość z jego odcieni. To pozwoliło na zwiększoną liczbę wykrytych pikseli, a w tym lepiej wysegmentowaną dłoń. Jednakże wszystko to również niesie za sobą różnego rodzaju szumy, które nie są związane z obiektem dłoni. 
+\begin{figure}[H]
+	\centering
+	\subfigure[Znak papieru]
+	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/detekcja_koloru/papier.png}}
+	\subfigure[Gest kamienia]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/detekcja_koloru/kamien.png}}
+	\subfigure[Gest nożyc]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/detekcja_koloru/nozyce.png}}
+	\caption{Rezultaty detekcji dłoni w niebieskiej rękawiczce}
+\end{figure}
+
+\paragraph{Zakres jaki wykorzystałem w swojej pracy inżynierskiej jest następujący:}
+\begin{enumerate}
+	\item od HSV (98,50,20)
+	\item do HSV (130,255,255)
+\end{enumerate}
+\mbox{} \\
+
+Jak widzimy występuje znacząca liczba szumu, jednakże jeżeli połączymy detekcję koloru niebieskiego z detekcją ruchu, która została opisana w poprzednim podrozdziale, może pozbyć się w większości tych niechcianych elementów. 
+
+\begin{figure}[H]
+	\centering
+	\subfigure[Znak papieru]
+	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs_color/papier.png}}
+	\subfigure[Gest kamienia]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs_color/kamien.png}}
+	\subfigure[Gest nożyc]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs_color/nozyce.png}}
+	\caption{Rezultaty detekcji dłoni w niebieskiej rękawiczce oraz wykrywania ruchu}
+\end{figure}
+
+Jak widzimy większość z niepożądanych szumów została usunięta za sprawą połączania dwóch masek binarnych. Możemy też zaobserwować, że nie wszystko zostało prawidłowo przefiltrowane, mogły też pozostać tzw. dziury binarne czyli części obiektów, które nie zostały zakwalifikowane jako części obiektu, a nimi faktyczne są. 
+
+Wszystko to powoduje, że konieczne są kolejne filtracje szumów. W tym przypadku wykorzystałem operacje morfologiczne na obrazach binarnych, co opiszę w następnym podrozdziale.  
+
+\section{Filtracja szumów}
+Połączenie iloczynowe maski binarnej uzyskanej z segmentacji obiektów w ruchu oraz maski binarnej z obiektami o określonym kolorze niesie za sobą możliwe niedokładności, których dla polepszenia efektowności rozpoznawania gestów należy zminimalizować. Odbywa się to poprzez zastosowanie operacji morfologicznych na obrazie binarnym. 
+
+\paragraph{Dodatkowe elementy:} \mbox{} \\
+Pierwszym problemem po wygenerowaniu maski binarnej można zostać uznane wszystkie dodatkowe elementy, które nie powinny być zakwalifikowane jako część dłoni. Segmentacja elementów obrazu w ruchu, może nieść ze sobą różnego rodzaju szum spowodowany tym, że inne obiekty, różne od naszej dłoni też mogą się poruszać, co w wyniku generacji maski binarnej zostaną też wzięte pod uwagę. Kolejnym problem są także wszystkie te pikseli, które są koloru niebieskiego lub też są zbliżone do niego, a więc przy wyłuskiwaniu wszystkich pikseli o kolorze rękawiczki, czyli w kolorze niebieskim, zostaną uwzględnione jako obiekt.
+
+\begin{figure}[H]
+	\centering
+	\subfigure[Maska binarna przed operacją morfologiczną erozji]
+	{\label{fig:a}\includegraphics[width=0.47\textwidth]{\ImgPath/rys/szumy/przed_erozja.png}}
+	\subfigure[Maska binarna po operacji morfologicznej erozji]
+	{\label{fig:b}\includegraphics[width=0.47\textwidth]{\ImgPath/rys/szumy/po_erozji.png}}
+	\caption{  \textbf{Zastosowanie operacji morfologicznej erozji z elementem strukturalnym kwadratu o boku 8 pikseli}}
+\end{figure}
+
+Zastosowanie operacji morfologicznej erozji na masce binarnej powoduje usunięcie elementów niechcianych, które są traktowane jako dodatkowy, niepotrzebny szum. W swojej pracy inżynierskiej wykorzystałem w pierwszym kroku filtracji masek binarnych operację morfologiczną erozji z bardzo małym elementem strukturalnym, bo z kwadratem o boku 2. Różniejsza operacja erozji, po wykonaniu operacji zamknięcia odbywała się już z większym wielkością elementem strukturalnym: kwadratem o boku 8.  Wykorzystanie takiej operacji dało zadowalające efekty w mojej ocenie, które pozwolą w późniejszym etapie pracy na dokładniejsze rozpoznawanie gestów.
+
+\paragraph{Ubytku w dłoni:} \mbox{} \\
+Oprócz pozbycia się dodatkowych elementów na obrazie binarnym należy także, wypełnić luki które mogły się pojawić podczas segmentacji obiektów w ruchu oraz przy uzyskiwaniu maski binarnej z obiektami o określonym kolorze. Są one spowodowane tym, że pewne części z obrazów podczas tych operacji zostały prawidło zakwalifikowane. Zbyt mocne lub też zbyt słabe światło czy też pojawiające się cienie mogły wpłynąć na kolor niebieskiej rękawiczki, a przez to niedokładnie ją wykryć. Również gest ręki mógł być bardzo powolny, a przez to nie zostanie uznana pełna dłoń jako element w ruchu przez operacje segmentacji ruchu. Zarówno reż dynamiczny ruch ręku w połączeniu z występujących w otoczeniu światłem wpływa na odbierany kolor rękawiczki. Należy też dodatkowo wziąć pod uwagę dziury w obrazie binarnym, który mogły wyniknąć z operacji morfologicznej erozji, która została zastosowana jako pierwsza. 
+
+\begin{figure}[H]
+	\centering
+	\subfigure[Maska binarna przed operacją morfologiczną dylatacji]
+	{\label{fig:a}\includegraphics[width=0.47\textwidth]{\ImgPath/rys/szumy/przed_dylatacja.png}}
+	\subfigure[Maska binarna po operacji morfologicznej dylatacji]
+	{\label{fig:b}\includegraphics[width=0.47\textwidth]{\ImgPath/rys/szumy/po_dylatacji.png}}
+	\caption{  \textbf{Zastosowanie operacji morfologicznej dylatacji z elementem strukturalnym kwadratu o boku 11 pikseli}}
+\end{figure}
+
+Zastosowanie operacji morfologicznej dylatacji na masce binarnej powoduje wypełnienie dziur, które mogły wystąpić w masce binarnej. W swojej pracy inżynierskiej do pozbycia się różnego rodzaju dziur w maskach binarnych  użyłem operacji morfologicznej dylatacji z elementem strukturalnym kwadratu o boku 11. 
+
+\begin{figure}[H]
+	\centering
+	\subfigure[Gest kamienia przed filtracją ]
+	{\label{fig:a}\includegraphics[width=0.45\textwidth]{\ImgPath/rys/szumy/1.png}}
+	\subfigure[Gest kamienia po filtracji]
+	{\label{fig:b}\includegraphics[width=0.45\textwidth]{\ImgPath/rys/szumy/2.png}}
+	\caption{  \textbf{Przykładowe maski binarne po zastosowaniu operacji morfologicznych erozji oraz dylatacji z elementami strukturalnymi kwadratu o boku 8 dla erozji oraz kwadratu o boku 11 dla operacji dylatacji}}
+\end{figure}
+
+W swojej pracy inżynierskiej zastosowałem następujące operacje do przefiltrowania masek binarnych: 
+\begin{enumerate}
+	\item operację morfologiczną erozji na masce binarnej z elementem strukturalnym kwadratu o boku 4
+	\item operację morfologiczną zamknięcia z elementem strukturalnym kwadratu o boku 8 na wyjściowej masce binarnej uzyskanej w podpunkcie nr 1
+	\item operację morfologiczną dylatacji z elementem strukturalnym kwadratu o boku 11 na wyjściowej masce binarnej uzyskanej w podpunkcie nr 2
+	\item operację morfologiczną dylatacji z elementem strukturalnym kwadratu o boku 11 na wyjściowej masce binarnej uzyskanej w podpunkcie nr 3
+\end{enumerate}
+
+\begin{figure}[H]
+	\centering
+	\subfigure[Gest papieru ]
+	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/szumy/p.png}}
+	\subfigure[Gest kamienia]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/szumy/k.png}}
+	\subfigure[Gest nożyc]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/szumy/n.png}}
+	\caption{  \textbf{Przykłady efektów wykonanej filtracji, która została powyżej opisana}}
+\end{figure}
+
+Cała filtracja  w mojej ocenie bardzo dobre rezultaty, które znacząco polepszyły prawidłową segmentację dłoni, a przez to w późniejszych krokach dokładniejsze rozpoznawanie dłoni.
+
 \section{Znajdowanie obiektów}
+Ostatnim etapem przetwarzania obrazów w mojej pracy inżynierskiej było wydzielenie z maski binarnej prostokąta, zawierającego w sobie całą wysegmentową wcześniej dłoń, bez ogólnego tła. Dzięki czemu jesteśmy wstanie analizować jedynie tą część maski binarnej, która zawiera w sobie całą dłoń, bez zbędnych innych elementów.
+
+Znajdowanie to polegało na wyszukaniu prostokąta na całej masce binarnej, która będzie miała największe pole z ze wszystkich znalezionych konturów na obiektach z maski binarnej. 
+
+\begin{figure}[H]
+	\centering
+	{\label{fig:a}\includegraphics[width=0.45\textwidth]{\ImgPath/rys/obcinanie/znalezienie.jpg}}
+	\caption{  \textbf{Zaznaczenie na czerwono prostokąta o największym polu, który zawiera w sobie całościowo obiekt}}
+\end{figure}
+
+Po znalezieniu takiego prostokąta następowało przycięcie maski do odpowiednich rozmiarów zgodnie z znalezionym prostokątem o największym polu. Prostokąt ten jest przyległy przez obiekt binarny z każdej swojej strony, co oznacza, że dokładnie przycięcie nie jest możliwe, bez zmniejsza znalezionego obiektu.
+
+\begin{figure}[H]
+	\centering
+	{\label{fig:b}\includegraphics[width=0.45\textwidth]{\ImgPath/rys/obcinanie/obcinanie.png}}
+	\caption{  \textbf{Obcięcie zgodnie ze znalezionym prostokątem}}
+\end{figure}
+\paragraph{Etapy przycięcia maski binarnej:}
+\begin{enumerate}
+	\item Przypisz do obecnie znalezione największego pola prostokąta wartość 0
+	\item Znajdź wszystkie kontury obiektów na masce binarnej
+	\item Dla każdego konturu wykonaj:
+	\begin{enumerate}
+		\item Oblicz współrzędne lewego górnego oraz prawego dolnego wierzchołka prostokąta, który będzie otaczał analizowany kontur 
+		\item Oblicz pole powierzchni tak utworzonego prostokąta
+		\item Jeżeli pole powierzchni utworzonego prostokąta jest większe niż pole powierzchni obecnie znalezionego największego prostokąta, to traktur tą powierzchnię jako największą i dodatkowo zapamiętaj współrzędne prostokąta
+	\end{enumerate}
+	\item Przytnij maskę binarną o zapamiętanych wierzchołkach największego znalezionego prostokąta
+\end{enumerate}
+
+Efekt końcowy wysegmentowania dłoni zawiera w sobie obiekt binarny reprezentujący dłoń, którą jest wykonywany gest.
+Zostanie on wykorzystany przez klasyfikatory opisany w następnych podrozdziałach klasyfikatora KNN oraz klasyfikatora opartego o sieci neuronowe.
+\begin{figure}[H]
+	\centering
+	\subfigure[Gest papieru ]
+	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/obcinanie/p.png}}
+	\subfigure[Gest kamienia]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/obcinanie/k.png}}
+	\subfigure[Gest nożyc]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/obcinanie/s.png}}
+	\caption{  \textbf{Końcowa segmentacja dłoni}}
+\end{figure} 
 
 \section{Dobór i ocena cech}
 Po wysegmentowaniu gestów dla uczenia maszynowego nadszedł czas, aby zgromadzony materiał opisać dobranymi cechami. Zbiór danych to wysegmentowana dłoń. Zdecydowałem się, że gesty będę opisywał w następujący sposób.
 
+\begin{itemize}
+	\item Stosunek szerokości do długości 
+	\item Pole powierzchni znalezionego obiektu dłoni
+	\item Pole powierzchni otoczki wypukłej utworzonej na znalezionej dłoni
+	\item Stosunek półosi małej do półosi wielkiej elipsy opisanej na znalezionej dłoni
+	\item Pole powierzchni otoczki wypukłej utworzonej elipsy na znalezionej dłoni
+\end{itemize}
+
 Przy ocenie jakości dobranych cech w pierwszej kolejności wykorzystałem odchylenie standardowe. Dzięki czemu miałem porównanie jak dana cecha wpływa na określony gest. 
+
+
 
 Kolejnym etapie było skuteczności wybranej cechy przy rozpoznawaniu konkretnych dwóch gestów. Do tego wykorzystałem wyt	`odę...
 
 Po wyżej wymienionej ocenie ustaliłem następujące cechy dla danego gestu:
 
+Ważnym etapem dla każdej cechy była jej normalizacja, aby nie powodowała większego wpływy od innych
 
 \section{Rozpoznawanie gestów przy pomocy klasyfikatora KNN}
 

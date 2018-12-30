@@ -18,11 +18,11 @@
 \BOOKMARK [1][-]{section.3.5}{TensorFlow}{chapter.3}% 18
 \BOOKMARK [1][-]{section.3.6}{Keras}{chapter.3}% 19
 \BOOKMARK [0][-]{chapter.4}{Gra papier, kamien, nozyce}{}% 20
-\BOOKMARK [0][-]{chapter.5}{Rozpoznawanie gest\363w w grze papier, kamien, nozyce}{}% 21
+\BOOKMARK [0][-]{chapter.5}{Rozpoznawanie gest\363w na przyk\233adzie gry papier, kamien, nozyce}{}% 21
 \BOOKMARK [1][-]{section.5.1}{Aktywizacja danych}{chapter.5}% 22
 \BOOKMARK [1][-]{section.5.2}{Detekcja ruchu}{chapter.5}% 23
 \BOOKMARK [1][-]{section.5.3}{Detekcja kolor\363w}{chapter.5}% 24
-\BOOKMARK [1][-]{section.5.4}{Szumy w zbiorze danych}{chapter.5}% 25
+\BOOKMARK [1][-]{section.5.4}{Filtracja szum\363w}{chapter.5}% 25
 \BOOKMARK [1][-]{section.5.5}{Znajdowanie obiekt\363w}{chapter.5}% 26
 \BOOKMARK [1][-]{section.5.6}{Dob\363r i ocena cech}{chapter.5}% 27
 \BOOKMARK [1][-]{section.5.7}{Rozpoznawanie gest\363w przy pomocy klasyfikatora KNN}{chapter.5}% 28
