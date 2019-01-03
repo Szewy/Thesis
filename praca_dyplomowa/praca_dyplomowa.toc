@@ -18,35 +18,44 @@
 \contentsline {section}{\numberline {2.4}Filtry ruchu}{8}{section.2.4}
 \contentsline {section}{\numberline {2.5}Detekcja kolor\IeC {\'o}w}{9}{section.2.5}
 \contentsline {chapter}{\numberline {3}Sztuczna inteligencja}{11}{chapter.3}
-\contentsline {section}{\numberline {3.1}Sztuczna inteligencja, uczenie maszynowe, g\IeC {\l }\IeC {\k e}bokie uczenie}{11}{section.3.1}
-\contentsline {section}{\numberline {3.2}Sieci neuronowe}{11}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Uczenie sieci neuronowych}{11}{subsection.3.2.1}
-\contentsline {section}{\numberline {3.3}Klasyfikatory}{11}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Klasyfikator KNN}{11}{subsection.3.3.1}
-\contentsline {paragraph}{Po utworzeniu klasyfikatora bazuj\IeC {\k a}cego na zbiorze ucz\IeC {\k a}cym, szacowanie atrybutu decyzyjnego odbywa si\IeC {\k e} w nast\IeC {\k e}puj\IeC {\k a}cych krokach: }{12}{section*.13}
-\contentsline {subsection}{\numberline {3.3.2}Dob\IeC {\'o}r i ocena cech}{12}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Python}{12}{section.3.4}
-\contentsline {paragraph}{Zalety u\IeC {\.z}ywania Pythona:}{12}{section*.14}
-\contentsline {section}{\numberline {3.5}TensorFlow}{13}{section.3.5}
-\contentsline {section}{\numberline {3.6}Keras}{14}{section.3.6}
-\contentsline {chapter}{\numberline {4}Gra papier, kamie\IeC {\'n}, no\IeC {\.z}yce}{15}{chapter.4}
-\contentsline {paragraph}{Trzy gesty dozwolone w grze:}{15}{section*.15}
-\contentsline {paragraph}{W przypadku kombinacji:}{15}{section*.16}
-\contentsline {chapter}{\numberline {5}Rozpoznawanie gest\IeC {\'o}w na przyk\IeC {\l }adzie gry papier, kamie\IeC {\'n}, no\IeC {\.z}yce}{17}{chapter.5}
-\contentsline {section}{\numberline {5.1}Aktywizacja danych}{17}{section.5.1}
-\contentsline {paragraph}{Do nagrywania plik\IeC {\'o}w wideo u\IeC {\.z}ywa\IeC {\l }em dw\IeC {\'o}ch kamer dedykowanych w laptopach:}{18}{section*.17}
-\contentsline {paragraph}{W mojej pracy in\IeC {\.z}ynierskiej wykorzystywa\IeC {\l }em zbi\IeC {\'o}r danych sk\IeC {\l }adaj\IeC {\k a}cy si\IeC {\k e} z:}{19}{section*.18}
-\contentsline {section}{\numberline {5.2}Detekcja ruchu}{19}{section.5.2}
-\contentsline {section}{\numberline {5.3}Detekcja kolor\IeC {\'o}w}{20}{section.5.3}
-\contentsline {paragraph}{Zakres jaki wykorzysta\IeC {\l }em w swojej pracy in\IeC {\.z}ynierskiej jest nast\IeC {\k e}puj\IeC {\k a}cy:}{22}{section*.19}
-\contentsline {section}{\numberline {5.4}Filtracja szum\IeC {\'o}w}{22}{section.5.4}
-\contentsline {paragraph}{Dodatkowe elementy:}{23}{section*.20}
-\contentsline {paragraph}{Ubytku w d\IeC {\l }oni:}{23}{section*.21}
-\contentsline {section}{\numberline {5.5}Znajdowanie obiekt\IeC {\'o}w}{25}{section.5.5}
-\contentsline {paragraph}{Etapy przyci\IeC {\k e}cia maski binarnej:}{26}{section*.22}
-\contentsline {section}{\numberline {5.6}Dob\IeC {\'o}r i ocena cech}{27}{section.5.6}
-\contentsline {section}{\numberline {5.7}Rozpoznawanie gest\IeC {\'o}w przy pomocy klasyfikatora KNN}{28}{section.5.7}
-\contentsline {section}{\numberline {5.8}Rozpoznawanie gest\IeC {\'o}w przy pomocy sieci neuronowej}{28}{section.5.8}
-\contentsline {subsection}{\numberline {5.8.1}Sie\IeC {\'c} neuronowa dla cech}{28}{subsection.5.8.1}
-\contentsline {subsection}{\numberline {5.8.2}Sie\IeC {\'c} neuronowa obraz\IeC {\'o}w binarnych}{28}{subsection.5.8.2}
-\contentsline {chapter}{\numberline {6}Podsumowanie}{29}{chapter.6}
+\contentsline {section}{\numberline {3.1}Sieci neuronowe}{11}{section.3.1}
+\contentsline {section}{\numberline {3.2}Klasyfikatory}{11}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Klasyfikator KNN}{11}{subsection.3.2.1}
+\contentsline {paragraph}{Po utworzeniu klasyfikatora bazuj\IeC {\k a}cego na zbiorze ucz\IeC {\k a}cym, szacowanie atrybutu decyzyjnego odbywa si\IeC {\k e} w nast\IeC {\k e}puj\IeC {\k a}cych krokach: }{11}{section*.13}
+\contentsline {subsection}{\numberline {3.2.2}Dob\IeC {\'o}r i ocena cech}{12}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Python}{13}{section.3.3}
+\contentsline {paragraph}{Zalety u\IeC {\.z}ywania Pythona:}{13}{section*.14}
+\contentsline {section}{\numberline {3.4}TensorFlow}{14}{section.3.4}
+\contentsline {section}{\numberline {3.5}Keras}{14}{section.3.5}
+\contentsline {chapter}{\numberline {4}Gra papier, kamie\IeC {\'n}, no\IeC {\.z}yce}{16}{chapter.4}
+\contentsline {paragraph}{Trzy gesty dozwolone w grze:}{16}{section*.15}
+\contentsline {paragraph}{W przypadku kombinacji:}{16}{section*.16}
+\contentsline {chapter}{\numberline {5}Rozpoznawanie gest\IeC {\'o}w na przyk\IeC {\l }adzie gry papier, kamie\IeC {\'n}, no\IeC {\.z}yce}{18}{chapter.5}
+\contentsline {section}{\numberline {5.1}Aktywizacja danych}{18}{section.5.1}
+\contentsline {paragraph}{Do nagrywania plik\IeC {\'o}w wideo u\IeC {\.z}ywa\IeC {\l }em dw\IeC {\'o}ch kamer dedykowanych w laptopach:}{19}{section*.17}
+\contentsline {paragraph}{W mojej pracy in\IeC {\.z}ynierskiej wykorzystywa\IeC {\l }em zbi\IeC {\'o}r danych sk\IeC {\l }adaj\IeC {\k a}cy si\IeC {\k e} z:}{20}{section*.18}
+\contentsline {section}{\numberline {5.2}Detekcja ruchu}{20}{section.5.2}
+\contentsline {section}{\numberline {5.3}Detekcja kolor\IeC {\'o}w}{21}{section.5.3}
+\contentsline {paragraph}{Zakres modelu HSV jaki wykorzysta\IeC {\l }em w swojej pracy in\IeC {\.z}ynierskiej jest nast\IeC {\k e}puj\IeC {\k a}cy:}{23}{section*.19}
+\contentsline {section}{\numberline {5.4}Filtracja szum\IeC {\'o}w}{23}{section.5.4}
+\contentsline {paragraph}{Dodatkowe elementy:}{24}{section*.20}
+\contentsline {paragraph}{Ubytku w d\IeC {\l }oni:}{24}{section*.21}
+\contentsline {section}{\numberline {5.5}Znajdowanie obiekt\IeC {\'o}w}{26}{section.5.5}
+\contentsline {paragraph}{Etapy przyci\IeC {\k e}cia maski binarnej:}{27}{section*.22}
+\contentsline {section}{\numberline {5.6}Dob\IeC {\'o}r i ocena cech}{28}{section.5.6}
+\contentsline {paragraph}{Zdecydowa\IeC {\l }em si\IeC {\k e}, \IeC {\.z}e gesty b\IeC {\k e}d\IeC {\k e} opisywa\IeC {\l } za pomoc\IeC {\k a} nast\IeC {\k e}puj\IeC {\k a}cych cech}{28}{section*.23}
+\contentsline {section}{\numberline {5.7}Rozpoznawanie gest\IeC {\'o}w przy pomocy klasyfikatora KNN}{29}{section.5.7}
+\contentsline {paragraph}{W zale\IeC {\.z}no\IeC {\'s}ci od doboru parametry klasyfikator k, osi\IeC {\k a}gn\IeC {\k a}\IeC {\l }em nast\IeC {\k e}puj\IeC {\k a}ce wyniki:}{30}{section*.24}
+\contentsline {paragraph}{k = 3}{30}{section*.25}
+\contentsline {paragraph}{k = 5}{30}{section*.26}
+\contentsline {paragraph}{k = 7}{30}{section*.27}
+\contentsline {paragraph}{k = 9}{30}{section*.28}
+\contentsline {section}{\numberline {5.8}Rozpoznawanie gest\IeC {\'o}w przy pomocy sieci neuronowej}{31}{section.5.8}
+\contentsline {subsection}{\numberline {5.8.1}Sie\IeC {\'c} neuronowa dla cech}{31}{subsection.5.8.1}
+\contentsline {paragraph}{Sieci neuronowe, kt\IeC {\'o}re wykorzystywa\IeC {\l }em przy budowie klasyfikatora sk\IeC {\l }ada\IeC {\l }y si\IeC {\k e} z nast\IeC {\k e}puj\IeC {\k a}cych cz\IeC {\k e}\IeC {\'s}ci:}{31}{section*.29}
+\contentsline {paragraph}{Do warstwy wej\IeC {\'s}ciowej by\IeC {\l }y podawane warto\IeC {\'s}ci nast\IeC {\k e}puj\IeC {\k a}cych cech:}{31}{section*.30}
+\contentsline {paragraph}{Zanotowa\IeC {\l }em nast\IeC {\k e}puj\IeC {\k a}ce dok\IeC {\l }adno\IeC {\'s}ci rozpoznawania sieci\IeC {\k a} przy wy\IeC {\.z}ej wymienionych parametrach:}{32}{section*.31}
+\contentsline {paragraph}{Analiza uczenia w poszczeg\IeC {\'o}lnych epokach:}{33}{section*.32}
+\contentsline {paragraph}{Przeprowadzona analiza pozwoli\IeC {\l }a ustali\IeC {\'c} ostateczne parametry sieci:}{35}{section*.33}
+\contentsline {subsection}{\numberline {5.8.2}Sie\IeC {\'c} neuronowa obraz\IeC {\'o}w binarnych}{35}{subsection.5.8.2}
+\contentsline {chapter}{\numberline {6}Podsumowanie}{36}{chapter.6}
