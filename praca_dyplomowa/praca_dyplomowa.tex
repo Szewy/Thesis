@@ -309,7 +309,38 @@ Na zaprezentowanym przykładzie możemy przeanalizować działanie klasyfikatora
 \subsection{Dobór i ocena cech}
 Podstawowym elementem tworzenia klasyfikatora jest dobór odpowiednich do niego cech na których będzie bazował. Źle dobrane elementy wejścia spowodują niedokładną klasyfikację. Dlatego tak bardzo ważne jest odpowiedni dobór cech opisujących.
 
-Ważnym etapem dla każdej cechy była jej normalizacja danych, aby dana cecho nie powodowała większego wpływy od innych czy też wpływa nieznacząco w stosunku do innych. W swojej pracy zdecydowałem się wykorzystać z standaryzację, zgodnie ze wzorem: $ Z = \dfrac{x - \mu}{\sigma} $
+Ważnym etapem dla każdej cechy była jej normalizacja danych, aby dana cecho nie powodowała większego wpływy od innych czy też wpływa nieznacząco w stosunku do innych. Przykładem normalizacji jest standaryzacja, którą możemy przedstawić zgodnie ze wzorem: $ Z = \dfrac{x - \mu}{\sigma} $, gdzie 
+\\ x - wartość przed normalizacją, \\ $\mu$ - średnia, \\ $\sigma$ - odchylenie standardowe
+
+\paragraph{Warunki dobrej cechy diagnostycznej: }
+\begin{itemize}
+	\item Powinny być wielkościami z podobnego zakresu
+	\item Wartości danej cechy w obrębie określonej klasy powinny być do siebie możliwie jak najbardziej zbliżone
+	\item Powinny być mało wrażliwe na szum
+	\item Ta sama cecha powinna przyjmować różne wartości w przypadku różnych klas
+	\item Ogólna liczba cech diagnostycznych nie może być zbyt duża
+\end{itemize}
+\mbox{} \\
+Warunkiem dobrej cechy diagnostycznej, jest to, że ta sama cecha w obrębie różnych klas powinna przyjmować jak najbardziej różne wartości. Przy diagnostyce tego warunku można wykorzystać średnią arytmetyczną wartości danej cechy w poszczególnych klasach.
+
+Kolejnym warunkiem na jaki warto zwrócić uwagę podczas oceny cech jest jej odchylenie standardowe w obrębie określonej klasy. Odchylenie standardowe można określić wzorem: \\
+$ \sigma = {\sqrt {\operatorname {E} ((X-\operatorname {E} (X))^{2})}} $, gdzie \\
+X - zmienna \\
+E - wartość oczekiwana \\
+
+Opisuje ono rozproszenie cechy w obrębie określonej klasy, co implikuje, że dobrze dobrana cecha charakteryzuje się jak najmniejszym rozproszeniem.
+
+\paragraph{Przykładowe cechy możliwe do wykorzystania do opisu masek binarnych: }
+\begin{itemize}
+	\item Stosunek szerokości do wysokości obrazu
+	\item Stosunek powierzchni obiektu binarnego do powierzchni całego obrazu
+	\item Stosunek powierzchni otoczki wypukłej na obiekcie binarnym do powierzchni całego obrazu
+	\item Stosunek półosi małej do dużej elipsy opisanej na obiekcie binarnym 
+	\item Wartości punktów końcowych obiektu binarnego
+	\item Orientacja obiektu binarnego
+\end{itemize}
+\mbox{} \\
+Przy wyborze odpowiednich cech ważnym elementem jest ich ocena, aby sprawdzić czy wybrana cecha będzie wymierny wpływ na prawidłową klasyfikację.
 
 \section{Python}
 Jest to interpretowany, obiektowy język wysokiego poziomu. Używany jest w szerokiej gamie  aplikacjach. Jest językiem ogólnego przeznaczenia, co oznacza, że może zostać wykorzystany praktycznie do wszystkiego. Jest rozwijany jako projekt otwartoźródłowy. Pojawił się w roku 1991, zaprojektowany przez holenderskiego programistę Guido van Rossum.
