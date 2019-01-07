@@ -19,6 +19,8 @@
 \usepackage{subfigure}
 \usepackage{tabularx}
 \usepackage{enumitem}
+\usepackage{listings}
+
 \setlist[itemize]{noitemsep, topsep=0pt}
 
 \newcommand{\ImgPath}{.}
@@ -276,6 +278,11 @@ Model składa się z następujących części: barwa, nasycenie, wartość. Geom
 \chapter{Sztuczna inteligencja}
 \section{Sieci neuronowe}
 
+\paragraph{Głębokie sieci neuronowe}
+
+\paragraph{Funkcje aktywacji}
+
+\paragraph{Uczenie sieci}
 
 \section{Klasyfikatory}
 Klasyfikacja to wyznaczanie klasy decyzyjnej do której należy nowy, nieznany dotąd obiekt. Metody klasyfikacji możemy podzielić na dwie kategorie. Pierwsza z nich jest  klasyfikacją nadzorowaną, druga zaś to klasyfikacja nienadzorowana. 
@@ -764,7 +771,7 @@ Z wykonanych analiz dokładności klasyfikatorów w zależności od parametru k 
 \subsection{Sieć neuronowa dla cech}
 	Analogicznie jak w przypadku klasyfikatora KNN również i  kolejny klasyfikator oparłem na wyznaczonych wcześniej cechach. Klasyfikator ten różnił się tym od poprzedniego, że bazował tym razem na sieciach neuronowych. A swoją skuteczność klasyfikacji zawdzięcza uczeniu maszynowemu.
 	
-	Sieć została stworzona w języku Python, korzystając z biblioteki TensorFlow oraz jako wysokopoziomowe API siei neuronowych wykorzystałem bibliotekę Keras.
+	Sieć została stworzona w języku Python, korzystając z biblioteki TensorFlow oraz jako wysokopoziomowe API sieci neuronowych wykorzystałem bibliotekę Keras.
 	
 	\paragraph{Sieci neuronowe, które wykorzystywałem przy budowie klasyfikatora składały się z następujących części:}
 	\begin{enumerate}
@@ -917,11 +924,82 @@ Z wykonanych analiz dokładności klasyfikatorów w zależności od parametru k 
 \subsection{Sieć neuronowa obrazów binarnych}
 
 
-Kolejnym podejściem do klasyfikatora była analiza wysegmentowanej dłoni gestu siecią neuronową tym razem bez opisywania gestu cechami, lecz podaniem do klasyfikatora całej otrzymanej wcześniej maski binarnej. 
+	Kolejnym podejściem do klasyfikacji była analiza wysegmentowanej dłoni gestu siecią neuronową tym razem bez opisywania gestu cechami, lecz podaniem do klasyfikatora całego otrzymanego wcześniej obrazu binarnego.
+	
+	Po procesie segmentacji dłoni z gestem, opisanym w poprzednich podrozdziałach, należało ustandaryzować rozmiar obrazu binarnego, który został wykorzystany jako element wejścia dla sieci neuronowej. Ustaliłem, że rozmiar będzie wynosił 60 pikseli szerokości oraz 25 pikseli wysokości. Stosunek obu wartości chciałem tak dobrać, aby zachował jak najbardziej ogólną jego wartość dla wszystkich obrazów binarnych z wykorzystywanego zbioru danych. Zmniejszenie rozmiaru, ma również korzystny wpływ na szybkość działania sieci, jednakże w wyniku czego tracimy pewne dostępne szczegóły na obrazie.
 
-Po wysegmentowaniu dłoni gestu opisanym w poprzednich podrozdziałach należało ustandaryzować rozmiar maski binarnej jako element wejścia dla sieci neuronowej. Ustałem, że będzie to rozmiar 60 pikseli szerokości oraz 25 pikseli wysokości. Stosunek obu wartości chciałem tak dobrać, aby zachował jak najbardziej ogólną jego wartość dla wszystkich masek binarnych. Zmniejszenie rozmiaru, ma również korzystny wpływ na szybkość działania sieci, jednakże za utracenie pewnych dostępnym szczegółów.
+	Sieć została stworzona w języku Python, korzystając z biblioteki TensorFlow oraz jako wysokopoziomowe API sieci neuronowych wykorzystałem bibliotekę Keras.
 
-...
+	Zbiór uczący sieci neuronowe zawierał 855 próbek, zaś zbiór weryfikacyjny zawierał w sobie 195 próbek. Każdy z trzech gestów miał po 350 próbek, zaś przydział do odpowiedniego zbioru odbywał się w sposób losowy.
+	
+	\paragraph{Sieci neuronowe, które wykorzystywałem przy budowie klasyfikatora składały się z następujących części:}
+	\begin{enumerate}
+		\item Warstwa wejściowa
+		\item Jedna warstwa ukryta
+		\item Warstwa wyjściowa
+	\end{enumerate}
+	
+	Jako elementy wejścia były wykorzystywane wysegmentowane wcześniej obrazy dłoni z gestem i skonwertowane do rozmiaru 60 pikseli szerokości i 25 pikseli wysokości. Wartości pikseli obrazu rgb zostały przeskalowane z przedziału 0-255 do wartości z przedziału 0-1. 
+	Do warstwy wejściowej sieci, podane zostały wartości tablicy o rozmiarze 25x60x3, która zawierała przeskalowane wartości rgb pikseli obrazu dłoni.
+	Ilość neuronów w warstwie ukrytej był to parametr, który doświadczalnie zmieniałem. Funkcja aktywacji jaką wykorzystałem dla tej warstwy była to funkcja RuLU.
+
+	Warstwa wyjściowa każdej z przetestowanych sieci, składała się z funkcji aktywacji softmax, której wyjście traktowałem jako prawdopodobieństwo danego z trzech gestów. Każdy z trzech neuronów warstwy wyjścia oznaczał właśnie to prawdopodobieństwo w następującej kolejności:
+	\begin{enumerate}
+		\item gest papieru
+		\item gest kamienia
+		\item gest nożyc
+	\end{enumerate}
+
+	\paragraph{Budowa sieci neuronowej korzystając z biblioteki Keras:}
+	\begin{lstlisting}[language=Python]
+   model = keras.Sequential([
+     keras.layers.Flatten(input_shape=(25, 60, 3)),
+     keras.layers.Dense(256, activation=tf.nn.relu),
+     keras.layers.Dense(3, activation=tf.nn.softmax)
+   ])
+	\end{lstlisting}
+	
+	Do uczenia sieci neuronowych wykorzystywałem metodę dostępną w bibliotece Keras GradientDescentOptimizer z parametrem uczenia równym 0.01. Zaś sama sieć została uruchomiana dla 100 epok. 
+	
+	\paragraph{Zanotowałem następujące dokładności rozpoznawania siecią przy wyżej wymienionych parametrach:}
+	
+	\mbox{}\\
+	
+	\begin{table}[H]
+		\centering
+		\begin{tabularx}{\textwidth}{|X|X|X|X|}
+			\hline
+			\textbf{Liczba neuronów w warstwie ukrytej sieci} & \textbf{Dokładność klasyfikacji} \\ 
+			
+			\hline
+			32  & 98.13\% \\ 
+			
+			\hline
+			64  & 98.46\% \\
+			
+			\hline
+			128  & 99.18\% \\
+			
+			\hline
+			256  & 99.58\% \\
+			
+			\hline
+			512  & 98.88\% \\
+			
+			\hline
+		\end{tabularx}
+		
+		\caption{Skuteczność sieci neuronowej}
+	\end{table}
+
+	Powyższe wartości dokładności rozpoznawania gestów przez sieć neuronową pokazują, że wyśmienicie sobie radzi z klasyfikacją gestów. Najlepsze rezultaty dawała sieć zbudowana z 256 neuronów w warstwie ukrytej. Średnia jej skuteczność to ponad 99\% co sprawia, że rozpoznawanie gestów można uznać praktycznie za bezbłędne. 
+	
+	\begin{figure}[H]
+		\centering
+		{\label{fig:b}\includegraphics[width=0.98\textwidth]{\ImgPath/rys/klasyfikatory/siec.png}}
+		\caption{  \textbf{Uruchomienie sieci neuronowej}}
+	\end{figure}
+	
 
 \chapter{Podsumowanie}
 
