@@ -277,12 +277,64 @@ Model składa się z następujących części: barwa, nasycenie, wartość. Geom
 
 \chapter{Sztuczna inteligencja}
 \section{Sieci neuronowe}
+	Sieci neuronowe możemy traktować jako model czarnej skrzynki. Dla określonych danych wejściowych uzyskujemy wartości wyjściowe.
+	
+	\begin{figure}[H]	
+		\centering
+		\includegraphics[width=0.9\textwidth]{\ImgPath/rys/czarna_skrzynka.png}
+		
+		\caption{  \textbf{Sieć neuronowa jako model czarnej skrzynki}}
+	\end{figure}
+	
+	Sztuczne sieci neuronowe są to systemy komputerowe zainspirowane biologiczną siecią neuronowa ludzkiego mózgu. Sieci neuronowe nie są algorytmami, jednakże są ogólnym modelem wykorzystywanym przy uczeniu maszynowym i przy przetwarzaniu danych wejściowych.
+	
+	Sieci neuronowe są to zbiory połączonych ze sobą sztucznych neuronów. W biologicznym układzie mózgu, połączenia pomiędzy dwoma neuronami nazywamy synapsami. W sztucznych sieciach neuronowych połączenie to często nazywamy krawędzią. 
+	
+	Czarna skrzynka to tzw. warstwa ukryta. Znajdują się w niej neurony ściśle ze sobą powiązane. Każdy z neuronów ma w sobie pewną wartość, powszechnie oznaczaną przez wartość liczby rzeczywistej. Każda krawędź w sieciach neuronowych posiada pewną określoną wagę. Zwiększanie lub zmniejszanie wag zmienia siłę sygnału w danym połączeniu pomiędzy neuronami.
+	
+	\begin{figure}[H]	
+		\centering
+		\includegraphics[width=0.4\textwidth]{\ImgPath/rys/czarna_skrzynka.png}
+		
+		\caption{  \textbf{Sieć neuronowa jako model czarnej skrzynki}}
+	\end{figure}
+	
 
-\paragraph{Głębokie sieci neuronowe}
+	
+	Sztuczne neurony na podstawie danych podanych na wejściu, wykonują pewną funkcję tak zwaną funkcję aktywacji. Często wykorzystuje się tą samą funkcję aktywacji dla tej samej warstwy, a czasami można wykorzystać tą samą funkcję aktywacji nawet o do całej sieci neuronowej. 
+	
+	\begin{figure}[H]	
+		\centering
+		\includegraphics[width=0.4\textwidth]{\ImgPath/rys/hsv.png}
+		
+		\caption{  \textbf{Sieć neuronowa jako model czarnej skrzynki}}
+	\end{figure}
+	
+	Oraz wzor wartosci neuronu dla okreslonego wejscia, wzor macierzowy
 
-\paragraph{Funkcje aktywacji}
+	\paragraph{Wykorzystanie sieci neuronowych:}
+	\begin{itemize}
+		\item Rozpoznawanie obrazów
+		\item Sterowanie gestami
+		\item Przewidywanie wartości akcji spółek giełdowych
+		\item Generowanie plików wideo z obrazka
+		\item Rozpoznawanie mowy
+		\item Tworzenie opisu zdjęć
+		\item Przewidywanie prognozy pogody
+		\item Diagnostyka medyczna
+		\item Ocena zdolności kredytowej
+		\item Rekomendowanie reklam
+	\end{itemize}
+	
+	\paragraph{Funkcje aktywacji:}
+	Rys1.  Rys2. Rys3
 
-\paragraph{Uczenie sieci}
+\paragraph{Uczenie sieci neuronowych:}
+Przy uczeniu sieci najczestrzyszym algorytmem ich uczenue jest wsteczna propagacja błędu.
+Znajac wartosc wyjsiową dla danego zbioru wartosci wejsciowych jestesmy wstanie policzyc blad dzialania sieci. Ten blad jest przekazywany interacyjnie do polaczynych w poprzednich wartwach neurow, a nastepnie liczony blad tych neuronow wykorzystujac przekazane wartosci bledow. Uczenie sieci polega na dostrajaniu wartosci wag, w zaleznosci od bledu w danym neuronie. Waznym parametrem przy uczeniu sieci jest parametr szybkosci uczeniu. Mowi on o szybkosci uczenia sie sieci neuronowych.
+
+Softmax jako funkcja na wyjscie:
+Opis....
 
 \section{Klasyfikatory}
 Klasyfikacja to wyznaczanie klasy decyzyjnej do której należy nowy, nieznany dotąd obiekt. Metody klasyfikacji możemy podzielić na dwie kategorie. Pierwsza z nich jest  klasyfikacją nadzorowaną, druga zaś to klasyfikacja nienadzorowana. 
