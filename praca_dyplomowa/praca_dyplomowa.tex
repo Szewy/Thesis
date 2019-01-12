@@ -294,47 +294,59 @@ Model składa się z następujących części: barwa, nasycenie, wartość. Geom
 	
 	\begin{figure}[H]	
 		\centering
-		\includegraphics[width=0.4\textwidth]{\ImgPath/rys/czarna_skrzynka.png}
+		\includegraphics[width=0.7\textwidth]{\ImgPath/rys/siec_neuronowa.png}
 		
-		\caption{  \textbf{Sieć neuronowa jako model czarnej skrzynki}}
+		\caption{  \textbf{Przykładowa sieć neuronowa}}
 	\end{figure}
 	
-
+	Na rysunku 3.2 zaprezentowano przykładowy schemat sieci neuronowej. Sieć ta zawiera dwa elementy wejścia, które są przekazywane do każdego neuronu z pierwszej warstwy ukrytej. Model posiada dwie warstwy ukryte, które są oznaczone na modelu kolorem niebieskim. Pierwsza z nich zawiera cztery neurony, zaś druga warstwa posiada dwa neurony. Ostatnia warstwa modelu, czyli warstwa wyjściowa oznaczona kolorem żółtym posiada dwa neurony, których wyjście jest interpretowane jako rezultat działania całej sztucznej sieci neuronowej.
 	
-	Sztuczne neurony na podstawie danych podanych na wejściu, wykonują pewną funkcję tak zwaną funkcję aktywacji. Często wykorzystuje się tą samą funkcję aktywacji dla tej samej warstwy, a czasami można wykorzystać tą samą funkcję aktywacji nawet o do całej sieci neuronowej. 
+	Sztuczne neurony na podstawie zsumowanych iloczynów wartości na wejściowych oraz wartości wag odpowiadających im krawędziom, wykonują pewną funkcję tak zwaną funkcję aktywacji, której rezultat jest traktowany jako wyjście dla pojedynczego neuronu. 
 	
 	\begin{figure}[H]	
 		\centering
-		\includegraphics[width=0.4\textwidth]{\ImgPath/rys/hsv.png}
+		\includegraphics[width=0.9\textwidth]{\ImgPath/rys/neuron.png}
 		
-		\caption{  \textbf{Sieć neuronowa jako model czarnej skrzynki}}
+		\caption{  \textbf{Przykład pojedynczego neuronu}}
 	\end{figure}
 	
-	Oraz wzor wartosci neuronu dla okreslonego wejscia, wzor macierzowy
-
-	\paragraph{Wykorzystanie sieci neuronowych:}
-	\begin{itemize}
-		\item Rozpoznawanie obrazów
-		\item Sterowanie gestami
-		\item Przewidywanie wartości akcji spółek giełdowych
-		\item Generowanie plików wideo z obrazka
-		\item Rozpoznawanie mowy
-		\item Tworzenie opisu zdjęć
-		\item Przewidywanie prognozy pogody
-		\item Diagnostyka medyczna
-		\item Ocena zdolności kredytowej
-		\item Rekomendowanie reklam
-	\end{itemize}
-	
 	\paragraph{Funkcje aktywacji:}
-	Rys1.  Rys2. Rys3
+		\mbox{} \\
+		Wartość funkcji aktywacji dla danego neuronu, określa wartość wyjściową tego neuronu.
+		\begin{figure}[H]
+			\centering
+			\subfigure[Funkcja ReLU]
+			{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/funkcje_aktywacji/relu.png}}
+			\subfigure[Funkcja Sigmoid]
+			{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/funkcje_aktywacji/sigmoid.png}}
+			\subfigure[Funkcja Tanh]
+			{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/funkcje_aktywacji/tanh.png}}
+			\caption{Przykładowe funkcje aktywacji wykorzystywane w sieciach neuronowych}
+		\end{figure}
+	
+		Często używa się tej samej funkcji aktywacji dla tej samej warstwy, a niejednokrotnie wykorzystujemy tą samą funkcję aktywacji nawet do całej sieci neuronowej. 
+		
+		Softmax jest przykładem funkcji aktywacji, którą często wykorzystuje się jako funkcję aktywacji w warstwie wyjściowej. Właściwość opisująca tę funkcję aktywacji jest ta, że suma wartości aktywacji dla całej warstwy jest równa 1. Wykorzystując tę normalizację, możemy wartości wyjściowe neuronów zinterpretować jako prawdopodobieństwo należności do poszczególnych klas, które reprezentowane są przez neurony wyjściowe.  
+		
+		\paragraph{Uczenie sieci neuronowych:}
+			\mbox{} \\
+			\indent
+			Przy uczeniu nadzorowanym sieci podstawowym algorytmem jest wsteczna propagacja błędu. Znając wartości wyjściowe dla danego zbioru danych wejściowych jesteśmy wstanie policzyć błąd działania sieci. Ten błąd jest przekazywany iteracyjnie do połączonych w poprzednich. Uczenie sieci polega na dostrajaniu wartości wag, w zależności od błędu w danym neuronie. Ważnym parametrem przy uczeniu sieci jest parametr szybkości uczeniu. Określa on szybkość uczenia się sieci neuronowych. 
+		
+	\paragraph{Wykorzystanie sieci neuronowych:}
+		\begin{itemize}
+			\item Rozpoznawanie obrazów
+			\item Sterowanie gestami
+			\item Przewidywanie wartości akcji spółek giełdowych
+			\item Generowanie plików wideo z obrazka
+			\item Rozpoznawanie mowy
+			\item Tworzenie opisu zdjęć
+			\item Przewidywanie prognozy pogody
+			\item Diagnostyka medyczna
+			\item Ocena zdolności kredytowej
+			\item Rekomendowanie reklam
 
-\paragraph{Uczenie sieci neuronowych:}
-Przy uczeniu sieci najczestrzyszym algorytmem ich uczenue jest wsteczna propagacja błędu.
-Znajac wartosc wyjsiową dla danego zbioru wartosci wejsciowych jestesmy wstanie policzyc blad dzialania sieci. Ten blad jest przekazywany interacyjnie do polaczynych w poprzednich wartwach neurow, a nastepnie liczony blad tych neuronow wykorzystujac przekazane wartosci bledow. Uczenie sieci polega na dostrajaniu wartosci wag, w zaleznosci od bledu w danym neuronie. Waznym parametrem przy uczeniu sieci jest parametr szybkosci uczeniu. Mowi on o szybkosci uczenia sie sieci neuronowych.
-
-Softmax jako funkcja na wyjscie:
-Opis....
+		\end{itemize}
 
 \section{Klasyfikatory}
 Klasyfikacja to wyznaczanie klasy decyzyjnej do której należy nowy, nieznany dotąd obiekt. Metody klasyfikacji możemy podzielić na dwie kategorie. Pierwsza z nich jest  klasyfikacją nadzorowaną, druga zaś to klasyfikacja nienadzorowana. 

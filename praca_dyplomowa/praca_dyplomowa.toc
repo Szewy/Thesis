@@ -19,19 +19,19 @@
 \contentsline {section}{\numberline {2.5}Detekcja kolor\IeC {\'o}w}{9}{section.2.5}
 \contentsline {chapter}{\numberline {3}Sztuczna inteligencja}{11}{chapter.3}
 \contentsline {section}{\numberline {3.1}Sieci neuronowe}{11}{section.3.1}
-\contentsline {paragraph}{Wykorzystanie sieci neuronowych:}{12}{section*.13}
-\contentsline {paragraph}{Funkcje aktywacji:}{12}{section*.14}
-\contentsline {paragraph}{Uczenie sieci neuronowych:}{13}{section*.15}
-\contentsline {section}{\numberline {3.2}Klasyfikatory}{13}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Klasyfikator KNN}{13}{subsection.3.2.1}
-\contentsline {paragraph}{Po utworzeniu klasyfikatora bazuj\IeC {\k a}cego na zbiorze ucz\IeC {\k a}cym, szacowanie atrybutu decyzyjnego odbywa si\IeC {\k e} w nast\IeC {\k e}puj\IeC {\k a}cych krokach: }{13}{section*.16}
-\contentsline {subsection}{\numberline {3.2.2}Dob\IeC {\'o}r i ocena cech}{14}{subsection.3.2.2}
+\contentsline {paragraph}{Funkcje aktywacji:}{12}{section*.13}
+\contentsline {paragraph}{Uczenie sieci neuronowych:}{13}{section*.14}
+\contentsline {paragraph}{Wykorzystanie sieci neuronowych:}{13}{section*.15}
+\contentsline {section}{\numberline {3.2}Klasyfikatory}{14}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Klasyfikator KNN}{14}{subsection.3.2.1}
+\contentsline {paragraph}{Po utworzeniu klasyfikatora bazuj\IeC {\k a}cego na zbiorze ucz\IeC {\k a}cym, szacowanie atrybutu decyzyjnego odbywa si\IeC {\k e} w nast\IeC {\k e}puj\IeC {\k a}cych krokach: }{14}{section*.16}
+\contentsline {subsection}{\numberline {3.2.2}Dob\IeC {\'o}r i ocena cech}{15}{subsection.3.2.2}
 \contentsline {paragraph}{Warunki dobrej cechy diagnostycznej: }{15}{section*.17}
-\contentsline {paragraph}{Przyk\IeC {\l }adowe cechy mo\IeC {\.z}liwe do wykorzystania do opisu masek binarnych: }{15}{section*.18}
+\contentsline {paragraph}{Przyk\IeC {\l }adowe cechy mo\IeC {\.z}liwe do wykorzystania do opisu masek binarnych: }{16}{section*.18}
 \contentsline {section}{\numberline {3.3}Python}{16}{section.3.3}
-\contentsline {paragraph}{Zalety u\IeC {\.z}ywania Pythona:}{16}{section*.19}
-\contentsline {section}{\numberline {3.4}TensorFlow}{17}{section.3.4}
-\contentsline {section}{\numberline {3.5}Keras}{17}{section.3.5}
+\contentsline {paragraph}{Zalety u\IeC {\.z}ywania Pythona:}{17}{section*.19}
+\contentsline {section}{\numberline {3.4}TensorFlow}{18}{section.3.4}
+\contentsline {section}{\numberline {3.5}Keras}{18}{section.3.5}
 \contentsline {chapter}{\numberline {4}Gra papier, kamie\IeC {\'n}, no\IeC {\.z}yce}{19}{chapter.4}
 \contentsline {paragraph}{Trzy gesty dozwolone w grze:}{19}{section*.20}
 \contentsline {paragraph}{W przypadku kombinacji:}{19}{section*.21}
