@@ -1066,13 +1066,13 @@ Z wykonanych analiz dokładności klasyfikatorów w zależności od parametru k 
 	
 
 \chapter{Podsumowanie}
-	W niniejszej pracy inżynierskiej opisano podejście do rozpoznawania gestów na przykładzie gry papier, kamień, nożyce. Wykorzystując bibliotekę OpenCV przedstawiono w jaki sposób można wysegmentować dłoń. Techniki opisane w pracy z według mojej oceny dały bardzo dobre rezultaty. Segmentacja gestu pozwoliła na wyraźne wyłuskanie dłoni wykonującej gest.
+	W niniejszej pracy inżynierskiej opisano podejście do rozpoznawania gestów na przykładzie gry papier, kamień, nożyce. Wykorzystując bibliotekę OpenCV przedstawiono w jaki sposób można wysegmentować dłoń. Techniki opisane w pracy według mojej oceny dały bardzo dobre rezultaty. Segmentacja gestu pozwoliła na wyraźne wyłuskanie dłoni wykonującej gest.
 	
-	Segmentacja była pierwszym etapem przy procesie poznawania gestów. Po nim zaś nastąpił bezpośredni proces klasyfikacji dłoni. W pierwszym sposobie podejścia do klasyfikowania jakim był klasyfikator KNN. Klasyfikator ten dla odpowiednich parametrów osiągnął średnią skuteczność 86.08\%, zakładając użycie trzech cech opisujących wysegmentowaną dłoń uważam, że jest to zadowalająca skuteczność.
+	Segmentacja była pierwszym etapem przy procesie rozpoznawania gestów. Po nim zaś nastąpił etap bezpośredniej klasyfikacji dłoni. W pierwszym sposobie podejścia do klasyfikowania był to klasyfikator KNN. Klasyfikator ten dla odpowiednich parametrów osiągnął średnią skuteczność 86.08\%, zakładając użycie trzech cech opisujących wysegmentowaną dłoń. 
 	
-	Drugim zaś podejściem do klasyfikacji był klasyfikator oparty o sieci neuronowe. Przy jego wykorzystaniu skuteczność rozpoznawania zdecydowanie przewyższyła klasyfikator KNN. Rozpoznawanie takie było praktycznie bezbłędne na zgromadzonym zestawie danych, ponieważ klasyfikator przy uzyskanych najlepszych parametrach osiągał skuteczność powyżej 99\%, co w moim przeświadczeniu jest wyśmienitym rezultatem, biorąc pod uwagę cały proces rozpoznawania gestów.
+	Drugim zaś podejściem do klasyfikacji był klasyfikator oparty o sieci neuronowe. Przy jego wykorzystaniu skuteczność rozpoznawania zdecydowanie przewyższyła klasyfikator KNN. Rozpoznawanie takie było praktycznie bezbłędne na zgromadzonym zestawie danych, ponieważ klasyfikator przy wykorzystaniu uzyskanych najlepszych parametrach osiągał skuteczność powyżej 99\%, co w moim przeświadczeniu jest wyśmienitym rezultatem, biorąc pod uwagę cały proces rozpoznawania gestów.
 	
-	W mojej ocenie cel jaki na początku swojej  pracy założyłem, czyli prawidłowe rozpoznawanie trzech gestów papieru, kamienia oraz nożyc, został osiągnięty z sukcesem. Klasyfikator oparty na sieciach neuronowych pokazał jak  wielkie możliwości daje wykorzystanie sztucznych sieci neuronowych, które coraz częściej są wykorzystywane w naszym codziennym życiu. 
+	W mojej ocenie cel jaki na początku swojej  pracy założyłem, czyli prawidłowe rozpoznawanie trzech gestów papieru, kamienia oraz nożyc, został osiągnięty z sukcesem. Klasyfikator oparty o sieci neuronowe pokazał jak  wielkie możliwości daje wykorzystanie sztucznych sieci neuronowych, które coraz częściej są wykorzystywane w naszym codziennym życiu. 
 
 	\paragraph{Jak można rozbudować tą pracę inżynierską: }
 		\begin{enumerate}
@@ -1089,11 +1089,43 @@ Z wykonanych analiz dokładności klasyfikatorów w zależności od parametru k 
 \appendix
 
 
-
+\begin{flushleft}
 \begin{thebibliography}{99}
+	
+\bibitem{Malina}{Witold Malina, Maciej Smiatacz, ,,Cyfrowe przetwarzanie obrazów'', 2008}
+\bibitem{Osowski}{Osowski Stanisław, ,,Metody i narzędzia eksploracji danych'', 2013}
+\bibitem{Bradski}{Adrian Kaehler[tłum], Łukasz Piwko[tłum], Gary R Bradski, ,,OpenCV 3 : komputerowe rozpoznawanie obrazu w C++ przy użyciu biblioteki OpenCV'', 2018}
+\bibitem{Iwanowski}{Marcin Iwanowski, ,,Metody morfologiczne w przetwarzaniu obrazów cyfrowych'', 2009}
+\bibitem{Rafajlowicz}{Ewaryst Rafajłowicz, Wojciech Rafajłowicz, Andrzej Rusiecki, ,,Algorytmy przetwarzania obrazów i wstęp do pracy z biblioteką OpenCV'', 2009}
+\bibitem{Slater}{Daniel Slater, Gianmario Spacagna, Peter Roelants, Valentino Zocca, ,,Deep Learning. Uczenie głębokie z językiem Python. Sztuczna inteligencja i sieci neuronowe'', 2018}
+\bibitem{Marmanis}{Douglas McIlwraith, Haralambos Marmanis, Dmitry Babenko, ,,Algorithms of the Intelligent Web 2nd Edition'', 2016}
+\bibitem{Chollet}{François Chollet, ,,Deep Learning with Python'', 2017}
+\bibitem{Raschka}{Sebastian Raschka, ,,Python. Uczenie maszynowe'', 2017}
+\bibitem{Geron}{Aurélien Géron, Krzysztof Sawka[tłum], ,,Uczenie maszynowe z użyciem Scikit-Learn i TensorFlow'', 2018}
+\bibitem{Ramsundar}{Bharath Ramsundar, Reza Bosagh Zadeh, ,,TensorFlow for Deep Learning. From Linear Regression to Reinforcement Learning'', 2018}
+\bibitem{Serra}{Jean Serra, ,,Image Analysis and Mathematical Morphology'', 1983}
+\bibitem{Burger}{Wilhelm Burger, Mark J. Burge, ,,Principles of Digital Image Processing: Fundamental Techniques'', 2009}
+\bibitem{Jankowski}{Jankowski Michał, ,,Elementy Grafiki Komputerowej'', 2006}
+\bibitem{Media}{O'Reilly Media, ,,Learning Python 4th Edition'', 2009}
+\bibitem{Lie}{Hetland Magnus Lie, ,,Beginning Python'', 2016}
+
+\bibitem{tiobe}{Tiobem, https://www.tiobe.com/tiobe-index/, dostęp: grudzień 2018}
+\bibitem{analizaobrazu}{Analizaobrazu, http://analizaobrazu.x25.pl/articles/19, dostęp: styczeń 2019}
+\bibitem{wiki}{Wikipedia, https://en.wikipedia.org/wiki/Rock\%E2\%80\%93paper\%E2\%80\%93scissors, dostęp: styczeń 2019}
+\bibitem{opencvc}{OpenCV docs, https://docs.opencv.org/3.4/d1/d32/tutorial\_py\_contour\_properties.html, dostęp: styczeń 2019}
+\bibitem{mumuw}{mimuw.edu.pl http://mst.mimuw.edu.pl/lecture.php?lecture=syd\&part=Ch2, dostęp: styczeń 2019}
+\bibitem{opencva}{OpenCV docs, https://opencv.org/about.html, dostęp: styczeń 2019}
+\bibitem{opencvs}{OpenCV docs, https://docs.opencv.org/3.0-beta/doc/py\_tutorials/py\_video/py\_bg\_subtraction/py\_bg\_subtraction.html, dostęp: styczeń 2019}
+\bibitem{opencvs2}{OpenCV docs, https://docs.opencv.org/3.4/db/d5c/tutorial\_py\_bg\_subtraction.html, dostęp: styczeń 2019}
+\bibitem{tensorflow}{TensorFlow.org https://www.tensorflow.org/guide/graphs, dostęp: styczeń 2019}
+\bibitem{keras}{Keras.io, https://keras.io/, dostęp: styczeń 2019}
+\bibitem{convex}{Learningopencv, https://www.learnopencv.com/convex-hull-using-opencv-in-python-and-c/, dostęp: styczeń 2019}
+\bibitem{pyimagesearch}{Pyimagesearch, https://www.pyimagesearch.com/2016/03/28/measuring-size-of-objects-in-an-image-with-opencv/, dostęp: styczeń 2019}
+\bibitem{opencvm}{OpenCV docs, https://docs.opencv.org/3.0-beta/doc/py\_tutorials/py\_imgproc/py\_morphological\_ops/py\_morphological\_ops.html, dostęp: styczeń 2019}
+\bibitem{opencvco}{OpenCV docs, https://docs.opencv.org/3.4.2/df/d9d/tutorial\_py\_colorspaces.html, dostęp: styczeń 2019}
 
 
 \end{thebibliography}
-
+\end{flushleft}
 
 \end{document}

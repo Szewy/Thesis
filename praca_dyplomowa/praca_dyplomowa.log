@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.28)  14 JAN 2019 12:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.28)  14 JAN 2019 13:07
 entering extended mode
 **./praca_dyplomowa.tex
 (praca_dyplomowa.tex
@@ -2084,18 +2084,44 @@ l.1068 \chapter
 Rozdzia\l  6.
 [41
 
-] [42]
-
-LaTeX Warning: Empty `thebibliography' environment on input line 1096.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1099.
-[43
+] [42] [43
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1099.
+Overfull \hbox (21.30753pt too wide) in paragraph at lines 1114--1115
+\T1/cmr/m/n/12 https://en.wikipedia.org/wiki/Rock%E2%80%93paper%E2%80%93scissor
+s, 
+ []
+
+
+Overfull \hbox (24.9358pt too wide) in paragraph at lines 1115--1116
+\T1/cmr/m/n/12 https://docs.opencv.org/3.4/d1/d32/tutorial_py_contour_propertie
+s.html, 
+ []
+
+
+Overfull \hbox (50.06155pt too wide) in paragraph at lines 1118--1119
+\T1/cmr/m/n/12 beta/doc/py_tutorials/py_video/py_bg_subtraction/py_bg_subtracti
+on.html, 
+ []
+
+
+Overfull \hbox (5.35722pt too wide) in paragraph at lines 1119--1120
+\T1/cmr/m/n/12 https://docs.opencv.org/3.4/db/d5c/tutorial_py_bg_subtraction.ht
+ml, 
+ []
+
+[44]
+Overfull \hbox (100.9657pt too wide) in paragraph at lines 1124--1125
+\T1/cmr/m/n/12 beta/doc/py_tutorials/py_imgproc/py_morphological_ops/py_morphol
+ogical_ops.html, 
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1131.
+[45]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1131.
  (praca_dyplomowa.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1099.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1099.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1131.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1131.
 
 Package rerunfilecheck Info: File `praca_dyplomowa.out' has not changed.
 (rerunfilecheck)             Checksum: C98002B8FF54EE310DD1625E71775752;2034.
@@ -2103,13 +2129,13 @@ Package rerunfilecheck Info: File `praca_dyplomowa.out' has not changed.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1099.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1131.
  ) 
 Here is how much of TeX's memory you used:
- 10238 strings out of 493305
- 147654 string characters out of 3129801
- 426079 words of memory out of 3000000
- 13278 multiletter control sequences out of 15000+200000
+ 10300 strings out of 493305
+ 148308 string characters out of 3129801
+ 426954 words of memory out of 3000000
+ 13308 multiletter control sequences out of 15000+200000
  30952 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,9n,42p,1009b,1205s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2135,9 +2161,9 @@ blic/pl/plmi12.pfb><C:/Users/Szewy/AppData/Local/Programs/MiKTeX 2.9/fonts/type
 ype1/public/pl/plr8.pfb><C:/Users/Szewy/AppData/Local/Programs/MiKTeX 2.9/fonts
 /type1/public/pl/plsy10.pfb><C:/Users/Szewy/AppData/Local/Programs/MiKTeX 2.9/f
 onts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on praca_dyplomowa.pdf (49 pages, 2905510 bytes).
+Output written on praca_dyplomowa.pdf (51 pages, 2913921 bytes).
 PDF statistics:
- 1103 PDF objects out of 1200 (max. 8388607)
- 264 named destinations out of 1000 (max. 500000)
+ 1151 PDF objects out of 1200 (max. 8388607)
+ 296 named destinations out of 1000 (max. 500000)
  546 words of extra memory for PDF output out of 10000 (max. 10000000)
 
