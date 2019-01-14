@@ -48,7 +48,7 @@
 \contentsline {section}{\numberline {5.5}Znajdowanie obiekt\IeC {\'o}w}{29}{section.5.5}
 \contentsline {paragraph}{Etapy przyci\IeC {\k e}cia maski binarnej:}{30}{section*.27}
 \contentsline {section}{\numberline {5.6}Dob\IeC {\'o}r i ocena cech}{31}{section.5.6}
-\contentsline {paragraph}{Zdecydowa\IeC {\l }em si\IeC {\k e}, \IeC {\.z}e gesty b\IeC {\k e}d\IeC {\k e} opisywa\IeC {\l } za pomoc\IeC {\k a} nast\IeC {\k e}puj\IeC {\k a}cych cech}{31}{section*.28}
+\contentsline {paragraph}{Zdecydowa\IeC {\l }em si\IeC {\k e}, \IeC {\.z}e gesty b\IeC {\k e}d\IeC {\k e} opisywa\IeC {\l } za pomoc\IeC {\k a} nast\IeC {\k e}puj\IeC {\k a}cych cech:}{31}{section*.28}
 \contentsline {section}{\numberline {5.7}Rozpoznawanie gest\IeC {\'o}w przy pomocy klasyfikatora KNN}{32}{section.5.7}
 \contentsline {paragraph}{W zale\IeC {\.z}no\IeC {\'s}ci od doboru parametry klasyfikator k, osi\IeC {\k a}gn\IeC {\k a}\IeC {\l }em nast\IeC {\k e}puj\IeC {\k a}ce wyniki:}{33}{section*.29}
 \contentsline {paragraph}{k = 3}{33}{section*.30}
@@ -67,4 +67,4 @@
 \contentsline {paragraph}{Budowa sieci neuronowej korzystaj\IeC {\k a}c z biblioteki Keras:}{39}{section*.40}
 \contentsline {paragraph}{Zanotowa\IeC {\l }em nast\IeC {\k e}puj\IeC {\k a}ce dok\IeC {\l }adno\IeC {\'s}ci rozpoznawania sieci\IeC {\k a} przy wy\IeC {\.z}ej wymienionych parametrach:}{39}{section*.41}
 \contentsline {chapter}{\numberline {6}Podsumowanie}{41}{chapter.6}
-\contentsline {paragraph}{Jak mo\IeC {\.z}na rozbudowa\IeC {\'c} t\IeC {\k a} prac\IeC {\k e} in\IeC {\.z}yniersk\IeC {\k a}: }{41}{section*.42}
+\contentsline {paragraph}{Jak mo\IeC {\.z}na rozbudowa\IeC {\'c} t\IeC {\k a} prac\IeC {\k e} in\IeC {\.z}yniersk\IeC {\k a}: }{42}{section*.42}
