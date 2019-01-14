@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.28)  12 JAN 2019 16:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.28)  14 JAN 2019 12:17
 entering extended mode
 **./praca_dyplomowa.tex
 (praca_dyplomowa.tex
@@ -2084,18 +2084,18 @@ l.1068 \chapter
 Rozdzia\l  6.
 [41
 
+] [42]
+
+LaTeX Warning: Empty `thebibliography' environment on input line 1096.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1099.
+[43
+
 ]
-
-LaTeX Warning: Empty `thebibliography' environment on input line 1081.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1084.
-[42
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1084.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1099.
  (praca_dyplomowa.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1084.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1084.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1099.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1099.
 
 Package rerunfilecheck Info: File `praca_dyplomowa.out' has not changed.
 (rerunfilecheck)             Checksum: C98002B8FF54EE310DD1625E71775752;2034.
@@ -2103,11 +2103,11 @@ Package rerunfilecheck Info: File `praca_dyplomowa.out' has not changed.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1084.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1099.
  ) 
 Here is how much of TeX's memory you used:
- 10229 strings out of 493305
- 147587 string characters out of 3129801
+ 10238 strings out of 493305
+ 147654 string characters out of 3129801
  426079 words of memory out of 3000000
  13278 multiletter control sequences out of 15000+200000
  30952 words of font info for 64 fonts, out of 3000000 for 9000
@@ -2135,9 +2135,9 @@ blic/pl/plmi12.pfb><C:/Users/Szewy/AppData/Local/Programs/MiKTeX 2.9/fonts/type
 ype1/public/pl/plr8.pfb><C:/Users/Szewy/AppData/Local/Programs/MiKTeX 2.9/fonts
 /type1/public/pl/plsy10.pfb><C:/Users/Szewy/AppData/Local/Programs/MiKTeX 2.9/f
 onts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on praca_dyplomowa.pdf (48 pages, 2901797 bytes).
+Output written on praca_dyplomowa.pdf (49 pages, 2905510 bytes).
 PDF statistics:
- 1088 PDF objects out of 1200 (max. 8388607)
- 255 named destinations out of 1000 (max. 500000)
+ 1103 PDF objects out of 1200 (max. 8388607)
+ 264 named destinations out of 1000 (max. 500000)
  546 words of extra memory for PDF output out of 10000 (max. 10000000)
 
