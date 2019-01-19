@@ -106,17 +106,54 @@ Zwycięzca określany jest w zależności od kombinacji gestów pokazanych przez
 Zachowując takie zasady, każdy z gestów ma takie samo prawdopodobieństwo zwycięstwa. W grze liczy się w dużej mierze szczęście, ale także umiejętność przewidywania gestów przeciwnika.
 
 \chapter{Wprowadzenie teoretyczne}
-\section{Cyfrowe przetwarzanie obrazów binarnych}
-Cyfrowe przetwarzanie obrazów binarnych jest to dziedzina przetwarzania obrazów cyfrowych zajmująca się algorytmami obróbki obrazów binarnych. 
+\section{Obrazy cyfrowe}
+\textbf{Obrazem cyfrowym f} nazywamy odwzorowanie dyskretne: 
+\begin{center}
+	$ \textbf{f} \colon D \to W $ 
+\end{center}
+przy czym D jest dziedziną obrazu - skończonym zbiorem współrzędnych, a W jest jego przeciwdziedziną - zbiorem wartości \cite{Iwanowski}. W związku z dyskretną reprezentacją obrazu \textit{funkcję obrazu} można określać pojęciem \textit{macierzy obrazu}.
+
+Dziedzina D jest iloczynem kartezjańskim skończonych zbiorów pojedynczych współrzędnych:
+\begin{center}
+	$ D = D_{1} \times D_{2}  \times \ldots  \times D_{n} $
+\end{center}
+gdzie n jest rozmiarem przestrzeni obrazu, a $ D_{i} $ jest zbiorem wartości i-tej współrzędnej punktu obrazu. 
+
+Przeciwdziedzina W jest również iloczynem kartezjańskim:
+\begin{center}
+	$ W = W_{1} \times W_{2}  \times \ldots  \times W_{n} $
+\end{center}
+
+Każdy ze zbiorów $ W_{i} $ w zależności od rodzaju obrazu może być podzbiorem zbioru liczb naturalnych, całkowitych lub liczb rzeczywistych.
+
+\textbf{Obrazy dwuwymiarowe} są to obrazy dla których n przyjmuje wartość równą~2. Funkcja obrazu wówczas jest funkcją dwóch zmiennych \textbf{f}(x,y), w której odwzorowanie ma zazwyczaj postać:
+\begin{center}
+	$ \textbf{f} \colon D = \{0, \ldots, x_{max}-1\} \times \{0, \ldots, y_{max}-1\} \to W $ 
+\end{center}
+
+Wartość $ x_{max} $ oznacza rozmiar wzdłuż osi x, zaś wartość $ y_{max} $ rozmiar wzdłuż osi y. Punkty obrazów dwuwymiarowych nazywane są pikselami.
+
+Obrazy które mogą przyjmować tylko jedną z dwóch wartości, wynoszących zazwyczaj 0 i 1 nazywamy \textbf{obrazami binarnymi}. Wówczas:
+\begin{center}
+	$ W = \{0,1\} $ 
+\end{center}
+
+
+Obrazy takie możemy traktować jako strukturę składającą się z dwóch zbiorów punktów obrazu. Pierwszy z nich A jest zbiorem punktów ,,włączonych'', które możemy interpretować jako te znajdujące się na pierwszym planie - punkty pierwszoplanowe:
+\begin{center}
+	$ A = \{p \colon \textbf{f}(p) = 1\} $ 
+\end{center}
+gdzie f jest funkcją obrazu. Drugi ze zbiór B składa się z pozostałych punktów (punktów wyłączonych), które są nazywane punktami tła:
+\begin{center}
+	$ B = \{p \colon \textbf{f}(p) = 0\} $ 
+\end{center}
 
 \begin{figure}[H]	
 	\centering
 	\includegraphics[width=0.7\textwidth]{\ImgPath/rys/bin.png}
 	
-	\caption{  \textbf{Przykładowy obraz binarny}}
+	\caption{  \textbf{Przykładowy obraz binarny dwuwymiarowy}}
 \end{figure}
-
-Obrazy binarne składają się z pikseli, które mogą przyjmować jedynie dwie wartości. Piksele takie możmy oznaczać różnymi symboli, np. 0/1, false/true czy też (0,0,0)/(255,255,255). Podczas interpretacji obrazu jedne z pikseli można traktować jako tło, inne zaś jako część obiektu. Dzięki czemu jesteśmy wstanie rozróżnić interesującą nas część obrazu od pozostałej części. 
 
 \section{Operacje morfologiczne}
 Operacje morfologiczne to podstawowe operacje przetwarzania obrazów. Pozwalają na złożone czynności związane z analizą kształtu poszczególnych elementów obrazu oraz położeniem względem siebie. W wyniku operacji struktura obiektu na obrazie zostaje zmieniona, w celu osiągnięcia określonych rezultatów. 
@@ -1097,14 +1134,14 @@ Z wykonanych analiz dokładności klasyfikatorów w zależności od parametru k 
 \begin{thebibliography}{99}
 \bibitem{Collins}{Andy Collins, ,,Mowa ciała'', 2002}
 \bibitem{Kostkiewicz}{Paweł Kostkiewicz, Michał Syfert, ,,Interakcja człowiek-komputer'', 2010}	
-\bibitem{Kinect}{https://msdn.microsoft.com/pl-pl/library/kinect-sdk--wprowadzenie.aspx, dostęp: styczeń 2019}	
+\bibitem{Kinect}{Kinect SDK – Wprowadzenie, https://msdn.microsoft.com/pl-pl/\\library/kinect-sdk--wprowadzenie.aspx, dostęp: styczeń 2019}	
 \bibitem{Fisher}{Len Fisher, ,,Rock, Paper, Scissors: Game Theory in Everyday Life'', 2008}	
-
+\bibitem{Iwanowski}{Marcin Iwanowski, ,,Metody morfologiczne w przetwarzaniu obrazów cyfrowych'', 2009}
+\bibitem{Tadeusiewicz}{Ryszard Tadeusiewicz, ,,Komputerowa analiza i przetwarzanie obrazów'', 1997}
 
 \bibitem{Malina}{Witold Malina, Maciej Smiatacz, ,,Cyfrowe przetwarzanie obrazów'', 2008}
 \bibitem{Osowski}{Osowski Stanisław, ,,Metody i narzędzia eksploracji danych'', 2013}
 \bibitem{Bradski}{Adrian Kaehler[tłum], Łukasz Piwko[tłum], Gary R Bradski, ,,OpenCV 3 : komputerowe rozpoznawanie obrazu w C++ przy użyciu biblioteki OpenCV'', 2018}
-\bibitem{Iwanowski}{Marcin Iwanowski, ,,Metody morfologiczne w przetwarzaniu obrazów cyfrowych'', 2009}
 \bibitem{Rafajlowicz}{Ewaryst Rafajłowicz, Wojciech Rafajłowicz, Andrzej Rusiecki, ,,Algorytmy przetwarzania obrazów i wstęp do pracy z biblioteką OpenCV'', 2009}
 \bibitem{Slater}{Daniel Slater, Gianmario Spacagna, Peter Roelants, Valentino Zocca, ,,Deep Learning. Uczenie głębokie z językiem Python. Sztuczna inteligencja i sieci neuronowe'', 2018}
 \bibitem{Marmanis}{Douglas McIlwraith, Haralambos Marmanis, Dmitry Babenko, ,,Algorithms of the Intelligent Web 2nd Edition'', 2016}
