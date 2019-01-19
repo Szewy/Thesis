@@ -63,14 +63,49 @@
 
 \chapter{Wstęp}
 \section{Wprowadzenie}
-Istotną rolę w życiu społecznym pełnią gesty. Dodatkowa mowa niewerbowana może przekazać zdecydowanie więcej informacji niż tylko słowa wypowiedziane przez nadawcę. Gesty mogę, również zastąpić słowa i być wykorzystywane jako zamiennik na słyszalne słowa. Przykładem tego jest język migowy, który pozwala na wzajemną komunikację ludzi głuchych. Oprócz samej mowy, gesty mają też inne zastosowania. Przykładem takim może być gra papier, kamień, nożyce. W której każdy z graczy pokazuje jeden z trzech dostępnym gestów. I w zależności od kombinacji gestów pokazanych przez graczy określany jest zwycięzca.
+Istotną rolę w życiu społecznym pełnią gesty. Dodatkowa mowa niewerbowana może przekazać zdecydowanie więcej informacji niż tylko słowa wypowiedziane przez nadawcę. Gesty zazwyczaj służą do uzupełnienia mowy, do wspomożenia lub wzmocnienia przekazywanej wiadomości\cite{Collins}. W języku migowym, który pozwala na wzajemną komunikację ludzi głuchych, gesty zastępują nawet słyszalne słowa. Oprócz samej mowy gesty mają też inne zastosowania. Przykładem takim może być gra papier, kamień, nożyce. W której każdy z graczy pokazuje jeden z trzech dostępnym gestów. W zależności od kombinacji gestów pokazanych przez graczy określany jest zwycięzca.
 
-Klasyfikacja gestów jest powszechnym problem przetwarzania obrazów. Jest to temat obszerny i coraz lepiej zbadanym problem nauki. Klasyfikacja gestów ma szerokie zastosowanie. Jedną zalet rozpoznawania gestów jest możliwość sterowania naszym smartfonem za pomocą ruchu rąk. Po wykonaniu gestu, a następnie po rozpoznaniu go przez  oprogramowanie telefonu wykonywana jest określona akcja. Innym wykorzystaniem klasyfikacji gestów jest sterowanie gier, gdzie jako przykład można podać konsolę Nintendo Wii.
+Interakcje człowiek-komputer są przedmiotem zainteresowania nauk na styku informatyki, nauk społecznych oraz projektowania technicznego i artystycznego. Interakcje pomiędzy użytkownikiem a komputer maja miejsce za pomocą interfejsów użytkownika, do których możemy zaliczyć zarówno sprzęt jak i oprogramowanie\cite{Kostkiewicz}. Szczególnym przypadkiem są interfejsy kinetyczne, których celem jest wykorzystywanie gestów ludzkich do interakcji człowiek-komputer.
+
+Klasyfikacja gestów jest powszechnym problem przetwarzania obrazów. Jest to temat obszerny i coraz lepiej zbadanym problem nauki. Klasyfikacja gestów ma szerokie zastosowanie. Jedną z zalet rozpoznawania gestów jest możliwość sterowania naszym smartfonem za pomocą ruchu rąk. Po wykonaniu gestu, a następnie po rozpoznaniu go przez  oprogramowanie telefonu wykonywana jest określona akcja. Innym wykorzystaniem klasyfikacji gestów jest sterowanie gier, gdzie jako przykład można podać urządzenie Kinect używane jako sensor dla konsoli Xbox 360\cite{Kinect}.
 
 \section{Cel pracy}
-W swojej pracy dyplomowej będę chciał przedstawić sposób podejścia do problemu klasyfikacji gestów, a następnie zaimplementować działające rozwiązanie i wykorzystać go w praktyce, na przykładzie gry papier, kamień, nożyce. Ogólnym celem będzie stworzenie klasyfikatora, który pozwoli na automatyczne rozpoznawanie gestów, które są wykorzystywane podczas gry papier, kamień, nożyce.
+W swojej pracy dyplomowej będę chciał przedstawić sposób podejścia do problemu klasyfikacji gestów, a następnie zaimplementować działające rozwiązanie i wykorzystać go w praktyce, na przykładzie gry papier, kamień, nożyce. Ogólnym celem będzie stworzenie klasyfikatora, który pozwoli na automatyczne rozpoznawanie gestów, które są wykonywane podczas gry.
 
-\chapter{Przetwarzanie obrazów}
+\section{Gra papier, kamień, nożyce}
+Jest to klasyczna gra towarzyska, w tradycyjnym wariancie przeznaczona dla dwóch graczy. W każdej rundzie każdy z graczy pokazuje gest przez siebie wybrany z trzech dostępnych. Wszystkie rundy odbywają się na ustalony wcześniej sygnał, a pokazywane gesty powinny być jak najbardziej zsynchronizowane. Gra kończy się wtedy, jeżeli jeden z graczy osiągnie określoną wcześniej ilość zwycięstw \cite{Fisher}.
+
+
+\paragraph{Trzy gesty dozwolone w grze:}
+\begin{itemize} 
+	\item Papier
+	\item Kamień
+	\item Nożyce
+\end{itemize} 
+
+\begin{figure}[H]
+	\centering
+	\subfigure[Gest papieru]
+	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/gesty_gry/papier.png}}
+	\subfigure[Gest kamienia]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/gesty_gry/kamien.png}}
+	\subfigure[Gest nożyc]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/gesty_gry/nozyce.png}}
+	\caption{BackgroundSubtractorKNN na gestach z gry papier, kamier, nożyce}
+\end{figure}
+
+Zwycięzca określany jest w zależności od kombinacji gestów pokazanych przez graczy. Jeżeli oba gracze pokazali ten sam gest, wówczas następuje remis. 
+
+\paragraph{W przypadku kombinacji:}
+\begin{itemize} 
+	\item papier-kamień - zwycięzcą zostaje gracz, który pokazał gest papieru
+	\item papier-nożyce - zwycięzcą zostaje gracz, który pokazał gest nożyc
+	\item kamień-nożyce - zwycięzcą zostaje gracz, który pokazał gest kamienia
+\end{itemize} 
+\mbox{} \\	
+Zachowując takie zasady, każdy z gestów ma takie samo prawdopodobieństwo zwycięstwa. W grze liczy się w dużej mierze szczęście, ale także umiejętność przewidywania gestów przeciwnika.
+
+\chapter{Wprowadzenie teoretyczne}
 \section{Cyfrowe przetwarzanie obrazów binarnych}
 Cyfrowe przetwarzanie obrazów binarnych jest to dziedzina przetwarzania obrazów cyfrowych zajmująca się algorytmami obróbki obrazów binarnych. 
 
@@ -82,36 +117,6 @@ Cyfrowe przetwarzanie obrazów binarnych jest to dziedzina przetwarzania obrazó
 \end{figure}
 
 Obrazy binarne składają się z pikseli, które mogą przyjmować jedynie dwie wartości. Piksele takie możmy oznaczać różnymi symboli, np. 0/1, false/true czy też (0,0,0)/(255,255,255). Podczas interpretacji obrazu jedne z pikseli można traktować jako tło, inne zaś jako część obiektu. Dzięki czemu jesteśmy wstanie rozróżnić interesującą nas część obrazu od pozostałej części. 
-
-\section{OpenCV}
-OpenCV (Open Source Computer Vision Library) jest to otwartoźródłowa biblioteka wykorzystywana przy rozpoznawaniu obrazów oraz przy uczeniu maszynowym. Została napisana w języku C przez programistów z firmy Intel w 1999 roku.
-
-W późniejszym czasie kolejne części biblioteki były także pisane w języku C++. OpenCV umożliwia pisanie kodów nie tylko w językach C i C++ ale również mamy możliwość wykorzystywania tej biblioteki w językach Python, Java czy też Matlab. Co więcej zostały udostępnione nakładki do języków takich jak C\#, Perl, Ruby czy Haskell aby móc również wykorzystywać zalety  biblioteki. 
-
-OpenCV udostępnia zaawansowaną funkcjonalność  w szeroko rozumianym pojęciu rozpoznawaniu obrazów:
-
-\begin{itemize}
-	\item przetwarzania obrazów
-	\item klasyfikowaniu wzorców
-	\item dokładnych pomiarów obrazów
-\end{itemize}
-
-Jako główne zalety OpenCV możemy wyróżnić, że jest on darmowy oraz otwartoźródłowy. Zawiera bogaty zakres funkcjonalności, a kod biblioteki został napisany w sposób zoptymalizowanym, tak aby operacje wymagające dużej mocy obliczeniowej czy działające w czasie rzeczywistym mogły wykonywać się możliwie jak najszybciej.
-
-OpenCV znalazło zastosowanie w wielu dziedzinach naszego codziennego życia:
-\begin{itemize} 
-	\item medycyna
-	\item robotyka
-	\item samochody autonomiczne
-	\item systemy antywłamaniowe 
-	\item systemy zabezpieczające
-	\item rozpoznawanie gestów
-	\item segmentacja obiektów
-	\item wykrywanie ruchu
-	\item rozszerzona rzeczywistość
-	\item rozpoznawanie obiektów
-\end{itemize}
-
 
 \section{Operacje morfologiczne}
 Operacje morfologiczne to podstawowe operacje przetwarzania obrazów. Pozwalają na złożone czynności związane z analizą kształtu poszczególnych elementów obrazu oraz położeniem względem siebie. W wyniku operacji struktura obiektu na obrazie zostaje zmieniona, w celu osiągnięcia określonych rezultatów. 
@@ -275,78 +280,78 @@ HSV (ang. Hue Saturation Value) jest to model opisu przestrzeni barw, wprowadzon
 
 Model składa się z następujących części: barwa, nasycenie, wartość. Geometrycznie możemy go przedstawić jako stożek. Wszystkie barwy wywodzą się ze światła białego, czyli ze środka stożka. Składowa H, oznacza barwę w postaci kąta od 0 do 360 stopni. Składowa S czyli nasycenie, geometrycznie to odległość od środka na promieniu podstawy. Decyduje o bliskości naszego koloru do koloru białego. Ostatnia składowa V, to wartość oznaczająca wysokość na stożku, co możemy traktować jako jasność naszego koloru. Czym mniejsza jej wartość tym kolor ciemniejszy.
 
-\chapter{Sztuczna inteligencja}
-\section{Sieci neuronowe}
-	Sieci neuronowe możemy traktować jako model czarnej skrzynki. Dla określonych danych wejściowych uzyskujemy wartości wyjściowe.
-	
-	\begin{figure}[H]	
-		\centering
-		\includegraphics[width=0.9\textwidth]{\ImgPath/rys/czarna_skrzynka.png}
-		
-		\caption{  \textbf{Sieć neuronowa jako model czarnej skrzynki}}
-	\end{figure}
-	
-	Sztuczne sieci neuronowe są to systemy komputerowe zainspirowane biologiczną siecią neuronowa ludzkiego mózgu. Sieci neuronowe nie są algorytmami, jednakże są ogólnym modelem wykorzystywanym przy uczeniu maszynowym i przy przetwarzaniu danych wejściowych.
-	
-	Sieci neuronowe są to zbiory połączonych ze sobą sztucznych neuronów. W biologicznym układzie mózgu, połączenia pomiędzy dwoma neuronami nazywamy synapsami. W sztucznych sieciach neuronowych połączenie to często nazywamy krawędzią. 
-	
-	Czarna skrzynka to tzw. warstwa ukryta. Znajdują się w niej neurony ściśle ze sobą powiązane. Każdy z neuronów ma w sobie pewną wartość, powszechnie oznaczaną przez wartość liczby rzeczywistej. Każda krawędź w sieciach neuronowych posiada pewną określoną wagę. Zwiększanie lub zmniejszanie wag zmienia siłę sygnału w danym połączeniu pomiędzy neuronami.
-	
-	\begin{figure}[H]	
-		\centering
-		\includegraphics[width=0.7\textwidth]{\ImgPath/rys/siec_neuronowa.png}
-		
-		\caption{  \textbf{Przykładowa sieć neuronowa}}
-	\end{figure}
-	
-	Na rysunku 3.2 zaprezentowano przykładowy schemat sieci neuronowej. Sieć ta zawiera dwa elementy wejścia, które są przekazywane do każdego neuronu z pierwszej warstwy ukrytej. Model posiada dwie warstwy ukryte, które są oznaczone na modelu kolorem niebieskim. Pierwsza z nich zawiera cztery neurony, zaś druga warstwa posiada dwa neurony. Ostatnia warstwa modelu, czyli warstwa wyjściowa oznaczona kolorem żółtym posiada dwa neurony, których wyjście jest interpretowane jako rezultat działania całej sztucznej sieci neuronowej.
-	
-	Sztuczne neurony na podstawie zsumowanych iloczynów wartości na wejściowych oraz wartości wag odpowiadających im krawędziom, wykonują pewną funkcję tak zwaną funkcję aktywacji, której rezultat jest traktowany jako wyjście dla pojedynczego neuronu. 
-	
-	\begin{figure}[H]	
-		\centering
-		\includegraphics[width=0.9\textwidth]{\ImgPath/rys/neuron.png}
-		
-		\caption{  \textbf{Przykład pojedynczego neuronu}}
-	\end{figure}
-	
-	\paragraph{Funkcje aktywacji:}
-		\mbox{} \\
-		Wartość funkcji aktywacji dla danego neuronu, określa wartość wyjściową tego neuronu.
-		\begin{figure}[H]
-			\centering
-			\subfigure[Funkcja ReLU]
-			{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/funkcje_aktywacji/relu.png}}
-			\subfigure[Funkcja Sigmoid]
-			{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/funkcje_aktywacji/sigmoid.png}}
-			\subfigure[Funkcja Tanh]
-			{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/funkcje_aktywacji/tanh.png}}
-			\caption{Przykładowe funkcje aktywacji wykorzystywane w sieciach neuronowych}
-		\end{figure}
-	
-		Często używa się tej samej funkcji aktywacji dla tej samej warstwy, a niejednokrotnie wykorzystujemy tą samą funkcję aktywacji nawet do całej sieci neuronowej. 
-		
-		Softmax jest przykładem funkcji aktywacji, którą często wykorzystuje się jako funkcję aktywacji w warstwie wyjściowej. Właściwość opisująca tę funkcję aktywacji jest ta, że suma wartości aktywacji dla całej warstwy jest równa 1. Wykorzystując tę normalizację, możemy wartości wyjściowe neuronów zinterpretować jako prawdopodobieństwo należności do poszczególnych klas, które reprezentowane są przez neurony wyjściowe.  
-		
-		\paragraph{Uczenie sieci neuronowych:}
-			\mbox{} \\
-			\indent
-			Przy uczeniu nadzorowanym sieci podstawowym algorytmem jest wsteczna propagacja błędu. Znając wartości wyjściowe dla danego zbioru danych wejściowych jesteśmy wstanie policzyć błąd działania sieci. Ten błąd jest przekazywany iteracyjnie do połączonych w poprzednich. Uczenie sieci polega na dostrajaniu wartości wag, w zależności od błędu w danym neuronie. Ważnym parametrem przy uczeniu sieci jest parametr szybkości uczeniu. Określa on szybkość uczenia się sieci neuronowych. 
-		
-	\paragraph{Wykorzystanie sieci neuronowych:}
-		\begin{itemize}
-			\item Rozpoznawanie obrazów
-			\item Sterowanie gestami
-			\item Przewidywanie wartości akcji spółek giełdowych
-			\item Generowanie plików wideo z obrazka
-			\item Rozpoznawanie mowy
-			\item Tworzenie opisu zdjęć
-			\item Przewidywanie prognozy pogody
-			\item Diagnostyka medyczna
-			\item Ocena zdolności kredytowej
-			\item Rekomendowanie reklam
 
-		\end{itemize}
+\section{Sieci neuronowe}
+Sieci neuronowe możemy traktować jako model czarnej skrzynki. Dla określonych danych wejściowych uzyskujemy wartości wyjściowe.
+
+\begin{figure}[H]	
+	\centering
+	\includegraphics[width=0.9\textwidth]{\ImgPath/rys/czarna_skrzynka.png}
+	
+	\caption{  \textbf{Sieć neuronowa jako model czarnej skrzynki}}
+\end{figure}
+
+Sztuczne sieci neuronowe są to systemy komputerowe zainspirowane biologiczną siecią neuronowa ludzkiego mózgu. Sieci neuronowe nie są algorytmami, jednakże są ogólnym modelem wykorzystywanym przy uczeniu maszynowym i przy przetwarzaniu danych wejściowych.
+
+Sieci neuronowe są to zbiory połączonych ze sobą sztucznych neuronów. W biologicznym układzie mózgu, połączenia pomiędzy dwoma neuronami nazywamy synapsami. W sztucznych sieciach neuronowych połączenie to często nazywamy krawędzią. 
+
+Czarna skrzynka to tzw. warstwa ukryta. Znajdują się w niej neurony ściśle ze sobą powiązane. Każdy z neuronów ma w sobie pewną wartość, powszechnie oznaczaną przez wartość liczby rzeczywistej. Każda krawędź w sieciach neuronowych posiada pewną określoną wagę. Zwiększanie lub zmniejszanie wag zmienia siłę sygnału w danym połączeniu pomiędzy neuronami.
+
+\begin{figure}[H]	
+	\centering
+	\includegraphics[width=0.7\textwidth]{\ImgPath/rys/siec_neuronowa.png}
+	
+	\caption{  \textbf{Przykładowa sieć neuronowa}}
+\end{figure}
+
+Na rysunku 3.2 zaprezentowano przykładowy schemat sieci neuronowej. Sieć ta zawiera dwa elementy wejścia, które są przekazywane do każdego neuronu z pierwszej warstwy ukrytej. Model posiada dwie warstwy ukryte, które są oznaczone na modelu kolorem niebieskim. Pierwsza z nich zawiera cztery neurony, zaś druga warstwa posiada dwa neurony. Ostatnia warstwa modelu, czyli warstwa wyjściowa oznaczona kolorem żółtym posiada dwa neurony, których wyjście jest interpretowane jako rezultat działania całej sztucznej sieci neuronowej.
+
+Sztuczne neurony na podstawie zsumowanych iloczynów wartości na wejściowych oraz wartości wag odpowiadających im krawędziom, wykonują pewną funkcję tak zwaną funkcję aktywacji, której rezultat jest traktowany jako wyjście dla pojedynczego neuronu. 
+
+\begin{figure}[H]	
+	\centering
+	\includegraphics[width=0.9\textwidth]{\ImgPath/rys/neuron.png}
+	
+	\caption{  \textbf{Przykład pojedynczego neuronu}}
+\end{figure}
+
+\paragraph{Funkcje aktywacji:}
+\mbox{} \\
+Wartość funkcji aktywacji dla danego neuronu, określa wartość wyjściową tego neuronu.
+\begin{figure}[H]
+	\centering
+	\subfigure[Funkcja ReLU]
+	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/funkcje_aktywacji/relu.png}}
+	\subfigure[Funkcja Sigmoid]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/funkcje_aktywacji/sigmoid.png}}
+	\subfigure[Funkcja Tanh]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/funkcje_aktywacji/tanh.png}}
+	\caption{Przykładowe funkcje aktywacji wykorzystywane w sieciach neuronowych}
+\end{figure}
+
+Często używa się tej samej funkcji aktywacji dla tej samej warstwy, a niejednokrotnie wykorzystujemy tą samą funkcję aktywacji nawet do całej sieci neuronowej. 
+
+Softmax jest przykładem funkcji aktywacji, którą często wykorzystuje się jako funkcję aktywacji w warstwie wyjściowej. Właściwość opisująca tę funkcję aktywacji jest ta, że suma wartości aktywacji dla całej warstwy jest równa 1. Wykorzystując tę normalizację, możemy wartości wyjściowe neuronów zinterpretować jako prawdopodobieństwo należności do poszczególnych klas, które reprezentowane są przez neurony wyjściowe.  
+
+\paragraph{Uczenie sieci neuronowych:}
+\mbox{} \\
+\indent
+Przy uczeniu nadzorowanym sieci podstawowym algorytmem jest wsteczna propagacja błędu. Znając wartości wyjściowe dla danego zbioru danych wejściowych jesteśmy wstanie policzyć błąd działania sieci. Ten błąd jest przekazywany iteracyjnie do połączonych w poprzednich. Uczenie sieci polega na dostrajaniu wartości wag, w zależności od błędu w danym neuronie. Ważnym parametrem przy uczeniu sieci jest parametr szybkości uczeniu. Określa on szybkość uczenia się sieci neuronowych. 
+
+\paragraph{Wykorzystanie sieci neuronowych:}
+\begin{itemize}
+	\item Rozpoznawanie obrazów
+	\item Sterowanie gestami
+	\item Przewidywanie wartości akcji spółek giełdowych
+	\item Generowanie plików wideo z obrazka
+	\item Rozpoznawanie mowy
+	\item Tworzenie opisu zdjęć
+	\item Przewidywanie prognozy pogody
+	\item Diagnostyka medyczna
+	\item Ocena zdolności kredytowej
+	\item Rekomendowanie reklam
+	
+\end{itemize}
 
 \section{Klasyfikatory}
 Klasyfikacja to wyznaczanie klasy decyzyjnej do której należy nowy, nieznany dotąd obiekt. Metody klasyfikacji możemy podzielić na dwie kategorie. Pierwsza z nich jest  klasyfikacją nadzorowaną, druga zaś to klasyfikacja nienadzorowana. 
@@ -362,7 +367,7 @@ Klasyfikator KNN jest przykładem klasyfikacji nadzorowanej. Zbiór treningowy z
 	\item Znajdujemy k obiektów treningowych, najbliższych naszemu obiektowi
 	\item Analizowany obiekt należy do klasy najliczniejszej w znalezionym zbiorze z podpunktu 2
 \end{enumerate}
-	
+
 Ocenianie odległości pomiędzy dwoma obiektami polega na umieszczaniu obiektów w przestrzeni d-wymiarowej, gdzie d opisuje ilość atrybutów dla obiektów. Metryka miary może odbywać się w różny sposób. Najczęściej jest to miara euklidesowa, jednakże możemy również wykorzystać inne miary tj. Manhattana czy Minkowskiego. 
 
 Po znalezieniu k-najbliższych sąsiadów, atrybut decyzyjny przyjmuje wartość od najbardziej licznej klasy w wyznaczonym zbiorze.
@@ -413,6 +418,37 @@ Opisuje ono rozproszenie cechy w obrębie określonej klasy, co implikuje, że d
 \mbox{} \\
 Przy wyborze odpowiednich cech ważnym elementem jest ich ocena, aby sprawdzić czy wybrana cecha będzie wymierny wpływ na prawidłową klasyfikację.
 
+\chapter{Wykorzystane narzędzia}
+
+\section{OpenCV}
+OpenCV (Open Source Computer Vision Library) jest to otwartoźródłowa biblioteka wykorzystywana przy rozpoznawaniu obrazów oraz przy uczeniu maszynowym. Została napisana w języku C przez programistów z firmy Intel w 1999 roku.
+
+W późniejszym czasie kolejne części biblioteki były także pisane w języku C++. OpenCV umożliwia pisanie kodów nie tylko w językach C i C++ ale również mamy możliwość wykorzystywania tej biblioteki w językach Python, Java czy też Matlab. Co więcej zostały udostępnione nakładki do języków takich jak C\#, Perl, Ruby czy Haskell aby móc również wykorzystywać zalety  biblioteki. 
+
+OpenCV udostępnia zaawansowaną funkcjonalność  w szeroko rozumianym pojęciu rozpoznawaniu obrazów:
+
+\begin{itemize}
+	\item przetwarzania obrazów
+	\item klasyfikowaniu wzorców
+	\item dokładnych pomiarów obrazów
+\end{itemize}
+
+Jako główne zalety OpenCV możemy wyróżnić, że jest on darmowy oraz otwartoźródłowy. Zawiera bogaty zakres funkcjonalności, a kod biblioteki został napisany w sposób zoptymalizowanym, tak aby operacje wymagające dużej mocy obliczeniowej czy działające w czasie rzeczywistym mogły wykonywać się możliwie jak najszybciej.
+
+OpenCV znalazło zastosowanie w wielu dziedzinach naszego codziennego życia:
+\begin{itemize} 
+	\item medycyna
+	\item robotyka
+	\item samochody autonomiczne
+	\item systemy antywłamaniowe 
+	\item systemy zabezpieczające
+	\item rozpoznawanie gestów
+	\item segmentacja obiektów
+	\item wykrywanie ruchu
+	\item rozszerzona rzeczywistość
+	\item rozpoznawanie obiektów
+\end{itemize}
+
 \section{Python}
 Jest to interpretowany, obiektowy język wysokiego poziomu. Używany jest w szerokiej gamie  aplikacjach. Jest językiem ogólnego przeznaczenia, co oznacza, że może zostać wykorzystany praktycznie do wszystkiego. Jest rozwijany jako projekt otwartoźródłowy. Pojawił się w roku 1991, zaprojektowany przez holenderskiego programistę Guido van Rossum.
 
@@ -448,39 +484,6 @@ TensorFlow oprócz niskopoziomowych struktur posiada również moduły wyższego
 Otwartoźródłowa biblioteka programistyczna napisana w języku Python wydana w dniu 27 marca 2015 napisana przez pierwotnego autora François Chollet. 
 
 Jej głównym przeznaczeniem jest to, aby w jak najprostszy i  jak najszybszy sposób umożliwić pracę w głębokich sieciach neuronowych. Co więcej, biblioteka została zaprojektowana w sposób przyjemny do użytkowania, skupiona na modularności oraz rozszerzalności. Zaś od 2017 roku TensorFlow wspiera w swojej bibliotece Kerasa. Dzięki czemu Keras jest wysokopoziomową warstwą tworzenia modelów sieci neuronowych i jej uczenia.
-
-\chapter{Gra papier, kamień, nożyce}
-Jest to klasyczna gra towarzyska, w tradycyjnym wariancie przeznaczona dla dwóch graczy. W każdej rundzie każdy z graczy pokazuje gest przez siebie wybrany z trzech dostępnych. Wszystkie rundy odbywają się na ustalony wcześniej sygnał, a pokazywane gesty powinny być jak najbardziej zsynchronizowane. Gra kończy się wtedy, jeżeli jeden z graczy osiągnie określoną wcześniej ilość zwycięstw.
-
-
-\paragraph{Trzy gesty dozwolone w grze:}
-\begin{itemize} 
-	\item Papier
-	\item Kamień
-	\item Nożyce
-\end{itemize} 
-
-\begin{figure}[H]
-	\centering
-	\subfigure[Gest papieru]
-	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/gesty_gry/papier.png}}
-	\subfigure[Gest kamienia]
-	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/gesty_gry/kamien.png}}
-	\subfigure[Gest nożyc]
-	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/gesty_gry/nozyce.png}}
-	\caption{BackgroundSubtractorKNN na gestach z gry papier, kamier, nożyce}
-\end{figure}
-
-Zwycięzca określany jest w zależności od kombinacji gestów pokazanych przez graczy. Jeżeli oba gracze pokazali ten sam gest, wówczas następuje remis. 
-
-\paragraph{W przypadku kombinacji:}
-\begin{itemize} 
-\item papier-kamień - zwycięzcą zostaje gracz, który pokazał gest papieru
-\item papier-nożyce - zwycięzcą zostaje gracz, który pokazał gest nożyc
-\item kamień-nożyce - zwycięzcą zostaje gracz, który pokazał gest kamienia
-\end{itemize} 
-\mbox{} \\	
-Zachowując takie zasady, każdy z gestów ma takie samo prawdopodobieństwo zwycięstwa. W grze liczy się w dużej mierze szczęście, ale także umiejętność przewidywania gestów przeciwnika.
 
 \chapter{Rozpoznawanie gestów na przykładzie gry papier, kamień, nożyce}
 \section{Aktywizacja danych}
@@ -1082,7 +1085,7 @@ Z wykonanych analiz dokładności klasyfikatorów w zależności od parametru k 
 	\begin{enumerate}
 		\item Zgromadzenie większego zbioru danych 
 		\item Wyekstrahowanie większej ilości cech dla klasyfikatora KNN 
-		\item Porównanie klasyfikatora KNN z innymi klasyfikatorami
+		\item Porównanie klasyfikatora KNN z innymi klasyfikatorami opartymi o cechy opisujące gest
 		\item Wykorzystanie sieci CNN
 		\item Klasyfikacja dłoni bez użycia rękawiczki
 		\item Zaimplementowanie gry dla wielu graczy wykorzystując stworzone klasyfikatory
@@ -1091,9 +1094,13 @@ Z wykonanych analiz dokładności klasyfikatorów w zależności od parametru k 
 	
 	
 \appendix
-\begin{flushleft}
 \begin{thebibliography}{99}
-	
+\bibitem{Collins}{Andy Collins, ,,Mowa ciała'', 2002}
+\bibitem{Kostkiewicz}{Paweł Kostkiewicz, Michał Syfert, ,,Interakcja człowiek-komputer'', 2010}	
+\bibitem{Kinect}{https://msdn.microsoft.com/pl-pl/library/kinect-sdk--wprowadzenie.aspx, dostęp: styczeń 2019}	
+\bibitem{Fisher}{Len Fisher, ,,Rock, Paper, Scissors: Game Theory in Everyday Life'', 2008}	
+
+
 \bibitem{Malina}{Witold Malina, Maciej Smiatacz, ,,Cyfrowe przetwarzanie obrazów'', 2008}
 \bibitem{Osowski}{Osowski Stanisław, ,,Metody i narzędzia eksploracji danych'', 2013}
 \bibitem{Bradski}{Adrian Kaehler[tłum], Łukasz Piwko[tłum], Gary R Bradski, ,,OpenCV 3 : komputerowe rozpoznawanie obrazu w C++ przy użyciu biblioteki OpenCV'', 2018}
@@ -1128,6 +1135,6 @@ Z wykonanych analiz dokładności klasyfikatorów w zależności od parametru k 
 
 
 \end{thebibliography}
-\end{flushleft}
+
 
 \end{document}
