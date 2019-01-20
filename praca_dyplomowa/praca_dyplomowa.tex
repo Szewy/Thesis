@@ -20,6 +20,7 @@
 \usepackage{tabularx}
 \usepackage{enumitem}
 \usepackage{listings}
+\usepackage{gensymb}
 
 \setlist[itemize]{noitemsep, topsep=0pt}
 
@@ -156,33 +157,36 @@ gdzie f jest funkcją obrazu. Drugi ze zbiór B składa się z pozostałych punk
 \end{figure}
 
 \section{Operacje morfologiczne}
-Operacje morfologiczne to podstawowe operacje przetwarzania obrazów. Pozwalają na złożone czynności związane z analizą kształtu poszczególnych elementów obrazu oraz położeniem względem siebie. W wyniku operacji struktura obiektu na obrazie zostaje zmieniona, w celu osiągnięcia określonych rezultatów. 
-Operacje morfologiczne najczęściej stosuje się dla obrazów binarnych, dla których są to operacji podstawowe oraz jedne z najważniejszych. Dzięki nim jesteśmy wstanie wyszczególnić interesujące nas części czy też przefiltrować nasz obraz. Najczęściej wykorzystywane operacje morfologiczne to: erozja, dylatacja, otwarcie oraz zamknięcie. Wymienione operacje można ze sobą łączyć, tworząc zaawansowane systemy analizy.
+Operacje morfologiczne pozwalają na złożone czynności związane z analizą kształtu poszczególnych elementów obrazu oraz położeniem względem siebie. W wyniku operacji struktura obiektu na obrazie zostaje zmieniona, w celu osiągnięcia określonych rezultatów. 
+Operacje morfologiczne można zastosować dla obrazów binarnych oraz dla obiektów o wielu odcieniach szarości\cite{Malina}. Dzięki nim jesteśmy wstanie wyszczególnić interesujące nas części czy też przefiltrować nasz obraz. Podstawowymi operacjami morfologicznymi są: erozja, dylatacja, otwarcie oraz zamknięcie. Wymienione operacje można wykonywać sekwencyjnie, tworząc zaawansowane systemy analizy.
 
-Operacje morfologiczne modyfikują wartość pikseli biorąc pod uwagę wartości pikseli ich otaczających. Liczbę punktów otoczenia określa tzw. element strukturalny, który definiuje wartości i ich rozmieszenie w otoczeniu. Szablon strukturalny(element strukturalny) posiada jeden wyróżniony punkt, nazywany punktem centralnym.
+Operacje morfologiczne modyfikują wartości pikseli biorąc pod uwagę jego otoczenie. Liczbę punktów otoczenia określa tzw. element strukturalny, który definiuje wartości i ich rozmieszenie w otoczeniu. Posiada on jeden wyróżniony punkt, nazywany punktem centralnym, który nie musi być pikselem ,,włączonym''. 
 
-Najczęściej stosowanymi elementami strukturalnymi są kwadrat o boku o nieparzystej liczbie pikseli, które wszystkie przyjmują wartość równą 1 oraz element strukturalny, który aproksymuje swoim kształtem koło.
+Najczęściej stosowanym elementem strukturalnym jest element strukturalny elementarny. Obejmuje on najbliższe sąsiedztwo piksela. Elementarny element strukturalny  o rozmiarze n jest elementem zawierający sąsiedztwo danego piksela o promieniu n\cite{Iwanowski}. 
 
 \begin{figure}[H]
 	\centering
 	\subfigure[]
-	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/elementy_strukturalne/1.png}}
+	{\label{fig:a}\includegraphics[width=0.25\textwidth]{\ImgPath/rys/elementy_strukturalne/1.png}}
 	\subfigure[]
-	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/elementy_strukturalne/2.png}}
+	{\label{fig:b}\includegraphics[width=0.25\textwidth]{\ImgPath/rys/elementy_strukturalne/2.png}}
 	\subfigure[]
-	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/elementy_strukturalne/3.png}}
-	\caption{Przykładowe elementy strukturalne, gdzie punkt w kolorze czerwonym jest punktem centralnym}
+	{\label{fig:b}\includegraphics[width=0.25\textwidth]{\ImgPath/rys/elementy_strukturalne/3.png}}
+	\caption{Dwuwymiarowy element strukturalny: (a) ośmiospójny, (b) czterospójny, (c) liniowy. Punkt w kolorze białym oznacza piksel ,,włączony'', w kolorze czarnym piksel ,,wyłączony'', a w kolorze czerwonym oznacza piksel ,,włączony'', który jest traktowany jako punkt centralny}
 \end{figure}
 
-\paragraph{Etapy przekształceń morfologicznych:}
+\paragraph{Etapy przekształceń morfologicznych dla obrazów binarnych:}
 \begin{enumerate}
 	\item Szablon strukturalny jest przesuwany po całym obiekcie, tak aby punkt centralny szablonu był analizowanym pikselem
 	\item Następuje porównanie otoczenia analizowanego piksela z elementem strukturalnym
 	\item W zależności od stosowanej operacji morfologicznej wartość analizowanego piksela zmienia się lub też pozostaje bez zmian
 \end{enumerate}
 
-\paragraph{Erozja:}\mbox{} \\
-Jest to operacja zwężania i zmniejszania poprzez usunięcie pikseli granicznych. Usuwa wszystkie mniejsze obiekty, które możemy zinterpretować jako szumy. 
+\paragraph{Erozja dla obrazów binarnych:}\mbox{} \\
+\indent Erozja dla obrazów binarnych jest operacją zwężania i zmniejszania poprzez usunięcie pikseli granicznych. Usuwa wszystkie mniejsze obiekty, które możemy zinterpretować jako szumy. Definiujemy ją następująco:
+\begin{center}
+	$ A \ominus B = \{a \colon a + b \in A$ dla każdego $b \in B\} $ 
+\end{center}
 
 \paragraph{Etapy operacji erozji:}
 \begin{enumerate}
@@ -194,18 +198,19 @@ Jest to operacja zwężania i zmniejszania poprzez usunięcie pikseli granicznyc
 \begin{figure}[H]
 	\centering
 	\subfigure[Obraz początkowy]
-		{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/szablon.png}}
-	\subfigure[Element struturalny, punkt czerwony jest punktem centralnym]
-		{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/e.png}}
+		{\label{fig:a}\includegraphics[width=0.35\textwidth]{\ImgPath/rys/operacje_morfologiczne/erozja_szablon.png}}
 	\subfigure[Obraz wyjściowy]
-		{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/erozja.png}}
-	\caption{Operacja erozji na obrazie binarnym}
+		{\label{fig:b}\includegraphics[width=0.35\textwidth]{\ImgPath/rys/operacje_morfologiczne/erozja2.png}}
+	\caption{Operacja erozji na obrazie binarnym z elementem strukturalnym z rysunku 2.2c}
 \end{figure}
 
-\paragraph{Dylatacja:}\mbox{} \\
-Jest to operacja rozszerzania i zwiększania. Pozwala na wypełnienie dziur binarnych w obiektach. Jeżeli dwa obiekty są położone blisko siebie, może nastąpić złączenie w jeden obiekt.
+\paragraph{Dylatacja dla obrazów binarnych:}\mbox{} \\
+\indent Dylatacja dla obrazów binarnych jest operacją rozszerzania i zwiększania. Pozwala na wypełnienie dziur binarnych w obiektach. Jeżeli dwa obiekty są położone blisko siebie, może nastąpić złączenie w jeden obiekt. Definiujemy ją następująco: 
+\begin{center}
+	$ A \oplus B = \{p \colon p = a + b, a \in A, b \in B\} $ 
+\end{center}
 
-\paragraph{Etapy operacji erozji:}
+\paragraph{Etapy operacji dylatacji:}
 \begin{enumerate}
 	\item Element strukturalny przesuwany jest iteracyjnie po całym obiekcie, tak aby punkt centralny szablonu był analizowanym pikselem
 	\item Porównuje się otoczenie analizowanego piksela z elementem strukturalnym
@@ -215,16 +220,17 @@ Jest to operacja rozszerzania i zwiększania. Pozwala na wypełnienie dziur bina
 \begin{figure}[H]
 	\centering
 	\subfigure[Obraz początkowy]
-	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/szablon.png}}
-	\subfigure[Element struturalny, punkt czerwony jest punktem centralnym]
-	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/e.png}}
+	{\label{fig:a}\includegraphics[width=0.35\textwidth]{\ImgPath/rys/operacje_morfologiczne/dylatacja_szablon.png}}
 	\subfigure[Obraz wyjściowy]
-	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/dylatacja.png}}
-	\caption{Operacja dylatacji na obrazie binarnym}
+	{\label{fig:b}\includegraphics[width=0.35\textwidth]{\ImgPath/rys/operacje_morfologiczne/dylatacja2.png}}
+	\caption{Operacja dylatacji na obrazie binarnym z elementem strukturalnym z rysunku 2.2c}
 \end{figure}
 
-\paragraph{Otwarcie:}\mbox{} \\
-Operacja otwarcia morfologicznego jest definiowana przez połączenie metod erozji oraz dylatacji. Metoda ta wygładza obiekt, usuwa niechciane szumy, a w dodatku nie modyfikuje znacząco wielkości obiektów tak jak to jest w przypadku zastosowania operacji erozji czy dylatacji.
+\paragraph{Otwarcie dla obrazów binarnych:}\mbox{} \\
+\indent Operacja otwarcia dla obrazów binarnych jest sekwencyjnym wykonaniem metod erozji oraz dylatacji. Metoda ta wygładza obiekt, usuwa pomniejsze obiekty, a w dodatku nie modyfikuje znacząco wielkości obiektów tak jak to jest w przypadku zastosowania operacji erozji czy dylatacji. Definiujemy ją następująco:
+\begin{center}
+	$ A \circ B = (A \ominus B) \oplus B $ 
+\end{center}
 
 \paragraph{Etapy operacji otwarcia:}
 \begin{enumerate}
@@ -235,16 +241,26 @@ Operacja otwarcia morfologicznego jest definiowana przez połączenie metod eroz
 \begin{figure}[H]
 	\centering
 	\subfigure[Obraz początkowy]
-	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/szablon.png}}
-	\subfigure[Element struturalny, punkt czerwony jest punktem centralnym]
-	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/e.png}}
+	{\label{fig:a}\includegraphics[width=0.31\textwidth]{\ImgPath/rys/operacje_morfologiczne/otwarcie_szablon.png}}
 	\subfigure[Obraz wyjściowy]
-	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/otwarcie.png}}
-	\caption{Operacja otwarcia na obrazie binarnym}
+	{\label{fig:b}\includegraphics[width=0.31\textwidth]{\ImgPath/rys/operacje_morfologiczne/otwarcie2.png}}
+	\caption{Operacja otwarcia na obrazie binarnym z elementem strukturalnym z rysunku 2.2c}
 \end{figure}
 
-\paragraph{Zamknięcie:}\mbox{} \\
-Operacja zamknięcia łączy w sobie połączenie dwóch metod dylatacji oraz erozji, analogicznie jak było w przypadku operacji zamknięcia, jednakże w odwrotnej kolejności. W rezultacie uzyskujemy połączenie obiektów o zbliżonych odległościach, wypełnienie dziur w obiektach, jednakże końcowy kształt obiektu zostaje w dużym stopniu zmieniony w stosunku do kształtu przed zastosowaniem operacji zamknięcia.
+\paragraph{Zamknięcie dla obrazów binarnych:}\mbox{} \\
+\indent Operacja zamknięcia dla obrazów binarnych jest sekwencyjnym wykonaniem metod dylatacji oraz erozji. W rezultacie uzyskujemy połączenie obiektów o zbliżonych odległościach, wypełnienie dziur w obiektach, jednakże końcowy kształt obiektu zostaje w dużym stopniu zmieniony w stosunku do kształtu przed zastosowaniem operacji zamknięcia. Definiujemy ją następująco:
+\begin{center}
+	$ A \bullet B = (A \oplus B) \ominus B $ 
+\end{center}
+
+\begin{figure}[H]
+	\centering
+	\subfigure[Obraz początkowy]
+	{\label{fig:a}\includegraphics[width=0.31\textwidth]{\ImgPath/rys/operacje_morfologiczne/zamkniecie_szablon.png}}
+	\subfigure[Obraz wyjściowy]
+	{\label{fig:b}\includegraphics[width=0.31\textwidth]{\ImgPath/rys/operacje_morfologiczne/zamkniecie2.png}}
+	\caption{Operacja zamknięcia na obrazie binarnym z elementem strukturalnym z rysunku 2.2c}
+\end{figure}
 
 \paragraph{Etapy operacji otwarcia:}
 \begin{enumerate}
@@ -252,59 +268,63 @@ Operacja zamknięcia łączy w sobie połączenie dwóch metod dylatacji oraz er
 	\item Wykonywana jest operacja erozji na obraz, który jest wynikiem erozji z punktu 1.
 \end{enumerate}
 
-\begin{figure}[H]
-	\centering
-	\subfigure[Obraz początkowy]
-	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/szablon.png}}
-	\subfigure[Element struturalny, punkt czerwony jest punktem centralnym]
-	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/e.png}}
-	\subfigure[Obraz wyjściowy]
-	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/operacje_morfologiczne/zamkniecie.png}}
-	\caption{Operacja zamknięcia na obrazie binarnym}
-\end{figure}
-
 \section{Filtry ruchu}
-Filtry ruchu są wykorzystywane do generowania maski binarnej zawierającej poruszające się obiekty. Tak zwany z ang. background subtraction wykorzystuje różnicę z dwóch różnych klatek z pliku wideo. Odejmowanie dwóch klatek pozwala nam prześledzić, które z części obrazów zmieniły się. Różnica dwóch pikseli da nam wartość niezerową, tylko wtedy jeżeli z analizowanych klatkach wartość odpowiadających sobie pikseli różni się, co interpretujemy, że ta część obrazu poruszyła się. 
+Filtry ruchu są wykorzystywane do generowania maski binarnej zawierającej poruszające się obiekty. Odejmowanie dwóch klatek z plików pozwala nam prześledzić, które z części obrazów zmieniły się. 
 
 \begin{figure}[H]
 	\centering
 	\subfigure[Tło]
-	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/tlo.jpg}}
-	\subfigure[Zdjęcie]
-	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/img.jpg}}
-	\subfigure[Różnica zdjęcia i tła ]
-	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/bin.jpg}}
-	\caption{Przykładowe metody background subtractor z biblioteki OpenCV}
+	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/tlo.png}}
+	\subfigure[Obraz binarny]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/obraz.png}}
+	\subfigure[Różnica]
+	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/bin.png}}
+	\caption{Różnica obrazu binarnego oraz jego tła}
 \end{figure}
 
-OpenCV w swojej bibliotece posiada wiele gotowych rozwiązać do wykrywania obiektów w ruchu. Jako jedne z najczęściej wykorzystywanych metod możemy wyróżnić następujące:
+OpenCV w swojej bibliotece posiada wiele gotowych rozwiązać do wykrywania obiektów w ruchu\cite{opencvs2}. Jako przykładowe metody możemy wyróżnić następujące:
 \begin{itemize} 
 	\item BackgroundSubtractorMOG
 	\item BackgroundSubtractorMOG2
 	\item BackgroundSubtractorGMG
+	\item BackgroundSubtractorKNN
+	\item BackgroundSubtractorGSOC
+	\item BackgroundSubtractorLSBP
 \end{itemize} 
 	
-\begin{figure}[H]
-	\centering
-	\subfigure[BackgroundSubtractorMOG]
-	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/mog.png}}
-	\subfigure[BackgroundSubtractorMOG2]
-	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/mog2.png}}
-	\subfigure[BackgroundSubtractorGMG]
-	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/gmg.png}}
-	\caption{Przykładowe metody background subtractor z biblioteki OpenCV}
-\end{figure}
+\paragraph{BackgroundSubtractorKNN} \mbox{} \\
+ \indent
+ BackgroundSubtractorKNN jest metodą segmentacji tła oraz pierwszego planu bazująca na K-najbliższych sąsiadach. Algorytm stosowany w metodzie jest bardzo wydajny, jeśli liczba pikseli na pierwszym planie jest niska\cite{KNN}. 
 
-W celu polepszenia efektów, należy pozbyć się niedokładnej segmentacji oraz możliwych szumów,  które mogą wystąpić podczas analizy. Są one spowodowane różnymi odbiciami, cieniami czy innymi niezauważalnymi ruchami. Wówczas należy wykorzystać przedstawione wcześniej operacje morfologiczne, które poprawią nam wykonaną detekcję.
+\begin{figure}[H]	
+	\centering
+	\includegraphics[width=0.7\textwidth]{\ImgPath/rys/bs/knn.png}
+	
+	\caption{  \textbf{Przykładowy obraz po zastosowaniu metody BackgroundSubtractorKNN z biblioteki OpenCV}}
+\end{figure}
+ 
+ Segmentacja oczywiście nie jest całkowicie dokładna, dlatego w celu polepszenia efektów, warto pozbyć się niedokładności oraz możliwych szumów,  które mogą wystąpić podczas analizy. Są one spowodowane różnymi odbiciami, cieniami czy innymi niezauważalnymi ruchami. Wówczas należy wykorzystać przedstawione wcześniej operacje morfologiczne, które poprawią nam wykonaną detekcję.
 
 \section{Detekcja kolorów}
-Celem detekcji kolorów jest wygenerowanie obrazu binarnego, w którym piksele binarne  o wartości prawdy oznaczają piksele, które na zadanym obrazie są w określonym przedziale kolorów. Jeżeli dany piksel nie należy do określonego  przedziału, wówczas obraz binarny w tym punkcie otrzymuje wartość fałszu. Detekcja taka pozwala na wyłuskania tylko obiektów o określonym koloru.
+Celem detekcji kolorów jest wygenerowanie obrazu binarnego, w którym piksele ,,włączone'' oznaczają te, które na zadanym obrazie są w określonym przedziale kolorów. Jeżeli dany piksel nie należy do określonego  przedziału, wówczas staje się ,,wyłączony''. Detekcja taka pozwala na wyłuskania tylko obiektów o określonej barwie.
 
-Detekcja jest bardzo wrażliwa na różnego rodzaju szumy. Częstymi powodem występowanie ich jest zmienne oświetlenie. Obiekt przy różnym świetle możemy odbierać kolorystycznie całkowicie inaczej. W przypadku, kiedy analizujemy dynamiczny ruch, wówczas dynamika również może wpływać na kolorystykę danego obiektu. Te wszystkie czynniki, sprawiają, że detekcja określonego koloru nie jest zadaniem takim prostym. 
+Detekcja jest bardzo wrażliwa na różnego rodzaju szumy. Częstymi powodem występowanie ich jest zmienne oświetlenie. Obiekt przy różnym świetle możemy odbierać kolorystycznie całkowicie inaczej. W przypadku, kiedy analizujemy dynamiczny ruch, wówczas dynamika również może wpływać na kolorystykę danego obiektu.  
 
 Aby polepszyć efekt końcowy detekcji obiektów o określonym kolorze, należy analogicznie jak w przypadku detekcji ruchu, wykorzystać odpowiednie operacje morfologiczne. 
 
-Przy detekcji kolorów tradycyjny model rgb (red, green, blue), najczęściej nie jest wystarczająco dobrym modelem. W zadaniach takich zdecydowanie lepiej sprawuje się model HSV.
+\paragraph{Model RGB} \mbox{} \\
+\indent
+Model RGB składa się z trzech części: R (\textit{ang. Red}) określa wartość barwy czerwonej, G (\textit{ang. Green}) określa wartość barwy zielonej, B (\textit{ang. Blue}) określa wartość barwy niebieskiej. Wartości najczęściej są podawane w przedziale liczb całkowitych 0-255 lub w przedziale liczb rzeczywistych 0-1. Model RGB jest szeroko stosowany w urządzeniach wyświetlających obraz oraz w urządzeniach analizujących obraz.
+\begin{figure}[H]	
+	\centering
+	\includegraphics[width=0.6\textwidth]{\ImgPath/rys/rgb.png}
+	
+	\caption{  \textbf{Model RGB}}
+\end{figure}
+
+\paragraph{Model HSV} \mbox{} \\ 
+\indent
+Przy detekcji kolorów tradycyjny model rgb najczęściej nie jest wystarczająco dobrym modelem. W zadaniach takich zdecydowanie lepiej sprawuje się model HSV.
 
 \begin{figure}[H]	
 	\centering
@@ -313,10 +333,39 @@ Przy detekcji kolorów tradycyjny model rgb (red, green, blue), najczęściej ni
 	\caption{  \textbf{Model HSV}}
 \end{figure}
 
-HSV (ang. Hue Saturation Value) jest to model opisu przestrzeni barw, wprowadzony przez Alveya Raya Smitha w 1978 roku.
+HSV (\textit{ang. Hue Saturation Value}) jest to model opisu przestrzeni barw, wprowadzony przez Alveya Raya Smitha w 1978 roku.
 
-Model składa się z następujących części: barwa, nasycenie, wartość. Geometrycznie możemy go przedstawić jako stożek. Wszystkie barwy wywodzą się ze światła białego, czyli ze środka stożka. Składowa H, oznacza barwę w postaci kąta od 0 do 360 stopni. Składowa S czyli nasycenie, geometrycznie to odległość od środka na promieniu podstawy. Decyduje o bliskości naszego koloru do koloru białego. Ostatnia składowa V, to wartość oznaczająca wysokość na stożku, co możemy traktować jako jasność naszego koloru. Czym mniejsza jej wartość tym kolor ciemniejszy.
+Model składa się z następujących części: barwa, nasycenie, wartość. Geometrycznie możemy go przedstawić jako stożek. Wszystkie barwy wywodzą się ze światła białego, czyli ze środka stożka. Składowa H, oznacza barwę w postaci kąta od 0 do 360 stopni. Składowa S czyli nasycenie, geometrycznie to odległość od środka na promieniu podstawy. Decyduje o bliskości naszego koloru do koloru białego. Ostatnia składowa V, to wartość oznaczająca wysokość na stożku, co możemy traktować jako jasność naszego koloru. Czym mniejsza jej wartość tym kolor ciemniejszy\cite{Jankowski}.
 
+\paragraph{Konwersja z modelu RGB na model HSV: \cite{rgbhsv}} \mbox{} \\ 
+\indent
+Jeżeli wartości barw są w przedziale liczb całkowitych 0-255, wówczas należy zmienić przedział na liczby rzeczywiste w zakresie 0-1: 
+\begin{center}
+	$ R' = R/255 $ \\
+	$ G' = G/255 $ \\ 
+	$ B' = B/255 $ \\
+	$ C_{max} = max(R', G', B') $ \\
+	$ C_{min} = min(R', G', B') $ \\
+	$ \Delta = C_{max}-C_{min}  $ \\ \mbox{} \\
+
+	$ 
+		H = \left\{ \begin{array}{ll}
+		0 \degree & $,gdy $\Delta = 0 \\
+		60 \degree * (\frac{G'-B'}{\Delta}mod6)& $,gdy $C_{max} = R' \\
+		60 \degree * (\frac{B'-R'}{\Delta}+2)& $,gdy $C_{max} = G' \\
+		60 \degree *  (\frac{R'-G'}{\Delta}+4)& $,gdy $C_{max} = B' \\
+		\end{array} \right. 
+	$ \\ \mbox{} \\ \mbox{}
+	
+	$ 
+		S = \left\{ \begin{array}{ll}
+		0  & $,gdy $C_{max} = 0 \\
+		\frac{\Delta}{C_{max}} & $,gdy $C_{max} \neq 0 \\
+		\end{array} \right. 
+	$ \\ \mbox{} \\ 
+	
+	$ V = C_{max}$ 
+\end{center}
 
 \section{Sieci neuronowe}
 Sieci neuronowe możemy traktować jako model czarnej skrzynki. Dla określonych danych wejściowych uzyskujemy wartości wyjściowe.
@@ -458,11 +507,11 @@ Przy wyborze odpowiednich cech ważnym elementem jest ich ocena, aby sprawdzić 
 \chapter{Wykorzystane narzędzia}
 
 \section{OpenCV}
-OpenCV (Open Source Computer Vision Library) jest to otwartoźródłowa biblioteka wykorzystywana przy rozpoznawaniu obrazów oraz przy uczeniu maszynowym. Została napisana w języku C przez programistów z firmy Intel w 1999 roku.
+OpenCV (Open Source Computer Vision Library) jest to biblioteka wykorzystywana przy rozpoznawaniu obrazów oraz przy uczeniu maszynowym. Została napisana w języku C przez programistów z firmy Intel w 1999 roku.
 
-W późniejszym czasie kolejne części biblioteki były także pisane w języku C++. OpenCV umożliwia pisanie kodów nie tylko w językach C i C++ ale również mamy możliwość wykorzystywania tej biblioteki w językach Python, Java czy też Matlab. Co więcej zostały udostępnione nakładki do języków takich jak C\#, Perl, Ruby czy Haskell aby móc również wykorzystywać zalety  biblioteki. 
+W późniejszym czasie kolejne części biblioteki były także pisane w języku C++. Biblioteka OpenCV umożliwia pisanie kodów nie tylko w językach C i C++ ale również mamy możliwość wykorzystywania tej biblioteki w językach Python, Java czy też Matlab. W związku z popularnością biblioteki udostępniono nakładki do języków takich jak C\#, Perl, Ruby czy Haskell aby móc również wykorzystywać zalety  biblioteki. 
 
-OpenCV udostępnia zaawansowaną funkcjonalność  w szeroko rozumianym pojęciu rozpoznawaniu obrazów:
+Biblioteka OpenCV udostępnia zaawansowaną funkcjonalność  w szeroko rozumianym pojęciu rozpoznawaniu obrazów:
 
 \begin{itemize}
 	\item przetwarzania obrazów
@@ -470,9 +519,9 @@ OpenCV udostępnia zaawansowaną funkcjonalność  w szeroko rozumianym pojęciu
 	\item dokładnych pomiarów obrazów
 \end{itemize}
 
-Jako główne zalety OpenCV możemy wyróżnić, że jest on darmowy oraz otwartoźródłowy. Zawiera bogaty zakres funkcjonalności, a kod biblioteki został napisany w sposób zoptymalizowanym, tak aby operacje wymagające dużej mocy obliczeniowej czy działające w czasie rzeczywistym mogły wykonywać się możliwie jak najszybciej.
+Jako główne zalety biblioteki OpenCV możemy wyróżnić, że jest ona darmowa oraz że jest o otwartych źródłach. Zawiera bogaty zakres funkcjonalności, a kod biblioteki został napisany w sposób zoptymalizowanym, tak aby operacje wymagające dużej mocy obliczeniowej czy działające w czasie rzeczywistym mogły wykonywać się możliwie jak najszybciej.
 
-OpenCV znalazło zastosowanie w wielu dziedzinach naszego codziennego życia:
+Biblioteka OpenCV od 20 lat znajduje zastosowanie w wielu dziedzinach naszego codziennego życia:
 \begin{itemize} 
 	\item medycyna
 	\item robotyka
@@ -1137,9 +1186,13 @@ Z wykonanych analiz dokładności klasyfikatorów w zależności od parametru k 
 \bibitem{Kinect}{Kinect SDK – Wprowadzenie, https://msdn.microsoft.com/pl-pl/\\library/kinect-sdk--wprowadzenie.aspx, dostęp: styczeń 2019}	
 \bibitem{Fisher}{Len Fisher, ,,Rock, Paper, Scissors: Game Theory in Everyday Life'', 2008}	
 \bibitem{Iwanowski}{Marcin Iwanowski, ,,Metody morfologiczne w przetwarzaniu obrazów cyfrowych'', 2009}
-\bibitem{Tadeusiewicz}{Ryszard Tadeusiewicz, ,,Komputerowa analiza i przetwarzanie obrazów'', 1997}
-
 \bibitem{Malina}{Witold Malina, Maciej Smiatacz, ,,Cyfrowe przetwarzanie obrazów'', 2008}
+\bibitem{opencvs2}{Background Subtraction, https://docs.opencv.org/3.4/db/d5c/\\tutorial\_py\_bg\_subtraction.html, dostęp: styczeń 2019}
+\bibitem{KNN}{BackgroundSubtractorKNN, https://docs.opencv.org/3.4.1/db/d88/\\classcv\_1\_1BackgroundSubtractorKNN.html, dostęp: styczeń 2019}
+\bibitem{Jankowski}{Jankowski Michał, ,,Elementy Grafiki Komputerowej'', 2006}
+\bibitem{rgbhsv}{RGB to HSV color conversion, https://www.rapidtables.com/convert/\\color/rgb-to-hsv.html, dostęp: styczeń 2019}
+
+\bibitem{Tadeusiewicz}{Ryszard Tadeusiewicz, ,,Komputerowa analiza i przetwarzanie obrazów'', 1997}
 \bibitem{Osowski}{Osowski Stanisław, ,,Metody i narzędzia eksploracji danych'', 2013}
 \bibitem{Bradski}{Adrian Kaehler[tłum], Łukasz Piwko[tłum], Gary R Bradski, ,,OpenCV 3 : komputerowe rozpoznawanie obrazu w C++ przy użyciu biblioteki OpenCV'', 2018}
 \bibitem{Rafajlowicz}{Ewaryst Rafajłowicz, Wojciech Rafajłowicz, Andrzej Rusiecki, ,,Algorytmy przetwarzania obrazów i wstęp do pracy z biblioteką OpenCV'', 2009}
@@ -1151,18 +1204,15 @@ Z wykonanych analiz dokładności klasyfikatorów w zależności od parametru k 
 \bibitem{Ramsundar}{Bharath Ramsundar, Reza Bosagh Zadeh, ,,TensorFlow for Deep Learning. From Linear Regression to Reinforcement Learning'', 2018}
 \bibitem{Serra}{Jean Serra, ,,Image Analysis and Mathematical Morphology'', 1983}
 \bibitem{Burger}{Wilhelm Burger, Mark J. Burge, ,,Principles of Digital Image Processing: Fundamental Techniques'', 2009}
-\bibitem{Jankowski}{Jankowski Michał, ,,Elementy Grafiki Komputerowej'', 2006}
+
 \bibitem{Media}{O'Reilly Media, ,,Learning Python 4th Edition'', 2009}
 \bibitem{Lie}{Hetland Magnus Lie, ,,Beginning Python'', 2016}
 
 \bibitem{tiobe}{Tiobem, https://www.tiobe.com/tiobe-index/, dostęp: grudzień 2018}
 \bibitem{analizaobrazu}{Analizaobrazu, http://analizaobrazu.x25.pl/articles/19, dostęp: styczeń 2019}
-\bibitem{wiki}{Wikipedia, https://en.wikipedia.org/wiki/Rock\%E2\%80\%93paper\%E2\%80\%93scissors, dostęp: styczeń 2019}
 \bibitem{opencvc}{OpenCV docs, https://docs.opencv.org/3.4/d1/d32/tutorial\_py\_contour\_properties.html, dostęp: styczeń 2019}
 \bibitem{mumuw}{mimuw.edu.pl http://mst.mimuw.edu.pl/lecture.php?lecture=syd\&part=Ch2, dostęp: styczeń 2019}
 \bibitem{opencva}{OpenCV docs, https://opencv.org/about.html, dostęp: styczeń 2019}
-\bibitem{opencvs}{OpenCV docs, https://docs.opencv.org/3.0-beta/doc/py\_tutorials/py\\\_video/py\_bg\_subtraction/py\_bg\_subtraction.html, dostęp: styczeń 2019}
-\bibitem{opencvs2}{OpenCV docs, https://docs.opencv.org/3.4/db/d5c/tutorial\_py\_bg\_subtraction.html, dostęp: styczeń 2019}
 \bibitem{tensorflow}{TensorFlow.org https://www.tensorflow.org/guide/graphs, dostęp: styczeń 2019}
 \bibitem{keras}{Keras.io, https://keras.io/, dostęp: styczeń 2019}
 \bibitem{convex}{Learningopencv, https://www.learnopencv.com/convex-hull-using-opencv-in-python-and-c/, dostęp: styczeń 2019}
