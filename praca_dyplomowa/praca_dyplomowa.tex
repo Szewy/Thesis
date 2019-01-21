@@ -66,9 +66,9 @@
 \section{Wprowadzenie}
 Istotną rolę w życiu społecznym pełnią gesty. Dodatkowa mowa niewerbowana może przekazać zdecydowanie więcej informacji niż tylko słowa wypowiedziane przez nadawcę. Gesty zazwyczaj służą do uzupełnienia mowy, do wspomożenia lub wzmocnienia przekazywanej wiadomości\cite{Collins}. W języku migowym, który pozwala na wzajemną komunikację ludzi głuchych, gesty zastępują nawet słyszalne słowa. Oprócz samej mowy gesty mają też inne zastosowania. Przykładem takim może być gra papier, kamień, nożyce. W której każdy z graczy pokazuje jeden z trzech dostępnym gestów. W zależności od kombinacji gestów pokazanych przez graczy określany jest zwycięzca.
 
-Interakcje człowiek-komputer są przedmiotem zainteresowania nauk na styku informatyki, nauk społecznych oraz projektowania technicznego i artystycznego. Interakcje pomiędzy użytkownikiem a komputer maja miejsce za pomocą interfejsów użytkownika, do których możemy zaliczyć zarówno sprzęt jak i oprogramowanie\cite{Kostkiewicz}. Szczególnym przypadkiem są interfejsy kinetyczne, których celem jest wykorzystywanie gestów ludzkich do interakcji człowiek-komputer.
+Interakcje człowiek-komputer są przedmiotem zainteresowania nauk na styku informatyki, nauk społecznych oraz projektowania technicznego i artystycznego. Interakcje pomiędzy użytkownikiem a komputer mają miejsce za pomocą interfejsów użytkownika, do których możemy zaliczyć zarówno sprzęt jak i oprogramowanie\cite{Kostkiewicz}. Szczególnym przypadkiem są interfejsy kinetyczne, których celem jest wykorzystywanie gestów ludzkich do interakcji człowiek-komputer.
 
-Klasyfikacja gestów jest powszechnym problem przetwarzania obrazów. Jest to temat obszerny i coraz lepiej zbadanym problem nauki. Klasyfikacja gestów ma szerokie zastosowanie. Jedną z zalet rozpoznawania gestów jest możliwość sterowania naszym smartfonem za pomocą ruchu rąk. Po wykonaniu gestu, a następnie po rozpoznaniu go przez  oprogramowanie telefonu wykonywana jest określona akcja. Innym wykorzystaniem klasyfikacji gestów jest sterowanie gier, gdzie jako przykład można podać urządzenie Kinect używane jako sensor dla konsoli Xbox 360\cite{Kinect}.
+Klasyfikacja gestów jest powszechnym problem przetwarzania obrazów. Jest to temat obszerny i coraz lepiej zbadany. Klasyfikacja gestów ma szerokie zastosowanie. Jedną z zalet rozpoznawania gestów jest możliwość sterowania naszym smartfonem za pomocą ruchu rąk. Po wykonaniu gestu, a następnie po rozpoznaniu go przez  oprogramowanie telefonu wykonywana jest określona akcja. Innym wykorzystaniem klasyfikacji gestów jest sterowanie gier, gdzie jako przykład można podać urządzenie Kinect używane jako sensor dla konsoli Xbox 360\cite{Kinect}.
 
 \section{Cel pracy}
 W swojej pracy dyplomowej będę chciał przedstawić sposób podejścia do problemu klasyfikacji gestów, a następnie zaimplementować działające rozwiązanie i wykorzystać go w praktyce, na przykładzie gry papier, kamień, nożyce. Ogólnym celem będzie stworzenie klasyfikatora, który pozwoli na automatyczne rozpoznawanie gestów, które są wykonywane podczas gry.
@@ -440,7 +440,7 @@ Wartość funkcji aktywacji dla danego neuronu, określa wartość wyjściową t
 \begin{figure}[H]
 	\centering
 	\subfigure[Wykres]
-	{\label{fig:b}\includegraphics[width=0.36\textwidth]{\ImgPath/rys/funkcje_aktywacji/relu.png}}
+	{\label{fig:b}\includegraphics[width=0.42\textwidth]{\ImgPath/rys/funkcje_aktywacji/relu.png}}
 	\subfigure[Wzór]
 	{\label{fig:a} {{\large $ f(x) = max(0, ax) $ \par}  }}
 		\caption{  \textbf{Funkcja ReLU}}
@@ -449,25 +449,25 @@ Wartość funkcji aktywacji dla danego neuronu, określa wartość wyjściową t
 \begin{figure}[H]
 	\centering
 	\subfigure[Wykres]
-	{\label{fig:b}\includegraphics[width=0.36\textwidth]{\ImgPath/rys/funkcje_aktywacji/sigmoid.png}}
+	{\label{fig:b}\includegraphics[width=0.42\textwidth]{\ImgPath/rys/funkcje_aktywacji/sigmoid.png}}
 	\subfigure[Wzór]
-	{\label{fig:a} {{\large $ f(x) = \frac{1}{1 + e^{-\beta x}} $ \par}  }}
+	{\label{fig:a} {{\large $ f(x) = \frac{1}{1 + exp(-\beta x)} $ \par}  }}
 	\caption{  \textbf{Funkcja Sigmoid}}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\subfigure[Wykres]
-	{\label{fig:b}\includegraphics[width=0.36\textwidth]{\ImgPath/rys/funkcje_aktywacji/tanh.png}}
+	{\label{fig:b}\includegraphics[width=0.42\textwidth]{\ImgPath/rys/funkcje_aktywacji/tanh.png}}
 	\subfigure[Wzór]
-	{\label{fig:a} {{\large $ f(x) = \frac{e^x - e^{-x}}{e^x+e^{-x}} $ \par}  }}
+	{\label{fig:a} {{\large $ f(x) = tanh(\beta x) $ \par}  }}
 	\caption{  \textbf{Funkcja Tanh}}
 \end{figure}
 
 Softmax jest przykładem funkcji aktywacji, którą często wykorzystuje się jako funkcję aktywacji w warstwie wyjściowej. Właściwość opisująca tę funkcję aktywacji jest ta, że suma wartości aktywacji dla całej warstwy jest równa 1. Wykorzystując tę normalizację, możemy wartości wyjściowe neuronów zinterpretować jako prawdopodobieństwo należności do poszczególnych klas, które reprezentowane są przez neurony wyjściowe. Funkcję Softmax definiujemy następująco: \\ 
 \begin{center}
-	{\LARGE $ f(y_{i}) = \frac{e^{y_{i}}}
-		{\sum_{j=1}^{n} e^{y_{j}}}
+	{\large $ f(y_{i}) = \frac{exp(y_{i})}
+		{\sum_{j=1}^{n} exp(y_{j})}
 	$\par}
 \end{center}
 
@@ -496,7 +496,7 @@ Uczenie sieci polega na dostrajaniu wartości wag, w zależności od błędu w d
 	
 	Ważnym etapem dla każdej cechy była jej normalizacja danych, aby dana cecho nie powodowała większego wpływy od innych czy też wpływa nieznacząco w stosunku do innych. Przykładem normalizacji jest standaryzacja, którą możemy przedstawić zgodnie ze wzorem: 
 	\begin{center}
-		$ Z = \dfrac{x - \mu}{\sigma} $
+		{\large $ Z = \dfrac{x - \mu}{\sigma} $ \par}
 	\end{center}
     x - wartość przed normalizacją \\ $\mu$ - średnia \\ $\sigma$ - odchylenie standardowe
 
@@ -513,7 +513,7 @@ Uczenie sieci polega na dostrajaniu wartości wag, w zależności od błędu w d
 	
 	Kolejnym warunkiem na jaki warto zwrócić uwagę podczas oceny cech jest jej odchylenie standardowe w obrębie określonej klasy. Odchylenie standardowe można określić wzorem: 
 	\begin{center}
-		$ \sigma = {\sqrt {\operatorname {E} ((X-\operatorname {E} (X))^{2})}} $ \\
+		{\large $ \sigma = {\sqrt {\operatorname {E} ((X-\operatorname {E} (X))^{2})}} $ \par}
 	\end{center}
 	X - zmienna \\
 	E - wartość oczekiwana 
