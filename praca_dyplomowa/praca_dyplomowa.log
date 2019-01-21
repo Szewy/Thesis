@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.28)  21 JAN 2019 16:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.28)  21 JAN 2019 17:38
 entering extended mode
 **./praca_dyplomowa.tex
 (praca_dyplomowa.tex
@@ -1455,110 +1455,118 @@ Package pdftex.def Info: ./rys/knn.png  used on input line 396.
                                                   \fi \fi 
 l.402 
        <./rys/knn.png>]
-<./rys/czarna_skrzynka.png, id=384, 667.293pt x 121.6545pt>
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <14.4> on input line 409.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <10> on input line 409.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <7> on input line 409.
+ [15]
+<./rys/czarna_skrzynka.png, id=391, 667.293pt x 121.6545pt>
 File: ./rys/czarna_skrzynka.png Graphic file (type png)
 <use ./rys/czarna_skrzynka.png>
-Package pdftex.def Info: ./rys/czarna_skrzynka.png  used on input line 409.
+Package pdftex.def Info: ./rys/czarna_skrzynka.png  used on input line 451.
 (pdftex.def)             Requested size: 350.99762pt x 63.99022pt.
-<./rys/siec_neuronowa.png, id=386, 334.24875pt x 181.8795pt>
-File: ./rys/siec_neuronowa.png Graphic file (type png)
-<use ./rys/siec_neuronowa.png>
-Package pdftex.def Info: ./rys/siec_neuronowa.png  used on input line 422.
-(pdftex.def)             Requested size: 272.99881pt x 148.56212pt.
-
-Underfull \vbox (badness 2735) has occurred while \output is active []
-
- [15pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+ [16pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
 12}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.426 
+l.459 
        <./rys/czarna_skrzynka.png>]
-Overfull \hbox (5.61708pt too wide) in paragraph at lines 429--430
+<./rys/siec_neuronowa.png, id=400, 334.24875pt x 181.8795pt>
+File: ./rys/siec_neuronowa.png Graphic file (type png)
+<use ./rys/siec_neuronowa.png>
+Package pdftex.def Info: ./rys/siec_neuronowa.png  used on input line 464.
+(pdftex.def)             Requested size: 272.99881pt x 148.56212pt.
+
+Overfull \hbox (5.61708pt too wide) in paragraph at lines 471--472
 \T1/cmr/m/n/12 ±cio-wych oraz war-to-±ci wag od-po-wia-da-j¡-cych im kra-w¦-dzi
 om, wy-ko-nuj¡ pewn¡
  []
 
-<./rys/neuron.png, id=393, 598.03426pt x 161.403pt>
+<./rys/neuron.png, id=401, 598.03426pt x 161.403pt>
 File: ./rys/neuron.png Graphic file (type png)
 <use ./rys/neuron.png>
-Package pdftex.def Info: ./rys/neuron.png  used on input line 433.
+Package pdftex.def Info: ./rys/neuron.png  used on input line 475.
 (pdftex.def)             Requested size: 350.99762pt x 94.72945pt.
-<./rys/funkcje_aktywacji/relu.png, id=394, 456.5055pt x 308.95425pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+13}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.479 
+       <./rys/siec_neuronowa.png>]
+<./rys/funkcje_aktywacji/relu.png, id=407, 456.5055pt x 308.95425pt>
 File: ./rys/funkcje_aktywacji/relu.png Graphic file (type png)
 <use ./rys/funkcje_aktywacji/relu.png>
 Package pdftex.def Info: ./rys/funkcje_aktywacji/relu.png  used on input line 4
-45.
+87.
 (pdftex.def)             Requested size: 163.79929pt x 110.85573pt.
-LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <14.4> on input line 447.
-LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 447.
-LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 447.
-[16pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
-3}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.450 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-2.14}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.450 
-       <./rys/siec_neuronowa.png> <./rys/neuron.png>]
-<./rys/funkcje_aktywacji/sigmoid.png, id=402, 456.5055pt x 308.95425pt>
+<./rys/funkcje_aktywacji/sigmoid.png, id=408, 456.5055pt x 308.95425pt>
 File: ./rys/funkcje_aktywacji/sigmoid.png Graphic file (type png)
 <use ./rys/funkcje_aktywacji/sigmoid.png>
 Package pdftex.def Info: ./rys/funkcje_aktywacji/sigmoid.png  used on input lin
-e 454.
+e 496.
 (pdftex.def)             Requested size: 163.79929pt x 110.85573pt.
-<./rys/funkcje_aktywacji/tanh.png, id=403, 456.5055pt x 308.95425pt>
+<./rys/funkcje_aktywacji/tanh.png, id=409, 456.5055pt x 308.95425pt>
 File: ./rys/funkcje_aktywacji/tanh.png Graphic file (type png)
 <use ./rys/funkcje_aktywacji/tanh.png>
-Package pdftex.def Info: ./rys/funkcje_aktywacji/tanh.png  used on input line 4
-63.
+Package pdftex.def Info: ./rys/funkcje_aktywacji/tanh.png  used on input line 5
+05.
 (pdftex.def)             Requested size: 163.79929pt x 110.85573pt.
+ [18pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+14}) has been already used, duplicate ignored
 
-Underfull \hbox (badness 10000) in paragraph at lines 469--470
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.510 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+2.15}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.510 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+2.16}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.510 
+       <./rys/neuron.png> <./rys/funkcje_aktywacji/relu.png> <./rys/funkcje_akt
+ywacji/sigmoid.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 511--512
 
  []
 
-[17pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
-5}) has been already used, duplicate ignored
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <20.74> on input line 513.
+[19pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.470 \begin{center}
-                    pdfTeX warning (ext4): destination with the same identifier
- (name{figure.2.16}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.470 \begin{center}
-                    pdfTeX warning (ext4): destination with the same identifier
- (name{figure.2.17}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.470 \begin{center}
-                     <./rys/funkcje_aktywacji/relu.png> <./rys/funkcje_aktywacj
-i/sigmoid.png> <./rys/funkcje_aktywacji/tanh.png>] [18] [19]
+l.535 \chapter
+              {Wykorzystane narzÄ™dzia} <./rys/funkcje_aktywacji/tanh.png>]
 Rozdzia\l  3.
 [20
 
 ]
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <5> on input line 585.
- [21] [22] [23]
+(Font)              <5> on input line 582.
+ [21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22]
+[23]
 Rozdzia\l  4.
-<./rys/rekawiczki.jpg, id=459, 340.27126pt x 390.258pt>
+<./rys/rekawiczki.jpg, id=477, 340.27126pt x 390.258pt>
 File: ./rys/rekawiczki.jpg Graphic file (type jpg)
 <use ./rys/rekawiczki.jpg>
-Package pdftex.def Info: ./rys/rekawiczki.jpg  used on input line 611.
+Package pdftex.def Info: ./rys/rekawiczki.jpg  used on input line 608.
 (pdftex.def)             Requested size: 155.99762pt x 178.91345pt.
 [24
 
@@ -1567,15 +1575,15 @@ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.617 
+l.614 
        <./rys/rekawiczki.jpg>]
-<./rys/klatka.jpg, id=465, 615.0478pt x 374.90062pt>
+<./rys/klatka.jpg, id=483, 615.0478pt x 374.90062pt>
 File: ./rys/klatka.jpg Graphic file (type jpg)
 <use ./rys/klatka.jpg>
-Package pdftex.def Info: ./rys/klatka.jpg  used on input line 620.
+Package pdftex.def Info: ./rys/klatka.jpg  used on input line 617.
 (pdftex.def)             Requested size: 234.00238pt x 142.63533pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 630--631
+Underfull \hbox (badness 10000) in paragraph at lines 627--628
 
  []
 
@@ -1584,34 +1592,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 630--631
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.651 
+l.648 
        <./rys/klatka.jpg>]
 File: ./rys/bs/knn.png Graphic file (type png)
 <use ./rys/bs/knn.png>
-Package pdftex.def Info: ./rys/bs/knn.png  used on input line 680.
+Package pdftex.def Info: ./rys/bs/knn.png  used on input line 677.
 (pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 680--680
+Underfull \hbox (badness 10000) in paragraph at lines 677--677
 []\T1/cmr/m/n/10 (a) Back-gro-und-Sub-trac-
  []
 
-<./rys/bs/gsoc.png, id=473, 1284.8pt x 722.7pt>
+<./rys/bs/gsoc.png, id=491, 1284.8pt x 722.7pt>
 File: ./rys/bs/gsoc.png Graphic file (type png)
 <use ./rys/bs/gsoc.png>
-Package pdftex.def Info: ./rys/bs/gsoc.png  used on input line 682.
+Package pdftex.def Info: ./rys/bs/gsoc.png  used on input line 679.
 (pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 682--682
+Underfull \hbox (badness 10000) in paragraph at lines 679--679
 []\T1/cmr/m/n/10 (b) Back-gro-und-Sub-trac-
  []
 
-<./rys/bs/lsbp.png, id=474, 1284.8pt x 722.7pt>
+<./rys/bs/lsbp.png, id=492, 1284.8pt x 722.7pt>
 File: ./rys/bs/lsbp.png Graphic file (type png)
 <use ./rys/bs/lsbp.png>
-Package pdftex.def Info: ./rys/bs/lsbp.png  used on input line 684.
+Package pdftex.def Info: ./rys/bs/lsbp.png  used on input line 681.
 (pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 684--684
+Underfull \hbox (badness 10000) in paragraph at lines 681--681
 []\T1/cmr/m/n/10 (c) Back-gro-und-Sub-trac-
  []
 
@@ -1619,20 +1627,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 684--684
 Underfull \vbox (badness 6910) has occurred while \output is active []
 
  [26]
-<./rys/bs/papier.png, id=480, 1284.8pt x 722.7pt>
+<./rys/bs/papier.png, id=498, 1284.8pt x 722.7pt>
 File: ./rys/bs/papier.png Graphic file (type png)
 <use ./rys/bs/papier.png>
-Package pdftex.def Info: ./rys/bs/papier.png  used on input line 698.
+Package pdftex.def Info: ./rys/bs/papier.png  used on input line 695.
 (pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
-<./rys/bs/kamien.png, id=481, 1284.8pt x 722.7pt>
+<./rys/bs/kamien.png, id=499, 1284.8pt x 722.7pt>
 File: ./rys/bs/kamien.png Graphic file (type png)
 <use ./rys/bs/kamien.png>
-Package pdftex.def Info: ./rys/bs/kamien.png  used on input line 700.
+Package pdftex.def Info: ./rys/bs/kamien.png  used on input line 697.
 (pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
-<./rys/bs/nozyce.png, id=482, 1284.8pt x 722.7pt>
+<./rys/bs/nozyce.png, id=500, 1284.8pt x 722.7pt>
 File: ./rys/bs/nozyce.png Graphic file (type png)
 <use ./rys/bs/nozyce.png>
-Package pdftex.def Info: ./rys/bs/nozyce.png  used on input line 702.
+Package pdftex.def Info: ./rys/bs/nozyce.png  used on input line 699.
 (pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
 
 [27pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3
@@ -1640,80 +1648,80 @@ Package pdftex.def Info: ./rys/bs/nozyce.png  used on input line 702.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.711 
+l.708 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 4.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.711 
+l.708 
        <./rys/bs/gsoc.png (PNG copy)> <./rys/bs/lsbp.png (PNG copy)> <./rys/bs/
 papier.png (PNG copy)> <./rys/bs/kamien.png (PNG copy)> <./rys/bs/nozyce.png (P
 NG copy)>]
 File: ./rys/hsv.png Graphic file (type png)
 <use ./rys/hsv.png>
-Package pdftex.def Info: ./rys/hsv.png  used on input line 717.
+Package pdftex.def Info: ./rys/hsv.png  used on input line 714.
 (pdftex.def)             Requested size: 97.5pt x 108.93169pt.
-<./rys/detekcja_koloru/papier.png, id=498, 1284.8pt x 722.7pt>
+<./rys/detekcja_koloru/papier.png, id=516, 1284.8pt x 722.7pt>
 File: ./rys/detekcja_koloru/papier.png Graphic file (type png)
 <use ./rys/detekcja_koloru/papier.png>
 Package pdftex.def Info: ./rys/detekcja_koloru/papier.png  used on input line 7
-27.
+24.
 (pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
-<./rys/detekcja_koloru/kamien.png, id=499, 1284.8pt x 722.7pt>
+<./rys/detekcja_koloru/kamien.png, id=517, 1284.8pt x 722.7pt>
 File: ./rys/detekcja_koloru/kamien.png Graphic file (type png)
 <use ./rys/detekcja_koloru/kamien.png>
 Package pdftex.def Info: ./rys/detekcja_koloru/kamien.png  used on input line 7
-29.
+26.
 (pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
-<./rys/detekcja_koloru/nozyce.png, id=500, 1284.8pt x 722.7pt>
+<./rys/detekcja_koloru/nozyce.png, id=518, 1284.8pt x 722.7pt>
 File: ./rys/detekcja_koloru/nozyce.png Graphic file (type png)
 <use ./rys/detekcja_koloru/nozyce.png>
 Package pdftex.def Info: ./rys/detekcja_koloru/nozyce.png  used on input line 7
-31.
+28.
 (pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
  [28pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.737 	\item o
+l.734 	\item o
               d HSV (98,50,20)pdfTeX warning (ext4): destination with the same 
 identifier (name{figure.4.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.737 	\item o
+l.734 	\item o
               d HSV (98,50,20) <./rys/detekcja_koloru/papier.png (PNG copy)> <.
 /rys/detekcja_koloru/kamien.png (PNG copy)> <./rys/detekcja_koloru/nozyce.png (
 PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 740--741
+Underfull \hbox (badness 10000) in paragraph at lines 737--738
 
  []
 
-<./rys/bs_color/papier.png, id=510, 1284.8pt x 722.7pt>
+<./rys/bs_color/papier.png, id=528, 1284.8pt x 722.7pt>
 File: ./rys/bs_color/papier.png Graphic file (type png)
 <use ./rys/bs_color/papier.png>
-Package pdftex.def Info: ./rys/bs_color/papier.png  used on input line 747.
+Package pdftex.def Info: ./rys/bs_color/papier.png  used on input line 744.
 (pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
-<./rys/bs_color/kamien.png, id=511, 1284.8pt x 722.7pt>
+<./rys/bs_color/kamien.png, id=529, 1284.8pt x 722.7pt>
 File: ./rys/bs_color/kamien.png Graphic file (type png)
 <use ./rys/bs_color/kamien.png>
-Package pdftex.def Info: ./rys/bs_color/kamien.png  used on input line 749.
+Package pdftex.def Info: ./rys/bs_color/kamien.png  used on input line 746.
 (pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
-<./rys/bs_color/nozyce.png, id=512, 1284.8pt x 722.7pt>
+<./rys/bs_color/nozyce.png, id=530, 1284.8pt x 722.7pt>
 File: ./rys/bs_color/nozyce.png Graphic file (type png)
 <use ./rys/bs_color/nozyce.png>
-Package pdftex.def Info: ./rys/bs_color/nozyce.png  used on input line 751.
+Package pdftex.def Info: ./rys/bs_color/nozyce.png  used on input line 748.
 (pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
 
-Overfull \hbox (6.40227pt too wide) in paragraph at lines 755--756
+Overfull \hbox (6.40227pt too wide) in paragraph at lines 752--753
 []\T1/cmr/m/n/12 Jak wi-dzimy wi¦k-szo±¢ z nie-po-»¡-da-nych szu-mów zo-staªa u
 su-ni¦ta za spraw¡
  []
 
 
-Overfull \hbox (8.71289pt too wide) in paragraph at lines 755--756
+Overfull \hbox (8.71289pt too wide) in paragraph at lines 752--753
 \T1/cmr/m/n/12 po-ª¡-cza-nia dwóch ma-sek bi-nar-nych. Mo-»emy te» za-ob-ser-wo
 -wa¢, »e nie wszystko
  []
@@ -1723,46 +1731,46 @@ Overfull \hbox (8.71289pt too wide) in paragraph at lines 755--756
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.765 
+l.762 
        <./rys/bs_color/papier.png (PNG copy)> <./rys/bs_color/kamien.png (PNG c
 opy)> <./rys/bs_color/nozyce.png (PNG copy)>]
-<./rys/szumy/przed_erozja.png, id=524, 770.88pt x 433.62pt>
+<./rys/szumy/przed_erozja.png, id=542, 770.88pt x 433.62pt>
 File: ./rys/szumy/przed_erozja.png Graphic file (type png)
 <use ./rys/szumy/przed_erozja.png>
-Package pdftex.def Info: ./rys/szumy/przed_erozja.png  used on input line 769.
+Package pdftex.def Info: ./rys/szumy/przed_erozja.png  used on input line 766.
 (pdftex.def)             Requested size: 183.30048pt x 103.1049pt.
-<./rys/szumy/po_erozji.png, id=525, 1284.8pt x 722.7pt>
+<./rys/szumy/po_erozji.png, id=543, 1284.8pt x 722.7pt>
 File: ./rys/szumy/po_erozji.png Graphic file (type png)
 <use ./rys/szumy/po_erozji.png>
-Package pdftex.def Info: ./rys/szumy/po_erozji.png  used on input line 771.
+Package pdftex.def Info: ./rys/szumy/po_erozji.png  used on input line 768.
 (pdftex.def)             Requested size: 183.30048pt x 103.09608pt.
  [30pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.779 
+l.776 
        <./rys/szumy/przed_erozja.png> <./rys/szumy/po_erozji.png (PNG copy)>]
-<./rys/szumy/przed_dylatacja.png, id=536, 770.88pt x 433.62pt>
+<./rys/szumy/przed_dylatacja.png, id=554, 770.88pt x 433.62pt>
 File: ./rys/szumy/przed_dylatacja.png Graphic file (type png)
 <use ./rys/szumy/przed_dylatacja.png>
 Package pdftex.def Info: ./rys/szumy/przed_dylatacja.png  used on input line 78
-3.
+0.
 (pdftex.def)             Requested size: 183.30048pt x 103.1049pt.
-<./rys/szumy/po_dylatacji.png, id=537, 1284.8pt x 722.7pt>
+<./rys/szumy/po_dylatacji.png, id=555, 1284.8pt x 722.7pt>
 File: ./rys/szumy/po_dylatacji.png Graphic file (type png)
 <use ./rys/szumy/po_dylatacji.png>
-Package pdftex.def Info: ./rys/szumy/po_dylatacji.png  used on input line 785.
+Package pdftex.def Info: ./rys/szumy/po_dylatacji.png  used on input line 782.
 (pdftex.def)             Requested size: 183.30048pt x 103.09608pt.
-<./rys/szumy/1.png, id=538, 770.88pt x 433.62pt>
+<./rys/szumy/1.png, id=556, 770.88pt x 433.62pt>
 File: ./rys/szumy/1.png Graphic file (type png)
 <use ./rys/szumy/1.png>
-Package pdftex.def Info: ./rys/szumy/1.png  used on input line 794.
+Package pdftex.def Info: ./rys/szumy/1.png  used on input line 791.
 (pdftex.def)             Requested size: 175.49881pt x 98.71817pt.
-<./rys/szumy/2.png, id=539, 1284.8pt x 722.7pt>
+<./rys/szumy/2.png, id=557, 1284.8pt x 722.7pt>
 File: ./rys/szumy/2.png Graphic file (type png)
 <use ./rys/szumy/2.png>
-Package pdftex.def Info: ./rys/szumy/2.png  used on input line 796.
+Package pdftex.def Info: ./rys/szumy/2.png  used on input line 793.
 (pdftex.def)             Requested size: 175.49881pt x 98.70714pt.
 
 [31pdfTeX warning (ext4): destination with the same identifier (name{figure.4.9
@@ -1770,50 +1778,50 @@ Package pdftex.def Info: ./rys/szumy/2.png  used on input line 796.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.802 	\item O
+l.799 	\item O
               peracjÄ™ morfologicznÄ… erozji na masce binarnej z elementem s...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.10})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.802 	\item O
+l.799 	\item O
               peracjÄ™ morfologicznÄ… erozji na masce binarnej z elementem s...
  <./rys/szumy/przed_dylatacja.png> <./rys/szumy/po_dylatacji.png (PNG copy)> <.
 /rys/szumy/1.png> <./rys/szumy/2.png (PNG copy)>]
-<./rys/szumy/p.png, id=553, 1284.8pt x 722.7pt>
+<./rys/szumy/p.png, id=571, 1284.8pt x 722.7pt>
 File: ./rys/szumy/p.png Graphic file (type png)
 <use ./rys/szumy/p.png>
-Package pdftex.def Info: ./rys/szumy/p.png  used on input line 811.
+Package pdftex.def Info: ./rys/szumy/p.png  used on input line 808.
 (pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
-<./rys/szumy/k.png, id=554, 1284.8pt x 722.7pt>
+<./rys/szumy/k.png, id=572, 1284.8pt x 722.7pt>
 File: ./rys/szumy/k.png Graphic file (type png)
 <use ./rys/szumy/k.png>
-Package pdftex.def Info: ./rys/szumy/k.png  used on input line 813.
+Package pdftex.def Info: ./rys/szumy/k.png  used on input line 810.
 (pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
-<./rys/szumy/n.png, id=555, 1284.8pt x 722.7pt>
+<./rys/szumy/n.png, id=573, 1284.8pt x 722.7pt>
 File: ./rys/szumy/n.png Graphic file (type png)
 <use ./rys/szumy/n.png>
-Package pdftex.def Info: ./rys/szumy/n.png  used on input line 815.
+Package pdftex.def Info: ./rys/szumy/n.png  used on input line 812.
 (pdftex.def)             Requested size: 117.00119pt x 65.81212pt.
-<./rys/obcinanie/znalezienie.jpg, id=556, 770.88pt x 433.62pt>
+<./rys/obcinanie/znalezienie.jpg, id=574, 770.88pt x 433.62pt>
 File: ./rys/obcinanie/znalezienie.jpg Graphic file (type jpg)
 <use ./rys/obcinanie/znalezienie.jpg>
 Package pdftex.def Info: ./rys/obcinanie/znalezienie.jpg  used on input line 82
-8.
+5.
 (pdftex.def)             Requested size: 175.49881pt x 98.71817pt.
  [32pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 11}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.831 
+l.828 
        <./rys/szumy/p.png (PNG copy)> <./rys/szumy/k.png (PNG copy)> <./rys/szu
 my/n.png (PNG copy)>]
-<./rys/obcinanie/obcinanie.png, id=569, 382.42876pt x 243.91125pt>
+<./rys/obcinanie/obcinanie.png, id=587, 382.42876pt x 243.91125pt>
 File: ./rys/obcinanie/obcinanie.png Graphic file (type png)
 <use ./rys/obcinanie/obcinanie.png>
-Package pdftex.def Info: ./rys/obcinanie/obcinanie.png  used on input line 836.
+Package pdftex.def Info: ./rys/obcinanie/obcinanie.png  used on input line 833.
 
 (pdftex.def)             Requested size: 175.49881pt x 111.93256pt.
  [33pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
@@ -1821,94 +1829,94 @@ Package pdftex.def Info: ./rys/obcinanie/obcinanie.png  used on input line 836.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.850 \end{enumerate}
+l.847 \end{enumerate}
                      pdfTeX warning (ext4): destination with the same identifie
 r (name{figure.4.13}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.850 \end{enumerate}
+l.847 \end{enumerate}
                       <./rys/obcinanie/znalezienie.jpg> <./rys/obcinanie/obcina
 nie.png>]
-<./rys/obcinanie/p.png, id=583, 338.26375pt x 167.62625pt>
+<./rys/obcinanie/p.png, id=601, 338.26375pt x 167.62625pt>
 File: ./rys/obcinanie/p.png Graphic file (type png)
 <use ./rys/obcinanie/p.png>
-Package pdftex.def Info: ./rys/obcinanie/p.png  used on input line 857.
+Package pdftex.def Info: ./rys/obcinanie/p.png  used on input line 854.
 (pdftex.def)             Requested size: 117.00119pt x 57.97946pt.
-<./rys/obcinanie/k.png, id=584, 375.4025pt x 177.66376pt>
+<./rys/obcinanie/k.png, id=602, 375.4025pt x 177.66376pt>
 File: ./rys/obcinanie/k.png Graphic file (type png)
 <use ./rys/obcinanie/k.png>
-Package pdftex.def Info: ./rys/obcinanie/k.png  used on input line 859.
+Package pdftex.def Info: ./rys/obcinanie/k.png  used on input line 856.
 (pdftex.def)             Requested size: 117.00119pt x 55.37068pt.
-<./rys/obcinanie/s.png, id=585, 639.38875pt x 231.86626pt>
+<./rys/obcinanie/s.png, id=603, 639.38875pt x 231.86626pt>
 File: ./rys/obcinanie/s.png Graphic file (type png)
 <use ./rys/obcinanie/s.png>
-Package pdftex.def Info: ./rys/obcinanie/s.png  used on input line 861.
+Package pdftex.def Info: ./rys/obcinanie/s.png  used on input line 858.
 (pdftex.def)             Requested size: 117.00119pt x 42.42757pt.
  [34pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 14}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.898 
+l.895 
       pdfTeX warning (ext4): destination with the same identifier (name{table.4
 .1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.898 
+l.895 
        <./rys/obcinanie/p.png (PNG copy)> <./rys/obcinanie/k.png (PNG copy)> <.
 /rys/obcinanie/s.png (PNG copy)>] [35pdfTeX warning (ext4): destination with th
 e same identifier (name{table.4.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.936 \paragraph
+l.933 \paragraph
                 {k = 3}]
-<./rys/klasyfikatory/knn.png, id=602, 395.076pt x 513.71925pt>
+<./rys/klasyfikatory/knn.png, id=620, 395.076pt x 513.71925pt>
 File: ./rys/klasyfikatory/knn.png Graphic file (type png)
 <use ./rys/klasyfikatory/knn.png>
-Package pdftex.def Info: ./rys/klasyfikatory/knn.png  used on input line 951.
+Package pdftex.def Info: ./rys/klasyfikatory/knn.png  used on input line 948.
 (pdftex.def)             Requested size: 195.0pt x 253.56673pt.
  [36pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 15}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.959 	
+l.956 	
         <./rys/klasyfikatory/knn.png>]
-Overfull \hbox (1.79031pt too wide) in paragraph at lines 971--971
+Overfull \hbox (1.79031pt too wide) in paragraph at lines 968--968
  []\T1/cmr/bx/n/12 Do war-stwy wej-±cio-wej byªy po-da-wane war-to-±ci na-st¦-p
 u-j¡-cych cech:[] 
  []
 
 [37]
-Underfull \hbox (badness 10000) in paragraph at lines 991--992
+Underfull \hbox (badness 10000) in paragraph at lines 988--989
 
  []
 
 
-Underfull \hbox (badness 4713) in paragraph at lines 1029--1029
+Underfull \hbox (badness 4713) in paragraph at lines 1026--1026
 []|\T1/cmr/bx/n/12 Tanh funk-cj¡
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1029--1029
+Underfull \hbox (badness 10000) in paragraph at lines 1026--1026
 []|\T1/cmr/m/n/12 2 neu-rony w
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1029--1029
+Underfull \hbox (badness 10000) in paragraph at lines 1026--1026
 []|\T1/cmr/m/n/12 4 neu-rony w
  []
 
 
-Underfull \hbox (badness 4120) in paragraph at lines 1029--1029
+Underfull \hbox (badness 4120) in paragraph at lines 1026--1026
 []|\T1/cmr/m/n/12 6 neu-ro-nów w
  []
 
 
-Underfull \hbox (badness 4120) in paragraph at lines 1029--1029
+Underfull \hbox (badness 4120) in paragraph at lines 1026--1026
 []|\T1/cmr/m/n/12 8 neu-ro-nów w
  []
 
@@ -1917,19 +1925,19 @@ Underfull \hbox (badness 4120) in paragraph at lines 1029--1029
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1037 	\paragraph
+l.1034 	\paragraph
                   {Analiza uczenia w poszczegÃ³lnych epokach:}]
-Underfull \hbox (badness 10000) in paragraph at lines 1038--1039
+Underfull \hbox (badness 10000) in paragraph at lines 1035--1036
 
  []
 
-<./rys/opoki.png, id=632, 290.2845pt x 173.448pt>
+<./rys/opoki.png, id=650, 290.2845pt x 173.448pt>
 File: ./rys/opoki.png Graphic file (type png)
 <use ./rys/opoki.png>
-Package pdftex.def Info: ./rys/opoki.png  used on input line 1042.
+Package pdftex.def Info: ./rys/opoki.png  used on input line 1039.
 (pdftex.def)             Requested size: 350.99762pt x 209.7245pt.
 
-Overfull \hbox (3.07616pt too wide) in paragraph at lines 1048--1049
+Overfull \hbox (3.07616pt too wide) in paragraph at lines 1045--1046
 []\T1/cmr/m/n/12 Ostatnim pa-ra-me-trem, który prze-ana-li-zo-wa-ªem byª do-bór
  pa-ra-me-tru szyb-
  []
@@ -1942,16 +1950,16 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1087 
+l.1084 
         <./rys/opoki.png>]
-<./rys/klasyfikatory/siec_cechy.png, id=639, 721.4955pt x 563.706pt>
+<./rys/klasyfikatory/siec_cechy.png, id=657, 721.4955pt x 563.706pt>
 File: ./rys/klasyfikatory/siec_cechy.png Graphic file (type png)
 <use ./rys/klasyfikatory/siec_cechy.png>
 Package pdftex.def Info: ./rys/klasyfikatory/siec_cechy.png  used on input line
- 1092.
+ 1089.
 (pdftex.def)             Requested size: 382.19833pt x 298.61653pt.
 
-Overfull \hbox (9.74112pt too wide) in paragraph at lines 1098--1098
+Overfull \hbox (9.74112pt too wide) in paragraph at lines 1095--1095
  []\T1/cmr/bx/n/12 Przeprowadzona ana-liza po-zwo-liªa usta-li¢ osta-teczne pa-
 ra-me-try sieci:[] 
  []
@@ -1961,35 +1969,35 @@ ra-me-try sieci:[]
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1098 		\item S
+l.1095 		\item S
                 ieÄ‡ skÅ‚ada siÄ™ z nastÄ™pujÄ…cych warstw: warstwa wejÅ›cio...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.17})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1098 		\item S
+l.1095 		\item S
                 ieÄ‡ skÅ‚ada siÄ™ z nastÄ™pujÄ…cych warstw: warstwa wejÅ›cio...
  <./rys/klasyfikatory/siec_cechy.png>] [41]
 ("C:\Users\Szewy\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1.
 sty"
 File: lstlang1.sty 2018/09/02 1.7 listings language file
 )
-Overfull \hbox (3.89684pt too wide) in paragraph at lines 1148--1149
+Overfull \hbox (3.89684pt too wide) in paragraph at lines 1145--1146
 \T1/cmr/m/n/12 blio-tece Ke-ras Gra-dient-De-scen-tOp-ti-mi-zer z pa-ra-me-trem
  ucze-nia rów-nym 0.01.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1152--1153
+Underfull \hbox (badness 10000) in paragraph at lines 1149--1150
 
  []
 
 [42]
-<./rys/klasyfikatory/siec.png, id=670, 756.426pt x 561.297pt>
+<./rys/klasyfikatory/siec.png, id=688, 756.426pt x 561.297pt>
 File: ./rys/klasyfikatory/siec.png Graphic file (type png)
 <use ./rys/klasyfikatory/siec.png>
-Package pdftex.def Info: ./rys/klasyfikatory/siec.png  used on input line 1185.
+Package pdftex.def Info: ./rys/klasyfikatory/siec.png  used on input line 1182.
 
 (pdftex.def)             Requested size: 382.19833pt x 283.61119pt.
  [43pdfTeX warning (ext4): destination with the same identifier (name{table.4.5
@@ -1997,13 +2005,13 @@ Package pdftex.def Info: ./rys/klasyfikatory/siec.png  used on input line 1185.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1190 \chapter
+l.1187 \chapter
                {Podsumowanie}pdfTeX warning (ext4): destination with the same i
 dentifier (name{figure.4.18}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1190 \chapter
+l.1187 \chapter
                {Podsumowanie} <./rys/klasyfikatory/siec.png>]
 Rozdzia\l  5.
 
@@ -2015,67 +2023,67 @@ Underfull \vbox (badness 1838) has occurred while \output is active []
 [45] [46
 
 ]
-Overfull \hbox (101.0256pt too wide) in paragraph at lines 1246--1247
+Overfull \hbox (19.7067pt too wide) in paragraph at lines 1231--1232
+[]\T1/cmr/m/n/12 Introduction to Ten-sor-Flow Lite, https://www.tensorflow.org/
+lite/overview,
+ []
+
+
+Overfull \hbox (101.0256pt too wide) in paragraph at lines 1237--1238
 []\T1/cmr/m/n/12 OpenCV docs, https://docs.opencv.org/3.4/d1/d32/tutorial_py_co
 ntour_properties.html,
  []
 
 
-Overfull \hbox (33.35468pt too wide) in paragraph at lines 1247--1248
-[]\T1/cmr/m/n/12 mimuw.edu.pl http://mst.mimuw.edu.pl/lecture.php?lecture=syd&p
-art=Ch2,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1251--1252
+Underfull \hbox (badness 10000) in paragraph at lines 1238--1239
 []\T1/cmr/m/n/12 Learningopencv, https://www.learnopencv.com/convex-hull-using-
 
  []
 
 
-Overfull \hbox (11.13101pt too wide) in paragraph at lines 1252--1253
+Overfull \hbox (11.13101pt too wide) in paragraph at lines 1239--1240
 []\T1/cmr/m/n/12 Pyimagesearch, https://www.pyimagesearch.com/2016/03/28/measur
 ing-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1253--1254
+Underfull \hbox (badness 10000) in paragraph at lines 1240--1241
 []\T1/cmr/m/n/12 OpenCV docs, https://docs.opencv.org/3.0-
  []
 
 
-Underfull \hbox (badness 1184) in paragraph at lines 1253--1254
+Underfull \hbox (badness 1184) in paragraph at lines 1240--1241
 \T1/cmr/m/n/12 py_morphological_ops/py_morphological_ops.html, do-st¦p: sty-cze
 «
  []
 
-[47]
-Overfull \hbox (66.17575pt too wide) in paragraph at lines 1254--1255
+
+Overfull \hbox (66.17575pt too wide) in paragraph at lines 1241--1242
 []\T1/cmr/m/n/12 OpenCV docs, https://docs.opencv.org/3.4.2/df/d9d/tutorial_py_
 colorspaces.html,
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1260.
-[48]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1260.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1247.
+[47]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1247.
  (praca_dyplomowa.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1260.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1260.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1247.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1247.
 
 Package rerunfilecheck Info: File `praca_dyplomowa.out' has not changed.
-(rerunfilecheck)             Checksum: 99B42FEC3ED93B3DDF5355D6352CE70C;2018.
+(rerunfilecheck)             Checksum: DC2B40D33F4CD91D24BD118E8B92B2F8;2018.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1260.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1247.
  ) 
 Here is how much of TeX's memory you used:
- 10377 strings out of 493305
- 149747 string characters out of 3129801
- 426864 words of memory out of 3000000
- 13365 multiletter control sequences out of 15000+200000
- 35523 words of font info for 73 fonts, out of 3000000 for 9000
+ 10360 strings out of 493305
+ 149611 string characters out of 3129801
+ 425599 words of memory out of 3000000
+ 13356 multiletter control sequences out of 15000+200000
+ 37860 words of font info for 79 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,9n,42p,987b,1205s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Szewy\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
@@ -2099,19 +2107,18 @@ pe1/public/pl/plex10.pfb><C:/Users/Szewy/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/public/pl/plmi10.pfb><C:/Users/Szewy/AppData/Local/Programs/MiKTeX 2.9/
 fonts/type1/public/pl/plmi12.pfb><C:/Users/Szewy/AppData/Local/Programs/MiKTeX 
 2.9/fonts/type1/public/pl/plmi6.pfb><C:/Users/Szewy/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/pl/plmi7.pfb><C:/Users/Szewy/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Users/Szewy/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/public/pl/plr10.pfb><C:/Users/Szewy/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><C:/Users/Szewy/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/pl/plr7.pfb><C:/Users/Szewy/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr8.pfb><C:/Users/Szewy/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Users/Szewy/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy6.pfb><C:/Users/Szewy/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/Szewy/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on praca_dyplomowa.pdf (54 pages, 2758382 bytes).
+eX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Users/Szewy/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/pl/plr10.pfb><C:/Users/Szewy/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><C:/Users/Szewy/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/pl/plr17.pfb><C:/Users/Szewy/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/pl/plr8.pfb><C:/Users/Szewy/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Users/Szewy/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy6.pfb><C:/Users/Szewy/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/Szewy/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on praca_dyplomowa.pdf (53 pages, 2754340 bytes).
 PDF statistics:
- 1262 PDF objects out of 1440 (max. 8388607)
- 308 named destinations out of 1000 (max. 500000)
+ 1254 PDF objects out of 1440 (max. 8388607)
+ 298 named destinations out of 1000 (max. 500000)
  546 words of extra memory for PDF output out of 10000 (max. 10000000)
 

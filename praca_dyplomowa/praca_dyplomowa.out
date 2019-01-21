@@ -9,8 +9,8 @@
 \BOOKMARK [1][-]{section.2.4}{Detekcja kolor\363w}{chapter.2}% 9
 \BOOKMARK [1][-]{section.2.5}{Klasyfikatory}{chapter.2}% 10
 \BOOKMARK [2][-]{subsection.2.5.1}{Klasyfikator KNN}{section.2.5}% 11
-\BOOKMARK [1][-]{section.2.6}{Sieci neuronowe}{chapter.2}% 12
-\BOOKMARK [2][-]{subsection.2.6.1}{Dob\363r i ocena cech}{section.2.6}% 13
+\BOOKMARK [2][-]{subsection.2.5.2}{Dob\363r i ocena cech}{section.2.5}% 12
+\BOOKMARK [1][-]{section.2.6}{Sieci neuronowe}{chapter.2}% 13
 \BOOKMARK [0][-]{chapter.3}{Wykorzystane narzedzia}{}% 14
 \BOOKMARK [1][-]{section.3.1}{OpenCV}{chapter.3}% 15
 \BOOKMARK [1][-]{section.3.2}{Python}{chapter.3}% 16

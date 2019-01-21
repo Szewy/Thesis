@@ -378,7 +378,7 @@ Klasyfikacja nadzorowana w momencie uczenia klasyfikatora tzn. podawania zbioru 
 Elementami wejścia dla stworzenia klasyfikatora jest zbiór uczący, wyjściem jest atrybut decyzyjny, oznaczający przynależność do danej klasy \cite{Malina2}.
 
 \subsection{Klasyfikator KNN}
-Klasyfikator KNN jest przykładem klasyfikacji nadzorowanej. Należy on do grupy algorytmów leniwych tzn. tych które nie tworzą wewnętrznej reprezentacji danych uczących, lecz określają rozwiązanie dopiero przy podaniu do klasyfikatora danych \cite{knn2}. 
+Klasyfikator KNN jest przykładem klasyfikacji nadzorowanej. Należy on do grupy algorytmów leniwych tzn. tych które nie tworzą wewnętrznej reprezentacji danych uczących, lecz określają rozwiązanie dopiero przy podaniu do klasyfikatora danych \cite{knn2}.
 
 \paragraph{Po utworzeniu klasyfikatora bazującego na zbiorze uczącym, szacowanie atrybutu decyzyjnego odbywa się w następujących krokach: }
 \begin{enumerate}
@@ -400,6 +400,48 @@ Po znalezieniu k-najbliższych sąsiadów, atrybut decyzyjny przyjmuje wartość
 
 Na zaprezentowanym przykładzie możemy przeanalizować działanie klasyfikatora KNN dla trzech sąsiadów. Dla wyuczonego klasyfikatora KNN próbkami, które na grafice są zaprezentowane jako kółeczka, zaś ich kolor pokazuje do jakiej klasy obiektu należą. Naszym zadaniem jest określenie atrybuty decyzyjnego dla próbki, która została zaznaczona kolorem niebieskim. W pierwszym kroku zaznaczamy najbliższe sąsiedztwo, na ilustracji zatoczono go dużym okręgiem. Można zaobserwować, że w sąsiedztwie mamy dwa obiekty klasy czerwonej oraz jeden klasy żółtej. Wybór klasy naszego obiektu jest większościowy, co oznacza, że nasza nowa, nieznana dotąd próbka danych zostanie zakwalifikowana do klasy czerwonej.
 
+
+\subsection{Dobór i ocena cech}
+Podstawowym elementem tworzenia klasyfikatora jest dobór odpowiednich do niego cech na których będzie bazował. Źle dobrane elementy wejścia spowodują niedokładną klasyfikację. Dlatego tak bardzo ważne jest odpowiedni dobór cech opisujących.
+
+Istotnym etapem dla każdej cechy była jej normalizacja danych, aby dana cecha nie powodowała większego wpływu od innych czy też wpływała nieznacząco w stosunku do innych. Przykładem normalizacji jest standaryzacja, którą możemy przedstawić zgodnie ze wzorem: 
+\begin{center}
+	{\large $ Z = \dfrac{x - \mu}{\sigma} $ \par}
+\end{center}
+x - wartość przed normalizacją \\ $\mu$ - średnia \\ $\sigma$ - odchylenie standardowe
+
+\paragraph{Warunki dobrej cechy diagnostycznej: }
+\begin{itemize}
+	\item Powinny być wielkościami z podobnego zakresu
+	\item Wartości danej cechy w obrębie określonej klasy powinny być do siebie możliwie jak najbardziej zbliżone
+	\item Powinny być mało wrażliwe na szum
+	\item Ta sama cecha powinna przyjmować różne wartości w przypadku różnych klas
+	\item Ogólna liczba cech diagnostycznych nie może być zbyt duża \cite{Osowski}
+\end{itemize}
+\mbox{} \\
+Warunkiem dobrej cechy diagnostycznej, jest to, że ta sama cecha w obrębie różnych klas powinna przyjmować jak najbardziej różne wartości. Przy diagnostyce tego warunku można wykorzystać średnią arytmetyczną wartości danej cechy w poszczególnych klasach.
+
+Kolejnym warunkiem na jaki warto zwrócić uwagę podczas oceny cech jest jej odchylenie standardowe w obrębie określonej klasy. Odchylenie standardowe można określić wzorem: 
+\begin{center}
+	{\large $ \sigma = {\sqrt {\operatorname {E} ((X-\operatorname {E} (X))^{2})}} $ \par}
+\end{center}
+X - zmienna \\
+E - wartość oczekiwana 
+
+
+Opisuje ono rozproszenie cechy w obrębie określonej klasy co implikuje, że dobrze dobrana cecha charakteryzuje się jak najmniejszym rozproszeniem.
+
+\paragraph{Przykładowe cechy możliwe do wykorzystania do opisu masek binarnych: }
+\begin{itemize}
+	\item Stosunek szerokości do wysokości obiektu binarnego
+	\item Stosunek powierzchni obiektu binarnego do powierzchni całego obrazu
+	\item Stosunek powierzchni otoczki wypukłej na obiekcie binarnym do powierzchni całego obrazu
+	\item Stosunek półosi małej do dużej elipsy opisanej na obiekcie binarnym 
+	\item Wartości punktów końcowych obiektu binarnego
+	\item Orientacja obiektu binarnego
+\end{itemize}
+\mbox{} \\
+Przy wyborze odpowiednich cech ważnym elementem jest ich ocena, aby sprawdzić czy wybrana cecha będzie pozytywnie wpływała na klasyfikację.
 
 \section{Sieci neuronowe}
 Sieci neuronowe możemy traktować jako model czarnej skrzynki. Dla określonych danych wejściowych uzyskujemy wartości wyjściowe.
@@ -468,7 +510,7 @@ Wartość funkcji aktywacji dla danego neuronu, określa wartość wyjściową t
 
 Softmax jest przykładem funkcji aktywacji, którą często wykorzystuje się jako funkcję aktywacji w warstwie wyjściowej. Suma wartości aktywacji dla całej warstwy jest równa 1. Wykorzystując tę normalizację, możemy wartości wyjściowe neuronów zinterpretować jako prawdopodobieństwo przynależności do poszczególnych klas, które reprezentowane są przez neurony wyjściowe. Funkcję Softmax definiujemy następująco: \\ 
 \begin{center}
-	{\large $ f(y_{i}) = \frac{exp(y_{i})}
+	{\LARGE $ f(y_{i}) = \frac{exp(y_{i})}
 		{\sum_{j=1}^{n} exp(y_{j})}
 	$\par}
 \end{center}
@@ -481,7 +523,6 @@ Uczenie sieci polega na dostrajaniu wartości wag poszczególnych neuronów. Prz
 \paragraph{Wykorzystanie sieci neuronowych:}
 \begin{itemize}
 	\item Rozpoznawanie obrazów
-	\item Sterowanie gestami
 	\item Przewidywanie wartości akcji spółek giełdowych
 	\item Generowanie plików wideo z obrazka
 	\item Rozpoznawanie mowy
@@ -489,58 +530,14 @@ Uczenie sieci polega na dostrajaniu wartości wag poszczególnych neuronów. Prz
 	\item Przewidywanie prognozy pogody
 	\item Diagnostyka medyczna
 	\item Ocena zdolności kredytowej
-	\item Rekomendowanie reklam
-	
 \end{itemize}
-
-\subsection{Dobór i ocena cech}
-	Podstawowym elementem tworzenia klasyfikatora jest dobór odpowiednich do niego cech na których będzie bazował. Źle dobrane elementy wejścia spowodują niedokładną klasyfikację. Dlatego tak bardzo ważne jest odpowiedni dobór cech opisujących.
-	
-	Istotnym etapem dla każdej cechy była jej normalizacja danych, aby dana cecha nie powodowała większego wpływu od innych czy też wpływała nieznacząco w stosunku do innych. Przykładem normalizacji jest standaryzacja, którą możemy przedstawić zgodnie ze wzorem: 
-	\begin{center}
-		{\large $ Z = \dfrac{x - \mu}{\sigma} $ \par}
-	\end{center}
-    x - wartość przed normalizacją \\ $\mu$ - średnia \\ $\sigma$ - odchylenie standardowe
-
-	\paragraph{Warunki dobrej cechy diagnostycznej: }
-	\begin{itemize}
-		\item Powinny być wielkościami z podobnego zakresu
-		\item Wartości danej cechy w obrębie określonej klasy powinny być do siebie możliwie jak najbardziej zbliżone
-		\item Powinny być mało wrażliwe na szum
-		\item Ta sama cecha powinna przyjmować różne wartości w przypadku różnych klas
-		\item Ogólna liczba cech diagnostycznych nie może być zbyt duża \cite{Osowski}
-	\end{itemize}
-	\mbox{} \\
-	Warunkiem dobrej cechy diagnostycznej, jest to, że ta sama cecha w obrębie różnych klas powinna przyjmować jak najbardziej różne wartości. Przy diagnostyce tego warunku można wykorzystać średnią arytmetyczną wartości danej cechy w poszczególnych klasach.
-	
-	Kolejnym warunkiem na jaki warto zwrócić uwagę podczas oceny cech jest jej odchylenie standardowe w obrębie określonej klasy. Odchylenie standardowe można określić wzorem: 
-	\begin{center}
-		{\large $ \sigma = {\sqrt {\operatorname {E} ((X-\operatorname {E} (X))^{2})}} $ \par}
-	\end{center}
-	X - zmienna \\
-	E - wartość oczekiwana 
-	
-	
-	Opisuje ono rozproszenie cechy w obrębie określonej klasy co implikuje, że dobrze dobrana cecha charakteryzuje się jak najmniejszym rozproszeniem.
-
-\paragraph{Przykładowe cechy możliwe do wykorzystania do opisu masek binarnych: }
-\begin{itemize}
-	\item Stosunek szerokości do wysokości obiektu binarnego
-	\item Stosunek powierzchni obiektu binarnego do powierzchni całego obrazu
-	\item Stosunek powierzchni otoczki wypukłej na obiekcie binarnym do powierzchni całego obrazu
-	\item Stosunek półosi małej do dużej elipsy opisanej na obiekcie binarnym 
-	\item Wartości punktów końcowych obiektu binarnego
-	\item Orientacja obiektu binarnego
-\end{itemize}
-\mbox{} \\
-Przy wyborze odpowiednich cech ważnym elementem jest ich ocena, aby sprawdzić czy wybrana cecha będzie pozytywnie wpływała na klasyfikację.
 
 \chapter{Wykorzystane narzędzia}
 
 \section{OpenCV}
-OpenCV (Open Source Computer Vision Library) jest to biblioteka wykorzystywana przy rozpoznawaniu obrazów oraz przy uczeniu maszynowym. Została napisana w języku C przez programistów z firmy Intel w 1999 roku.
+Biblioteka OpenCV (ang.\textit{ Open Source Computer Vision Library}) jest wykorzystywana przy rozpoznawaniu obrazów oraz przy uczeniu maszynowym. Została napisana w języku C przez programistów z firmy Intel w 1999 roku \cite{opencv}.
 
-W późniejszym czasie kolejne części biblioteki były także pisane w języku C++. Biblioteka OpenCV umożliwia pisanie kodów nie tylko w językach C i C++ ale również mamy możliwość wykorzystywania tej biblioteki w językach Python, Java czy też Matlab. W związku z popularnością biblioteki udostępniono nakładki do języków takich jak C\#, Perl, Ruby czy Haskell aby móc również wykorzystywać zalety  biblioteki. 
+W późniejszym czasie kolejne części biblioteki były także pisane w języku C++. Biblioteka OpenCV umożliwia pisanie kodów nie tylko w językach C i C++ ale również mamy możliwość wykorzystywania tej biblioteki w językach Python, Java czy też Matlab. W związku z popularnością biblioteki udostępniono nakładki do języków takich jak C\#, Perl, Ruby czy Haskell aby móc również wykorzystywać zalety  biblioteki\cite{opencv2}. 
 
 Biblioteka OpenCV udostępnia zaawansowaną funkcjonalność  w szeroko rozumianym pojęciu rozpoznawaniu obrazów:
 
@@ -567,7 +564,7 @@ Biblioteka OpenCV od 20 lat znajduje zastosowanie w wielu dziedzinach naszego co
 \end{itemize}
 
 \section{Python}
-Jest to interpretowany, obiektowy język wysokiego poziomu. Używany jest w szerokiej gamie  aplikacjach. Jest językiem ogólnego przeznaczenia, co oznacza, że może zostać wykorzystany praktycznie do wszystkiego. Jest rozwijany jako projekt otwartoźródłowy. Pojawił się w roku 1991, zaprojektowany przez holenderskiego programistę Guido van Rossum.
+Jest to interpretowany, obiektowy język wysokiego poziomu. Używany jest w szerokiej gamie  aplikacji. Jest językiem ogólnego przeznaczenia, co oznacza, że może zostać wykorzystany praktycznie do wszystkiego. Jest rozwijany jako projekt o otwartych źródłach. Pojawił się w roku 1991, zaprojektowany przez holenderskiego programistę Guido van Rossum\cite{python1}.  
 
 \paragraph{Zalety używania Pythona:}
 \begin{itemize} 
@@ -577,30 +574,30 @@ Jest to interpretowany, obiektowy język wysokiego poziomu. Używany jest w szer
 	\item jest wieloplatformowy
 	\item posiada bogaty zbiór różnego rodzaju bibliotek
 	\item łatwy do nauczenia, nawet dla osób zaczynających programować
-	\item szybkość działania w stosunku do innych języków skryptowych
+	\item szybkość działania w stosunku do innych języków skryptowych\cite{python}
 \end{itemize} 
 \mbox{} \\
 Jeśli mielibyśmy dyskutować o wadach językach Python to ciężko jednoznacznie wskazać takie. Na pewno część z programistów może uznać zalety dynamicznego zarządzania typami jako wadę, ponieważ w niektórych przypadkach może spowodować błędy trudniejsze do znalezienia. Działania Pythona jest również wolniejsze w stosunku do języków takich jak C czy C++.  Za jedną z wad na pewno można uznać sposób programowania obiektowego jakie odbywa się w Pythonie. W szczególności nie ma enkapsulacji, istnieją metody które symulują takie działa, jednakże w stosunku do innych języków  obiektowych czytelność kodu zdecydowanie jest zmniejszona.
 
-Język mimo swoich lat ciągle zyskuje na popularności. Ostatnio wszedł do pierwszej trójki najbardziej popularnych języków programowania według TIOBE\footnote{stan na grudzień 2018}, wyprzedzając między innymi język C++, a ulegając jedynie językowi Java oraz C. Wzrost języka Python na pewno można łączyć ze wzrostem popularności uczenia maszynowego i głębokich sieci, gdzie język Python jest jednym z najlepszych, jak nie najlepszym językiem w tych dziedzinach. Bardzo bogata biblioteka oraz przyjemna składnia sprawia, że język Python jest częściej wykorzystywany.  
+Język mimo swoich lat ciągle zyskuje na popularności. Ostatnio wszedł do pierwszej trójki najbardziej popularnych języków programowania według TIOBE\footnote{stan na styczeń 2019}\cite{tiobe}, wyprzedzając między innymi język C++, a ulegając jedynie językowi Java oraz C. Wzrost języka Python na pewno można łączyć ze wzrostem popularności uczenia maszynowego i głębokich sieci, gdzie język Python jest jednym z najlepszych, jak nie najlepszym językiem w tych dziedzinach. Bardzo bogata biblioteka oraz przyjemna składnia sprawia, że język Python jest częściej wykorzystywany.  
 
-Jako ciekawostkę można powiedzieć, że nazwa języka Python wzięła się nie od zwierzęcia, lecz od słynnego Brytyjskiego serialu "Monty Python’s Flying Circus".
+Jako ciekawostkę można powiedzieć, że nazwa języka Python wzięła się nie od zwierzęcia, lecz od słynnego Brytyjskiego serialu ,,Monty Python’s Flying Circus''\cite{python1}.
 
 \section{TensorFlow}
-Jest to biblioteka programistyczna wykorzystywana w uczeniu maszynowym i głębokich sieciach neuronowych. Została wydana jako otwarte oprogramowanie przez Google Brain Team w dniu 9 listopada 2015.
+Jest to biblioteka programistyczna wykorzystywana w uczeniu maszynowym i głębokich sieciach neuronowych. Została wydana jako otwarte oprogramowanie przez Google Brain Team w dniu 9 listopada 2015\cite{tensorflow}.
 
-Umożliwia pisanie programów m.in. w językach takich jak Python czy C. Jest dostępny na 64-bitowych systemach operacyjnych: Windows, Linux, macOS oraz na platformach mobilnych: Android oraz iOS. Zaś w maju 2017 został wydany TensorFlow Lite jako dedykowane rozwiązanie specjalnie dla użytkowników Androida.
+Umożliwia pisanie programów m.in. w językach takich jak Python czy C. Jest dostępny na 64-bitowych systemach operacyjnych: Windows, Linux, macOS oraz na platformach mobilnych: Android oraz iOS. Zaś w maju 2017 został wydany TensorFlow Lite jako dedykowane rozwiązanie specjalnie dla użytkowników Androida\cite{tensorflowlite}.
 
-Olbrzymią zaletą TensorFlow jest to, że reprezentuje on paradygmat Dataflow, w którym program ma postać grafu skierowanego modelującego przepływ danych pomiędzy niezależnymi operacjami w węzłach. W pierwszym kroku należy zdefiniować model, a następnie stworzyć tzw. TensorFlow session, która pozwala na uruchomienie programu. Takie podejście do pisania programów posiada ogromną zaletą jaką jest możliwość efektywnego programowania równoległego oraz rozproszonego. 
+Olbrzymią zaletą biblioteki TensorFlow jest to, że reprezentuje on paradygmat Dataflow, w którym program ma postać grafu skierowanego modelującego przepływ danych pomiędzy niezależnymi operacjami w węzłach. W pierwszym kroku należy zdefiniować model, a następnie stworzyć tzw. TensorFlow session, która pozwala na uruchomienie programu. Takie podejście do pisania programów posiada ogromną zaletę jaką jest możliwość efektywnego programowania równoległego oraz rozproszonego\cite{tensorflowG}. 
 
 TensorFlow daje możliwość nie tylko wykorzystania mocy obliczeniowej procesora, ale równie dobrze korzystania z mocy kart graficznych. Wszystko to powoduje pełne wykorzystanie komputerów przy obliczeniach równoległych.
 
-TensorFlow oprócz niskopoziomowych struktur posiada również moduły wyższego poziomu. Do modułów niskiego poziomu możemy odwoływać się poprzez warstwę API, która umożliwia łatwy do używania interfejs przeznaczony do modelów głębokiego uczenia. Zaś nad warstwą API znajduje się warstwa wysokiego poziomu, przykładem jej jest Keras.
+TensorFlow oprócz niskopoziomowych struktur posiada również moduły wyższego poziomu. Do modułów niskiego poziomu możemy odwoływać się poprzez warstwę API, która umożliwia łatwy do używania interfejs przeznaczony do modelów głębokiego uczenia. Zaś nad warstwą API znajduje się warstwa wysokiego poziomu.
 
 \section{Keras}
-Otwartoźródłowa biblioteka programistyczna napisana w języku Python wydana w dniu 27 marca 2015 napisana przez pierwotnego autora François Chollet. 
+Biblioteka Keras została napisana w języku Python i wydana w marcu 2015 przez pierwotnego autora François Chollet\cite{keras}. 
 
-Jej głównym przeznaczeniem jest to, aby w jak najprostszy i  jak najszybszy sposób umożliwić pracę w głębokich sieciach neuronowych. Co więcej, biblioteka została zaprojektowana w sposób przyjemny do użytkowania, skupiona na modularności oraz rozszerzalności. Zaś od 2017 roku TensorFlow wspiera w swojej bibliotece Kerasa. Dzięki czemu Keras jest wysokopoziomową warstwą tworzenia modelów sieci neuronowych i jej uczenia.
+Jej głównym przeznaczeniem jest to, aby w jak najprostszy i  jak najszybszy sposób umożliwić pracę w głębokich sieciach neuronowych. Biblioteka została zaprojektowana w sposób przyjemny do użytkowania, skupiona na modularności oraz rozszerzalności. Zaś od 2017 roku TensorFlow wspiera bibliotekę Keras. Dzięki czemu Keras jest wysokopoziomową warstwą tworzenia modelów sieci neuronowych i jej uczenia w bibliotece TensorFlow.
 
 \chapter{Rozpoznawanie gestów na przykładzie gry papier, kamień, nożyce}
 \section{Aktywizacja danych}
@@ -1225,34 +1222,24 @@ Z wykonanych analiz dokładności klasyfikatorów w zależności od parametru k 
 \bibitem{Malina2}{Witold Malina, Maciej Smiatacz, ,,Rozpoznawanie obrazów'', 2010}
 \bibitem{knn2}{Metoda K Najbliższych Sąsiadów, http://home.agh.edu.pl/~horzyk/lectures/miw/KNN.pdf, dostęp: styczeń 2019}
 \bibitem{Osowski}{Osowski Stanisław, ,,Metody i narzędzia eksploracji danych'', 2013}
+\bibitem{opencv}{Introduction to OpenCV-Python Tutorials, https://docs.opencv.org/\\3.4.1/d0/de3/tutorial\_py\_intro.html, dostęp: styczeń 2019}
+\bibitem{opencv2}{OpenCV, https://en.wikipedia.org/wiki/OpenCV, dostęp: styczeń 2019}
+\bibitem{python1}{General Python FAQ, https://docs.python.org/2/faq/general.html, dostęp: styczeń 2019}
+\bibitem{python}{O'Reilly Media, ,,Learning Python 4th Edition'', 2009}
+\bibitem{tiobe}{TIOBE Index for January 2019, https://www.tiobe.com/tiobe-index/, dostęp: styczeń 2019}
+\bibitem{tensorflow}{TensorFlow: Large-Scale Machine Learning on Heterogeneous\\ Distributed Systems https://static.googleusercontent.com/media/\\research.google.com/en//pubs/archive/45166.pdf, dostęp: styczeń 2019}
+\bibitem{tensorflowlite}{Introduction to TensorFlow Lite, https://www.tensorflow.org/lite/overview, dostęp: styczeń 2019}
+\bibitem{tensorflowG}{Graphs and Sessions, https://www.tensorflow.org/guide/graphs, dostęp: styczeń 2019}
+\bibitem{keras}{Introducing Keras 2, https://blog.keras.io/introducing-keras-2.html, dostęp: styczeń 2019}
 
 
 
-\bibitem{Rafajlowicz}{Ewaryst Rafajłowicz, Wojciech Rafajłowicz, Andrzej Rusiecki, ,,Algorytmy przetwarzania obrazów i wstęp do pracy z biblioteką OpenCV'', 2009}
-\bibitem{Slater}{Daniel Slater, Gianmario Spacagna, Peter Roelants, Valentino Zocca, ,,Deep Learning. Uczenie głębokie z językiem Python. Sztuczna inteligencja i sieci neuronowe'', 2018}
-\bibitem{Marmanis}{Douglas McIlwraith, Haralambos Marmanis, Dmitry Babenko, ,,Algorithms of the Intelligent Web 2nd Edition'', 2016}
-\bibitem{Chollet}{François Chollet, ,,Deep Learning with Python'', 2017}
-\bibitem{Raschka}{Sebastian Raschka, ,,Python. Uczenie maszynowe'', 2017}
-\bibitem{Geron}{Aurélien Géron, Krzysztof Sawka[tłum], ,,Uczenie maszynowe z użyciem Scikit-Learn i TensorFlow'', 2018}
-\bibitem{Ramsundar}{Bharath Ramsundar, Reza Bosagh Zadeh, ,,TensorFlow for Deep Learning. From Linear Regression to Reinforcement Learning'', 2018}
-\bibitem{Serra}{Jean Serra, ,,Image Analysis and Mathematical Morphology'', 1983}
-\bibitem{Burger}{Wilhelm Burger, Mark J. Burge, ,,Principles of Digital Image Processing: Fundamental Techniques'', 2009}
-
-\bibitem{Media}{O'Reilly Media, ,,Learning Python 4th Edition'', 2009}
-\bibitem{Lie}{Hetland Magnus Lie, ,,Beginning Python'', 2016}
-
-\bibitem{tiobe}{Tiobem, https://www.tiobe.com/tiobe-index/, dostęp: grudzień 2018}
-\bibitem{analizaobrazu}{Analizaobrazu, http://analizaobrazu.x25.pl/articles/19, dostęp: styczeń 2019}
 \bibitem{opencvc}{OpenCV docs, https://docs.opencv.org/3.4/d1/d32/tutorial\_py\_contour\_properties.html, dostęp: styczeń 2019}
-\bibitem{mumuw}{mimuw.edu.pl http://mst.mimuw.edu.pl/lecture.php?lecture=syd\&part=Ch2, dostęp: styczeń 2019}
-\bibitem{opencva}{OpenCV docs, https://opencv.org/about.html, dostęp: styczeń 2019}
-\bibitem{tensorflow}{TensorFlow.org https://www.tensorflow.org/guide/graphs, dostęp: styczeń 2019}
-\bibitem{keras}{Keras.io, https://keras.io/, dostęp: styczeń 2019}
 \bibitem{convex}{Learningopencv, https://www.learnopencv.com/convex-hull-using-opencv-in-python-and-c/, dostęp: styczeń 2019}
 \bibitem{pyimagesearch}{Pyimagesearch, https://www.pyimagesearch.com/2016/03/28/measuring-size-of-objects-in-an-image-with-opencv/, dostęp: styczeń 2019}
 \bibitem{opencvm}{OpenCV docs, https://docs.opencv.org/3.0-beta/doc/py\_tutorials/py\_imgproc/\\py\_morphological\_ops/py\_morphological\_ops.html, dostęp: styczeń 2019}
 \bibitem{opencvco}{OpenCV docs, https://docs.opencv.org/3.4.2/df/d9d/tutorial\_py\_colorspaces.html, dostęp: styczeń 2019}
-\bibitem{Softmax}{Mechanizm uwagi w sieciach neuronowych, http://moria.umcs.lublin.pl/\\sphinx/src/machine\_learning/attention.html, dostęp: styczeń 2019}
+
 
 \end{thebibliography}
 
