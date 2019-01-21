@@ -71,10 +71,10 @@ Interakcje człowiek-komputer są przedmiotem zainteresowania nauk na styku info
 Klasyfikacja gestów jest powszechnym problem przetwarzania obrazów. Jest to temat obszerny i coraz lepiej zbadany. Klasyfikacja gestów ma szerokie zastosowanie. Jedną z zalet rozpoznawania gestów jest możliwość sterowania naszym smartfonem za pomocą ruchu rąk. Po wykonaniu gestu, a następnie po rozpoznaniu go przez  oprogramowanie telefonu wykonywana jest określona akcja. Innym wykorzystaniem klasyfikacji gestów jest sterowanie gier, gdzie jako przykład można podać urządzenie Kinect używane jako sensor dla konsoli Xbox 360\cite{Kinect}.
 
 \section{Cel pracy}
-W swojej pracy dyplomowej będę chciał przedstawić sposób podejścia do problemu klasyfikacji gestów, a następnie zaimplementować działające rozwiązanie i wykorzystać go w praktyce, na przykładzie gry papier, kamień, nożyce. Ogólnym celem będzie stworzenie klasyfikatora, który pozwoli na automatyczne rozpoznawanie gestów, które są wykonywane podczas gry.
+W swojej pracy dyplomowej będę chciał przedstawić sposób podejścia do problemu klasyfikacji gestów, a następnie zaimplementować działające rozwiązanie i wykorzystać go w praktyce na przykładzie gry papier, kamień, nożyce. Ogólnym celem będzie stworzenie klasyfikatora, który pozwoli na automatyczne rozpoznawanie gestów, które są wykonywane podczas gry.
 
 \section{Gra papier, kamień, nożyce}
-Jest to klasyczna gra towarzyska, w tradycyjnym wariancie przeznaczona dla dwóch graczy. W każdej rundzie każdy z graczy pokazuje gest przez siebie wybrany z trzech dostępnych. Wszystkie rundy odbywają się na ustalony wcześniej sygnał, a pokazywane gesty powinny być jak najbardziej zsynchronizowane. Gra kończy się wtedy, jeżeli jeden z graczy osiągnie określoną wcześniej ilość zwycięstw \cite{Fisher}.
+Jest to klasyczna gra towarzyska, w tradycyjnym wariancie przeznaczona dla dwóch graczy. W każdej rundzie gracze pokazują gesty przez siebie wybrane z trzech dostępnych. Wszystkie rundy odbywają się na ustalony wcześniej sygnał, a pokazywane gesty powinny być jak najbardziej zsynchronizowane. Gra kończy się wtedy, jeżeli jeden z graczy osiągnie określoną wcześniej ilość zwycięstw \cite{Fisher}.
 
 
 \paragraph{Trzy gesty dozwolone w grze:}
@@ -95,7 +95,7 @@ Jest to klasyczna gra towarzyska, w tradycyjnym wariancie przeznaczona dla dwóc
 	\caption{Gesty papieru, kamienia, nożyce}
 \end{figure}
 
-Zwycięzca określany jest w zależności od kombinacji gestów pokazanych przez graczy. Jeżeli oba gracze pokazali ten sam gest, wówczas następuje remis. 
+Zwycięzca w danej rundzie określany jest w zależności od kombinacji gestów pokazanych przez graczy. Jeżeli oba gracze pokazali ten sam gest, wówczas następuje remis. 
 
 \paragraph{W przypadku kombinacji:}
 \begin{itemize} 
@@ -144,7 +144,7 @@ Obrazy takie możemy traktować jako strukturę składającą się z dwóch zbio
 \begin{center}
 	$ A = \{p \colon \textbf{f}(p) = 1\} $ 
 \end{center}
-gdzie f jest funkcją obrazu. Drugi ze zbiór B składa się z pozostałych punktów (punktów wyłączonych), które są nazywane punktami tła:
+gdzie f jest funkcją obrazu. Drugi ze zbiór B składa się z pozostałych punktów tzw. punktów ,,wyłączonych'', które są również nazywane punktami tła:
 \begin{center}
 	$ B = \{p \colon \textbf{f}(p) = 0\} $ 
 \end{center}
@@ -157,8 +157,10 @@ gdzie f jest funkcją obrazu. Drugi ze zbiór B składa się z pozostałych punk
 \end{figure}
 
 \section{Operacje morfologiczne}
-Operacje morfologiczne pozwalają na złożone czynności związane z analizą kształtu poszczególnych elementów obrazu oraz położeniem względem siebie. W wyniku operacji struktura obiektu na obrazie zostaje zmieniona, w celu osiągnięcia określonych rezultatów. 
-Operacje morfologiczne można zastosować dla obrazów binarnych oraz dla obiektów o wielu odcieniach szarości\cite{Malina}. Dzięki nim jesteśmy wstanie wyszczególnić interesujące nas części czy też przefiltrować nasz obraz. Podstawowymi operacjami morfologicznymi są: erozja, dylatacja, otwarcie oraz zamknięcie. Wymienione operacje można wykonywać sekwencyjnie, tworząc zaawansowane systemy analizy.
+Operacje morfologiczne pozwalają na złożone czynności związane z analizą kształtu poszczególnych elementów obrazu oraz położeniem ich względem siebie. W wyniku operacji struktura obiektu na obrazie zostaje zmieniona, w celu osiągnięcia określonych rezultatów. 
+Operacje morfologiczne można zastosować dla obrazów binarnych oraz dla obrazów o wielu odcieniach szarości\cite{Malina}. Dzięki nim jesteśmy wstanie wyszczególnić interesujące nas części czy też przefiltrować nasz obraz. 
+
+Podstawowymi operacjami morfologicznymi są: erozja, dylatacja, otwarcie oraz zamknięcie. Wymienione operacje można wykonywać sekwencyjnie, tworząc zaawansowane systemy analizy.
 
 Operacje morfologiczne modyfikują wartości pikseli biorąc pod uwagę jego otoczenie. Liczbę punktów otoczenia określa tzw. element strukturalny, który definiuje wartości i ich rozmieszenie w otoczeniu. Posiada on jeden wyróżniony punkt, nazywany punktem centralnym, który nie musi być pikselem ,,włączonym''. 
 
@@ -167,11 +169,11 @@ Najczęściej stosowanym elementem strukturalnym jest element strukturalny eleme
 \begin{figure}[H]
 	\centering
 	\subfigure[]
-	{\label{fig:a}\includegraphics[width=0.25\textwidth]{\ImgPath/rys/elementy_strukturalne/1.png}}
+	{\label{fig:a}\includegraphics[width=0.22\textwidth]{\ImgPath/rys/elementy_strukturalne/1.png}}
 	\subfigure[]
-	{\label{fig:b}\includegraphics[width=0.25\textwidth]{\ImgPath/rys/elementy_strukturalne/2.png}}
+	{\label{fig:b}\includegraphics[width=0.22\textwidth]{\ImgPath/rys/elementy_strukturalne/2.png}}
 	\subfigure[]
-	{\label{fig:b}\includegraphics[width=0.25\textwidth]{\ImgPath/rys/elementy_strukturalne/3.png}}
+	{\label{fig:b}\includegraphics[width=0.22\textwidth]{\ImgPath/rys/elementy_strukturalne/3.png}}
 	\caption{Dwuwymiarowy element strukturalny: (a) ośmiospójny, (b) czterospójny, (c) liniowy. Punkt w kolorze białym oznacza piksel ,,włączony'', w kolorze czarnym piksel ,,wyłączony'', a w kolorze czerwonym oznacza piksel ,,włączony'', który jest traktowany jako punkt centralny}
 \end{figure}
 
@@ -213,7 +215,7 @@ Najczęściej stosowanym elementem strukturalnym jest element strukturalny eleme
 \paragraph{Etapy operacji dylatacji:}
 \begin{enumerate}
 	\item Element strukturalny przesuwany jest iteracyjnie po całym obiekcie, tak aby punkt centralny szablonu był analizowanym pikselem
-	\item Porównuje się otoczenie analizowanego piksela z elementem strukturalnym
+	\item Następuje porównanie otoczenia analizowanego piksela z elementem strukturalnym
 	\item Jeżeli przynajmniej jeden piksel z otoczenia objętego przez szablon strukturalny ma wartość równą 1, to punkt centralny przyjmuje również wartość 1. Jeżeli zaś wszystkie piksele z otoczenia piksela centralnego określonego przez element strukturalny mają wartość 0 to wówczas piksel centralny przyjmuje wartość 0.
 \end{enumerate}
 
@@ -241,9 +243,9 @@ Najczęściej stosowanym elementem strukturalnym jest element strukturalny eleme
 \begin{figure}[H]
 	\centering
 	\subfigure[Obraz początkowy]
-	{\label{fig:a}\includegraphics[width=0.31\textwidth]{\ImgPath/rys/operacje_morfologiczne/otwarcie_szablon.png}}
+	{\label{fig:a}\includegraphics[width=0.32\textwidth]{\ImgPath/rys/operacje_morfologiczne/otwarcie_szablon.png}}
 	\subfigure[Obraz wyjściowy]
-	{\label{fig:b}\includegraphics[width=0.31\textwidth]{\ImgPath/rys/operacje_morfologiczne/otwarcie2.png}}
+	{\label{fig:b}\includegraphics[width=0.32\textwidth]{\ImgPath/rys/operacje_morfologiczne/otwarcie2.png}}
 	\caption{Operacja otwarcia na obrazie binarnym z elementem strukturalnym z rysunku 2.2c}
 \end{figure}
 
@@ -256,16 +258,16 @@ Najczęściej stosowanym elementem strukturalnym jest element strukturalny eleme
 \begin{figure}[H]
 	\centering
 	\subfigure[Obraz początkowy]
-	{\label{fig:a}\includegraphics[width=0.31\textwidth]{\ImgPath/rys/operacje_morfologiczne/zamkniecie_szablon.png}}
+	{\label{fig:a}\includegraphics[width=0.32\textwidth]{\ImgPath/rys/operacje_morfologiczne/zamkniecie_szablon.png}}
 	\subfigure[Obraz wyjściowy]
-	{\label{fig:b}\includegraphics[width=0.31\textwidth]{\ImgPath/rys/operacje_morfologiczne/zamkniecie2.png}}
+	{\label{fig:b}\includegraphics[width=0.32\textwidth]{\ImgPath/rys/operacje_morfologiczne/zamkniecie2.png}}
 	\caption{Operacja zamknięcia na obrazie binarnym z elementem strukturalnym z rysunku 2.2c}
 \end{figure}
 
-\paragraph{Etapy operacji otwarcia:}
+\paragraph{Etapy operacji zamknięcia:}
 \begin{enumerate}
 	\item Wykonywana jest operacja dylatacji na zadanym obrazie
-	\item Wykonywana jest operacja erozji na obraz, który jest wynikiem erozji z punktu 1.
+	\item Wykonywana jest operacja erozji na obraz, który jest wynikiem dylatacji z punktu 1.
 \end{enumerate}
 
 \section{Filtry ruchu}
@@ -282,7 +284,7 @@ Filtry ruchu są wykorzystywane do generowania maski binarnej zawierającej poru
 	\caption{Różnica obrazu binarnego oraz jego tła}
 \end{figure}
 
-OpenCV w swojej bibliotece posiada wiele gotowych rozwiązać do wykrywania obiektów w ruchu\cite{opencvs2}. Jako przykładowe metody możemy wyróżnić następujące:
+Biblioteka OpenCV posiada wiele gotowych rozwiązać do wykrywania obiektów w ruchu\cite{opencvs2}. Jako przykładowe metody możemy wyróżnić następujące:
 \begin{itemize} 
 	\item BackgroundSubtractorMOG
 	\item BackgroundSubtractorMOG2
@@ -294,7 +296,7 @@ OpenCV w swojej bibliotece posiada wiele gotowych rozwiązać do wykrywania obie
 	
 \paragraph{BackgroundSubtractorKNN} \mbox{} \\
  \indent
- BackgroundSubtractorKNN jest metodą segmentacji tła oraz pierwszego planu bazująca na K-najbliższych sąsiadach. Algorytm stosowany w metodzie jest bardzo wydajny, jeśli liczba pikseli na pierwszym planie jest niska\cite{KNN}. 
+ BackgroundSubtractorKNN jest metodą segmentacji tła oraz pierwszego planu bazująca na K-najbliższych sąsiadach. Algorytm stosowany w metodzie jest bardzo wydajny, jeżeli liczba pikseli na pierwszym planie jest niska\cite{KNN}. 
 
 \begin{figure}[H]	
 	\centering
@@ -306,7 +308,7 @@ OpenCV w swojej bibliotece posiada wiele gotowych rozwiązać do wykrywania obie
  Segmentacja oczywiście nie jest całkowicie dokładna, dlatego w celu polepszenia efektów, warto pozbyć się niedokładności oraz możliwych szumów,  które mogą wystąpić podczas analizy. Są one spowodowane różnymi odbiciami, cieniami czy innymi niezauważalnymi ruchami. Wówczas należy wykorzystać przedstawione wcześniej operacje morfologiczne, które poprawią nam wykonaną detekcję.
 
 \section{Detekcja kolorów}
-Celem detekcji kolorów jest wygenerowanie obrazu binarnego, w którym piksele ,,włączone'' oznaczają te, które na zadanym obrazie są w określonym przedziale kolorów. Jeżeli dany piksel nie należy do określonego  przedziału, wówczas staje się ,,wyłączony''. Detekcja taka pozwala na wyłuskania tylko obiektów o określonej barwie.
+Celem detekcji kolorów jest wygenerowanie obrazu binarnego, w którym piksele ,,włączone'' oznaczają te, które na zadanym obrazie są w określonym przedziale kolorów. Jeżeli dany piksel nie należy do określonego  przedziału, wówczas staje się ,,wyłączony''. Detekcja taka pozwala na wyłuskanie tylko obiektów o określonej barwie.
 
 Detekcja jest bardzo wrażliwa na różnego rodzaju szumy. Częstymi powodem występowanie ich jest zmienne oświetlenie. Obiekt przy różnym świetle możemy odbierać kolorystycznie całkowicie inaczej. W przypadku, kiedy analizujemy dynamiczny ruch, wówczas dynamika również może wpływać na kolorystykę danego obiektu.  
 
@@ -324,7 +326,7 @@ Model RGB składa się z trzech części: R (\textit{ang. Red}) określa wartoś
 
 \paragraph{Model HSV} \mbox{} \\ 
 \indent
-Przy detekcji kolorów tradycyjny model rgb najczęściej nie jest wystarczająco dobrym modelem. W zadaniach takich zdecydowanie lepiej sprawuje się model HSV.
+Przy detekcji kolorów tradycyjny model RGB najczęściej nie jest wystarczająco dobrym modelem. W zadaniach takich zdecydowanie lepiej sprawuje się model HSV.
 
 \begin{figure}[H]	
 	\centering
@@ -335,11 +337,11 @@ Przy detekcji kolorów tradycyjny model rgb najczęściej nie jest wystarczając
 
 HSV (\textit{ang. Hue Saturation Value}) jest to model opisu przestrzeni barw, wprowadzony przez Alveya Raya Smitha w 1978 roku.
 
-Model składa się z następujących części: barwa, nasycenie, wartość. Geometrycznie możemy go przedstawić jako stożek. Wszystkie barwy wywodzą się ze światła białego, czyli ze środka stożka. Składowa H, oznacza barwę w postaci kąta od 0 do 360 stopni. Składowa S czyli nasycenie, geometrycznie to odległość od środka na promieniu podstawy. Decyduje o bliskości naszego koloru do koloru białego. Ostatnia składowa V, to wartość oznaczająca wysokość na stożku, co możemy traktować jako jasność naszego koloru. Czym mniejsza jej wartość tym kolor ciemniejszy\cite{Jankowski}.
+Model składa się z następujących części: barwa, nasycenie, wartość. Geometrycznie możemy go przedstawić jako stożek. Wszystkie barwy wywodzą się ze światła białego, czyli ze środka stożka. Składowa H, oznacza barwę w postaci kąta od 0 do 360 stopni. Składowa S czyli nasycenie, geometrycznie to odległość od środka na promieniu podstawy. Decyduje o bliskości naszego koloru do koloru białego. Ostatnia składowa V, to wartość oznaczająca wysokość na stożku, którą możemy traktować jako jasność naszego koloru. Czym mniejsza jej wartość tym kolor ciemniejszy\cite{Jankowski}.
 
 \paragraph{Konwersja z modelu RGB na model HSV: \cite{rgbhsv}} \mbox{} \\ 
 \indent
-Jeżeli wartości barw są w przedziale liczb całkowitych 0-255, wówczas należy zmienić przedział na liczby rzeczywiste w zakresie 0-1: 
+Jeżeli wartość barw jest w przedziale liczb całkowitych 0-255, wówczas należy zmienić przedział na liczby rzeczywiste w zakresie 0-1: 
 \begin{center}
 	$ R' = R/255 $ \\
 	$ G' = G/255 $ \\ 
@@ -373,10 +375,10 @@ Klasyfikacja to wyznaczanie klasy decyzyjnej do której należy nowy, nieznany d
 
 Klasyfikacja nadzorowana w momencie uczenia klasyfikatora tzn. podawania zbioru danych treningowych, musi w sobie zawierać etykietę(atrybut decyzyjny), która oznacza do jakiej klasy należy ten konkretny przypadek. Zaś w przypadku ucznia nienadzorowanego atrybut decyzyjny nie istnieje.
 
-Elementami wejścia dla stworzenia klasyfikatora jest zbiór uczący, wyjściem jest atrybut decyzyjny, oznaczający przynależność do danej klasy.
+Elementami wejścia dla stworzenia klasyfikatora jest zbiór uczący, wyjściem jest atrybut decyzyjny, oznaczający przynależność do danej klasy \cite{Malina2}.
 
 \subsection{Klasyfikator KNN}
-Klasyfikator KNN jest przykładem klasyfikacji nadzorowanej. Elementami wejścia dla stworzenia klasyfikatora jest zbiór uczący. Wyjściem jest klasyfikator, który wykorzystujemy do określania atrybutów decyzyjnych nieznanych wcześniej obiektów
+Klasyfikator KNN jest przykładem klasyfikacji nadzorowanej. Należy on do grupy algorytmów leniwych tzn. tych które nie tworzą wewnętrznej reprezentacji danych uczących, lecz określają rozwiązanie dopiero przy podaniu do klasyfikatora danych \cite{knn2}. 
 
 \paragraph{Po utworzeniu klasyfikatora bazującego na zbiorze uczącym, szacowanie atrybutu decyzyjnego odbywa się w następujących krokach: }
 \begin{enumerate}
@@ -396,7 +398,7 @@ Po znalezieniu k-najbliższych sąsiadów, atrybut decyzyjny przyjmuje wartość
 	\caption{Przykład klasyfikatora KNN dla trzech sąsiadów}
 \end{figure}
 
-Na zaprezentowanym przykładzie możemy przeanalizować działanie klasyfikatora KNN dla trzech sąsiadów. Dla wyuczonego klasyfikatora KNN próbkami, które na grafice są zaprezentowane jako kółeczka, zaś ich kolor pokazuje do jakiej klasy obiektu należą. Naszym zadaniem jest określenie atrybuty decyzyjnego dla próbki, która została zaznaczona jako koło niebieski koło. W pierwszym kroku zaznaczamy najbliższe sąsiedztwo, na ilustracji zaznaczono go dużym okręgiem. Można zaobserwować, że w sąsiedztwie mamy dwa obiekty klasy czerwonej oraz jeden klasy żółtej. Wybór klasy naszego obiektu jest większościowy, co oznacza, że nasza nowa nieznana dotąd próbka danych zostanie zakwalifikowana do klasy czerwonej.
+Na zaprezentowanym przykładzie możemy przeanalizować działanie klasyfikatora KNN dla trzech sąsiadów. Dla wyuczonego klasyfikatora KNN próbkami, które na grafice są zaprezentowane jako kółeczka, zaś ich kolor pokazuje do jakiej klasy obiektu należą. Naszym zadaniem jest określenie atrybuty decyzyjnego dla próbki, która została zaznaczona kolorem niebieskim. W pierwszym kroku zaznaczamy najbliższe sąsiedztwo, na ilustracji zatoczono go dużym okręgiem. Można zaobserwować, że w sąsiedztwie mamy dwa obiekty klasy czerwonej oraz jeden klasy żółtej. Wybór klasy naszego obiektu jest większościowy, co oznacza, że nasza nowa, nieznana dotąd próbka danych zostanie zakwalifikowana do klasy czerwonej.
 
 
 \section{Sieci neuronowe}
@@ -411,7 +413,7 @@ Sieci neuronowe możemy traktować jako model czarnej skrzynki. Dla określonych
 
 Sztuczne sieci neuronowe są to systemy komputerowe zainspirowane biologiczną siecią neuronowa ludzkiego mózgu. Sieci neuronowe nie są algorytmami, jednakże są ogólnym modelem wykorzystywanym przy uczeniu maszynowym i przy przetwarzaniu danych wejściowych.
 
-Sieci neuronowe są to zbiory połączonych ze sobą sztucznych neuronów. W biologicznym układzie mózgu, połączenia pomiędzy dwoma neuronami nazywamy synapsami. W sztucznych sieciach neuronowych połączenie to często nazywamy krawędzią. 
+Sieci neuronowe są to zbiory połączonych ze sobą sztucznych neuronów \cite{Osowski}. W biologicznym układzie mózgu, połączenia pomiędzy dwoma neuronami nazywamy synapsami. W sztucznych sieciach neuronowych połączenie to często nazywamy krawędzią. 
 
 Czarna skrzynka to tzw. warstwa ukryta. Znajdują się w niej neurony ściśle ze sobą powiązane. Każdy z neuronów ma w sobie pewną wartość, powszechnie oznaczaną przez wartość liczby rzeczywistej. Każda krawędź w sieciach neuronowych posiada pewną określoną wagę. Zwiększanie lub zmniejszanie wag zmienia siłę sygnału w danym połączeniu pomiędzy neuronami.
 
@@ -435,7 +437,7 @@ Sztuczne neurony na podstawie zsumowanych iloczynów wartości na wejściowych o
 
 \paragraph{Funkcje aktywacji:}
 \mbox{} \\ \indent
-Wartość funkcji aktywacji dla danego neuronu, określa wartość wyjściową tego neuronu. Często używa się tej samej funkcji aktywacji dla tej samej warstwy, a niejednokrotnie wykorzystujemy tą samą funkcję aktywacji nawet do całej sieci neuronowej. 
+Wartość funkcji aktywacji dla danego neuronu, określa wartość wyjściową tego neuronu. Często używa się tej samej funkcji aktywacji dla tej samej warstwy, a niejednokrotnie wykorzystujemy tę samą funkcję aktywacji nawet do całej sieci neuronowej. 
 
 \begin{figure}[H]
 	\centering
@@ -464,7 +466,7 @@ Wartość funkcji aktywacji dla danego neuronu, określa wartość wyjściową t
 	\caption{  \textbf{Funkcja Tanh}}
 \end{figure}
 
-Softmax jest przykładem funkcji aktywacji, którą często wykorzystuje się jako funkcję aktywacji w warstwie wyjściowej. Właściwość opisująca tę funkcję aktywacji jest ta, że suma wartości aktywacji dla całej warstwy jest równa 1. Wykorzystując tę normalizację, możemy wartości wyjściowe neuronów zinterpretować jako prawdopodobieństwo należności do poszczególnych klas, które reprezentowane są przez neurony wyjściowe. Funkcję Softmax definiujemy następująco: \\ 
+Softmax jest przykładem funkcji aktywacji, którą często wykorzystuje się jako funkcję aktywacji w warstwie wyjściowej. Suma wartości aktywacji dla całej warstwy jest równa 1. Wykorzystując tę normalizację, możemy wartości wyjściowe neuronów zinterpretować jako prawdopodobieństwo przynależności do poszczególnych klas, które reprezentowane są przez neurony wyjściowe. Funkcję Softmax definiujemy następująco: \\ 
 \begin{center}
 	{\large $ f(y_{i}) = \frac{exp(y_{i})}
 		{\sum_{j=1}^{n} exp(y_{j})}
@@ -474,7 +476,7 @@ Softmax jest przykładem funkcji aktywacji, którą często wykorzystuje się ja
 \paragraph{Uczenie sieci neuronowych:}
 \mbox{} \\
 \indent
-Uczenie sieci polega na dostrajaniu wartości wag, w zależności od błędu w danym neuronie. Przy uczeniu nadzorowanym sieci podstawowym algorytmem jest wsteczna propagacja błędu. Znając wartości wyjściowe dla danego zbioru danych wejściowych jesteśmy wstanie policzyć błąd działania sieci. Ten błąd jest przekazywany iteracyjnie do połączonych w poprzednich. Ważnym parametrem przy uczeniu sieci jest parametr szybkości uczeniu. Określa on szybkość uczenia się sieci neuronowych. 
+Uczenie sieci polega na dostrajaniu wartości wag poszczególnych neuronów. Przy uczeniu nadzorowanym sieci podstawowym algorytmem jest wsteczna propagacja błędu. Znając wartości wyjściowe dla danego zbioru danych wejściowych jesteśmy wstanie policzyć błąd działania sieci. Ten błąd jest przekazywany iteracyjnie do połączonych w poprzednich warstwach neuronów. Ważnym parametrem przy uczeniu sieci jest parametr szybkości uczeniu. Określa on szybkość uczenia się sieci neuronowych. 
 
 \paragraph{Wykorzystanie sieci neuronowych:}
 \begin{itemize}
@@ -494,7 +496,7 @@ Uczenie sieci polega na dostrajaniu wartości wag, w zależności od błędu w d
 \subsection{Dobór i ocena cech}
 	Podstawowym elementem tworzenia klasyfikatora jest dobór odpowiednich do niego cech na których będzie bazował. Źle dobrane elementy wejścia spowodują niedokładną klasyfikację. Dlatego tak bardzo ważne jest odpowiedni dobór cech opisujących.
 	
-	Ważnym etapem dla każdej cechy była jej normalizacja danych, aby dana cecho nie powodowała większego wpływy od innych czy też wpływa nieznacząco w stosunku do innych. Przykładem normalizacji jest standaryzacja, którą możemy przedstawić zgodnie ze wzorem: 
+	Istotnym etapem dla każdej cechy była jej normalizacja danych, aby dana cecha nie powodowała większego wpływu od innych czy też wpływała nieznacząco w stosunku do innych. Przykładem normalizacji jest standaryzacja, którą możemy przedstawić zgodnie ze wzorem: 
 	\begin{center}
 		{\large $ Z = \dfrac{x - \mu}{\sigma} $ \par}
 	\end{center}
@@ -506,7 +508,7 @@ Uczenie sieci polega na dostrajaniu wartości wag, w zależności od błędu w d
 		\item Wartości danej cechy w obrębie określonej klasy powinny być do siebie możliwie jak najbardziej zbliżone
 		\item Powinny być mało wrażliwe na szum
 		\item Ta sama cecha powinna przyjmować różne wartości w przypadku różnych klas
-		\item Ogólna liczba cech diagnostycznych nie może być zbyt duża
+		\item Ogólna liczba cech diagnostycznych nie może być zbyt duża \cite{Osowski}
 	\end{itemize}
 	\mbox{} \\
 	Warunkiem dobrej cechy diagnostycznej, jest to, że ta sama cecha w obrębie różnych klas powinna przyjmować jak najbardziej różne wartości. Przy diagnostyce tego warunku można wykorzystać średnią arytmetyczną wartości danej cechy w poszczególnych klasach.
@@ -519,7 +521,7 @@ Uczenie sieci polega na dostrajaniu wartości wag, w zależności od błędu w d
 	E - wartość oczekiwana 
 	
 	
-	Opisuje ono rozproszenie cechy w obrębie określonej klasy, co implikuje, że dobrze dobrana cecha charakteryzuje się jak najmniejszym rozproszeniem.
+	Opisuje ono rozproszenie cechy w obrębie określonej klasy co implikuje, że dobrze dobrana cecha charakteryzuje się jak najmniejszym rozproszeniem.
 
 \paragraph{Przykładowe cechy możliwe do wykorzystania do opisu masek binarnych: }
 \begin{itemize}
@@ -531,7 +533,7 @@ Uczenie sieci polega na dostrajaniu wartości wag, w zależności od błędu w d
 	\item Orientacja obiektu binarnego
 \end{itemize}
 \mbox{} \\
-Przy wyborze odpowiednich cech ważnym elementem jest ich ocena, aby sprawdzić czy wybrana cecha będzie wymierny wpływ na prawidłową klasyfikację.
+Przy wyborze odpowiednich cech ważnym elementem jest ich ocena, aby sprawdzić czy wybrana cecha będzie pozytywnie wpływała na klasyfikację.
 
 \chapter{Wykorzystane narzędzia}
 
@@ -1220,10 +1222,12 @@ Z wykonanych analiz dokładności klasyfikatorów w zależności od parametru k 
 \bibitem{KNN}{BackgroundSubtractorKNN, https://docs.opencv.org/3.4.1/db/d88/\\classcv\_1\_1BackgroundSubtractorKNN.html, dostęp: styczeń 2019}
 \bibitem{Jankowski}{Jankowski Michał, ,,Elementy Grafiki Komputerowej'', 2006}
 \bibitem{rgbhsv}{RGB to HSV color conversion, https://www.rapidtables.com/convert/\\color/rgb-to-hsv.html, dostęp: styczeń 2019}
-
-\bibitem{Tadeusiewicz}{Ryszard Tadeusiewicz, ,,Komputerowa analiza i przetwarzanie obrazów'', 1997}
+\bibitem{Malina2}{Witold Malina, Maciej Smiatacz, ,,Rozpoznawanie obrazów'', 2010}
+\bibitem{knn2}{Metoda K Najbliższych Sąsiadów, http://home.agh.edu.pl/~horzyk/lectures/miw/KNN.pdf, dostęp: styczeń 2019}
 \bibitem{Osowski}{Osowski Stanisław, ,,Metody i narzędzia eksploracji danych'', 2013}
-\bibitem{Bradski}{Adrian Kaehler[tłum], Łukasz Piwko[tłum], Gary R Bradski, ,,OpenCV 3 : komputerowe rozpoznawanie obrazu w C++ przy użyciu biblioteki OpenCV'', 2018}
+
+
+
 \bibitem{Rafajlowicz}{Ewaryst Rafajłowicz, Wojciech Rafajłowicz, Andrzej Rusiecki, ,,Algorytmy przetwarzania obrazów i wstęp do pracy z biblioteką OpenCV'', 2009}
 \bibitem{Slater}{Daniel Slater, Gianmario Spacagna, Peter Roelants, Valentino Zocca, ,,Deep Learning. Uczenie głębokie z językiem Python. Sztuczna inteligencja i sieci neuronowe'', 2018}
 \bibitem{Marmanis}{Douglas McIlwraith, Haralambos Marmanis, Dmitry Babenko, ,,Algorithms of the Intelligent Web 2nd Edition'', 2016}
