@@ -153,7 +153,7 @@ gdzie f jest funkcją obrazu. Drugi ze zbiór B składa się z pozostałych punk
 	\centering
 	\includegraphics[width=0.7\textwidth]{\ImgPath/rys/bin.png}
 	
-	\caption{  \textbf{Przykładowy obraz binarny dwuwymiarowy}}
+	\caption{Przykładowy obraz binarny dwuwymiarowy}
 \end{figure}
 
 \section{Operacje morfologiczne}
@@ -302,7 +302,7 @@ Biblioteka OpenCV posiada wiele gotowych rozwiązać do wykrywania obiektów w r
 	\centering
 	\includegraphics[width=0.7\textwidth]{\ImgPath/rys/bs/knn.png}
 	
-	\caption{  \textbf{Przykładowy obraz po zastosowaniu metody BackgroundSubtractorKNN z biblioteki OpenCV}}
+	\caption{Przykładowy obraz po zastosowaniu metody BackgroundSubtractorKNN z biblioteki OpenCV}
 \end{figure}
  
  Segmentacja oczywiście nie jest całkowicie dokładna, dlatego w celu polepszenia efektów, warto pozbyć się niedokładności oraz możliwych szumów,  które mogą wystąpić podczas analizy. Są one spowodowane różnymi odbiciami, cieniami czy innymi niezauważalnymi ruchami. Wówczas należy wykorzystać przedstawione wcześniej operacje morfologiczne, które poprawią nam wykonaną detekcję.
@@ -321,21 +321,18 @@ Model RGB składa się z trzech części: R (\textit{ang. Red}) określa wartoś
 	\centering
 	\includegraphics[width=0.6\textwidth]{\ImgPath/rys/rgb.png}
 	
-	\caption{  \textbf{Model RGB}}
+	\caption{Model RGB}
 \end{figure}
 
-\paragraph{Model HSV} \mbox{} \\ 
-\indent
-Przy detekcji kolorów tradycyjny model RGB najczęściej nie jest wystarczająco dobrym modelem. W zadaniach takich zdecydowanie lepiej sprawuje się model HSV.
+\paragraph{Model HSV} \mbox{} \\ \indent
+HSV (\textit{ang. Hue Saturation Value}) jest to model opisu przestrzeni barw, wprowadzony przez Alveya Raya Smitha w 1978 roku.
 
 \begin{figure}[H]	
 	\centering
 	\includegraphics[width=0.4\textwidth]{\ImgPath/rys/hsv.png}
 	
-	\caption{  \textbf{Model HSV}}
+	\caption{Model HSV}
 \end{figure}
-
-HSV (\textit{ang. Hue Saturation Value}) jest to model opisu przestrzeni barw, wprowadzony przez Alveya Raya Smitha w 1978 roku.
 
 Model składa się z następujących części: barwa, nasycenie, wartość. Geometrycznie możemy go przedstawić jako stożek. Wszystkie barwy wywodzą się ze światła białego, czyli ze środka stożka. Składowa H, oznacza barwę w postaci kąta od 0 do 360 stopni. Składowa S czyli nasycenie, geometrycznie to odległość od środka na promieniu podstawy. Decyduje o bliskości naszego koloru do koloru białego. Ostatnia składowa V, to wartość oznaczająca wysokość na stożku, którą możemy traktować jako jasność naszego koloru. Czym mniejsza jej wartość tym kolor ciemniejszy\cite{Jankowski}.
 
@@ -450,7 +447,7 @@ Sieci neuronowe możemy traktować jako model czarnej skrzynki. Dla określonych
 	\centering
 	\includegraphics[width=0.9\textwidth]{\ImgPath/rys/czarna_skrzynka.png}
 	
-	\caption{  \textbf{Sieć neuronowa jako model czarnej skrzynki}}
+	\caption{Sieć neuronowa jako model czarnej skrzynki}
 \end{figure}
 
 Sztuczne sieci neuronowe są to systemy komputerowe zainspirowane biologiczną siecią neuronowa ludzkiego mózgu. Sieci neuronowe nie są algorytmami, jednakże są ogólnym modelem wykorzystywanym przy uczeniu maszynowym i przy przetwarzaniu danych wejściowych.
@@ -463,7 +460,7 @@ Czarna skrzynka to tzw. warstwa ukryta. Znajdują się w niej neurony ściśle z
 	\centering
 	\includegraphics[width=0.7\textwidth]{\ImgPath/rys/siec_neuronowa.png}
 	
-	\caption{  \textbf{Przykładowa sieć neuronowa}}
+	\caption{Przykładowa sieć neuronowa}
 \end{figure}
 
 Na rysunku 3.2 zaprezentowano przykładowy schemat sieci neuronowej. Sieć ta zawiera dwa elementy wejścia, które są przekazywane do każdego neuronu z pierwszej warstwy ukrytej. Model posiada dwie warstwy ukryte, które są oznaczone na modelu kolorem niebieskim. Pierwsza z nich zawiera cztery neurony, zaś druga warstwa posiada dwa neurony. Ostatnia warstwa modelu, czyli warstwa wyjściowa oznaczona kolorem żółtym posiada dwa neurony, których wyjście jest interpretowane jako rezultat działania całej sztucznej sieci neuronowej.
@@ -474,7 +471,7 @@ Sztuczne neurony na podstawie zsumowanych iloczynów wartości na wejściowych o
 	\centering
 	\includegraphics[width=0.9\textwidth]{\ImgPath/rys/neuron.png}
 	
-	\caption{  \textbf{Przykład pojedynczego neuronu}}
+	\caption{Przykład pojedynczego neuronu}
 \end{figure}
 
 \paragraph{Funkcje aktywacji:}
@@ -487,7 +484,7 @@ Wartość funkcji aktywacji dla danego neuronu, określa wartość wyjściową t
 	{\label{fig:b}\includegraphics[width=0.42\textwidth]{\ImgPath/rys/funkcje_aktywacji/relu.png}}
 	\subfigure[Wzór]
 	{\label{fig:a} {{\large $ f(x) = max(0, ax) $ \par}  }}
-		\caption{  \textbf{Funkcja ReLU}}
+		\caption{Funkcja ReLU}
 \end{figure}
 
 \begin{figure}[H]
@@ -496,7 +493,7 @@ Wartość funkcji aktywacji dla danego neuronu, określa wartość wyjściową t
 	{\label{fig:b}\includegraphics[width=0.42\textwidth]{\ImgPath/rys/funkcje_aktywacji/sigmoid.png}}
 	\subfigure[Wzór]
 	{\label{fig:a} {{\large $ f(x) = \frac{1}{1 + exp(-\beta x)} $ \par}  }}
-	\caption{  \textbf{Funkcja Sigmoid}}
+	\caption{Funkcja Sigmoid}
 \end{figure}
 
 \begin{figure}[H]
@@ -505,7 +502,7 @@ Wartość funkcji aktywacji dla danego neuronu, określa wartość wyjściową t
 	{\label{fig:b}\includegraphics[width=0.42\textwidth]{\ImgPath/rys/funkcje_aktywacji/tanh.png}}
 	\subfigure[Wzór]
 	{\label{fig:a} {{\large $ f(x) = tanh(\beta x) $ \par}  }}
-	\caption{  \textbf{Funkcja Tanh}}
+	\caption{Funkcja Tanh}
 \end{figure}
 
 Softmax jest przykładem funkcji aktywacji, którą często wykorzystuje się jako funkcję aktywacji w warstwie wyjściowej. Suma wartości aktywacji dla całej warstwy jest równa 1. Wykorzystując tę normalizację, możemy wartości wyjściowe neuronów zinterpretować jako prawdopodobieństwo przynależności do poszczególnych klas, które reprezentowane są przez neurony wyjściowe. Funkcję Softmax definiujemy następująco: \\ 
@@ -599,22 +596,22 @@ Biblioteka Keras została napisana w języku Python i wydana w marcu 2015 przez 
 
 Jej głównym przeznaczeniem jest to, aby w jak najprostszy i  jak najszybszy sposób umożliwić pracę w głębokich sieciach neuronowych. Biblioteka została zaprojektowana w sposób przyjemny do użytkowania, skupiona na modularności oraz rozszerzalności. Zaś od 2017 roku TensorFlow wspiera bibliotekę Keras. Dzięki czemu Keras jest wysokopoziomową warstwą tworzenia modelów sieci neuronowych i jej uczenia w bibliotece TensorFlow.
 
-\chapter{Rozpoznawanie gestów na przykładzie gry papier, kamień, nożyce}
+\chapter{Rozwiązanie problemu}
 \section{Aktywizacja danych}
 Pierwszym etapem mojej pracy była aktywizacja danych potrzebnych do uczenia maszynowego. Zbieranie danych polegało na nagrywaniu plików wideo, na których dana osoba wykonywała określony gest. W swojej pracy dyplomowej zakładałem, że każdy wykonywany gest, jest pokazywany w niebieskiej rękawiczce. To założenie wykorzystywałem w całej swojej pracy inżynierskiej.
 
 \begin{figure}[H]	
 	\centering
-	\includegraphics[width=0.4\textwidth]{\ImgPath/rys/rekawiczki.jpg}
+	\includegraphics[width=0.37\textwidth]{\ImgPath/rys/rekawiczki.jpg}
 	
 	\caption{Rękawiczki wykorzystywane w pracy inżynierskiej}
 \end{figure}
 
-Osoba podczas nagrywania wykonuje ciąg określonych gestów, w dowolnym odstępie czasie. Jest ona ustawiona prostopadle do kamery, co pozwala, aby gest odbywał się poprzez wyciągnięcie ręki oraz jego pokazanie. Na nagraniu zostaje zarejestrowany wykonywany gest, tak aby jedyną widoczną częścią ciała była prawa dłoń oraz ewentualnie cześć przedramienia. 
+Osoba podczas nagrywania wykonuje ciąg określonych gestów, w dowolnym odstępie czasu. Jest ona ustawiona prostopadle do kamery, co pozwala, aby gest odbywał się poprzez wyciągnięcie ręki oraz jego pokazanie. Na nagraniu zostaje zarejestrowany wykonywany gest, tak aby jedyną widoczną częścią ciała była prawa dłoń oraz ewentualnie cześć przedramienia. 
 
 \begin{figure}[H]	
 	\centering
-	\includegraphics[width=0.6\textwidth]{\ImgPath/rys/klatka.jpg}
+	\includegraphics[width=0.45\textwidth]{\ImgPath/rys/klatka.jpg}
 	
 	\caption{Przykładowa klatka z nagrania}
 \end{figure}
@@ -626,8 +623,10 @@ Osoba podczas nagrywania wykonuje ciąg określonych gestów, w dowolnym odstęp
 \end{itemize}
 \mbox{} \\
 
-Obie kamery pozwoliły na zadowalające efekty zbierania danych. Jakość nagrań przy dostatecznie dobrym oświetleniu była bardzo zadowalająca, pozwalająca bez problem rozpoznawać wykonywany gest. Również liczba klatek na sekundę pozwoliła, aby dynamiczny ruch był płynny i łatwy do prawidłowego wysegmentowania.
+Obie kamery przy dostatecznie dobrym oświetleniu pozwoliły na zadowalające efekty zbierania danych. Klatki plików wideo były w rozdzielczości 1280x720, co pozwoliło, że jakość nagrań była bardzo zadowalająca, pozwalająca bez problem rozpoznawać wykonywany gest. 
 
+Również liczba klatek na sekundę umożliwiła, aby dynamiczny ruch był płynny i łatwy do prawidłowego wysegmentowania. Pierwsza kamera zapewniła 7.49 klatek na sekundę, druga zaś 16.46 klatek na sekundę.
+ 
 W celu zebrania jak najszerszego zakresu danych, zbieranie gestów nie ograniczyło się do jednej osoby, jednakże do pięciu różnych osób:
 \begin{itemize}
 	\item trzech kobiet
@@ -635,7 +634,7 @@ W celu zebrania jak najszerszego zakresu danych, zbieranie gestów nie ograniczy
 \end{itemize}
 \mbox{} \\
 \indent 
-Zbieranie danych na różnych osobach pozwala na zmniejszenie wpływu charakterystycznych cech dla danej osoby:
+ Zbieranie danych na różnych osobach pozwala na zmniejszenie wpływu charakterystycznych cech dla danej osoby. 
 \begin{itemize}
 	\item długości dłoni
 	\item szerokości dłoni
@@ -654,13 +653,14 @@ Po zgromadzeniu całego materiału wideo przeszedłem do etapu wyznaczania numer
 	\item 350 próbek gestu kamienia
 	\item 350 próbek gestu nożyc
 \end{itemize}
-
-Aby zapewnić prawidłowe rozpoznawanie, należy zgromadzić jak największą liczbę próbek gestów, która będzie w późniejszych etapach wykorzystywana przy uczeniu oraz weryfikacji klasyfikatorów.
+ Zbiór danych był równomiernie rozłożony na 5 osób - po 70 próbek na każdy gest jednej osoby.
+ 
+ Aby zapewnić prawidłowe rozpoznawanie, należy zgromadzić jak największą liczbę próbek gestów, która będzie w późniejszych etapach wykorzystywana przy uczeniu oraz weryfikacji klasyfikatorów.
 
 \section{Detekcja ruchu}
-Po zebraniu danych zająłem się ich przetwarzaniem. Pierwszym krokiem było wysegmentowanie obiektów, które znajdowały się w ruchu. Aby to osiągnąć, należało wygenerować maskę binarną, która rozdziela elementy obrazu, która są w ruchu, od tych, które są elementami statycznymi. Do tego wykorzystałem tzw. background subtraction czyli tłumacząc z angielskiego ,,odejmowanie tła''.
+Po zebraniu danych zająłem się ich przetwarzaniem. Pierwszym krokiem było wysegmentowanie obiektów, które znajdowały się w ruchu. Aby to osiągnąć, należało wygenerować maskę binarną, która rozdziela elementy obrazu, która są w ruchu, od tych, które są elementami statycznymi. Do tego wykorzystałem usuwanie tła przez odejmowanie klatek realizowane przez metody \textit{BackgroundSubtractor} z biblioteki OpenCV.
 
-W swojej pracy inżynierskiej w analizie wziąłem pod uwagę następujące dostępne funkcje w bibliotece OpenCV:
+W swojej pracy inżynierskiej w analizie wziąłem pod uwagę następujące dostępne funkcje:
 
 \begin{itemize} 
 	\item BackgroundSubtractorMOG
@@ -674,15 +674,15 @@ W swojej pracy inżynierskiej w analizie wziąłem pod uwagę następujące dost
 \begin{figure}[H]
 	\centering
 	\subfigure[BackgroundSubtractorKNN]
-	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/knn.png}}
+	{\label{fig:a}\includegraphics[width=0.28\textwidth]{\ImgPath/rys/bs/knn.png}}
 	\subfigure[BackgroundSubtractorGSOC]
-	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/gsoc.png}}
+	{\label{fig:b}\includegraphics[width=0.28\textwidth]{\ImgPath/rys/bs/gsoc.png}}
 	\subfigure[BackgroundSubtractorLSBP]
-	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/bs/lsbp.png}}
+	{\label{fig:b}\includegraphics[width=0.28\textwidth]{\ImgPath/rys/bs/lsbp.png}}
 	\caption{Przykładowe obrazy biorące udział w wyborze odpowiedniej funkcji z biblioteki OpenCV usuwającej tło}
 \end{figure}
 
-Po przeprowadzeniu licznych testów wywnioskowałem, że najlepszą metodą w mojej pracy inżynierskiej będzie funkcja z biblioteki OpenCV BackgroundSubtractorKNN. Uważam, że na przetestowanych próbkach segmentacja ruchu metodą tą dawała najlepsze rezultaty w porównaniu z innymi przetestowanymi metodami. Parametry funkcji przyjęły następującą końcową wartość:
+Po przeprowadzeniu licznych testów wywnioskowałem, że najlepszą metodą w mojej pracy inżynierskiej będzie funkcja z biblioteki OpenCV \textit{BackgroundSubtractorKNN}. Uważam, że na przetestowanych próbkach segmentacja ruchu metodą tą dawała najlepsze rezultaty w porównaniu z innymi przetestowanymi metodami. Parametry funkcji przyjęły następującą końcową wartość:
 \begin{enumerate}
 	\item history: 200
 	\item dist2Threshold: 8
@@ -704,20 +704,14 @@ Po przeprowadzeniu licznych testów wywnioskowałem, że najlepszą metodą w mo
 Można zauważyć, że wykonywany ruch dłonią jest bardzo widoczny, jednakże dodatkowo zawarta jest duża ilość szumu. Pozbycie się elementów dodatkowych, nieinteresujących nas części obiektów przedstawię w kolejnych podrozdziałach o detekcji kolorów oraz w podrozdziale o filtracji szumu. 
 
 \section{Detekcja kolorów}
-Równolegle do segmentacji obiektów w ruchu, zająłem się detekcją obiektów o określonym kolorze. W swojej pracy inżynierskiej założyłem, że każdy wykonywany gest jest pokazywany w niebieskiej rękawiczce, w celu łatwiejszej segmentacji dłoni. Nie użyłem tradycyjnego koloru skóry ze względu na fakt, że oprócz detekcji dłoni, spowodowałby także segmentację innych części ciała, takich jak twarz czy klatka piersiowa. Wszystko to mogłoby spowodować mniej precyzyjne rozpoznawanie gestu.
+Równolegle do segmentacji obiektów w ruchu, zająłem się detekcją obiektów o określonym kolorze. W swojej pracy inżynierskiej założyłem, że każdy wykonywany gest jest pokazywany w niebieskiej rękawiczce, w celu łatwiejszej segmentacji dłoni. Nie został użyty tradycyjny kolor skóry ze względu na fakt, że oprócz detekcji dłoni, spowodowałby także segmentację innych części ciała takich jak twarz. Wszystko to mogłoby spowodować mniej precyzyjne rozpoznawanie gestu.
 
 Wybrałem kolor niebieski ze względu na fakt, że jest to kolor dobrze rozróżniający się od innych, na który nie wpływa aż tak znacząco moc oświetlenia.
 Jako że każdy gest wykonywany jest w niebieskiej rękawiczce, mogłem wykorzystać ten fakt i przy pomocy modelu HSV określić zakres kątów barwy w tym modelu. 
+ 
+Na modelu HSV można łatwo zaobserwować, że kolor niebieski znajduje się w pewnym przedziale składowej H modelu HSV. To pozwala na zdecydowanie łatwiejsze określenie zakresu niż w przypadku modelu RGB.  
 
-\begin{figure}[H]	
-	\centering
-	\includegraphics[width=0.25\textwidth]{\ImgPath/rys/hsv.png}
-	
-	\caption{  \textbf{Model HSV}}
-\end{figure}
-
-Na powyżej przedstawionym modelu HSV, można łatwo zaobserwować, że kolor niebieski znajduje się w pewnym przedziale składowej H modelu HSV. To pozwala na zdecydowanie łatwiejsze określenie zakresu niż w przypadku modelu RGB. 
-Chciałem tak dobrać przedział kolorów w modelu HSV, aby był możliwie jak najszerszy w celu dobrej detekcji dłoni. Zakres ten zawierał dodatkowo kolory zbliżone do niebieskiego oraz większość z jego odcieni. To pozwoliło na zwiększoną liczbę wykrytych pikseli, a w tym lepiej wysegmentowaną dłoń. Jednakże wszystko to również niesie za sobą różnego rodzaju szumy, które nie są związane z obiektem dłoni. 
+Przedział składowej H w modelu HSV, został tak dobrany, aby zawierał większość barw zbliżonych do niebieskiej. To pozwoliło na rozszerzenie liczby wykrytych pikseli, a w efekcie lepiej wysegmentowaną dłoń. Jednakże wszystko to również niesie za sobą różnego rodzaju szumy, obiekty który również są barwy niebieskiej, jednakże które nie są związane z obiektem dłoni.
 \begin{figure}[H]
 	\centering
 	\subfigure[Znak papieru]
@@ -729,7 +723,7 @@ Chciałem tak dobrać przedział kolorów w modelu HSV, aby był możliwie jak n
 	\caption{Rezultaty detekcji dłoni w niebieskiej rękawiczce}
 \end{figure}
 
-\paragraph{Zakres modelu HSV jaki wykorzystałem w swojej pracy inżynierskiej jest następujący:}
+\paragraph{Zakres modelu HSV jaki wykorzystałem w swojej pracy inżynierskiej:}
 \begin{enumerate}
 	\item od HSV (98,50,20)
 	\item do HSV (130,255,255)
@@ -759,17 +753,17 @@ Połączenie iloczynowe maski binarnej uzyskanej z segmentacji obiektów w ruchu
 \paragraph{Dodatkowe elementy:} \mbox{} \\
 \indent
 Pierwszym problemem po wygenerowaniu maski binarnej można uznać wszystkie dodatkowe elementy, które nie powinny być zakwalifikowane jako część dłoni. Segmentacja elementów obrazu w ruchu może nieść ze sobą różnego rodzaju szum spowodowany tym, że inne obiekty, różne od naszej dłoni też mogą się poruszać, co w wyniku generacji maski binarnej zostaną też wzięte pod uwagę. Kolejnym problem są także wszystkie te piksele, które są koloru niebieskiego lub też są zbliżone do niego, a więc przy wyłuskiwaniu wszystkich pikseli o kolorze rękawiczki, czyli o kolorze niebieskim, zostaną również uwzględnione jako obiekt.
-
+ 
 \begin{figure}[H]
 	\centering
-	\subfigure[Maska binarna przed operacją morfologiczną erozji]
-	{\label{fig:a}\includegraphics[width=0.47\textwidth]{\ImgPath/rys/szumy/przed_erozja.png}}
-	\subfigure[Maska binarna po operacji morfologicznej erozji]
-	{\label{fig:b}\includegraphics[width=0.47\textwidth]{\ImgPath/rys/szumy/po_erozji.png}}
-	\caption{  \textbf{Zastosowanie operacji morfologicznej erozji z elementem strukturalnym kwadratu o boku 8 pikseli}}
+	\subfigure[Maska binarna przed operacją erozji morfologicznej]
+	{\label{fig:a}\includegraphics[width=0.45\textwidth]{\ImgPath/rys/szumy/przed_erozja.png}}
+	\subfigure[Maska binarna po operacji erozji morfologicznej]
+	{\label{fig:b}\includegraphics[width=0.45\textwidth]{\ImgPath/rys/szumy/po_erozji.png}}
+	\caption{Zastosowanie operacji morfologicznej erozji z elementem strukturalnym kwadratu o boku 7 pikseli}
 \end{figure}
 
-Zastosowanie operacji morfologicznej erozji na masce binarnej powoduje usunięcie elementów niechcianych, które są traktowane jako dodatkowy, niepotrzebny szum. W swojej pracy inżynierskiej wykorzystałem w pierwszym kroku filtracji masek binarnych operację morfologiczną erozji z małym elementem strukturalnym, z kwadratem o boku 4. Wykorzystanie takiej operacji w mojej ocenie dało zadowalające efekty, które pozwolą na dokładniejsze rozpoznawanie gestów.
+Zastosowanie operacji morfologicznej erozji na masce binarnej powoduje usunięcie elementów niechcianych, które są traktowane jako dodatkowy, niepotrzebny szum. W swojej pracy inżynierskiej wykorzystałem w pierwszym kroku filtracji masek binarnych operację morfologiczną erozji z elementem strukturalnym kwadratem o boku 7. Wykorzystanie takiej operacji w mojej ocenie dało zadowalające efekty, które pozwolą na dokładniejsze rozpoznawanie gestów.
 
 \paragraph{Ubytku w dłoni:} \mbox{} \\ \indent
 Oprócz pozbycia się dodatkowych elementów na obrazie binarnym należy także, wypełnić luki, które mogły się pojawić podczas segmentacji obiektów w ruchu oraz przy uzyskiwaniu maski binarnej z obiektami o określonym kolorze. Są one spowodowane tym, że pewne części z obrazów podczas tych operacji nie zostały prawidło zakwalifikowane. Zbyt mocne lub też zbyt słabe światło czy też pojawiające się cienie mogły wpłynąć na kolor niebieskiej rękawiczki, a przez to spowodować niedokładne wykrycie. Również gest ręki mógł być bardzo powolny, a przez co nie zostać prawidło uznanym  przez operacje segmentacji ruchu. Jednakowo też dynamiczny ruch ręku w połączeniu z występujących w otoczeniu światłem wpływa na odbierany kolor rękawiczki. Należy też dodatkowo wziąć pod uwagę dziury w obrazie binarnym, który mogły wyniknąć z operacji morfologicznej erozji, która została zastosowana jako pierwsza. 
@@ -777,13 +771,13 @@ Oprócz pozbycia się dodatkowych elementów na obrazie binarnym należy także,
 \begin{figure}[H]
 	\centering
 	\subfigure[Maska binarna przed operacją morfologiczną dylatacji]
-	{\label{fig:a}\includegraphics[width=0.47\textwidth]{\ImgPath/rys/szumy/przed_dylatacja.png}}
+	{\label{fig:a}\includegraphics[width=0.45\textwidth]{\ImgPath/rys/szumy/przed_dylatacja.png}}
 	\subfigure[Maska binarna po operacji morfologicznej dylatacji]
-	{\label{fig:b}\includegraphics[width=0.47\textwidth]{\ImgPath/rys/szumy/po_dylatacji.png}}
-	\caption{  \textbf{Zastosowanie operacji morfologicznej dylatacji z elementem strukturalnym kwadratu o boku 11 pikseli}}
+	{\label{fig:b}\includegraphics[width=0.45\textwidth]{\ImgPath/rys/szumy/po_dylatacji.png}}
+	\caption{Zastosowanie operacji morfologicznej dylatacji z elementem strukturalnym kwadratu o boku 21 pikseli}
 \end{figure}
 
-Zastosowanie operacji morfologicznej dylatacji na masce binarnej powoduje wypełnienie dziur, które mogły wystąpić w masce binarnej. W swojej pracy inżynierskiej do pozbycia się różnego rodzaju dziur w maskach binarnych  użyłem dwukrotnej operacji morfologicznej dylatacji z elementem strukturalnym kwadratu o boku 11. 
+Zastosowanie operacji morfologicznej dylatacji na masce binarnej powoduje wypełnienie dziur, które mogły wystąpić w masce binarnej. W swojej pracy inżynierskiej do pozbycia się różnego rodzaju dziur w maskach binarnych użyłem operacji morfologicznej dylatacji z elementem strukturalnym kwadratu o boku 21. 
 
 \begin{figure}[H]
 	\centering
@@ -791,15 +785,14 @@ Zastosowanie operacji morfologicznej dylatacji na masce binarnej powoduje wypeł
 	{\label{fig:a}\includegraphics[width=0.45\textwidth]{\ImgPath/rys/szumy/1.png}}
 	\subfigure[Gest kamienia po filtracji]
 	{\label{fig:b}\includegraphics[width=0.45\textwidth]{\ImgPath/rys/szumy/2.png}}
-	\caption{  \textbf{Przykładowe maski binarne po zastosowaniu operacji morfologicznych erozji oraz dylatacji z elementami strukturalnymi kwadratu o boku 8 dla erozji oraz kwadratu o boku 11 dla operacji dylatacji}}
+	\caption{Przykładowe maski binarne po zastosowaniu operacji morfologicznych erozji oraz dylatacji z elementami strukturalnymi kwadratu o boku 7 dla erozji oraz kwadratu o boku 21 dla operacji dylatacji}
 \end{figure}
 
 W swojej pracy inżynierskiej zastosowałem następujące operacje do przefiltrowania masek binarnych: 
 \begin{enumerate}
-	\item Operację morfologiczną erozji na masce binarnej z elementem strukturalnym kwadratu o boku 4
-	\item Operację morfologiczną zamknięcia z elementem strukturalnym kwadratu o boku 8 na wyjściowej masce binarnej uzyskanej w podpunkcie nr 1
-	\item Operację morfologiczną dylatacji z elementem strukturalnym kwadratu o boku 11 na wyjściowej masce binarnej uzyskanej w podpunkcie nr 2
-	\item Operację morfologiczną dylatacji z elementem strukturalnym kwadratu o boku 11 na wyjściowej masce binarnej uzyskanej w podpunkcie nr 3
+	\item Operację morfologiczną erozji na masce binarnej z elementem strukturalnym kwadratu o boku 7
+	\item Operację morfologiczną zamknięcia z elementem strukturalnym kwadratu o boku 9 na wyjściowej masce binarnej uzyskanej w podpunkcie nr 1
+	\item Operację morfologiczną dylatacji z elementem strukturalnym kwadratu o boku 21 na wyjściowej masce binarnej uzyskanej w podpunkcie nr 2
 \end{enumerate}
 
 \begin{figure}[H]
@@ -810,28 +803,28 @@ W swojej pracy inżynierskiej zastosowałem następujące operacje do przefiltro
 	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/szumy/k.png}}
 	\subfigure[Gest nożyc]
 	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/szumy/n.png}}
-	\caption{  \textbf{Przykłady efektów wykonanej filtracji, która została powyżej opisana}}
+	\caption{Przykłady efektów wykonanej filtracji, która została powyżej opisana}
 \end{figure}
 
 Cała filtracja  w mojej ocenie dała bardzo dobre rezultaty, które znacząco polepszyły prawidłową segmentację dłoni, a przez to w późniejszych krokach dokładniejsze rozpoznawanie dłoni.
 
 \section{Znajdowanie obiektów}
-Ostatnim etapem przetwarzania obrazów w mojej pracy inżynierskiej było wydzielenie z maski binarnej prostokąta, zawierającego w sobie całą wysegmentową wcześniej dłoń, bez ogólnego tła. Dzięki czemu jesteśmy wstanie analizować jedynie tą część maski binarnej, która zawiera w sobie całą dłoń, bez zbędnych innych elementów.
+Ostatnim etapem przetwarzania obrazów w mojej pracy inżynierskiej było wydzielenie z maski binarnej prostokąta, zawierającego w sobie całą wysegmentową wcześniej dłoń, bez ogólnego tła. Dzięki czemu jesteśmy wstanie analizować jedynie tę część maski binarnej, która zawiera w sobie całą dłoń, bez zbędnych innych elementów.
 
 Znajdowanie to polegało na wyszukaniu prostokąta na całej masce binarnej, która będzie miała największe pole ze wszystkich znalezionych konturów na obiektach z maski binarnej. 
 
 \begin{figure}[H]
 	\centering
-	{\label{fig:a}\includegraphics[width=0.45\textwidth]{\ImgPath/rys/obcinanie/znalezienie.jpg}}
-	\caption{  \textbf{Zaznaczenie na czerwono prostokąta o największym polu, który zawiera w sobie całościowo obiekt}}
+	{\label{fig:a}\includegraphics[width=0.60\textwidth]{\ImgPath/rys/obcinanie/znalezienie.jpg}}
+	\caption{Zaznaczenie na czerwono prostokąta o największym polu, który zawiera w sobie całościowo obiekt}
 \end{figure}
 
 Po znalezieniu takiego prostokąta następowało przycięcie maski binarnej do odpowiednich rozmiarów zgodnie ze znalezionym prostokątem o największym polu. Prostokąt ten jest przyległy przez obiekt binarny z każdej swojej strony, co oznacza, że większe przycięcie nie jest możliwe, bez zmniejszania znalezionego obiektu.
 
 \begin{figure}[H]
 	\centering
-	{\label{fig:b}\includegraphics[width=0.45\textwidth]{\ImgPath/rys/obcinanie/obcinanie.png}}
-	\caption{  \textbf{Obcięcie zgodnie ze znalezionym prostokątem}}
+	{\label{fig:b}\includegraphics[width=0.50\textwidth]{\ImgPath/rys/obcinanie/obcinanie.png}}
+	\caption{Obcięcie zgodnie ze znalezionym prostokątem}
 \end{figure}
 \paragraph{Etapy przycięcia maski binarnej:}
 \begin{enumerate}
@@ -856,7 +849,7 @@ Efekt końcowy wysegmentowania dłoni zawiera w sobie obiekt binarny reprezentuj
 	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/obcinanie/k.png}}
 	\subfigure[Gest nożyc]
 	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/obcinanie/s.png}}
-	\caption{  \textbf{Końcowa segmentacja dłoni}}
+	\caption{Końcowa segmentacja dłoni}
 \end{figure} 
 
 \section{Dobór i ocena cech}
@@ -917,42 +910,37 @@ Odchylenie standardowe dla danej cechy, w obrębia określonego gestu nie były 
 Po przeanalizowaniu odchyleń standardowych doszedłem do wniosku, że wszystkie trzy, wcześniej wybrane cechy są odpowiednie, aby je wykorzystać do stworzenia klasyfikatora.  
 
 \section{Rozpoznawanie gestów przy pomocy klasyfikatora KNN}
-Dla klasyfikatora KNN przygotowałem następujący zestaw cechy opisujących maskę binarną: 
-\begin{itemize}
-	\item Stosunek szerokości do długości obrazu
-	\item Stosunek powierzchni znalezionego obiektu dłoni do powierzchni całego obrazu
-	\item Stosunek powierzchni otoczki wypukłej utworzonej na znalezionej dłoni do powierzchni całego obrazu
-\end{itemize}
+Dla klasyfikatora KNN przygotowałem zestaw cechy opisujących maskę binarną z poprzedniego podrozdziału.
 
 Każda z cech została poddana etapowi normalizacji w postaci standaryzacji. Została ona przeprowadzona zgodnie ze wzorem: $ Z = \dfrac{x - \mu}{\sigma} $, gdzie x - wartość przed normalizacją, $\mu$ - średnia, $\sigma$ - odchylenie standardowe
 
 Klasyfikator został oparty na klasycznej odległości euklidesowej. Zbiór danych, który został opisany w poprzednich podrozdziałach składał się z 1050 różnych próbek danych. Został on podzielony w stosunku 8:2, dzięki czemu zbiór uczący liczył 855 próbek, zaś zbiór weryfikacyjny zawierał 195 próbek. 
 
-\paragraph{W zależności od doboru parametry klasyfikator k, osiągnąłem następujące wyniki:}
-{\centering
-\paragraph{k = 3}
-	\mbox{}\\
-	Średnia dokładność klasyfikatora: \textbf{83.76\%}
-\paragraph{k = 5}
-	\mbox{}\\
-	Średnia dokładność klasyfikatora: \textbf{86.08\%}
-\paragraph{k = 7}
-	\mbox{}\\
-	Średnia dokładność klasyfikatora: \textbf{82.41\%}
-\paragraph{k = 9}
-	\mbox{}\\
-	Średnia dokładność klasyfikatora: \textbf{81.68\%} \par
-}
-	\begin{figure}[H]
-		\centering
-		{\label{fig:b}\includegraphics[width=0.50\textwidth]{\ImgPath/rys/klasyfikatory/knn.png}}
-		\caption{  \textbf{Uruchomienie klasyfikatora KNN}}
-	\end{figure}
+
+\begin{table}[H]
+	\centering
+	\begin{tabularx}{\textwidth}{|X|X|X|X|}
+		\hline
+		\textbf{Wartość parametru k} & \textbf{Średnia dokładność klasyfikatora}    \\ 
+		
+		\hline
+		3 & 83.76\% \\ 
+		\hline
+		\textbf{5} & \textbf{86.08}\% \\
+		\hline
+		7 & 82.41\% \\
+		\hline
+		9 & 81.68\% \\
+		\hline
+	\end{tabularx}
 	
-Z wykonanych analiz dokładności klasyfikatorów w zależności od parametru k wynika, że najlepsze efekty można było osiągnąć używając klasyfikatora KNN z parametrem k o wartości 5, który działał ze średnią dokładnością \textbf{86.08\%}.
+	\caption{Skuteczność KNN w zależności od parametru k}
+\end{table}
+	
+Z wykonanych analiz dokładności klasyfikatora KNN w zależności od parametru k wynika, że najlepsze efekty można było osiągnąć używając go z parametrem k o wartości 5, który działał ze średnią dokładnością 86.08\%.
 \section{Rozpoznawanie gestów przy pomocy sieci neuronowej}
 \subsection{Sieć neuronowa dla cech}
-	Analogicznie jak w przypadku klasyfikatora KNN również i  kolejny klasyfikator oparłem na wyznaczonych wcześniej cechach. Klasyfikator ten różnił się tym od poprzedniego, że bazował tym razem na sieciach neuronowych. A swoją skuteczność klasyfikacji zawdzięcza uczeniu maszynowemu.
+	Analogicznie jak w przypadku klasyfikatora KNN również i  kolejny klasyfikator oparłem na wyznaczonych wcześniej cechach.
 	
 	Sieć została stworzona w języku Python, korzystając z biblioteki TensorFlow oraz jako wysokopoziomowe API sieci neuronowych wykorzystałem bibliotekę Keras.
 	
@@ -963,12 +951,6 @@ Z wykonanych analiz dokładności klasyfikatorów w zależności od parametru k 
 		\item Warstwa wyjściowa
 	\end{enumerate}
 
-	\paragraph{Do warstwy wejściowej były podawane wartości następujących cech:}
-	\begin{itemize}
-		\item Stosunek szerokości do długości obrazu
-		\item Stosunek powierzchni znalezionego obiektu dłoni do powierzchni całego obrazu
-		\item Stosunek powierzchni otoczki wypukłej utworzonej na znalezionej dłoni do powierzchni całego obrazu
-	\end{itemize}
 	\noindent
 	Każda z cech została poddana etapowi normalizacji w postaci standaryzacji, która zdecydowanie korzystnie wpływała na skuteczność klasyfikacji.
 	
@@ -980,13 +962,7 @@ Z wykonanych analiz dokładności klasyfikatorów w zależności od parametru k 
 		\item gest kamienia
 		\item gest nożyc
 	\end{enumerate}
-	
-	Pierwszym zbiorem sieci jaki przetestowałem były to sieci z jedną warstwą ukrytą. Do uczenia sieci wykorzystywałem metodę GradientDescentOptimizer z parametrem uczenia równym 0.01. Zaś sama sieć została uruchomiana dla 100 epok. Ilość neuronów w warstwie ukrytej oraz funkcje aktywacji dla tej warstwy i warstwy wejściowej były to parametry, które doświadczalnie zmieniałem.
-	
-	\paragraph{Zanotowałem następujące dokładności rozpoznawania siecią przy wyżej wymienionych parametrach:}
-	
 	\mbox{}\\
-	
 	\begin{table}[H]
 		\centering
 		\begin{tabularx}{\textwidth}{|X|X|X|X|}
@@ -1000,7 +976,7 @@ Z wykonanych analiz dokładności klasyfikatorów w zależności od parametru k 
 			4 neurony w warstwie ukrytej & 80.05\% & 64.52\% & 81.35\% \\
 			
 			\hline
-			6 neuronów w warstwie ukrytej & 83.43\% & 69.01\% & 83.08\% \\
+			6 neuronów w warstwie ukrytej & \textbf{83.43}\% & \textbf{69.01}\% & \textbf{83.08}\% \\
 			
 			\hline
 			8 neuronów w warstwie ukrytej & 81.59\% & 67.54\% & 77.26\% \\
@@ -1027,24 +1003,26 @@ Z wykonanych analiz dokładności klasyfikatorów w zależności od parametru k 
 		
 		\caption{Skuteczność sieci neuronowej}
 	\end{table}
+   	Pierwszym zbiorem sieci jaki przetestowałem były to sieci z jedną warstwą ukrytą. Do uczenia sieci wykorzystywałem metodę \textit{GradientDescentOptimizer} z parametrem uczenia równym 0.01. Zaś sama sieć została uruchomiana dla 100 epok uczących. Ilość neuronów w warstwie ukrytej oraz funkcje aktywacji dla tej warstwy i warstwy wejściowej były to parametry, które doświadczalnie zmieniałem.
+
 	
-	Po przeprowadzonych doświadczeniach okazało się, że najlepsze wyniki można było uzyskać siecią neuronową składającą się z 6 neuronów w warstwie ukrytej, przy wykorzystywaniu funkcji aktywacji ReLU w warstwie wejściowej oraz w warstwie ukrytej. Wszystkie wartości zostały przedstawione dla 100 epok uczenia sieci.
+	Po przeprowadzonych doświadczeniach okazało się, że najlepsze wyniki można było uzyskać siecią neuronową składającą się z 6 neuronów w warstwie ukrytej, przy wykorzystywaniu funkcji aktywacji ReLU w warstwie wejściowej oraz w warstwie ukrytej. 
 	
-	W następnym etapie swojej pracy przeanalizowałem, wpływ ilości epok podczas uczenia sieci. Testowanie odbyło się na sieci, która dała najlepsze rezultaty w poprzednim doświadczeniu.
-	\paragraph{Analiza uczenia w poszczególnych epokach:}
-	\mbox{}\\
+	Można również zauważyć, że sieć niezależnie od funkcji aktywacyjnej dla 6 neuronów w warstwie ukrytej zawsze dawała najlepsze rozwiązanie.
 	
+	W następnym etapie swojej pracy przeanalizowałem, wpływ ilości epok uczących. Testowanie odbyło się na sieci, która dała najlepsze rezultaty w poprzednim doświadczeniu.
+
 	\begin{figure}[H]
 		\centering
 		{\label{fig:b}\includegraphics[width=0.90\textwidth]{\ImgPath/rys/opoki.png}}
-		\caption{  \textbf{Skuteczność uczenia sieci w zależności od ilości epok uczenia}}
+		\caption{Skuteczność uczenia sieci w zależności od ilości epok uczenia}
 	\end{figure}
 
 	Na wykresie można zaobserwować bardzo dynamiczny wzrost skuteczności uczenia, dla pierwszych 50 epok. Kolejnym 50 epokach następuje również sporo wzrost skuteczności, jednakże już nie tak gwałtowny. Uczenie przy ponad 100 opokach daje to coraz mniejszy wzrost skuteczności uczenia, co można z łatwością zobaczyć na wykresie. Analiza ta spowodowała, że sieci neuronowe poddawałem uczeniu dla 100 epok.
 	
-	Ostatnim parametrem, który przeanalizowałem był dobór parametru szybkości uczenia w metodzie GradientDescentOptimizer, wpływa on w jak szybki sposób zbliżamy się do optymalnego rozwiązania według wyliczonego gradientu.
+	Ostatnią własność, którą przeanalizowałem był dobór parametru szybkości uczenia w metodzie \textit{GradientDescentOptimizer}.
 	
-		\begin{table}[H]
+	\begin{table}[H]
 		\centering
 		\begin{tabularx}{\textwidth}{|X|X|X|X|}
 			\hline
@@ -1054,7 +1032,7 @@ Z wykonanych analiz dokładności klasyfikatorów w zależności od parametru k 
 			0.001 & 67.19\% \\ 
 			
 			\hline
-			0.010 & 83.43\% \\
+			0.010 & \textbf{83.43}\% \\
 			
 			\hline
 			0.020 & 78.91\% \\
@@ -1084,11 +1062,6 @@ Z wykonanych analiz dokładności klasyfikatorów w zależności od parametru k 
 
 	Większość z prób była do siebie zbliżona skutecznością. W wykonanych doświadczeniach sieć dawała najlepsze rozwiązania dla parametru szybkości uczenia o wartości: 0.01.
 	
-	\begin{figure}[H]
-		\centering
-		{\label{fig:b}\includegraphics[width=0.98\textwidth]{\ImgPath/rys/klasyfikatory/siec_cechy.png}}
-		\caption{  \textbf{Uruchomienie sieci neuronowej}}
-	\end{figure}
 
 	\paragraph{Przeprowadzona analiza pozwoliła ustalić ostateczne parametry sieci:}
 	\begin{itemize}
@@ -1103,17 +1076,16 @@ Z wykonanych analiz dokładności klasyfikatorów w zależności od parametru k 
 	\end{itemize}
 	\mbox{}
 	\\
-	Sieć z podanymi wyżej parametrami dała średnią skuteczność na poziomie \textbf{83.43\%}. Jest to wartość zadowalająca, zbliżona do wartości jaka została uzyskana za pomocą klasyfikatora KNN.
+	Sieć z podanymi wyżej parametrami dała średnią skuteczność na poziomie 83.43\%. Jest to wartość zadowalająca, zbliżona do wartości jaka została uzyskana za pomocą klasyfikatora KNN.
 \subsection{Sieć neuronowa obrazów binarnych}
 
 
-	Kolejnym podejściem do klasyfikacji była analiza wysegmentowanej dłoni gestu siecią neuronową tym razem bez opisywania gestu cechami, lecz podaniem do klasyfikatora całego otrzymanego wcześniej obrazu binarnego.
+	Kolejnym podejściem do klasyfikacji była analiza wysegmentowanej dłoni gestu siecią neuronową tym razem bez opisywania gestu cechami, lecz użyciem całego otrzymanego wcześniej obrazu binarnego.
 	
-	Po procesie segmentacji dłoni z gestem, opisanym w poprzednich podrozdziałach, należało ustandaryzować rozmiar obrazu binarnego, który został wykorzystany jako element wejścia dla sieci neuronowej. Ustaliłem, że rozmiar będzie wynosił 60 pikseli szerokości oraz 25 pikseli wysokości. Stosunek obu wartości chciałem tak dobrać, aby zachował jak najbardziej ogólną jego wartość dla wszystkich obrazów binarnych z wykorzystywanego zbioru danych. Zmniejszenie rozmiaru, ma również korzystny wpływ na szybkość działania sieci, jednakże w wyniku czego tracimy pewne dostępne szczegóły na obrazie.
+	Po procesie segmentacji dłoni z gestem, opisanym w poprzednich podrozdziałach, należało ustandaryzować rozmiar wcześniej otrzymanego obrazu binarnego, który został wykorzystany jako element wejścia dla sieci neuronowej. Ustaliłem, że rozmiar będzie wynosił 60 pikseli szerokości oraz 25 pikseli wysokości. Stosunek obu wartości chciałem tak dobrać, aby zachował jak najbardziej ogólną jego wartość dla wszystkich obrazów binarnych z wykorzystywanego zbioru danych. Zmniejszenie rozmiaru, ma również korzystny wpływ na szybkość działania sieci, jednakże w wyniku czego tracimy pewne dostępne szczegóły na obrazie. Poza zmianą wymiarów zbiór danych był analogiczny do wykorzystywanych poprzednio.
 
 	Sieć została stworzona w języku Python, korzystając z biblioteki TensorFlow oraz jako wysokopoziomowe API sieci neuronowych wykorzystałem bibliotekę Keras.
 
-	Zbiór uczący sieci neuronowe zawierał 855 próbek, zaś zbiór weryfikacyjny zawierał w sobie 195 próbek. Każdy z trzech gestów miał po 350 próbek, zaś przydział do odpowiedniego zbioru odbywał się w sposób losowy.
 	
 	\paragraph{Sieci neuronowe, które wykorzystywałem przy budowie klasyfikatora składały się z następujących części:}
 	\begin{enumerate}
@@ -1122,8 +1094,12 @@ Z wykonanych analiz dokładności klasyfikatorów w zależności od parametru k 
 		\item Warstwa wyjściowa
 	\end{enumerate}
 	
-	Jako elementy wejścia były wykorzystywane wysegmentowane wcześniej obrazy dłoni z gestem i skonwertowane do rozmiaru 60 pikseli szerokości i 25 pikseli wysokości. Wartości pikseli obrazu rgb zostały przeskalowane z przedziału 0-255 do wartości z przedziału 0-1. 
-	Do warstwy wejściowej sieci, podane zostały wartości tablicy o rozmiarze 25x60x3, która zawierała przeskalowane wartości rgb pikseli obrazu dłoni.
+	Jako elementy wejścia były wykorzystywane wysegmentowane wcześniej obrazy dłoni z gestem i skonwertowane do rozmiaru 60 pikseli szerokości i 25 pikseli wysokości. 
+	
+	Zmniejszenie obrazu binarnego niosło za sobą również zmianę kodowanie obrazu. Po wykonaniu tej operacji cały zbiór danych był kodowany jako zbiór obrazów szarościowych.
+		
+	Wartości pikseli obrazu szarościowego zostały przeskalowane z przedziału 0-255 do wartości z przedziału liczb rzeczywistych 0-1. Do warstwy wejściowej sieci, podane zostały wartości tablicy o rozmiarze 25x60.
+	
 	Ilość neuronów w warstwie ukrytej był to parametr, który doświadczalnie zmieniałem. Funkcja aktywacji jaką wykorzystałem dla tej warstwy była to funkcja RuLU.
 
 	Warstwa wyjściowa każdej z przetestowanych sieci, składała się z funkcji aktywacji softmax, której wyjście traktowałem jako prawdopodobieństwo danego z trzech gestów. Każdy z trzech neuronów warstwy wyjścia oznaczał właśnie to prawdopodobieństwo w następującej kolejności:
@@ -1136,7 +1112,7 @@ Z wykonanych analiz dokładności klasyfikatorów w zależności od parametru k 
 	\paragraph{Budowa sieci neuronowej korzystając z biblioteki Keras:}
 	\begin{lstlisting}[language=Python]
    model = keras.Sequential([
-     keras.layers.Flatten(input_shape=(25, 60, 3)),
+     keras.layers.Flatten(input_shape=(25, 60)),
      keras.layers.Dense(256, activation=tf.nn.relu),
      keras.layers.Dense(3, activation=tf.nn.softmax)
    ])
@@ -1175,14 +1151,7 @@ Z wykonanych analiz dokładności klasyfikatorów w zależności od parametru k 
 		\caption{Skuteczność sieci neuronowej}
 	\end{table}
 
-	Powyższe wartości dokładności rozpoznawania gestów przez sieć neuronową pokazują, że wyśmienicie sobie radzi z klasyfikacją gestów. Najlepsze rezultaty dawała sieć zbudowana z 256 neuronów w warstwie ukrytej. Średnia jej skuteczność to ponad 99\% co sprawia, że rozpoznawanie gestów można uznać praktycznie za bezbłędne. 
-	
-	\begin{figure}[H]
-		\centering
-		{\label{fig:b}\includegraphics[width=0.98\textwidth]{\ImgPath/rys/klasyfikatory/siec.png}}
-		\caption{  \textbf{Uruchomienie sieci neuronowej}}
-	\end{figure}
-	
+	Powyższe wartości dokładności rozpoznawania gestów przez sieć neuronową pokazują, że wyśmienicie sobie radzi z klasyfikacją gestów. Najlepsze rezultaty dawała sieć zbudowana z 256 neuronów w warstwie ukrytej. Średnia jej skuteczność to ponad 99\% co sprawia, że rozpoznawanie gestów można uznać praktycznie za bezbłędne. 	
 
 \chapter{Podsumowanie}
 	W niniejszej pracy inżynierskiej opisano podejście do rozpoznawania gestów na przykładzie gry papier, kamień, nożyce. Wykorzystując bibliotekę OpenCV przedstawiono w jaki sposób można wysegmentować dłoń. Techniki opisane w pracy według mojej oceny dały bardzo dobre rezultaty. Segmentacja gestu pozwoliła na wyraźne wyłuskanie dłoni wykonującej gest.
@@ -1202,7 +1171,7 @@ Z wykonanych analiz dokładności klasyfikatorów w zależności od parametru k 
 		\item Porównanie klasyfikatora KNN z innymi klasyfikatorami opartymi o cechy opisujące gest
 		\item Wykorzystanie sieci CNN
 		\item Klasyfikacja dłoni bez użycia rękawiczki
-		\item Zaimplementowanie gry dla wielu graczy wykorzystując stworzone klasyfikatory
+		\item Zaimplementowanie pełnego interfejsu gry i zliczanie punktów
 		\item Dodanie do klasyfikacji kolejnych gestów
 	\end{enumerate}
 	

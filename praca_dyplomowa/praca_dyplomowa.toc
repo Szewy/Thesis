@@ -39,36 +39,28 @@
 \contentsline {paragraph}{Zalety u\IeC {\.z}ywania Pythona:}{21}{section*.25}
 \contentsline {section}{\numberline {3.3}TensorFlow}{22}{section.3.3}
 \contentsline {section}{\numberline {3.4}Keras}{23}{section.3.4}
-\contentsline {chapter}{\numberline {4}Rozpoznawanie gest\IeC {\'o}w na przyk\IeC {\l }adzie gry papier, kamie\IeC {\'n}, no\IeC {\.z}yce}{24}{chapter.4}
+\contentsline {chapter}{\numberline {4}Rozwi\IeC {\k a}zanie problemu}{24}{chapter.4}
 \contentsline {section}{\numberline {4.1}Aktywizacja danych}{24}{section.4.1}
 \contentsline {paragraph}{Do nagrywania plik\IeC {\'o}w wideo u\IeC {\.z}ywa\IeC {\l }em dw\IeC {\'o}ch kamer dedykowanych w laptopach:}{25}{section*.26}
 \contentsline {paragraph}{W mojej pracy in\IeC {\.z}ynierskiej wykorzystywa\IeC {\l }em zbi\IeC {\'o}r danych sk\IeC {\l }adaj\IeC {\k a}cy si\IeC {\k e} z:}{26}{section*.27}
 \contentsline {section}{\numberline {4.2}Detekcja ruchu}{26}{section.4.2}
 \contentsline {section}{\numberline {4.3}Detekcja kolor\IeC {\'o}w}{27}{section.4.3}
-\contentsline {paragraph}{Zakres modelu HSV jaki wykorzysta\IeC {\l }em w swojej pracy in\IeC {\.z}ynierskiej jest nast\IeC {\k e}puj\IeC {\k a}cy:}{29}{section*.28}
+\contentsline {paragraph}{Zakres modelu HSV jaki wykorzysta\IeC {\l }em w swojej pracy in\IeC {\.z}ynierskiej:}{28}{section*.28}
 \contentsline {section}{\numberline {4.4}Filtracja szum\IeC {\'o}w}{29}{section.4.4}
-\contentsline {paragraph}{Dodatkowe elementy:}{30}{section*.29}
+\contentsline {paragraph}{Dodatkowe elementy:}{29}{section*.29}
 \contentsline {paragraph}{Ubytku w d\IeC {\l }oni:}{30}{section*.30}
 \contentsline {section}{\numberline {4.5}Znajdowanie obiekt\IeC {\'o}w}{32}{section.4.5}
 \contentsline {paragraph}{Etapy przyci\IeC {\k e}cia maski binarnej:}{33}{section*.31}
-\contentsline {section}{\numberline {4.6}Dob\IeC {\'o}r i ocena cech}{34}{section.4.6}
-\contentsline {paragraph}{Zdecydowa\IeC {\l }em si\IeC {\k e}, \IeC {\.z}e gesty b\IeC {\k e}d\IeC {\k e} opisywa\IeC {\l } za pomoc\IeC {\k a} nast\IeC {\k e}puj\IeC {\k a}cych cech:}{34}{section*.32}
-\contentsline {section}{\numberline {4.7}Rozpoznawanie gest\IeC {\'o}w przy pomocy klasyfikatora KNN}{35}{section.4.7}
-\contentsline {paragraph}{W zale\IeC {\.z}no\IeC {\'s}ci od doboru parametry klasyfikator k, osi\IeC {\k a}gn\IeC {\k a}\IeC {\l }em nast\IeC {\k e}puj\IeC {\k a}ce wyniki:}{36}{section*.33}
-\contentsline {paragraph}{k = 3}{36}{section*.34}
-\contentsline {paragraph}{k = 5}{36}{section*.35}
-\contentsline {paragraph}{k = 7}{36}{section*.36}
-\contentsline {paragraph}{k = 9}{36}{section*.37}
-\contentsline {section}{\numberline {4.8}Rozpoznawanie gest\IeC {\'o}w przy pomocy sieci neuronowej}{37}{section.4.8}
-\contentsline {subsection}{\numberline {4.8.1}Sie\IeC {\'c} neuronowa dla cech}{37}{subsection.4.8.1}
-\contentsline {paragraph}{Sieci neuronowe, kt\IeC {\'o}re wykorzystywa\IeC {\l }em przy budowie klasyfikatora sk\IeC {\l }ada\IeC {\l }y si\IeC {\k e} z nast\IeC {\k e}puj\IeC {\k a}cych cz\IeC {\k e}\IeC {\'s}ci:}{37}{section*.38}
-\contentsline {paragraph}{Do warstwy wej\IeC {\'s}ciowej by\IeC {\l }y podawane warto\IeC {\'s}ci nast\IeC {\k e}puj\IeC {\k a}cych cech:}{37}{section*.39}
-\contentsline {paragraph}{Zanotowa\IeC {\l }em nast\IeC {\k e}puj\IeC {\k a}ce dok\IeC {\l }adno\IeC {\'s}ci rozpoznawania sieci\IeC {\k a} przy wy\IeC {\.z}ej wymienionych parametrach:}{38}{section*.40}
-\contentsline {paragraph}{Analiza uczenia w poszczeg\IeC {\'o}lnych epokach:}{39}{section*.41}
-\contentsline {paragraph}{Przeprowadzona analiza pozwoli\IeC {\l }a ustali\IeC {\'c} ostateczne parametry sieci:}{41}{section*.42}
-\contentsline {subsection}{\numberline {4.8.2}Sie\IeC {\'c} neuronowa obraz\IeC {\'o}w binarnych}{41}{subsection.4.8.2}
-\contentsline {paragraph}{Sieci neuronowe, kt\IeC {\'o}re wykorzystywa\IeC {\l }em przy budowie klasyfikatora sk\IeC {\l }ada\IeC {\l }y si\IeC {\k e} z nast\IeC {\k e}puj\IeC {\k a}cych cz\IeC {\k e}\IeC {\'s}ci:}{42}{section*.43}
-\contentsline {paragraph}{Budowa sieci neuronowej korzystaj\IeC {\k a}c z biblioteki Keras:}{42}{section*.44}
-\contentsline {paragraph}{Zanotowa\IeC {\l }em nast\IeC {\k e}puj\IeC {\k a}ce dok\IeC {\l }adno\IeC {\'s}ci rozpoznawania sieci\IeC {\k a} przy wy\IeC {\.z}ej wymienionych parametrach:}{42}{section*.45}
-\contentsline {chapter}{\numberline {5}Podsumowanie}{44}{chapter.5}
-\contentsline {paragraph}{Jak mo\IeC {\.z}na rozbudowa\IeC {\'c} t\IeC {\k a} prac\IeC {\k e} in\IeC {\.z}yniersk\IeC {\k a}: }{45}{section*.46}
+\contentsline {section}{\numberline {4.6}Dob\IeC {\'o}r i ocena cech}{33}{section.4.6}
+\contentsline {paragraph}{Zdecydowa\IeC {\l }em si\IeC {\k e}, \IeC {\.z}e gesty b\IeC {\k e}d\IeC {\k e} opisywa\IeC {\l } za pomoc\IeC {\k a} nast\IeC {\k e}puj\IeC {\k a}cych cech:}{33}{section*.32}
+\contentsline {section}{\numberline {4.7}Rozpoznawanie gest\IeC {\'o}w przy pomocy klasyfikatora KNN}{34}{section.4.7}
+\contentsline {section}{\numberline {4.8}Rozpoznawanie gest\IeC {\'o}w przy pomocy sieci neuronowej}{35}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}Sie\IeC {\'c} neuronowa dla cech}{35}{subsection.4.8.1}
+\contentsline {paragraph}{Sieci neuronowe, kt\IeC {\'o}re wykorzystywa\IeC {\l }em przy budowie klasyfikatora sk\IeC {\l }ada\IeC {\l }y si\IeC {\k e} z nast\IeC {\k e}puj\IeC {\k a}cych cz\IeC {\k e}\IeC {\'s}ci:}{35}{section*.33}
+\contentsline {paragraph}{Przeprowadzona analiza pozwoli\IeC {\l }a ustali\IeC {\'c} ostateczne parametry sieci:}{38}{section*.34}
+\contentsline {subsection}{\numberline {4.8.2}Sie\IeC {\'c} neuronowa obraz\IeC {\'o}w binarnych}{39}{subsection.4.8.2}
+\contentsline {paragraph}{Sieci neuronowe, kt\IeC {\'o}re wykorzystywa\IeC {\l }em przy budowie klasyfikatora sk\IeC {\l }ada\IeC {\l }y si\IeC {\k e} z nast\IeC {\k e}puj\IeC {\k a}cych cz\IeC {\k e}\IeC {\'s}ci:}{39}{section*.35}
+\contentsline {paragraph}{Budowa sieci neuronowej korzystaj\IeC {\k a}c z biblioteki Keras:}{40}{section*.36}
+\contentsline {paragraph}{Zanotowa\IeC {\l }em nast\IeC {\k e}puj\IeC {\k a}ce dok\IeC {\l }adno\IeC {\'s}ci rozpoznawania sieci\IeC {\k a} przy wy\IeC {\.z}ej wymienionych parametrach:}{40}{section*.37}
+\contentsline {chapter}{\numberline {5}Podsumowanie}{41}{chapter.5}
+\contentsline {paragraph}{Jak mo\IeC {\.z}na rozbudowa\IeC {\'c} t\IeC {\k a} prac\IeC {\k e} in\IeC {\.z}yniersk\IeC {\k a}: }{42}{section*.38}
