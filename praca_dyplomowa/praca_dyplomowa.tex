@@ -92,7 +92,7 @@ Jest to klasyczna gra towarzyska, w tradycyjnym wariancie przeznaczona dla dwóc
 	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/gesty_gry/kamien.png}}
 	\subfigure[Gest nożyc]
 	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/gesty_gry/nozyce.png}}
-	\caption{BackgroundSubtractorKNN na gestach z gry papier, kamier, nożyce}
+	\caption{Gesty papieru, kamienia, nożyce}
 \end{figure}
 
 Zwycięzca określany jest w zależności od kombinacji gestów pokazanych przez graczy. Jeżeli oba gracze pokazali ten sam gest, wówczas następuje remis. 
@@ -367,6 +367,38 @@ Jeżeli wartości barw są w przedziale liczb całkowitych 0-255, wówczas nale�
 	$ V = C_{max}$ 
 \end{center}
 
+
+\section{Klasyfikatory}
+Klasyfikacja to wyznaczanie klasy decyzyjnej do której należy nowy, nieznany dotąd obiekt. Metody klasyfikacji możemy podzielić na dwie kategorie. Pierwsza z nich jest  klasyfikacją nadzorowaną, druga zaś to klasyfikacja nienadzorowana. 
+
+Klasyfikacja nadzorowana w momencie uczenia klasyfikatora tzn. podawania zbioru danych treningowych, musi w sobie zawierać etykietę(atrybut decyzyjny), która oznacza do jakiej klasy należy ten konkretny przypadek. Zaś w przypadku ucznia nienadzorowanego atrybut decyzyjny nie istnieje.
+
+Elementami wejścia dla stworzenia klasyfikatora jest zbiór uczący, wyjściem jest atrybut decyzyjny, oznaczający przynależność do danej klasy.
+
+\subsection{Klasyfikator KNN}
+Klasyfikator KNN jest przykładem klasyfikacji nadzorowanej. Elementami wejścia dla stworzenia klasyfikatora jest zbiór uczący. Wyjściem jest klasyfikator, który wykorzystujemy do określania atrybutów decyzyjnych nieznanych wcześniej obiektów
+
+\paragraph{Po utworzeniu klasyfikatora bazującego na zbiorze uczącym, szacowanie atrybutu decyzyjnego odbywa się w następujących krokach: }
+\begin{enumerate}
+	\item Ustalamy wartość k
+	\item Znajdujemy k obiektów treningowych, najbliższych naszemu obiektowi
+	\item Analizowany obiekt należy do klasy najliczniejszej w znalezionym zbiorze z podpunktu 2
+\end{enumerate}
+
+Ocenianie odległości pomiędzy dwoma obiektami polega na umieszczaniu obiektów w przestrzeni d-wymiarowej, gdzie d opisuje ilość atrybutów dla obiektów. Metryka miary może odbywać się w różny sposób. Najczęściej jest to miara euklidesowa, jednakże możemy również wykorzystać inne miary tj. Manhattana czy Minkowskiego. 
+
+Po znalezieniu k-najbliższych sąsiadów, atrybut decyzyjny przyjmuje wartość od najbardziej licznej klasy w wyznaczonym zbiorze.
+
+\begin{figure}[H]	
+	\centering
+	\includegraphics[width=0.5\textwidth]{\ImgPath/rys/knn.png}
+	
+	\caption{Przykład klasyfikatora KNN dla trzech sąsiadów}
+\end{figure}
+
+Na zaprezentowanym przykładzie możemy przeanalizować działanie klasyfikatora KNN dla trzech sąsiadów. Dla wyuczonego klasyfikatora KNN próbkami, które na grafice są zaprezentowane jako kółeczka, zaś ich kolor pokazuje do jakiej klasy obiektu należą. Naszym zadaniem jest określenie atrybuty decyzyjnego dla próbki, która została zaznaczona jako koło niebieski koło. W pierwszym kroku zaznaczamy najbliższe sąsiedztwo, na ilustracji zaznaczono go dużym okręgiem. Można zaobserwować, że w sąsiedztwie mamy dwa obiekty klasy czerwonej oraz jeden klasy żółtej. Wybór klasy naszego obiektu jest większościowy, co oznacza, że nasza nowa nieznana dotąd próbka danych zostanie zakwalifikowana do klasy czerwonej.
+
+
 \section{Sieci neuronowe}
 Sieci neuronowe możemy traktować jako model czarnej skrzynki. Dla określonych danych wejściowych uzyskujemy wartości wyjściowe.
 
@@ -402,27 +434,47 @@ Sztuczne neurony na podstawie zsumowanych iloczynów wartości na wejściowych o
 \end{figure}
 
 \paragraph{Funkcje aktywacji:}
-\mbox{} \\
-Wartość funkcji aktywacji dla danego neuronu, określa wartość wyjściową tego neuronu.
+\mbox{} \\ \indent
+Wartość funkcji aktywacji dla danego neuronu, określa wartość wyjściową tego neuronu. Często używa się tej samej funkcji aktywacji dla tej samej warstwy, a niejednokrotnie wykorzystujemy tą samą funkcję aktywacji nawet do całej sieci neuronowej. 
+
 \begin{figure}[H]
 	\centering
-	\subfigure[Funkcja ReLU]
-	{\label{fig:a}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/funkcje_aktywacji/relu.png}}
-	\subfigure[Funkcja Sigmoid]
-	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/funkcje_aktywacji/sigmoid.png}}
-	\subfigure[Funkcja Tanh]
-	{\label{fig:b}\includegraphics[width=0.3\textwidth]{\ImgPath/rys/funkcje_aktywacji/tanh.png}}
-	\caption{Przykładowe funkcje aktywacji wykorzystywane w sieciach neuronowych}
+	\subfigure[Wykres]
+	{\label{fig:b}\includegraphics[width=0.36\textwidth]{\ImgPath/rys/funkcje_aktywacji/relu.png}}
+	\subfigure[Wzór]
+	{\label{fig:a} {{\large $ f(x) = max(0, ax) $ \par}  }}
+		\caption{  \textbf{Funkcja ReLU}}
 \end{figure}
 
-Często używa się tej samej funkcji aktywacji dla tej samej warstwy, a niejednokrotnie wykorzystujemy tą samą funkcję aktywacji nawet do całej sieci neuronowej. 
+\begin{figure}[H]
+	\centering
+	\subfigure[Wykres]
+	{\label{fig:b}\includegraphics[width=0.36\textwidth]{\ImgPath/rys/funkcje_aktywacji/sigmoid.png}}
+	\subfigure[Wzór]
+	{\label{fig:a} {{\large $ f(x) = \frac{1}{1 + e^{-\beta x}} $ \par}  }}
+	\caption{  \textbf{Funkcja Sigmoid}}
+\end{figure}
 
-Softmax jest przykładem funkcji aktywacji, którą często wykorzystuje się jako funkcję aktywacji w warstwie wyjściowej. Właściwość opisująca tę funkcję aktywacji jest ta, że suma wartości aktywacji dla całej warstwy jest równa 1. Wykorzystując tę normalizację, możemy wartości wyjściowe neuronów zinterpretować jako prawdopodobieństwo należności do poszczególnych klas, które reprezentowane są przez neurony wyjściowe.  
+\begin{figure}[H]
+	\centering
+	\subfigure[Wykres]
+	{\label{fig:b}\includegraphics[width=0.36\textwidth]{\ImgPath/rys/funkcje_aktywacji/tanh.png}}
+	\subfigure[Wzór]
+	{\label{fig:a} {{\large $ f(x) = \frac{e^x - e^{-x}}{e^x+e^{-x}} $ \par}  }}
+	\caption{  \textbf{Funkcja Tanh}}
+\end{figure}
+
+Softmax jest przykładem funkcji aktywacji, którą często wykorzystuje się jako funkcję aktywacji w warstwie wyjściowej. Właściwość opisująca tę funkcję aktywacji jest ta, że suma wartości aktywacji dla całej warstwy jest równa 1. Wykorzystując tę normalizację, możemy wartości wyjściowe neuronów zinterpretować jako prawdopodobieństwo należności do poszczególnych klas, które reprezentowane są przez neurony wyjściowe. Funkcję Softmax definiujemy następująco: \\ 
+\begin{center}
+	{\LARGE $ f(y_{i}) = \frac{e^{y_{i}}}
+		{\sum_{j=1}^{n} e^{y_{j}}}
+	$\par}
+\end{center}
 
 \paragraph{Uczenie sieci neuronowych:}
 \mbox{} \\
 \indent
-Przy uczeniu nadzorowanym sieci podstawowym algorytmem jest wsteczna propagacja błędu. Znając wartości wyjściowe dla danego zbioru danych wejściowych jesteśmy wstanie policzyć błąd działania sieci. Ten błąd jest przekazywany iteracyjnie do połączonych w poprzednich. Uczenie sieci polega na dostrajaniu wartości wag, w zależności od błędu w danym neuronie. Ważnym parametrem przy uczeniu sieci jest parametr szybkości uczeniu. Określa on szybkość uczenia się sieci neuronowych. 
+Uczenie sieci polega na dostrajaniu wartości wag, w zależności od błędu w danym neuronie. Przy uczeniu nadzorowanym sieci podstawowym algorytmem jest wsteczna propagacja błędu. Znając wartości wyjściowe dla danego zbioru danych wejściowych jesteśmy wstanie policzyć błąd działania sieci. Ten błąd jest przekazywany iteracyjnie do połączonych w poprzednich. Ważnym parametrem przy uczeniu sieci jest parametr szybkości uczeniu. Określa on szybkość uczenia się sieci neuronowych. 
 
 \paragraph{Wykorzystanie sieci neuronowych:}
 \begin{itemize}
@@ -439,62 +491,39 @@ Przy uczeniu nadzorowanym sieci podstawowym algorytmem jest wsteczna propagacja 
 	
 \end{itemize}
 
-\section{Klasyfikatory}
-Klasyfikacja to wyznaczanie klasy decyzyjnej do której należy nowy, nieznany dotąd obiekt. Metody klasyfikacji możemy podzielić na dwie kategorie. Pierwsza z nich jest  klasyfikacją nadzorowaną, druga zaś to klasyfikacja nienadzorowana. 
-
-Klasyfikacja nadzorowana w momencie uczenia klasyfikatora tzn. podawania zbioru danych treningowych, musi w sobie zawierać etykietę(atrybut decyzyjny), która oznacza do jakiej klasy należy ten konkretny przypadek. Zaś w przypadku ucznia nienadzorowanego atrybutu decyzyjnego nie istnieje.
-
-\subsection{Klasyfikator KNN}
-Klasyfikator KNN jest przykładem klasyfikacji nadzorowanej. Zbiór treningowy zawiera w sobie cechy dla klasyfikatora czyli atrybuty oraz atrybut decyzyjny, który określa przynależność do konkretnej klasy. Elementami wejścia dla stworzenia klasyfikatora jest zbiór uczący. Wyjściem jest klasyfikator, który wykorzystujemy do określania atrybutów decyzyjnych nieznanych wcześniej obiektów.
-
-\paragraph{Po utworzeniu klasyfikatora bazującego na zbiorze uczącym, szacowanie atrybutu decyzyjnego odbywa się w następujących krokach: }
-\begin{enumerate}
-	\item Ustalamy wartość k
-	\item Znajdujemy k obiektów treningowych, najbliższych naszemu obiektowi
-	\item Analizowany obiekt należy do klasy najliczniejszej w znalezionym zbiorze z podpunktu 2
-\end{enumerate}
-
-Ocenianie odległości pomiędzy dwoma obiektami polega na umieszczaniu obiektów w przestrzeni d-wymiarowej, gdzie d opisuje ilość atrybutów dla obiektów. Metryka miary może odbywać się w różny sposób. Najczęściej jest to miara euklidesowa, jednakże możemy również wykorzystać inne miary tj. Manhattana czy Minkowskiego. 
-
-Po znalezieniu k-najbliższych sąsiadów, atrybut decyzyjny przyjmuje wartość od najbardziej licznej klasy w wyznaczonym zbiorze.
-
-\begin{figure}[H]	
-	\centering
-	\includegraphics[width=0.6\textwidth]{\ImgPath/rys/knn.png}
-	
-	\caption{Przykład klasyfikatora KNN dla trzech sąsiadów}
-\end{figure}
-
-Na zaprezentowanym przykładzie możemy przeanalizować działanie klasyfikatora KNN dla trzech sąsiadów. Dla wyuczonego klasyfikatora KNN, próbkami, która na grafice są zaprezentowane jako kółeczka, zaś ich kolor pokazuje do jakiej klasy obiektu należy. Naszym zadaniem jest określenie atrybuty decyzyjnego dla próbki, która została zaznaczona jako mniejsze koło niebieskie. W pierwszym kroki zaznaczamy sąsiedztwo trzech sąsiadów, na ilustracji zaznaczono go dużym kołem niebieskim. Można zaobserwować, że w sąsiedztwie mamy dwa obiekty klasy czerwonej oraz jeden klasy żółtej. Wybór klasy naszego obiektu jest większościowy, co oznacza, że nasza nowa nieznana dotąd próbka danych zostanie zakwalifikowana do klasy czerwonej.
-
-
 \subsection{Dobór i ocena cech}
-Podstawowym elementem tworzenia klasyfikatora jest dobór odpowiednich do niego cech na których będzie bazował. Źle dobrane elementy wejścia spowodują niedokładną klasyfikację. Dlatego tak bardzo ważne jest odpowiedni dobór cech opisujących.
+	Podstawowym elementem tworzenia klasyfikatora jest dobór odpowiednich do niego cech na których będzie bazował. Źle dobrane elementy wejścia spowodują niedokładną klasyfikację. Dlatego tak bardzo ważne jest odpowiedni dobór cech opisujących.
+	
+	Ważnym etapem dla każdej cechy była jej normalizacja danych, aby dana cecho nie powodowała większego wpływy od innych czy też wpływa nieznacząco w stosunku do innych. Przykładem normalizacji jest standaryzacja, którą możemy przedstawić zgodnie ze wzorem: 
+	\begin{center}
+		$ Z = \dfrac{x - \mu}{\sigma} $
+	\end{center}
+    x - wartość przed normalizacją \\ $\mu$ - średnia \\ $\sigma$ - odchylenie standardowe
 
-Ważnym etapem dla każdej cechy była jej normalizacja danych, aby dana cecho nie powodowała większego wpływy od innych czy też wpływa nieznacząco w stosunku do innych. Przykładem normalizacji jest standaryzacja, którą możemy przedstawić zgodnie ze wzorem: $ Z = \dfrac{x - \mu}{\sigma} $, gdzie 
-\\ x - wartość przed normalizacją, \\ $\mu$ - średnia, \\ $\sigma$ - odchylenie standardowe
-
-\paragraph{Warunki dobrej cechy diagnostycznej: }
-\begin{itemize}
-	\item Powinny być wielkościami z podobnego zakresu
-	\item Wartości danej cechy w obrębie określonej klasy powinny być do siebie możliwie jak najbardziej zbliżone
-	\item Powinny być mało wrażliwe na szum
-	\item Ta sama cecha powinna przyjmować różne wartości w przypadku różnych klas
-	\item Ogólna liczba cech diagnostycznych nie może być zbyt duża
-\end{itemize}
-\mbox{} \\
-Warunkiem dobrej cechy diagnostycznej, jest to, że ta sama cecha w obrębie różnych klas powinna przyjmować jak najbardziej różne wartości. Przy diagnostyce tego warunku można wykorzystać średnią arytmetyczną wartości danej cechy w poszczególnych klasach.
-
-Kolejnym warunkiem na jaki warto zwrócić uwagę podczas oceny cech jest jej odchylenie standardowe w obrębie określonej klasy. Odchylenie standardowe można określić wzorem: \\
-$ \sigma = {\sqrt {\operatorname {E} ((X-\operatorname {E} (X))^{2})}} $, gdzie \\
-X - zmienna \\
-E - wartość oczekiwana \\
-
-Opisuje ono rozproszenie cechy w obrębie określonej klasy, co implikuje, że dobrze dobrana cecha charakteryzuje się jak najmniejszym rozproszeniem.
+	\paragraph{Warunki dobrej cechy diagnostycznej: }
+	\begin{itemize}
+		\item Powinny być wielkościami z podobnego zakresu
+		\item Wartości danej cechy w obrębie określonej klasy powinny być do siebie możliwie jak najbardziej zbliżone
+		\item Powinny być mało wrażliwe na szum
+		\item Ta sama cecha powinna przyjmować różne wartości w przypadku różnych klas
+		\item Ogólna liczba cech diagnostycznych nie może być zbyt duża
+	\end{itemize}
+	\mbox{} \\
+	Warunkiem dobrej cechy diagnostycznej, jest to, że ta sama cecha w obrębie różnych klas powinna przyjmować jak najbardziej różne wartości. Przy diagnostyce tego warunku można wykorzystać średnią arytmetyczną wartości danej cechy w poszczególnych klasach.
+	
+	Kolejnym warunkiem na jaki warto zwrócić uwagę podczas oceny cech jest jej odchylenie standardowe w obrębie określonej klasy. Odchylenie standardowe można określić wzorem: 
+	\begin{center}
+		$ \sigma = {\sqrt {\operatorname {E} ((X-\operatorname {E} (X))^{2})}} $ \\
+	\end{center}
+	X - zmienna \\
+	E - wartość oczekiwana 
+	
+	
+	Opisuje ono rozproszenie cechy w obrębie określonej klasy, co implikuje, że dobrze dobrana cecha charakteryzuje się jak najmniejszym rozproszeniem.
 
 \paragraph{Przykładowe cechy możliwe do wykorzystania do opisu masek binarnych: }
 \begin{itemize}
-	\item Stosunek szerokości do wysokości obrazu
+	\item Stosunek szerokości do wysokości obiektu binarnego
 	\item Stosunek powierzchni obiektu binarnego do powierzchni całego obrazu
 	\item Stosunek powierzchni otoczki wypukłej na obiekcie binarnym do powierzchni całego obrazu
 	\item Stosunek półosi małej do dużej elipsy opisanej na obiekcie binarnym 
@@ -546,7 +575,7 @@ Jest to interpretowany, obiektowy język wysokiego poziomu. Używany jest w szer
 	\item jest wieloplatformowy
 	\item posiada bogaty zbiór różnego rodzaju bibliotek
 	\item łatwy do nauczenia, nawet dla osób zaczynających programować
-	\item szybkość działania w stosunku do innych języków kryptowych
+	\item szybkość działania w stosunku do innych języków skryptowych
 \end{itemize} 
 \mbox{} \\
 Jeśli mielibyśmy dyskutować o wadach językach Python to ciężko jednoznacznie wskazać takie. Na pewno część z programistów może uznać zalety dynamicznego zarządzania typami jako wadę, ponieważ w niektórych przypadkach może spowodować błędy trudniejsze do znalezienia. Działania Pythona jest również wolniejsze w stosunku do języków takich jak C czy C++.  Za jedną z wad na pewno można uznać sposób programowania obiektowego jakie odbywa się w Pythonie. W szczególności nie ma enkapsulacji, istnieją metody które symulują takie działa, jednakże w stosunku do innych języków  obiektowych czytelność kodu zdecydowanie jest zmniejszona.
@@ -562,7 +591,7 @@ Umożliwia pisanie programów m.in. w językach takich jak Python czy C. Jest do
 
 Olbrzymią zaletą TensorFlow jest to, że reprezentuje on paradygmat Dataflow, w którym program ma postać grafu skierowanego modelującego przepływ danych pomiędzy niezależnymi operacjami w węzłach. W pierwszym kroku należy zdefiniować model, a następnie stworzyć tzw. TensorFlow session, która pozwala na uruchomienie programu. Takie podejście do pisania programów posiada ogromną zaletą jaką jest możliwość efektywnego programowania równoległego oraz rozproszonego. 
 
-TensorFlow daje możliwość nie tylko wykorzystania CPU, ale równie dobrze korzystania z GPU. Wszystko to powoduje pełne wykorzystanie mocy obliczeniowej komputerów przy obliczeniach równoległych.
+TensorFlow daje możliwość nie tylko wykorzystania mocy obliczeniowej procesora, ale równie dobrze korzystania z mocy kart graficznych. Wszystko to powoduje pełne wykorzystanie komputerów przy obliczeniach równoległych.
 
 TensorFlow oprócz niskopoziomowych struktur posiada również moduły wyższego poziomu. Do modułów niskiego poziomu możemy odwoływać się poprzez warstwę API, która umożliwia łatwy do używania interfejs przeznaczony do modelów głębokiego uczenia. Zaś nad warstwą API znajduje się warstwa wysokiego poziomu, przykładem jej jest Keras.
 
@@ -1219,7 +1248,7 @@ Z wykonanych analiz dokładności klasyfikatorów w zależności od parametru k 
 \bibitem{pyimagesearch}{Pyimagesearch, https://www.pyimagesearch.com/2016/03/28/measuring-size-of-objects-in-an-image-with-opencv/, dostęp: styczeń 2019}
 \bibitem{opencvm}{OpenCV docs, https://docs.opencv.org/3.0-beta/doc/py\_tutorials/py\_imgproc/\\py\_morphological\_ops/py\_morphological\_ops.html, dostęp: styczeń 2019}
 \bibitem{opencvco}{OpenCV docs, https://docs.opencv.org/3.4.2/df/d9d/tutorial\_py\_colorspaces.html, dostęp: styczeń 2019}
-
+\bibitem{Softmax}{Mechanizm uwagi w sieciach neuronowych, http://moria.umcs.lublin.pl/\\sphinx/src/machine\_learning/attention.html, dostęp: styczeń 2019}
 
 \end{thebibliography}
 
