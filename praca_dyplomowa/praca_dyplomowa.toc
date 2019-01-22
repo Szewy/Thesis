@@ -63,4 +63,3 @@
 \contentsline {paragraph}{Budowa sieci neuronowej korzystaj\IeC {\k a}c z biblioteki Keras:}{40}{section*.36}
 \contentsline {paragraph}{Zanotowa\IeC {\l }em nast\IeC {\k e}puj\IeC {\k a}ce dok\IeC {\l }adno\IeC {\'s}ci rozpoznawania sieci\IeC {\k a} przy wy\IeC {\.z}ej wymienionych parametrach:}{40}{section*.37}
 \contentsline {chapter}{\numberline {5}Podsumowanie}{41}{chapter.5}
-\contentsline {paragraph}{Jak mo\IeC {\.z}na rozbudowa\IeC {\'c} t\IeC {\k a} prac\IeC {\k e} in\IeC {\.z}yniersk\IeC {\k a}: }{42}{section*.38}

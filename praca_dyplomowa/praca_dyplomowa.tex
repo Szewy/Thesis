@@ -44,7 +44,7 @@
 \nrindeksu{279074}
 
 \opiekun{mgr inż. Marek Wdowiak}
-\terminwykonania{1 lutego 2018} 
+\terminwykonania{1 lutego 2019} 
 \rok{2018}
 
 
@@ -1140,7 +1140,7 @@ Z wykonanych analiz dokładności klasyfikatora KNN w zależności od parametru 
 			128  & 99.18\% \\
 			
 			\hline
-			256  & 99.58\% \\
+			256  & \textbf{99.58}\% \\
 			
 			\hline
 			512  & 98.88\% \\
@@ -1154,27 +1154,35 @@ Z wykonanych analiz dokładności klasyfikatora KNN w zależności od parametru 
 	Powyższe wartości dokładności rozpoznawania gestów przez sieć neuronową pokazują, że wyśmienicie sobie radzi z klasyfikacją gestów. Najlepsze rezultaty dawała sieć zbudowana z 256 neuronów w warstwie ukrytej. Średnia jej skuteczność to ponad 99\% co sprawia, że rozpoznawanie gestów można uznać praktycznie za bezbłędne. 	
 
 \chapter{Podsumowanie}
-	W niniejszej pracy inżynierskiej opisano podejście do rozpoznawania gestów na przykładzie gry papier, kamień, nożyce. Wykorzystując bibliotekę OpenCV przedstawiono w jaki sposób można wysegmentować dłoń. Techniki opisane w pracy według mojej oceny dały bardzo dobre rezultaty. Segmentacja gestu pozwoliła na wyraźne wyłuskanie dłoni wykonującej gest.
+	W niniejszej pracy inżynierskiej opisałem podejście do rozpoznawania gestów na przykładzie gry papier, kamień, nożyce. 
 	
-	Segmentacja była pierwszym etapem przy procesie rozpoznawania gestów. Po nim zaś nastąpił etap bezpośredniej klasyfikacji dłoni. W pierwszym sposobie podejścia do klasyfikowania był to klasyfikator KNN. Klasyfikator ten dla odpowiednich parametrów osiągnął średnią skuteczność 86.08\%, zakładając użycie trzech cech opisujących wysegmentowaną dłoń. 
+	Proces segmentacji dłoni składał się z wielu pomniejszych etapów. Pierwszym z nich była aktywizacja zbioru danych. Proces ten był pracochłonny, ponieważ należało zebrać materiał od kilku różnych osób i opowiedzieć im o ich stosunkowo klarownym zadaniu jakim było pokazywanie gestów. 
 	
-	Drugim zaś podejściem do klasyfikacji był klasyfikator oparty o sieci neuronowe, który również korzysta z wyekstrahowanych wcześniej cech. Przy jego wykorzystaniu skuteczność była bardzo zbliżona do klasyfikatora KNN.
+	Zbieranie danych było etapem dosyć prostym, jednakże analiza zgromadzonego materiału wymagała dużej ilości włożonej pracy.
 	
-	 Ostatnim wykorzystanym klasyfikatorem był klasyfikator również oparty o sieci neuronowe, jednakże tym razem jako element wejścia był podawany cały obraz binarny, bez jakikolwiek opisujących go cech. Tak stworzony klasyfikator zdecydowanie przewyższył klasyfikatory wykorzystujące wcześniej dobrane cechy. Rozpoznawanie takie było praktycznie bezbłędne na zgromadzonym zestawie danych, ponieważ klasyfikator przy wykorzystaniu uzyskanych najlepszych parametrów osiągał skuteczność powyżej 99\%, co w moim przeświadczeniu jest wyśmienitym rezultatem, biorąc pod uwagę cały proces rozpoznawania gestów.
+	Kolejnym etapem mojej pracy była detekcja obiektów w ruchu oraz o kolorze niebieskim. Uważam osobiście, że był to jeden z najtrudniejszych etapów w mojej pracy. Segmentacja niosła za sobą dużą ilość szumu, którego należało odpowiednio przefiltrować. Był to proces dla mnie bardzo żmudny, ponieważ do klasycznych metod opisanych w tej pracy należało dobrać odpowiednie parametry i ich kolejność wykonywania. Były to wielogodzinne prace służące, aby uzyskać jak najlepszy efekt. Wielokrotnie zdarzało się, że parametry dobrane dla jednego zestawu danych w drugim całkowicie psuły efekt wcześniejszej detekcji. To wszystko spowodowało, że należało włożyć dużo ciężkiej pracy, aby uzyskać zadowalający efekt dla całego zestawu danych.
 	
-	W mojej ocenie cel jaki na początku swojej  pracy założyłem, czyli prawidłowe rozpoznawanie trzech gestów papieru, kamienia oraz nożyc, został osiągnięty z sukcesem. Klasyfikator oparty o sieci neuronowe pokazał jak  wielkie możliwości daje wykorzystanie sztucznych sieci neuronowych, które coraz częściej są wykorzystywane w naszym codziennym życiu.
+	Po wykonanej pracy uważam, że trud włożony przy etapie segmentacji w dużym stopniu przyczynił się do zadowalających rezultatów w późniejszej klasyfikacji.
 	
-	\paragraph{Jak można rozbudować tą pracę inżynierską: }
-	\begin{enumerate}
-		\item Zgromadzenie większego zbioru danych 
-		\item Wyekstrahowanie większej ilości cech dla klasyfikatora KNN 
-		\item Porównanie klasyfikatora KNN z innymi klasyfikatorami opartymi o cechy opisujące gest
-		\item Wykorzystanie sieci CNN
-		\item Klasyfikacja dłoni bez użycia rękawiczki
-		\item Zaimplementowanie pełnego interfejsu gry i zliczanie punktów
-		\item Dodanie do klasyfikacji kolejnych gestów
-	\end{enumerate}
+	Pierwszym podejściem do klasyfikacji dłoni był klasyfikator KNN. W pierwszym kroku należało opisać cechami zgromadzony zbiór danych. Po analizie wyselekcjonowałem trzy cechy opisujące właściwości binarne uzyskanych obrazów binarnych w procesie segmentacji. Można było zaobserwować, że każda wybrana cecha zwiększała skuteczność klasyfikacji. 
 	
+	Wartość parametru k dla klasyfikator KNN, była doświadczalnie ustalana. Najlepsze wyniki klasyfikacji uzyskałem dla parametru k równym 5, gdzie skuteczność wynosiła 86.08\%. Zwiększanie lub zmniejszanie tej wartości powodowało mniej dokładne wyniki.
+	
+	Drugim podejściem do klasyfikacji był klasyfikator oparty o sieci neuronowe, który również korzysta z tych samych cech co klasyfikator KNN. 
+	
+	Przy analizowaniu trzech różnych funkcji aktywacji dla warty wejściowej oraz warstwy ukrytej można było jasno zauważyć, że najgorzej spisywała się funkcja Sigmoid. Wyniki jej były zdecydowanie gorsze od pozostałych. 
+	
+	Rezultaty zastosowania funkcji aktywacji ReLU oraz Tanh były do siebie zbliżone, jednakże minimalnie lepiej zachowywała się funkcja ReLU, dzięki której można było uzyskać najlepsze wyniki  na poziomie 83.43\%. 
+	
+	Bardzo ciekawą obserwacją, było zauważenie, że sieć działała najlepiej przy 6 neuronach w warstwie ukrytej, niezależnie od używanej funkcji aktywacji.
+	
+	Zwiększenie ilości epok uczących zwiększała skuteczność działania sieci. Jednakże wzrost ilości epok uczących powodował większą ilość czasu potrzebnego na wykonanie koniecznych obliczeń. Uczenie powyżej 100 epok w mojej obserwacji dawało już zbyt mały zysk w stosunku do nakładów czasowych. Wszystko to spowodowało ustalenie ilości epok uczących na wartość 100.
+
+	Ostatnim wykorzystanym klasyfikatorem był klasyfikator również oparty o sieci neuronowe, jednakże tym razem jako element wejścia był podawany cały obraz wysegmentowanej dłoni, bez opisujących go cech. Tak stworzony klasyfikator zdecydowanie przewyższył klasyfikatory wykorzystujące wcześniej dobrane cechy. Rozpoznawanie takie było praktycznie bezbłędne na zgromadzonym zestawie danych. Klasyfikator przy wykorzystaniu uzyskanych najlepszych parametrów osiągał skuteczność powyżej 99\%, co w moim przeświadczeniu jest wyśmienitym rezultatem, biorąc pod uwagę cały proces segmentacji dłoni.
+	 
+	W mojej ocenie słabsza skuteczność klasyfikatorów wykorzystujących opisujące cechy obrazów była spowodowana zbyt małą ich ilością. Zwiększenie ich liczby spowodowałaby obszerniejsze informacje o wysegmentowanym geście, co przyczyniłoby się do lepszej klasyfikacji. 
+	
+	Uważam, że cel jaki na początku swojej  pracy założyłem, czyli prawidłowe rozpoznawanie trzech gestów papieru, kamienia oraz nożyc, został osiągnięty z sukcesem. Klasyfikator oparty o sieci neuronowe pokazał jak wielkie możliwości daje wykorzystanie sztucznych sieci neuronowych, które coraz częściej są wykorzystywane w naszym codziennym życiu.
 	
 \appendix
 \begin{thebibliography}{99}
