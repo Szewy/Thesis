@@ -25,6 +25,6 @@
 \BOOKMARK [1][-]{section.4.6}{Dob\363r i ocena cech}{chapter.4}% 25
 \BOOKMARK [1][-]{section.4.7}{Rozpoznawanie gest\363w przy pomocy klasyfikatora KNN}{chapter.4}% 26
 \BOOKMARK [1][-]{section.4.8}{Rozpoznawanie gest\363w przy pomocy sieci neuronowej}{chapter.4}% 27
-\BOOKMARK [2][-]{subsection.4.8.1}{Siec neuronowa dla cech}{section.4.8}% 28
-\BOOKMARK [2][-]{subsection.4.8.2}{Siec neuronowa obraz\363w binarnych}{section.4.8}% 29
+\BOOKMARK [2][-]{subsection.4.8.1}{Siec neuronowa oparta o cechy}{section.4.8}% 28
+\BOOKMARK [2][-]{subsection.4.8.2}{Siec neuronowa oparta o wartosci pikseli obrazu binarnego}{section.4.8}% 29
 \BOOKMARK [0][-]{chapter.5}{Podsumowanie}{}% 30

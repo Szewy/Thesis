@@ -230,14 +230,14 @@ Najczęściej stosowane elementy strukturalne nazywamy elementarnymi. W ich skł
 
 \paragraph{Otwarcie dla obrazów binarnych:}\mbox{} \\
 \indent Operacja otwarcia dla obrazów binarnych jest sekwencyjnym wykonaniem metod erozji oraz dylatacji. Metoda ta wygładza obiekt, usuwa pomniejsze obiekty, a w dodatku nie modyfikuje znacząco wielkości obiektów tak jak to jest w przypadku zastosowania operacji erozji czy dylatacji. Definiujemy ją następująco:
-\begin{center}
-	$ A \circ B = (A \ominus B) \oplus B $ 
-\end{center}
+\begin{equation}
+	 A \circ B = (A \ominus B) \oplus B 
+\end{equation}
 
 \paragraph{Etapy operacji otwarcia:}
 \begin{enumerate}
 	\item Wykonywana jest operacja erozji na zadanym obrazie
-	\item Wykonywana jest operacja dylatacji na obraz, który jest wynikiem erozji z punktu 1.
+	\item Wykonywana jest operacja dylatacji na obrazie, który jest wynikiem erozji z punktu 1.
 \end{enumerate}
 
 \begin{figure}[H]
@@ -251,9 +251,9 @@ Najczęściej stosowane elementy strukturalne nazywamy elementarnymi. W ich skł
 
 \paragraph{Zamknięcie dla obrazów binarnych:}\mbox{} \\
 \indent Operacja zamknięcia dla obrazów binarnych jest sekwencyjnym wykonaniem metod dylatacji oraz erozji. W rezultacie uzyskujemy połączenie obiektów o zbliżonych odległościach, wypełnienie dziur w obiektach, jednakże końcowy kształt obiektu zostaje w dużym stopniu zmieniony w stosunku do kształtu przed zastosowaniem operacji zamknięcia. Definiujemy ją następująco:
-\begin{center}
-	$ A \bullet B = (A \oplus B) \ominus B $ 
-\end{center}
+\begin{equation}
+	 A \bullet B = (A \oplus B) \ominus B  
+\end{equation}
 
 \begin{figure}[H]
 	\centering
@@ -267,7 +267,7 @@ Najczęściej stosowane elementy strukturalne nazywamy elementarnymi. W ich skł
 \paragraph{Etapy operacji zamknięcia:}
 \begin{enumerate}
 	\item Wykonywana jest operacja dylatacji na zadanym obrazie
-	\item Wykonywana jest operacja erozji na obraz, który jest wynikiem dylatacji z punktu 1.
+	\item Wykonywana jest operacja erozji na obrazie, który jest wynikiem dylatacji z punktu 1.
 \end{enumerate}
 
 \section{Filtry ruchu}
@@ -305,7 +305,7 @@ Biblioteka OpenCV posiada wiele gotowych rozwiązać do wykrywania obiektów w r
 	\caption{Przykładowy obraz po zastosowaniu metody BackgroundSubtractorKNN z biblioteki OpenCV}
 \end{figure}
  
- Segmentacja oczywiście nie jest całkowicie dokładna, dlatego w celu polepszenia efektów, warto pozbyć się niedokładności oraz możliwych szumów,  które mogą wystąpić podczas analizy. Są one spowodowane różnymi odbiciami, cieniami czy innymi niezauważalnymi ruchami. Wówczas należy wykorzystać przedstawione wcześniej operacje morfologiczne, które poprawią nam wykonaną detekcję.
+ Segmentacja oczywiście nie jest całkowicie dokładna, dlatego w celu polepszenia efektów należy zastosować dalszą filtrację. Występujące szumy są spowodowane różnymi odbiciami, cieniami czy innymi niezauważalnymi ruchami. Wówczas należy wykorzystać przedstawione wcześniej operacje morfologiczne, które poprawią nam wykonaną detekcję.
 
 \section{Detekcja kolorów}
 Celem detekcji kolorów jest wygenerowanie obrazu binarnego, w którym piksele ,,włączone'' oznaczają te, które na zadanym obrazie są w określonym przedziale kolorów. Jeżeli dany piksel nie należy do określonego  przedziału, wówczas staje się ,,wyłączony''. Detekcja taka pozwala na wyłuskanie tylko obiektów o określonej barwie.
@@ -316,10 +316,10 @@ Aby polepszyć efekt końcowy detekcji obiektów o określonym kolorze, należy 
 
 \paragraph{Model RGB} \mbox{} \\
 \indent
-Model RGB składa się z trzech części: R (\textit{ang. Red}) określa wartość barwy czerwonej, G (\textit{ang. Green}) określa wartość barwy zielonej, B (\textit{ang. Blue}) określa wartość barwy niebieskiej. Wartości najczęściej są podawane w przedziale liczb całkowitych 0-255 lub w przedziale liczb rzeczywistych 0-1. Model RGB jest szeroko stosowany w urządzeniach wyświetlających obraz oraz w urządzeniach analizujących obraz.
+Model RGB składa się z trzech części: R (\textit{ang. Red}) określa wartość barwy czerwonej, G (\textit{ang. Green}) określa wartość barwy zielonej, B (\textit{ang. Blue}) określa wartość barwy niebieskiej. Wartości najczęściej są podawane w przedziale liczb całkowitych 0-255 lub w przedziale liczb rzeczywistych 0-1. Model RGB jest szeroko stosowany w urządzeniach wyświetlających obraz oraz w urządzeniach akwizycji obrazu.
 \begin{figure}[H]	
 	\centering
-	\includegraphics[width=0.6\textwidth]{\ImgPath/rys/rgb.png}
+	\includegraphics[width=0.62\textwidth]{\ImgPath/rys/rgb.png}
 	
 	\caption{Model RGB}
 \end{figure}
@@ -329,7 +329,7 @@ HSV (\textit{ang. Hue Saturation Value}) jest to model opisu przestrzeni barw, w
 
 \begin{figure}[H]	
 	\centering
-	\includegraphics[width=0.4\textwidth]{\ImgPath/rys/hsv.png}
+	\includegraphics[width=0.42\textwidth]{\ImgPath/rys/hsv.png}
 	
 	\caption{Model HSV}
 \end{figure}
@@ -339,32 +339,41 @@ Model składa się z następujących części: barwa, nasycenie, wartość. Geom
 \paragraph{Konwersja z modelu RGB na model HSV: \cite{rgbhsv}} \mbox{} \\ 
 \indent
 Jeżeli wartość barw jest w przedziale liczb całkowitych 0-255, wówczas należy zmienić przedział na liczby rzeczywiste w zakresie 0-1: 
-\begin{center}
-	$ R' = R/255 $ \\
-	$ G' = G/255 $ \\ 
-	$ B' = B/255 $ \\
-	$ C_{max} = max(R', G', B') $ \\
-	$ C_{min} = min(R', G', B') $ \\
-	$ \Delta = C_{max}-C_{min}  $ \\ \mbox{} \\
-
-	$ 
+\begin{equation}
+	 R' = R/255 
+\end{equation}
+\begin{equation}
+	 G' = G/255 
+\end{equation}
+\begin{equation}
+	 B' = B/255 
+\end{equation}
+\begin{equation}
+	 C_{max} = max(R', G', B')
+\end{equation}
+\begin{equation} 
+	 C_{min} = min(R', G', B')
+\end{equation}
+\begin{equation} 
+	 \Delta = C_{max}-C_{min} 
+\end{equation}
+\begin{equation}
 		H = \left\{ \begin{array}{ll}
-		0 \degree & $,gdy $\Delta = 0 \\
-		60 \degree * (\frac{G'-B'}{\Delta}mod6)& $,gdy $C_{max} = R' \\
-		60 \degree * (\frac{B'-R'}{\Delta}+2)& $,gdy $C_{max} = G' \\
-		60 \degree *  (\frac{R'-G'}{\Delta}+4)& $,gdy $C_{max} = B' \\
+		0 \degree & \mbox{,gdy }\Delta = 0 \\
+		60 \degree * (\frac{G'-B'}{\Delta}mod6)& \mbox{,gdy }C_{max} = R' \\
+		60 \degree * (\frac{B'-R'}{\Delta}+2)& \mbox{,gdy }C_{max} = G' \\
+		60 \degree *  (\frac{R'-G'}{\Delta}+4)& \mbox{,gdy }C_{max} = B' \\
 		\end{array} \right. 
-	$ \\ \mbox{} \\ \mbox{}
-	
-	$ 
+\end{equation}
+\begin{equation}
 		S = \left\{ \begin{array}{ll}
-		0  & $,gdy $C_{max} = 0 \\
-		\frac{\Delta}{C_{max}} & $,gdy $C_{max} \neq 0 \\
+		0  & \mbox{,gdy } C_{max} = 0 \\
+		\frac{\Delta}{C_{max}} & \mbox{,gdy }C_{max} \neq 0 \\
 		\end{array} \right. 
-	$ \\ \mbox{} \\ 
-	
-	$ V = C_{max}$ 
-\end{center}
+\end{equation}
+\begin{equation}
+	 V = C_{max} 
+\end{equation}
 
 
 \section{Klasyfikatory}
@@ -402,9 +411,9 @@ Na zaprezentowanym przykładzie możemy przeanalizować działanie klasyfikatora
 Podstawowym elementem tworzenia klasyfikatora jest dobór odpowiednich do niego cech na których będzie bazował. Źle dobrane elementy wejścia spowodują niedokładną klasyfikację. Dlatego tak bardzo ważne jest odpowiedni dobór cech opisujących.
 
 Istotnym etapem dla każdej cechy była jej normalizacja danych, aby dana cecha nie powodowała większego wpływu od innych czy też wpływała nieznacząco w stosunku do innych. Przykładem normalizacji jest standaryzacja, którą możemy przedstawić zgodnie ze wzorem: 
-\begin{center}
-	{\large $ Z = \dfrac{x - \mu}{\sigma} $ \par}
-\end{center}
+\begin{equation}
+	  Z = \dfrac{x - \mu}{\sigma} 
+\end{equation}
 x - wartość przed normalizacją \\ $\mu$ - średnia \\ $\sigma$ - odchylenie standardowe
 
 \paragraph{Warunki dobrej cechy diagnostycznej: }
@@ -419,9 +428,9 @@ x - wartość przed normalizacją \\ $\mu$ - średnia \\ $\sigma$ - odchylenie s
 Warunkiem dobrej cechy diagnostycznej, jest to, że ta sama cecha w obrębie różnych klas powinna przyjmować jak najbardziej różne wartości. Przy diagnostyce tego warunku można wykorzystać średnią arytmetyczną wartości danej cechy w poszczególnych klasach.
 
 Kolejnym warunkiem na jaki warto zwrócić uwagę podczas oceny cech jest jej odchylenie standardowe w obrębie określonej klasy. Odchylenie standardowe można określić wzorem: 
-\begin{center}
-	{\large $ \sigma = {\sqrt {\operatorname {E} ((X-\operatorname {E} (X))^{2})}} $ \par}
-\end{center}
+\begin{equation}
+	 \sigma = {\sqrt {\operatorname {E} ((X-\operatorname {E} (X))^{2})}} 
+\end{equation}
 X - zmienna \\
 E - wartość oczekiwana 
 
@@ -445,7 +454,7 @@ Sieci neuronowe możemy traktować jako model czarnej skrzynki. Dla określonych
 
 \begin{figure}[H]	
 	\centering
-	\includegraphics[width=0.9\textwidth]{\ImgPath/rys/czarna_skrzynka.png}
+	\includegraphics[width=0.95\textwidth]{\ImgPath/rys/czarna_skrzynka.png}
 	
 	\caption{Sieć neuronowa jako model czarnej skrzynki}
 \end{figure}
@@ -458,7 +467,7 @@ Czarna skrzynka to tzw. warstwa ukryta. Znajdują się w niej neurony ściśle z
 
 \begin{figure}[H]	
 	\centering
-	\includegraphics[width=0.7\textwidth]{\ImgPath/rys/siec_neuronowa.png}
+	\includegraphics[width=0.70\textwidth]{\ImgPath/rys/siec_neuronowa.png}
 	
 	\caption{Przykładowa sieć neuronowa}
 \end{figure}
@@ -469,7 +478,7 @@ Sztuczne neurony na podstawie zsumowanych iloczynów wartości na wejściowych o
 
 \begin{figure}[H]	
 	\centering
-	\includegraphics[width=0.9\textwidth]{\ImgPath/rys/neuron.png}
+	\includegraphics[width=0.95\textwidth]{\ImgPath/rys/neuron.png}
 	
 	\caption{Przykład pojedynczego neuronu}
 \end{figure}
@@ -478,43 +487,42 @@ Sztuczne neurony na podstawie zsumowanych iloczynów wartości na wejściowych o
 \mbox{} \\ \indent
 Wartość funkcji aktywacji dla danego neuronu, określa wartość wyjściową tego neuronu. Często używa się tej samej funkcji aktywacji dla tej samej warstwy, a niejednokrotnie wykorzystujemy tę samą funkcję aktywacji nawet do całej sieci neuronowej. 
 
-\begin{center}
-{\large $ f(x) = max(0, ax) $ \par}
-\end{center}
+\begin{equation}
+  f(x) = max(0, ax) 
+\end{equation}
 \begin{figure}[H]	
 	\centering
-	\includegraphics[width=0.42\textwidth]{\ImgPath/rys/funkcje_aktywacji/relu.png}
+	\includegraphics[width=0.65\textwidth]{\ImgPath/rys/funkcje_aktywacji/relu.png}
 	
 	\caption{Funkcja ReLU}
 \end{figure}
 
-\begin{center}
-{\large $ f(x) = \frac{1}{1 + exp(-\beta x)} $ \par}
-\end{center}
+\begin{equation}
+  f(x) = \frac{1}{1 + exp(-\beta x)} 
+\end{equation}
 \begin{figure}[H]	
 	\centering
-	\includegraphics[width=0.42\textwidth]{\ImgPath/rys/funkcje_aktywacji/sigmoid.png}
+	\includegraphics[width=0.65\textwidth]{\ImgPath/rys/funkcje_aktywacji/sigmoid.png}
 	
 	\caption{Funkcja Sigmoid}
 \end{figure}
 
 
-\begin{center}
-	{\large $ f(x) = tanh(\beta x) $ \par}
-\end{center}
+\begin{equation}
+	 f(x) = tanh(\beta x) 
+\end{equation}
 \begin{figure}[H]	
 	\centering
-	\includegraphics[width=0.42\textwidth]{\ImgPath/rys/funkcje_aktywacji/tanh.png}
+	\includegraphics[width=0.65\textwidth]{\ImgPath/rys/funkcje_aktywacji/tanh.png}
 	
 	\caption{Funkcja Tanh}
 \end{figure}
 
 Softmax jest przykładem funkcji aktywacji, którą często wykorzystuje się jako funkcję aktywacji w warstwie wyjściowej. Suma wartości aktywacji dla całej warstwy jest równa 1. Wykorzystując tę normalizację, możemy wartości wyjściowe neuronów zinterpretować jako prawdopodobieństwo przynależności do poszczególnych klas, które reprezentowane są przez neurony wyjściowe. Funkcję Softmax definiujemy następująco: \\ 
-\begin{center}
-	{\LARGE $ f(y_{i}) = \frac{exp(y_{i})}
+\begin{equation}
+    f(y_{i}) = \frac{exp(y_{i})}
 		{\sum_{j=1}^{n} exp(y_{j})}
-	$\par}
-\end{center}
+\end{equation}
 
 \paragraph{Uczenie sieci neuronowych:}
 \mbox{} \\
@@ -531,6 +539,7 @@ Uczenie sieci polega na dostrajaniu wartości wag poszczególnych neuronów. Prz
 	\item Przewidywanie prognozy pogody
 	\item Diagnostyka medyczna
 	\item Ocena zdolności kredytowej
+	\item Rekomendowanie reklam
 \end{itemize}
 
 \chapter{Wykorzystane narzędzia}
@@ -538,7 +547,7 @@ Uczenie sieci polega na dostrajaniu wartości wag poszczególnych neuronów. Prz
 \section{OpenCV}
 Biblioteka OpenCV (ang.\textit{ Open Source Computer Vision Library}) jest wykorzystywana przy rozpoznawaniu obrazów oraz przy uczeniu maszynowym. Została napisana w języku C przez programistów z firmy Intel w 1999 roku \cite{opencv}.
 
-W późniejszym czasie kolejne części biblioteki były także pisane w języku C++. Biblioteka OpenCV umożliwia pisanie kodów nie tylko w językach C i C++ ale również mamy możliwość wykorzystywania tej biblioteki w językach Python, Java czy też Matlab. W związku z popularnością biblioteki udostępniono nakładki do języków takich jak C\#, Perl, Ruby czy Haskell aby móc również wykorzystywać zalety  biblioteki\cite{opencv2}. 
+W późniejszym czasie kolejne części biblioteki były także pisane w języku C++. Biblioteka OpenCV umożliwia pisanie kodów nie tylko w językach C i C++ ale również mamy możliwość wykorzystywania tej biblioteki w językach Python, Java czy też Matlab. W związku z popularnością biblioteki udostępniono nakładki do języków takich jak C\#, Perl cz Ruby, aby móc również wykorzystywać zalety  biblioteki\cite{opencv2}. 
 
 Biblioteka OpenCV udostępnia zaawansowaną funkcjonalność  w szeroko rozumianym pojęciu rozpoznawaniu obrazów:
 
@@ -943,7 +952,7 @@ Klasyfikator został oparty na klasycznej odległości euklidesowej. Zbiór dany
 	
 Z wykonanych analiz dokładności klasyfikatora KNN w zależności od parametru k wynika, że najlepsze efekty można było osiągnąć używając go z parametrem k o wartości 5, który działał ze średnią dokładnością 86.08\%.
 \section{Rozpoznawanie gestów przy pomocy sieci neuronowej}
-\subsection{Sieć neuronowa dla cech}
+\subsection{Sieć neuronowa oparta o cechy}
 	Analogicznie jak w przypadku klasyfikatora KNN również i  kolejny klasyfikator oparłem na wyznaczonych wcześniej cechach.
 	
 	Sieć została stworzona w języku Python, korzystając z biblioteki TensorFlow oraz jako wysokopoziomowe API sieci neuronowych wykorzystałem bibliotekę Keras.
@@ -1081,7 +1090,7 @@ Z wykonanych analiz dokładności klasyfikatora KNN w zależności od parametru 
 	\mbox{}
 	\\
 	Sieć z podanymi wyżej parametrami dała średnią skuteczność na poziomie 83.43\%. Jest to wartość zadowalająca, zbliżona do wartości jaka została uzyskana za pomocą klasyfikatora KNN.
-\subsection{Sieć neuronowa obrazów binarnych}
+\subsection{Sieć neuronowa oparta o wartości pikseli obrazu binarnego}
 
 
 	Kolejnym podejściem do klasyfikacji była analiza wysegmentowanej dłoni gestu siecią neuronową tym razem bez opisywania gestu cechami, lecz użyciem całego otrzymanego wcześniej obrazu binarnego.
@@ -1102,7 +1111,7 @@ Z wykonanych analiz dokładności klasyfikatora KNN w zależności od parametru 
 	
 	Zmniejszenie obrazu binarnego niosło za sobą również zmianę kodowanie obrazu. Po wykonaniu tej operacji cały zbiór danych był kodowany jako zbiór obrazów szarościowych.
 		
-	Wartości pikseli obrazu szarościowego zostały przeskalowane z przedziału 0-255 do wartości z przedziału liczb rzeczywistych 0-1. Do warstwy wejściowej sieci, podane zostały wartości tablicy o rozmiarze 25x60.
+	Do warstwy wejściowej sieci, podane zostały wartości pikseli obrazów szarościowych o rozmiarze 25x60. 
 	
 	Ilość neuronów w warstwie ukrytej był to parametr, który doświadczalnie zmieniałem. Funkcja aktywacji jaką wykorzystałem dla tej warstwy była to funkcja RuLU.
 
@@ -1187,7 +1196,7 @@ Z wykonanych analiz dokładności klasyfikatora KNN w zależności od parametru 
 	W mojej ocenie słabsza skuteczność klasyfikatorów wykorzystujących opisujące cechy obrazów była spowodowana zbyt małą ich ilością. Zwiększenie ich liczby spowodowałaby obszerniejsze informacje o wysegmentowanym geście, co przyczyniłoby się do lepszej klasyfikacji. 
 	
 	Uważam, że cel jaki na początku swojej  pracy założyłem, czyli prawidłowe rozpoznawanie trzech gestów papieru, kamienia oraz nożyc, został osiągnięty z sukcesem. Klasyfikator oparty o sieci neuronowe pokazał jak wielkie możliwości daje wykorzystanie sztucznych sieci neuronowych, które coraz częściej są wykorzystywane w naszym codziennym życiu.
-	
+
 \appendix
 \begin{thebibliography}{99}
 \bibitem{Collins}{Andy Collins, ,,Mowa ciała'', 2002}
@@ -1204,7 +1213,7 @@ Z wykonanych analiz dokładności klasyfikatora KNN w zależności od parametru 
 \bibitem{knn2}{Metoda K Najbliższych Sąsiadów, http://home.agh.edu.pl/\%7ehorzyk/\\lectures/miw/KNN.pdf, dostęp: styczeń 2019}
 \bibitem{Osowski}{Osowski Stanisław, ,,Metody i narzędzia eksploracji danych'', 2013}
 \bibitem{opencv}{Introduction to OpenCV-Python Tutorials, https://docs.opencv.org/\\3.4.1/d0/de3/tutorial\_py\_intro.html, dostęp: styczeń 2019}
-\bibitem{opencv2}{OpenCV, https://en.wikipedia.org/wiki/OpenCV, dostęp: styczeń 2019}
+\bibitem{opencv2}{Gloria Bueno García, Oscar Deniz Suarez, José Luis Espinosa Aranda, Jesus Salido Tercero, Ismael Serrano Gracia, Noelia Vállez Enano, ,,Learning Image Processing with OpenCV'', 2015}
 \bibitem{python1}{General Python FAQ, https://docs.python.org/2/faq/general.html, dostęp: styczeń 2019}
 \bibitem{python}{O'Reilly Media, ,,Learning Python 4th Edition'', 2009}
 \bibitem{tiobe}{TIOBE Index for January 2019, https://www.tiobe.com/tiobe-index/, dostęp: styczeń 2019}
