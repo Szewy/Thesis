@@ -44,7 +44,7 @@
 \nrindeksu{279074}
 
 \opiekun{mgr inż. Marek Wdowiak}
-\terminwykonania{1 lutego 2019} 
+\terminwykonania{28 stycznia 2019} 
 \rok{2018}
 
 
@@ -64,14 +64,14 @@
 
 \chapter{Wstęp}
 \section{Wprowadzenie}
-Istotną rolę w życiu społecznym pełnią gesty. Dodatkowa mowa niewerbowana może przekazać zdecydowanie więcej informacji niż tylko słowa wypowiedziane przez nadawcę. Gesty zazwyczaj służą do uzupełnienia mowy, do wspomożenia lub wzmocnienia przekazywanej wiadomości\cite{Collins}. W języku migowym, który pozwala na wzajemną komunikację ludzi głuchych, gesty zastępują nawet słyszalne słowa. Oprócz samej mowy gesty mają też inne zastosowania. Przykładem takim może być gra papier, kamień, nożyce. W której każdy z graczy pokazuje jeden z trzech dostępnym gestów. W zależności od kombinacji gestów pokazanych przez graczy określany jest zwycięzca.
+Istotną rolę w życiu społecznym pełnią gesty. Dodatkowa mowa niewerbowana może przekazać zdecydowanie więcej informacji niż tylko słowa wypowiedziane przez nadawcę. Gesty zazwyczaj służą do uzupełnienia mowy, do wspomożenia lub wzmocnienia przekazywanej wiadomości\cite{Collins}. W języku migowym, który pozwala na wzajemną komunikację ludzi głuchych, gesty pełnią rolę głównego medium komunikacyjnego. Oprócz samej mowy gesty mają też inne zastosowania. Przykładem takim może być gra papier, kamień, nożyce. W której każdy z graczy pokazuje jeden z trzech dostępnym gestów. W zależności od kombinacji gestów pokazanych przez graczy określany jest zwycięzca.
 
-Interakcje człowiek-komputer są przedmiotem zainteresowania nauk na styku informatyki, nauk społecznych oraz projektowania technicznego i artystycznego. Interakcje pomiędzy użytkownikiem a komputer mają miejsce za pomocą interfejsów użytkownika, do których możemy zaliczyć zarówno sprzęt jak i oprogramowanie\cite{Kostkiewicz}. Szczególnym przypadkiem są interfejsy kinetyczne, których celem jest wykorzystywanie gestów ludzkich do interakcji człowiek-komputer.
+Interakcje człowiek-komputer są przedmiotem zainteresowania nauk na styku informatyki, nauk społecznych oraz projektowania technicznego i artystycznego. Interakcje pomiędzy użytkownikiem a komputer mają miejsce za pomocą interfejsów użytkownika, do których możemy zaliczyć zarówno sprzęt jak i oprogramowanie\cite{Kostkiewicz}. Szczególnym przypadkiem są interfejsy kinetyczne, których celem jest wykorzystywanie gestów ludzkich do interakcji człowiek-komputer. Dąży się do upodobnienia interakcji człowiek-komputer do interakcji między ludzkich. Uczymy zatem komputery, rozpoznawania gestów i mowy, tak aby komunikacja z komputerem odbywała się w sposób bardziej naturalny.
 
 Klasyfikacja gestów jest powszechnym problem przetwarzania obrazów. Jest to temat obszerny i coraz lepiej zbadany. Klasyfikacja gestów ma szerokie zastosowanie. Jedną z zalet rozpoznawania gestów jest możliwość sterowania naszym smartfonem za pomocą ruchu rąk. Po wykonaniu gestu, a następnie po rozpoznaniu go przez  oprogramowanie telefonu wykonywana jest określona akcja. Innym wykorzystaniem klasyfikacji gestów jest sterowanie gier, gdzie jako przykład można podać urządzenie Kinect używane jako sensor dla konsoli Xbox 360\cite{Kinect}.
 
 \section{Cel pracy}
-W swojej pracy dyplomowej będę chciał przedstawić sposób podejścia do problemu klasyfikacji gestów, a następnie zaimplementować działające rozwiązanie i wykorzystać go w praktyce na przykładzie gry papier, kamień, nożyce. Ogólnym celem będzie stworzenie klasyfikatora, który pozwoli na automatyczne rozpoznawanie gestów, które są wykonywane podczas gry.
+W swojej pracy dyplomowej będę chciał przedstawić sposób podejścia do problemu klasyfikacji gestów, a następnie zaimplementować w języku Python, przy użyciu bibliotek OpenCV, TensorFlow oraz Keras działającego rozwiązania i wykorzystać go w praktyce na przykładzie gry papier, kamień, nożyce. Ogólnym celem będzie stworzenie klasyfikatora, który pozwoli na~automatyczne rozpoznawanie gestów, które są wykonywane podczas gry.
 
 \section{Gra papier, kamień, nożyce}
 Jest to klasyczna gra towarzyska, w tradycyjnym wariancie przeznaczona dla dwóch graczy. W każdej rundzie gracze pokazują gesty przez siebie wybrane z trzech dostępnych. Wszystkie rundy odbywają się na ustalony wcześniej sygnał, a pokazywane gesty powinny być jak najbardziej zsynchronizowane. Gra kończy się wtedy, jeżeli jeden z graczy osiągnie określoną wcześniej ilość zwycięstw \cite{Fisher}.
@@ -95,7 +95,7 @@ Jest to klasyczna gra towarzyska, w tradycyjnym wariancie przeznaczona dla dwóc
 	\caption{Gesty papieru, kamienia, nożyce}
 \end{figure}
 
-Zwycięzca w danej rundzie określany jest w zależności od kombinacji gestów pokazanych przez graczy. Jeżeli oba gracze pokazali ten sam gest, wówczas następuje remis. 
+Zwycięzca w danej rundzie określany jest w zależności od kombinacji gestów pokazanych przez graczy. Jeżeli obaj gracze pokazali ten sam gest, wówczas następuje remis. 
 
 \paragraph{W przypadku kombinacji:}
 \begin{itemize} 
@@ -109,45 +109,45 @@ Zachowując takie zasady, każdy z gestów ma takie samo prawdopodobieństwo zwy
 \chapter{Wprowadzenie teoretyczne}
 \section{Obrazy cyfrowe}
 \textbf{Obrazem cyfrowym f} nazywamy odwzorowanie dyskretne: 
-\begin{center}
-	$ \textbf{f} \colon D \to W $ 
-\end{center}
+\begin{equation}
+	 \textbf{f} \colon D \to W  
+\end{equation}
 przy czym D jest dziedziną obrazu - skończonym zbiorem współrzędnych, a W jest jego przeciwdziedziną - zbiorem wartości \cite{Iwanowski}. W związku z dyskretną reprezentacją obrazu \textit{funkcję obrazu} można określać pojęciem \textit{macierzy obrazu}.
 
 Dziedzina D jest iloczynem kartezjańskim skończonych zbiorów pojedynczych współrzędnych:
-\begin{center}
-	$ D = D_{1} \times D_{2}  \times \ldots  \times D_{n} $
-\end{center}
+\begin{equation}
+	 D = D_{1} \times D_{2}  \times \ldots  \times D_{n} 
+\end{equation}
 gdzie n jest rozmiarem przestrzeni obrazu, a $ D_{i} $ jest zbiorem wartości i-tej współrzędnej punktu obrazu. 
 
 Przeciwdziedzina W jest również iloczynem kartezjańskim:
-\begin{center}
-	$ W = W_{1} \times W_{2}  \times \ldots  \times W_{n} $
-\end{center}
+\begin{equation}
+	 W = W_{1} \times W_{2}  \times \ldots  \times W_{n} 
+\end{equation}
 
 Każdy ze zbiorów $ W_{i} $ w zależności od rodzaju obrazu może być podzbiorem zbioru liczb naturalnych, całkowitych lub liczb rzeczywistych.
 
 \textbf{Obrazy dwuwymiarowe} są to obrazy dla których n przyjmuje wartość równą~2. Funkcja obrazu wówczas jest funkcją dwóch zmiennych \textbf{f}(x,y), w której odwzorowanie ma zazwyczaj postać:
-\begin{center}
-	$ \textbf{f} \colon D = \{0, \ldots, x_{max}-1\} \times \{0, \ldots, y_{max}-1\} \to W $ 
-\end{center}
+\begin{equation}
+	 \textbf{f} \colon D = \{0, \ldots, x_{max}-1\} \times \{0, \ldots, y_{max}-1\} \to W  
+\end{equation}
 
 Wartość $ x_{max} $ oznacza rozmiar wzdłuż osi x, zaś wartość $ y_{max} $ rozmiar wzdłuż osi y. Punkty obrazów dwuwymiarowych nazywane są pikselami.
 
 Obrazy które mogą przyjmować tylko jedną z dwóch wartości, wynoszących zazwyczaj 0 i 1 nazywamy \textbf{obrazami binarnymi}. Wówczas:
-\begin{center}
-	$ W = \{0,1\} $ 
-\end{center}
+\begin{equation}
+	 W = \{0,1\}  
+\end{equation}
 
 
 Obrazy takie możemy traktować jako strukturę składającą się z dwóch zbiorów punktów obrazu. Pierwszy z nich A jest zbiorem punktów ,,włączonych'', które możemy interpretować jako te znajdujące się na pierwszym planie - punkty pierwszoplanowe:
-\begin{center}
-	$ A = \{p \colon \textbf{f}(p) = 1\} $ 
-\end{center}
+\begin{equation}
+	 A = \{p \colon \textbf{f}(p) = 1\} 
+\end{equation}
 gdzie f jest funkcją obrazu. Drugi ze zbiór B składa się z pozostałych punktów tzw. punktów ,,wyłączonych'', które są również nazywane punktami tła:
-\begin{center}
-	$ B = \{p \colon \textbf{f}(p) = 0\} $ 
-\end{center}
+\begin{equation}
+	 B = \{p \colon \textbf{f}(p) = 0\} 
+\end{equation}
 
 \begin{figure}[H]	
 	\centering
@@ -157,42 +157,42 @@ gdzie f jest funkcją obrazu. Drugi ze zbiór B składa się z pozostałych punk
 \end{figure}
 
 \section{Operacje morfologiczne}
-Operacje morfologiczne pozwalają na złożone czynności związane z analizą kształtu poszczególnych elementów obrazu oraz położeniem ich względem siebie. W wyniku operacji struktura obiektu na obrazie zostaje zmieniona, w celu osiągnięcia określonych rezultatów. 
+Operacje morfologiczne pozwalają na złożone czynności związane z analizą kształtu poszczególnych elementów obrazu oraz położeniem ich względem siebie. W wyniku operacji struktura obiektu na obrazie zostaje zmieniona, w~celu osiągnięcia określonych rezultatów. 
 Operacje morfologiczne można zastosować dla obrazów binarnych oraz dla obrazów o wielu odcieniach szarości\cite{Malina}. Dzięki nim jesteśmy wstanie wyszczególnić interesujące nas części czy też przefiltrować nasz obraz. 
 
 Podstawowymi operacjami morfologicznymi są: erozja, dylatacja, otwarcie oraz zamknięcie. Wymienione operacje można wykonywać sekwencyjnie, tworząc zaawansowane systemy analizy.
 
-Operacje morfologiczne modyfikują wartości pikseli biorąc pod uwagę jego otoczenie. Liczbę punktów otoczenia określa tzw. element strukturalny, który definiuje wartości i ich rozmieszenie w otoczeniu. Posiada on jeden wyróżniony punkt, nazywany punktem centralnym, który nie musi być pikselem ,,włączonym''. 
+Operacje morfologiczne modyfikują wartości pikseli biorąc pod uwagę jego otoczenie. Liczbę punktów otoczenia określa tzw. element strukturalny, który definiuje wartości i ich rozmieszenie w otoczeniu. Posiada on jeden wyróżniony punkt, nazywany punktem centralnym, który nie musi być pikselem ,,włączonym''\cite{Iwanowski}. 
 
-Najczęściej stosowanym elementem strukturalnym jest element strukturalny elementarny. Obejmuje on najbliższe sąsiedztwo piksela. Elementarny element strukturalny  o rozmiarze n jest elementem zawierający sąsiedztwo danego piksela o promieniu n\cite{Iwanowski}. 
+Najczęściej stosowane elementy strukturalne nazywamy elementarnymi. W ich skład wchodzi sąsiedztwo ośmiospójne, czterospójne oraz element liniowy poziomy i pionowy.
 
 \begin{figure}[H]
 	\centering
 	\subfigure[]
-	{\label{fig:a}\includegraphics[width=0.22\textwidth]{\ImgPath/rys/elementy_strukturalne/1.png}}
+	{\label{fig:a}\includegraphics[width=0.25\textwidth]{\ImgPath/rys/elementy_strukturalne/1.png}}
 	\subfigure[]
-	{\label{fig:b}\includegraphics[width=0.22\textwidth]{\ImgPath/rys/elementy_strukturalne/2.png}}
+	{\label{fig:b}\includegraphics[width=0.25\textwidth]{\ImgPath/rys/elementy_strukturalne/2.png}}
 	\subfigure[]
-	{\label{fig:b}\includegraphics[width=0.22\textwidth]{\ImgPath/rys/elementy_strukturalne/3.png}}
-	\caption{Dwuwymiarowy element strukturalny: (a) ośmiospójny, (b) czterospójny, (c) liniowy. Punkt w kolorze białym oznacza piksel ,,włączony'', w kolorze czarnym piksel ,,wyłączony'', a w kolorze czerwonym oznacza piksel ,,włączony'', który jest traktowany jako punkt centralny}
+	{\label{fig:b}\includegraphics[width=0.25\textwidth]{\ImgPath/rys/elementy_strukturalne/3.png}}
+	\caption{Dwuwymiarowy element strukturalny: (a) ośmiospójny, (b) czterospójny, (c) liniowy poziomy. Punkt w kolorze białym oznacza piksel ,,włączony'', w kolorze czarnym piksel ,,wyłączony'', a w kolorze czerwonym oznacza piksel ,,włączony'', który jest traktowany jako punkt centralny}
 \end{figure}
 
 \paragraph{Etapy przekształceń morfologicznych dla obrazów binarnych:}
 \begin{enumerate}
-	\item Szablon strukturalny jest przesuwany po całym obiekcie, tak aby punkt centralny szablonu był analizowanym pikselem
+	\item Szablon strukturalny jest przesuwany po całym obiekcie, tak aby punkt centralny znajdował się nad analizowanym pikselem
 	\item Następuje porównanie otoczenia analizowanego piksela z elementem strukturalnym
 	\item W zależności od stosowanej operacji morfologicznej wartość analizowanego piksela zmienia się lub też pozostaje bez zmian
 \end{enumerate}
 
 \paragraph{Erozja dla obrazów binarnych:}\mbox{} \\
 \indent Erozja dla obrazów binarnych jest operacją zwężania i zmniejszania poprzez usunięcie pikseli granicznych. Usuwa wszystkie mniejsze obiekty, które możemy zinterpretować jako szumy. Definiujemy ją następująco:
-\begin{center}
-	$ A \ominus B = \{a \colon a + b \in A$ dla każdego $b \in B\} $ 
-\end{center}
+\begin{equation}
+	 A \ominus B = \{a \colon a + b \in A \mbox{ dla każdego } b \in B\} 
+\end{equation}
 
 \paragraph{Etapy operacji erozji:}
 \begin{enumerate}
-	\item Element strukturalny przesuwany jest iteracyjnie po całym obiekcie,  tak aby punkt centralny szablonu był analizowanym pikselem
+	\item Element strukturalny przesuwany jest iteracyjnie po całym obiekcie
 	\item Porównuje się otoczenie analizowanego piksela z elementem strukturalnym
 	\item  Jeżeli przynajmniej jeden piksel z otoczenia objętego przez szablon strukturalny ma wartość równą 0, to punkt centralny przyjmuje wartość 0. Jeżeli zaś taki przypadek nie wystąpił piksel centralny zachowuje swoją poprzednią wartość
 \end{enumerate}
@@ -208,13 +208,13 @@ Najczęściej stosowanym elementem strukturalnym jest element strukturalny eleme
 
 \paragraph{Dylatacja dla obrazów binarnych:}\mbox{} \\
 \indent Dylatacja dla obrazów binarnych jest operacją rozszerzania i zwiększania. Pozwala na wypełnienie dziur binarnych w obiektach. Jeżeli dwa obiekty są położone blisko siebie, może nastąpić złączenie w jeden obiekt. Definiujemy ją następująco: 
-\begin{center}
-	$ A \oplus B = \{p \colon p = a + b, a \in A, b \in B\} $ 
-\end{center}
+\begin{equation}
+	 A \oplus B = \{p \colon p = a + b, a \in A, b \in B\} 
+\end{equation}
 
 \paragraph{Etapy operacji dylatacji:}
 \begin{enumerate}
-	\item Element strukturalny przesuwany jest iteracyjnie po całym obiekcie, tak aby punkt centralny szablonu był analizowanym pikselem
+	\item Element strukturalny przesuwany jest iteracyjnie po całym obiekcie
 	\item Następuje porównanie otoczenia analizowanego piksela z elementem strukturalnym
 	\item Jeżeli przynajmniej jeden piksel z otoczenia objętego przez szablon strukturalny ma wartość równą 1, to punkt centralny przyjmuje również wartość 1. Jeżeli zaś wszystkie piksele z otoczenia piksela centralnego określonego przez element strukturalny mają wartość 0 to wówczas piksel centralny przyjmuje wartość 0.
 \end{enumerate}
@@ -465,7 +465,7 @@ Czarna skrzynka to tzw. warstwa ukryta. Znajdują się w niej neurony ściśle z
 
 Na rysunku 3.2 zaprezentowano przykładowy schemat sieci neuronowej. Sieć ta zawiera dwa elementy wejścia, które są przekazywane do każdego neuronu z pierwszej warstwy ukrytej. Model posiada dwie warstwy ukryte, które są oznaczone na modelu kolorem niebieskim. Pierwsza z nich zawiera cztery neurony, zaś druga warstwa posiada dwa neurony. Ostatnia warstwa modelu, czyli warstwa wyjściowa oznaczona kolorem żółtym posiada dwa neurony, których wyjście jest interpretowane jako rezultat działania całej sztucznej sieci neuronowej.
 
-Sztuczne neurony na podstawie zsumowanych iloczynów wartości na wejściowych oraz wartości wag odpowiadających im krawędziom, wykonują pewną funkcję tak zwaną funkcję aktywacji, której rezultat jest traktowany jako wyjście dla pojedynczego neuronu. 
+Sztuczne neurony na podstawie zsumowanych iloczynów wartości na wejściowych oraz wartości wag odpowiadających im krawędziom, wykonują pewną funkcję tak zwaną funkcję akwizycji, której rezultat jest traktowany jako wyjście dla pojedynczego neuronu. 
 
 \begin{figure}[H]	
 	\centering
@@ -478,30 +478,34 @@ Sztuczne neurony na podstawie zsumowanych iloczynów wartości na wejściowych o
 \mbox{} \\ \indent
 Wartość funkcji aktywacji dla danego neuronu, określa wartość wyjściową tego neuronu. Często używa się tej samej funkcji aktywacji dla tej samej warstwy, a niejednokrotnie wykorzystujemy tę samą funkcję aktywacji nawet do całej sieci neuronowej. 
 
-\begin{figure}[H]
+\begin{center}
+{\large $ f(x) = max(0, ax) $ \par}
+\end{center}
+\begin{figure}[H]	
 	\centering
-	\subfigure[Wykres]
-	{\label{fig:b}\includegraphics[width=0.42\textwidth]{\ImgPath/rys/funkcje_aktywacji/relu.png}}
-	\subfigure[Wzór]
-	{\label{fig:a} {{\large $ f(x) = max(0, ax) $ \par}  }}
-		\caption{Funkcja ReLU}
+	\includegraphics[width=0.42\textwidth]{\ImgPath/rys/funkcje_aktywacji/relu.png}
+	
+	\caption{Funkcja ReLU}
 \end{figure}
 
-\begin{figure}[H]
+\begin{center}
+{\large $ f(x) = \frac{1}{1 + exp(-\beta x)} $ \par}
+\end{center}
+\begin{figure}[H]	
 	\centering
-	\subfigure[Wykres]
-	{\label{fig:b}\includegraphics[width=0.42\textwidth]{\ImgPath/rys/funkcje_aktywacji/sigmoid.png}}
-	\subfigure[Wzór]
-	{\label{fig:a} {{\large $ f(x) = \frac{1}{1 + exp(-\beta x)} $ \par}  }}
+	\includegraphics[width=0.42\textwidth]{\ImgPath/rys/funkcje_aktywacji/sigmoid.png}
+	
 	\caption{Funkcja Sigmoid}
 \end{figure}
 
-\begin{figure}[H]
+
+\begin{center}
+	{\large $ f(x) = tanh(\beta x) $ \par}
+\end{center}
+\begin{figure}[H]	
 	\centering
-	\subfigure[Wykres]
-	{\label{fig:b}\includegraphics[width=0.42\textwidth]{\ImgPath/rys/funkcje_aktywacji/tanh.png}}
-	\subfigure[Wzór]
-	{\label{fig:a} {{\large $ f(x) = tanh(\beta x) $ \par}  }}
+	\includegraphics[width=0.42\textwidth]{\ImgPath/rys/funkcje_aktywacji/tanh.png}
+	
 	\caption{Funkcja Tanh}
 \end{figure}
 
@@ -597,8 +601,8 @@ Biblioteka Keras została napisana w języku Python i wydana w marcu 2015 przez 
 Jej głównym przeznaczeniem jest to, aby w jak najprostszy i  jak najszybszy sposób umożliwić pracę w głębokich sieciach neuronowych. Biblioteka została zaprojektowana w sposób przyjemny do użytkowania, skupiona na modularności oraz rozszerzalności. Zaś od 2017 roku TensorFlow wspiera bibliotekę Keras. Dzięki czemu Keras jest wysokopoziomową warstwą tworzenia modelów sieci neuronowych i jej uczenia w bibliotece TensorFlow.
 
 \chapter{Rozwiązanie problemu}
-\section{Aktywizacja danych}
-Pierwszym etapem mojej pracy była aktywizacja danych potrzebnych do uczenia maszynowego. Zbieranie danych polegało na nagrywaniu plików wideo, na których dana osoba wykonywała określony gest. W swojej pracy dyplomowej zakładałem, że każdy wykonywany gest, jest pokazywany w niebieskiej rękawiczce. To założenie wykorzystywałem w całej swojej pracy inżynierskiej.
+\section{Akwizycja danych}
+Pierwszym etapem mojej pracy była akwizycja danych potrzebnych do uczenia maszynowego. Zbieranie danych polegało na nagrywaniu plików wideo, na których dana osoba wykonywała określony gest. W swojej pracy dyplomowej zakładałem, że każdy wykonywany gest, jest pokazywany w niebieskiej rękawiczce. To założenie wykorzystywałem w całej swojej pracy inżynierskiej.
 
 \begin{figure}[H]	
 	\centering
@@ -1156,7 +1160,7 @@ Z wykonanych analiz dokładności klasyfikatora KNN w zależności od parametru 
 \chapter{Podsumowanie}
 	W niniejszej pracy inżynierskiej opisałem podejście do rozpoznawania gestów na przykładzie gry papier, kamień, nożyce. 
 	
-	Proces segmentacji dłoni składał się z wielu pomniejszych etapów. Pierwszym z nich była aktywizacja zbioru danych. Proces ten był pracochłonny, ponieważ należało zebrać materiał od kilku różnych osób i opowiedzieć im o ich stosunkowo klarownym zadaniu jakim było pokazywanie gestów. 
+	Proces segmentacji dłoni składał się z wielu pomniejszych etapów. Pierwszym z nich była akwizycja zbioru danych. Proces ten był pracochłonny, ponieważ należało zebrać materiał od kilku różnych osób i opowiedzieć im o ich stosunkowo klarownym zadaniu jakim było pokazywanie gestów. 
 	
 	Zbieranie danych było etapem dosyć prostym, jednakże analiza zgromadzonego materiału wymagała dużej ilości włożonej pracy.
 	

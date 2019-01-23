@@ -5,26 +5,35 @@ Rozpoznawanie gestów na przykładzie gry papier, kamień, nożyce
 \end{center}
 
 \section*{Streszczenie}
-W pracy inżynierskiej zostało przedstawione podejście do problemu rozpoznawania gestów przez wszystkie jego etapy. W pierwszym etapie został przedstawiony zakres i cel pracy. Kolejne dwa rozdziały to teoretyczny wstęp do zagadnień oraz wykorzystanych narzędzi w pracy. 
+W pracy inżynierskiej zostało zaprezentowane podejście do problemu rozpoznawania gestów. W pierwszym rozdziale został przedstawiony zakres i cel pracy. Kolejne dwa rozdziały to teoretyczny wstęp do zagadnień oraz wykorzystanych narzędzi w pracy. 
 
-Rozdział ,,rozwiązywanie problemu'' pokazuje podejście do klasyfikacji gestów na przykładzie gry papier, kamień, nożyce. Obrazuje aktywizację oraz  przetwarzanie danych w celu uzyskania jak najlepszego zbioru danych. W późniejszej części zostały opisane etapy filtracji, segmentacji dłoni. Po uzyskaniu zbioru danych zostały stworzone klasyfikatory. Pierwszym podejściem było stworzenie klasyfikatora KNN, a następnie stworzenie klasyfikatora bazującego na sieciach neuronowych. 
+Rozdział ,,rozwiązywanie problemu'' pokazuje podejście do klasyfikacji gestów na przykładzie gry papier, kamień, nożyce. Obrazuje akwizycję oraz~przetwarzanie danych w celu uzyskania jak najlepszego zbioru danych. W~późniejszej części zostały opisane etapy filtracji oraz segmentacji dłoni. Po uzyskaniu zbioru danych zostały stworzone klasyfikatory. Początkowym podejściem było stworzenie klasyfikatora KNN, a następnie stworzenie klasyfikatorów bazujących na sieciach neuronowych. Pierwszy klasyfikator do uczenia maszynowego wykorzystywał cechy opisujące wykonywany gest, drugi zaś używał obrazów z wysegmentowaną dłonią. Po uzyskanych rezultatach działania sieci neuronowych przeprowadzono analizę ich dokładności obserwując dobór funkcji aktywacji, liczby neuronów, parametru szybkości uczenia oraz liczby epok uczących.
 
-Zakończenie pracy to podsumowanie wykonanej pracy, porównanie wyników uzyskanych przez użyte klasyfikatory oraz opisanie wniosków zaobserwowanych podczas wykonywania pracy inżynierskiej.
+Klasyfikator oparty o wartości pikseli obrazu binarnego osiągnął zdecydowanie najwyższą skuteczność o wartości ponad 99\%. Pozostałe klasyfikatory oparte o cechy uzyskiwały skuteczność gorszą, wynoszącą około 85\%. 
+
+Zakończenie pracy to podsumowanie wykonanej pracy, porównanie wyników uzyskanych przez użyte klasyfikatory oraz opisanie wniosków zaobserwowanych podczas wykonywania pracy inżynierskiej. 
 
 \bigskip
-{\noindent\bf Słowa kluczowe:} rozpoznawanie gestów, klasyfikacja, sieci neuronowe, OpenCV, TensorFlow, Keras, klasyfikator KNN
+{\noindent\bf Słowa kluczowe:} rozpoznawanie gestów, klasyfikacja, sztuczne sieci neuronowe, klasyfikator KNN, OpenCV, TensorFlow, Keras
 
-\vskip 2cm
+%\vskip 2cm
 
-
+\newpage
 \begin{center}
 \large \bf
-ENG Rozpoznawanie gestów na przykładzie gry papier, kamień, nożyce
+The gesture recognition on the example of the game “paper, stone, scissors”
 \end{center}
 
 \section*{Abstract}
+My Engineer's Thesis outlines an approach to the problem of gesture recognition. The first chapter presents the scope and the objective of my thesis. The next two chapters disclose an theoretical introduction to the issues and tools used at work. 
+
+The chapter called “Resolving the problem” shows an attitude to gesture classification on the example of the game named “paper, stone, scissors”. This~mentioned chapter illustrates the acquisition and processing of data in~order to obtain the best data set.  Afterward, the phases of filtration and~hand segmentation have been described. After regaining the dataset, classifiers were created. The initial attitude was to create a KNN classifier, and then the~classifiers based on neural networks were performed. The first machine learning classifier used the features describing the gesture performed, the second classifier used the images with a segmented hand. The analysis of~neural networks accuracy was carried out on the set of results, observing the~selection of~the~activation function, the number of neurons, the parameter of~the~learning speed and the number of epochs being taught.  
+
+The classifier which is based on the pixel values of the binary image achieved the best performance with a value of 99\%. Other classifiers based on the features, presented worse efficiency, amounting to about 85\%.
+
+At the end, there is a summary and conclusion of all work which was done as well as a comparison of the results obtained by the used classifiers.
 
 \bigskip
-{\noindent\bf Keywords:} ENG rozpoznawanie gestów, klasyfikacja, python, sieci neuronowe
+{\noindent\bf Keywords:} gestures recognition, classification, artificial neural network, KNN classifier, OpenCV, TensorFlow, Keras
 
 \vfill
